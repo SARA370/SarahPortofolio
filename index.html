@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Portofolio responsive</title>
+</head>
+
+<body>
+    <!--------------------------------------------------------->
+    <!--------------------- HEADER SECTION -------------------->
+    <!--------------------------------------------------------->
+    <header>
+
+        <!------------------------- NAVBAR ------------------------>
+
+        <nav class="nav container">
+            <!-------------------------- LOGO ------------------------->
+            <a id="logo-link" href="#"><img src="./assets/imgs/logo_Plan de travail 1.png" alt="logo"></a>
+
+            <!--------------------NAVBAR CONTAINENT-------------------->
+
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Portofolio</a></li>
+            </ul>
+
+            <!-- FIXME fixer navbar -->
+
+            <div class="last-part-menu">
+
+                <a href="#contact">
+                    <button class="nav-link-contact">Contact</button>
+                </a>
+
+                <!------------------------Languages lists----------------------->
+
+
+                <!--NOTE a way to make a dropdown -->
+                <!-- <select class="select-languages">
+                    <option value="english"><p class="english" >En</p></option>
+                    <option value="french">Fr</option>
+                </select> -->
+
+
+                <div class="language-list">
+                    <button>En</button>
+                    <button>Fr</button>
+                </div>
+
+
+                <div class="checkbox">
+                    <input type="checkbox" />
+                    <div>
+                        <div class="switch">
+                            <div class="line"></div>
+                            <span class="on">ON</span>
+                        </div>
+                        <div class="shadow"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- <div class="petit-test-flemme">
+        <img src="./assets/imgs/behance-logo-24.png" alt="logo askip">
+        <ul>
+            <li>hello</li>
+            <li>hello</li>
+            <li>hello</li>
+            <li>hello</li>
+            <li>hello</li>
+        </ul>
+
+        <ul>
+            <li>language</li>
+            <li>language</li>
+            <li>language</li>
+        </ul>
+    </div> -->
+
+
+    <!--------------------------------------------------------->
+    <!-------------------- HERO SECTION ----------------------->
+    <!--------------------------------------------------------->
+
+    <section id="home" class="home container">
+        <div class="home-content">
+            <div class="home-img">
+                <img src="./assets/imgs/2006641-resume-plexus-technologie-futuriste-reseau-sur-fond-degrade-gris-illustrationle-vectoriel.jpg"
+                    alt="personal photo">
+            </div>
+            <div class="home-text">
+                <h3>Hello, I'm Sarah</h3>
+                <div class="intro">
+                    <h3> I'm</h3>
+                    <h3 class="typing"></h3>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------social media icons----------------------->
+
+        <div class="social-icons">
+
+            <ul>
+                
+                <li>
+                    <a href="#">
+                        Github
+                        <img src="./assets/imgs/github-logo-24.png" alt="">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Behance
+                        <img src="./assets/imgs/behance-logo-24.png" alt="">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Linkedin
+                        <img src="./assets/imgs/linkedin-logo-24.png" alt="">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Instagram
+                        <img src="./assets/imgs/instagram-logo-24.png" alt="">
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!--------------------------------------------------------->
+    <!-------------------- ABOUT SECTION ---------------------->
+    <!--------------------------------------------------------->
+
+    <section class="about container" id="about">
+        <div class="about-title">
+            <h2>A <span>Propos</span><span class="bg-text">A PROPOS</span></h2>
+        </div>
+
+        <div class="about-content">
+            <div class="about-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda consequuntur error
+                    dolorem iusto esse eveniet delectus fuga. Deleniti vel necessitatibus cupiditate eum quasi
+                    temporibus officiis, voluptatum dolorum nulla facilis sapiente laboriosam exercitationem similique
+                    aliquid repellat molestias labore in tenetur corporis est obcaecati dolores totam. Hic temporibus
+                    labore nesciunt. Maiores.</p>
+
+                <a href="./assets/pdf/CV- SARAH AL-RASHID.pdf" class="main-btn">
+                    <span class="btn-text">Download CV</span>
+                    <span class="btn-icon"><img src="./assets/imgs/icons8-download-48.png"></span>
+                </a>
+            </div>
+
+            <div class="about-image">
+                <img src="./assets/imgs/circle-img.png" class="circle">
+
+
+                <img src="./assets/imgs/pexels-moose-photos-1587009-removebg-preview.png" class="mine">
+            </div>
+        </div>
+    </section>
+
+    <!--------------------------------------------------------->
+    <!------------------ PORTFOLIO SECTION -------------------->
+    <!--------------------------------------------------------->
+
+    <section class="portfolio container" id="portfolio">
+        <div class="potofolio-title">
+            <h2>P<span>ortofolio</span><span class="bg-text">PORTFOLIO</span></h2>
+        </div>
+
+        <div class="row">
+
+            <div class="filter">
+                <ul class="filter-btns">
+                    <li class="active2" data-target="all">All</li>
+                    <li data-target="code">Code</li>
+                    <li data-target="ux/ui-design">UX/UI Design</li>
+                    <li data-target="graphique-design">Graphique Design</li>
+                    <li data-target="email-template">Emaile marketing template</li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="portfolio-gallery">
+
+                    <div class="item" data-id="Code">
+                        <div class="inner">
+                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="ux/ui-design">
+                        <div class="inner">
+                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="graphique-design">
+                        <div class="inner">
+                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="email-template">
+                        <div class="inner">
+                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="item" data-id="email-template">
+                        <div class="inner">
+                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="item" data-id="email-template">
+                        <div class="inner">
+                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="item" data-id="email-template">
+                        <div class="inner">
+                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="item" data-id="email-template">
+                        <div class="inner">
+                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="item" data-id="email-template">
+                        <div class="inner">
+                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--------------------------------------------------------->
+    <!------------------- CONTACT SECTION --------------------->
+    <!--------------------------------------------------------->
+
+    <section class="contact container" id="contact">
+        <div class="contact-title">
+            <h2>C<span>ontact</span><span class="bg-text">CONTACT</span></h2>
+        </div>
+        <div class="contact-form">
+            <form>
+                <div class="input-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email Id</label>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" rows="8" required></textarea>
+                    <label for="message">Your Message</label>
+
+                </div>
+            </form>
+            <button type="submit">SUBMIT</button>
+        </div>
+    </section>
+
+
+
+    <!--------------------------------------------------------->
+    <!------------------- FOOTER SECTION ---------------------->
+    <!--------------------------------------------------------->
+    <section class="footer-container" id="footer">
+        <p>&#169; Sarah Al-Rashid</p>
+
+    </section>
+
+
+
+
+    <!--------------------------------------------------------->
+    <!------------------Link to javascipt---------------------->
+    <!--------------------------------------------------------->
+    <script src="./assets/main.js"></script>
+
+</body>
+
+</html>
