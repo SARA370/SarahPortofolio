@@ -26,6 +26,8 @@ button {
     font-size: 1rem;
 }
 
+
+
 header {
     background-color: rgba(56, 55, 55, 0.461);
     position: fixed;
@@ -35,33 +37,35 @@ header {
     border-bottom: 2px white dotted;
 
     nav {
-        width: 100%;
-
+        padding: 0 15em;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
-        #logo-link{ //NOTE SOFIA
-            
-            width: 10%;
 
-            img{
-                width: 100%;
-            }
-        }
-        
-        ul { //NOTE SOFIA  
-            padding-left: 110px;
-
+        ul {
+            //NOTE SOFIA 
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-around;
+            background-color: violet;
+            // FIXME fixer l'image
+
+            li :first-child{
+
+                width: 12%;
+
+                img {
+                    width: 100%;
+                }
+
+            }
 
             li {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
 
-                margin-left: 1em;
+                //margin-left: 1em;
 
                 .nav-link {
                     font-size: 1.2rem;
@@ -72,6 +76,10 @@ header {
                         transition: 0.3s all linear;
                     }
                 }
+                
+
+                
+
             }
 
 
@@ -81,62 +89,139 @@ header {
         .last-part-menu {
             display: flex;
             align-items: center;
+            background-color: orangered;
 
-            .nav-link-contact{
-                margin: 0 20px;
+            .nav-link-contact {
+                margin: 0 5px;
                 padding: 5px 20px;
                 background-color: pink;
                 border: none;
                 border-radius: 50px;
             }
 
-            .language-list{
-                
-                width: 50px;
-                background-color: tomato;
 
-                button{
-                    width: 100%;
-                    border: none;
-                    background-color: transparent;
+            .dropdown {
+                width: 100%;
+                position: relative;
+                margin: .4em;
+                border: 1px solid black;
+                border-radius: 50px;
+
+
+                .select {
+                    color: rgb(0, 0, 0);
                     display: flex;
                     justify-content: center;
+                    align-items: center;
+                    border-radius: 0.5em;
+                    cursor: pointer;
+                    transition: ease 0.3s;
+
+
+                    .selected {
+                        display: flex;
+                        justify-content: space-between;
+                        line-height: 1.3;
+                        font-weight: 500;
+                        font-size: 1.1rem;
+
+                        &:before {
+                            content: '';
+                            display: block;
+                            width: 27px;
+                            height: 25px;
+                            background-image: url("../imgs/icons8-france-48\ \(1\).png");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+
+                        }
+                    }
+
+                    .caret {
+                        width: 0;
+                        height: 0;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-top: 6px solid whitesmoke;
+                        transition: 0.3s;
+                        position: absolute;
+                        top: 11px;
+                        left: 40px;
+                        cursor: pointer;
+
+                    }
                 }
             }
 
-            
 
-            .checkbox{
+            .menu {
+                padding: .3em 1em;
+                background: red;
+                border-radius: 0.5em;
+                color: black;
+                position: absolute;
+                top: 3.7em;
+                left: 84%;
+                transform: translateX();
+                opacity: 0;
+                display: none;
+                transition: .2s;
+                z-index: 1;
+
+                li {
+                    margin: 0;
+                    font-size: 500;
+                    padding-right: .8em;
+                    cursor: pointer;
+
+
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 28px;
+                        height: 25px;
+                        background-image: url("../imgs/icons8-usa-48.png");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        border-radius: 46%;
+                    }
+                }
+            }
+
+
+            .checkbox {
                 background: linear-gradient(0deg, #777777, #414141);
                 width: 3.7em;
                 height: 1.6em;
                 border-radius: 2em;
                 box-shadow: inset 0 0.05em 0 #222,
-                inset 0 -0.05em 0 #909090;
+                    inset 0 -0.05em 0 #909090;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 position: relative;
-        
-                input{
+
+                input {
                     position: absolute;
                     width: 100%;
                     height: 100%;
                     opacity: 0;
                     z-index: 2;
                     cursor: pointer;
-        
-                    &:checked + div .switch{
+
+                    &:checked+div .switch {
                         background: linear-gradient(210deg, #5e5e5e 0%, #d6d6d6 45%, #d6d6d6 100%);
                         box-shadow: inset 0 0 0.15em #fff, -0.05em 0.05em 0.1em 0 #000;
-        
-                        &:checked + div .shadow:before{
+
+                        &:checked+div .shadow:before {
                             left: 0.5em;
                             box-shadow: -0.2em 0.5em 0.8em #222;
                         }
                     }
                 }
-                .switch{
+
+                .switch {
                     background: linear-gradient(150deg, #5e5e5e 0%, #d6d6d6 45%, #d6d6d6 100%);
                     width: 2.3em;
                     height: 1.1em;
@@ -148,8 +233,8 @@ header {
                     box-sizing: border-box;
                     position: relative;
                     z-index: 1;
-        
-                    .line{
+
+                    .line {
                         background: #686868;
                         position: absolute;
                         top: 50%;
@@ -158,8 +243,8 @@ header {
                         width: .1em;
                         height: .6em;
                     }
-        
-                    span{
+
+                    span {
                         font-family: Georgia, 'Times New Roman', Times, serif;
                         font-weight: bold;
                         font-size: .6rem;
@@ -168,7 +253,8 @@ header {
                         line-height: 1em;
                     }
                 }
-                .shadow{
+
+                .shadow {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -176,8 +262,8 @@ header {
                     height: 100%;
                     border-radius: 2em;
                     z-index: 0;
-        
-                    &:before{
+
+                    &:before {
                         content: '';
                         position: absolute;
                         top: 50%;
@@ -191,9 +277,9 @@ header {
                         right: 0.2em;
                         box-shadow: .2em .1em .8em #222;
                     }
-        
+
                 }
-        
+
             }
 
         }
@@ -204,7 +290,7 @@ header {
 
 // NOTE APPARENCE LANGUE
 //.english {
-                    
+
 //     &::before {
 //         content: '';
 //         display: block;
@@ -322,7 +408,8 @@ p {
     justify-content: center;
     transform: translate(-250px, 0); //
 
-    ul{//NOTE SOFIA 
+    ul {
+        //NOTE SOFIA 
 
         a {
             color: rgb(255, 255, 255);
@@ -342,13 +429,13 @@ p {
             transition-property: transform;
             border: 2px dotted white;
             line-height: .5;
-    
+
             &:hover {
                 transform: translate(140px, 0);
-    
+
             }
         }
-    
+
         img {
             margin-left: 15px;
             font-size: 30px;
@@ -357,7 +444,7 @@ p {
         }
 
     }
-    
+
 }
 
 
@@ -473,10 +560,10 @@ p {
         .about-image {
             width: 35%;
             position: relative;
-        
+
 
             .circle {
-                
+
                 width: 164%;
                 position: absolute;
                 top: -7%;
@@ -596,7 +683,7 @@ p {
                 }
             }
 
-            
+
 
 
 
