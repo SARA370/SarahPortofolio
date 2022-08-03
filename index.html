@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Portofolio responsive</title>
+    <title>Sarah Portofolio</title>
 </head>
 
 <body>
@@ -14,144 +14,69 @@
     <!--------------------- HEADER SECTION -------------------->
     <!--------------------------------------------------------->
     <header>
-
         <!------------------------- NAVBAR ------------------------>
+        <div class="nav container">
+            <a href="#"><img class="logo-image" src="./assets/imgs/logo_Plan de travail 1.png" alt="LOGO IMAGE"></a>
 
-        <nav class="container">
-            
-            <!--------------------NAVBAR CONTAINENT-------------------->
+            <ul class="navbar">
+                <li><a href="#mywork" class="nav-links">MY WORK</a></li>
+                <li><a href="#about" class="nav-links">ABOUT</a></li>
+                <li><a href="#contact" class="nav-links-contact">CONTACT ME</a></li>
 
-            <ul>
-                <li><a href="#" class="nav-link"><img src="./assets/imgs/logo_Plan de travail 1.png" alt="logo"></a></li>
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#portfolio" class="nav-link">Portofolio</a></li>
             </ul>
 
-            <!-- FIXME fixer navbar -->
-
-            <div class="last-part-menu">
-
-                <a href="#contact">
-                    <button class="nav-link-contact">Contact</button>
+            <!------------------------- LISTE OF LANGUAGES ------------------------>
+            <div class="drop-down-body">
+                <a href="#" class="drop-down-btn">
+                    <img src="./assets/imgs/united-kingdom-flag-icon.svg" alt="uk flag" id="btn-img" class="language-img">
+                    <h3 id="btn-title" class="language-title">EN</h3>
                 </a>
-
-                <!------------------------Languages lists----------------------->
-
-
-                <!--NOTE a way to make a dropdown -->
-                <!-- <select class="select-languages">
-                    <option value="english"><p class="english" >En</p></option>
-                    <option value="french">Fr</option>
-                </select> -->
-
-                <div class="language">
-                    <div class="dropdown">
-                        <div class="select">
-                            <span class="selected">Fr</span>
-                            <div class="caret">
-        
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <ul class="menu">
-                        <li>En</li>
-                    </ul>
-                </div>
-                
-
-                <div class="checkbox">
-                    <input type="checkbox" />
-                    <div>
-                        <div class="switch">
-                            <div class="line"></div>
-                            <span class="on">ON</span>
-                        </div>
-                        <div class="shadow"></div>
-                    </div>
-                </div>
-
+                <ul class="language-menu">
+                    <li class="language-item" data-lang='fr'>
+                        <img src="./assets/imgs/france-flag-icon.svg" alt="french flag" class="language-img">
+                        <h3 id="btn-title" class="language-title">FR</h3>
+                    </li>
+                </ul>
             </div>
-
-        </nav>
+        </div>
     </header>
-
-
-    <!-- <div class="petit-test-flemme">
-        <img src="./assets/imgs/behance-logo-24.png" alt="logo askip">
-        <ul>
-            <li>hello</li>
-            <li>hello</li>
-            <li>hello</li>
-            <li>hello</li>
-            <li>hello</li>
-        </ul>
-
-        <ul>
-            <li>language</li>
-            <li>language</li>
-            <li>language</li>
-        </ul>
-    </div> -->
 
 
     <!--------------------------------------------------------->
     <!-------------------- HERO SECTION ----------------------->
     <!--------------------------------------------------------->
 
-    <section id="home" class="home container">
-        <div class="home-content">
-            <div class="home-img">
-                <img src="./assets/imgs/2006641-resume-plexus-technologie-futuriste-reseau-sur-fond-degrade-gris-illustrationle-vectoriel.jpg"
-                    alt="personal photo">
-            </div>
-            <div class="home-text">
-                <h3>Hello, I'm Sarah</h3>
-                <div class="intro">
-                    <h3> I'm</h3>
-                    <h3 class="typing"></h3>
+    <section id="hero" class="hero container">
+        <div class="hero-content">
+
+            <div class="hero-card">
+                <div class="card-img">
+                    <img src="./assets/imgs/20220224_224112-removebg-preview.png" alt="MY PROFILE PHOTO">
                 </div>
+                <div class="hero-text">
+                    <h3>Hello, I'm Sarah</h3>
+                    <div class="intro">
+                        <h3 class="typing"></h3>
+                    </div>
+                </div>
+                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis
+                    tenetur eaque provident nisi eius maxime hic! Hic, provident soluta?</p>
+                <a href="./assets/pdf/CV- SARAH AL-RASHID.pdf" class="main-btn">
+                    <span class="btn-text">Download CV</span>
+                    <span class="btn-icon"><img src="./assets/imgs/download-arrow-svgrepo-com.svg"></span>
+                </a>
             </div>
         </div>
 
         <!------------------------social media icons----------------------->
-
-        <div class="social-icons">
-
+        <div class="social">
             <ul>
-                
-                <li>
-                    <a href="#">
-                        Github
-                        <img src="./assets/imgs/github-logo-24.png" alt="">
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Behance
-                        <img src="./assets/imgs/behance-logo-24.png" alt="">
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Linkedin
-                        <img src="./assets/imgs/linkedin-logo-24.png" alt="">
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Instagram
-                        <img src="./assets/imgs/instagram-logo-24.png" alt="">
-                    </a>
-                </li>
-
+                <li><a href="#">Linkedin</a><img src="./assets/imgs/linkedin-social-media-svgrepo-com.svg" alt="linkedin icone"></li>
+                <li><a href="#">Behance</a><img src="./assets/imgs/behance-svgrepo-com.svg" alt="linkedin icone"></li>
+                <li><a href="#">Linkedin</a><img src="./assets/imgs/github-svgrepo-com.svg" alt="linkedin icone"></li>
             </ul>
-
         </div>
+
     </section>
 
 
@@ -176,11 +101,6 @@
                     temporibus officiis, voluptatum dolorum nulla facilis sapiente laboriosam exercitationem similique
                     aliquid repellat molestias labore in tenetur corporis est obcaecati dolores totam. Hic temporibus
                     labore nesciunt. Maiores.</p>
-
-                <a href="./assets/pdf/CV- SARAH AL-RASHID.pdf" class="main-btn">
-                    <span class="btn-text">Download CV</span>
-                    <span class="btn-icon"><img src="./assets/imgs/icons8-download-48.png"></span>
-                </a>
             </div>
 
             <div class="about-image">
