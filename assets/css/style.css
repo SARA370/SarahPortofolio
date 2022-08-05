@@ -30,7 +30,7 @@ body {
   background-image: url(../imgs/Abstract_digital_background_with_technology_circuit_generated.jpg);
   background-size: contain;
   background-repeat: no-repeat;
-  min-height: 500vh;
+  min-height: 1000vh;
 }
 body::before {
   content: "";
@@ -117,7 +117,7 @@ header .nav .drop-down-body .drop-down-btn {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.37);
   color: white;
-  padding: 0.5em;
+  padding-right: 1em;
   border: 1px solid rgb(255, 255, 255);
   cursor: pointer;
   border-radius: 17px;
@@ -153,43 +153,44 @@ header .nav .drop-down-body .language-menu .language-item:hover {
 }
 
 .hero-content {
-  max-width: 600px;
+  position: relative;
+  max-width: 48rem;
   width: 100%;
+  min-height: 10vh;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 600px;
-}
-.hero-content-card {
-  width: 20rem;
-  padding: 2em 1em;
-  padding-top: 4em;
-  background-color: black;
+  padding: 1em 4em;
+  background-color: rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
 }
-.hero-content-card .card-img {
+.hero-content .profile-img {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  border: 3px solid white;
 }
-.hero-content-card-text {
+.hero-content-text {
   display: flex;
   text-align: center;
   justify-content: center;
   flex-direction: column;
 }
-.hero-content-card-text .intro {
+.hero-content-text .intro {
   display: flex;
   background-color: white;
 }
-.hero-content-card-text .intro .typing {
+.hero-content-text .intro .typing {
   margin-left: 10px;
 }
-.hero-content-card-text .intro .typing:after {
+.hero-content-text .intro .typing:after {
   content: "";
   width: 1px;
   height: 99%;
@@ -214,7 +215,7 @@ header .nav .drop-down-body .language-menu .language-item:hover {
     opacity: 1;
   }
 }
-.hero-content-card .main-btn {
+.hero-content .main-btn {
   width: 99%;
   border-radius: 30px;
   font-weight: 600;
@@ -227,12 +228,12 @@ header .nav .drop-down-body .language-menu .language-item:hover {
   overflow: hidden;
   text-decoration: none;
 }
-.hero-content-card .main-btn .btn-text {
+.hero-content .main-btn .btn-text {
   margin-left: 8em;
   font-weight: bold;
   font-size: 1.1rem;
 }
-.hero-content-card .main-btn .btn-icon {
+.hero-content .main-btn .btn-icon {
   background-color: green;
   display: flex;
   align-items: center;
@@ -240,10 +241,10 @@ header .nav .drop-down-body .language-menu .language-item:hover {
   border-radius: 50%;
   padding: 0.1rem;
 }
-.hero-content-card .main-btn .btn-icon img {
+.hero-content .main-btn .btn-icon img {
   width: 35px;
 }
-.hero-content-card .main-btn:before {
+.hero-content .main-btn:before {
   content: "";
   position: absolute;
   top: 0;
@@ -252,33 +253,50 @@ header .nav .drop-down-body .language-menu .language-item:hover {
   transition: all 0.4s ease-out;
   z-index: -1;
 }
-.hero-content-card .main-btn:hover {
+.hero-content .main-btn:hover {
   transition: all 0.4s ease-out;
 }
-.hero-content-card .main-btn:hover::before {
+.hero-content .main-btn:hover::before {
   width: 100%;
   height: 100%;
   background-color: green;
   transform: translateX(0);
   transition: all 0.4s ease-out;
 }
-.hero .social {
-  position: relative;
-  min-height: 10px;
-  transform: translateY(-50%);
+
+.social-icons {
+  position: fixed;
+  top: 0;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.hero .social ul {
-  transform: translateX(-270px);
+.social-icons ul {
+  transform: translate(-370px, 0);
 }
-.hero .social ul li {
+.social-icons ul li {
   display: block;
   margin: 1em;
-  background-color: rgba(0, 0, 0, 0.37);
+  background-color: rebeccapurple;
+}
+.social-icons ul li a {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 0, 0, 0.425);
+  font-size: 22px;
+  display: block;
+  margin: 5px;
+  padding: 12px;
   width: 300px;
   text-align: right;
-  padding: 2em;
-  border-radius: 0 30px 30px 0;
-  transition: all 1s;
+  border-radius: 50px;
+  transition: 0.7s;
+  transition-property: transform;
+  border: 2px dotted white;
+  line-height: 0.5;
+}
+.social-icons ul li a img {
+  width: 2%;
 }
 
 p {
