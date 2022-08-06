@@ -38,10 +38,10 @@ body::before {
   left: 0;
   top: 0;
   width: 100%;
-  min-height: 210vh;
+  min-height: 272vh;
   background: url("../imgs/bg3.svg");
   background-size: cover;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.9);
   z-index: -1;
 }
 body .container {
@@ -88,8 +88,8 @@ body header .nav .navbar .nav-links {
 body header .nav .navbar .nav-links-contact {
   background-color: rgba(124, 123, 123, 0.37);
   color: #f5f5f5;
-  padding: 0.3rem;
-  border-radius: 12px;
+  padding: 0.2rem 1.3em;
+  border-radius: 40px;
   border: 1px solid white;
   font-family: "Sarpanch", sans-serif;
   font-weight: bold;
@@ -152,16 +152,17 @@ body header .nav .drop-down-body .language-menu .language-item:hover {
 }
 body .hero-content {
   position: relative;
-  max-width: 48rem;
+  max-width: 61rem;
   width: 100%;
-  min-height: 10vh;
-  margin: auto;
+  height: 30vh;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1em 4em;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(6, 6, 6, 0);
+  border: 1px solid white;
+  border-radius: 30px;
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
 }
@@ -181,14 +182,15 @@ body .hero-content-text {
   justify-content: center;
   flex-direction: column;
 }
-body .hero-content-text .intro {
+body .hero-content-text .typing {
   display: flex;
+  align-items: center;
   background-color: white;
 }
-body .hero-content-text .intro .typing {
+body .hero-content-text .typing .typing {
   margin-left: 10px;
 }
-body .hero-content-text .intro .typing:after {
+body .hero-content-text .typing .typing:after {
   content: "";
   width: 1px;
   height: 99%;
