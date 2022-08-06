@@ -162,7 +162,7 @@ body .hero-content {
   flex-direction: column;
   background-color: rgba(6, 6, 6, 0);
   border: 1px solid white;
-  border-radius: 30px;
+  border-radius: 10px;
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
 }
