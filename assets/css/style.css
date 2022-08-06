@@ -263,6 +263,40 @@ body .hero-content .main-btn:hover::before {
   transform: translateX(0);
   transition: all 0.4s ease-out;
 }
+body .social-icons {
+  position: fixed;
+  top: 0;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .social-icons ul {
+  transform: translate(-370px, 0);
+}
+body .social-icons ul li {
+  display: block;
+  margin: 1em;
+  background-color: rebeccapurple;
+}
+body .social-icons ul li a {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 0, 0, 0.425);
+  font-size: 22px;
+  display: block;
+  margin: 5px;
+  padding: 12px;
+  width: 300px;
+  text-align: right;
+  border-radius: 50px;
+  transition: 0.7s;
+  transition-property: transform;
+  border: 2px dotted white;
+  line-height: 0.5;
+}
+body .social-icons ul li a img {
+  width: 2%;
+}
 body p {
   font-size: 0.938rem;
   margin-bottom: 1.5rem;
