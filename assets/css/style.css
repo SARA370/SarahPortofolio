@@ -150,42 +150,70 @@ body header .nav .drop-down-body .language-menu .language-item {
 body header .nav .drop-down-body .language-menu .language-item:hover {
   background-color: aquamarine;
 }
+body header .nav .toggle {
+  width: 3.8rem;
+  height: 1.5rem;
+  background: white;
+  border-radius: 150px;
+  box-shadow: inset 0 2px 50px rgba(0, 0, 0, 0.1), inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 8px rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
+}
+body header .nav .toggle:before {
+  position: absolute;
+  content: "OFF";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  transform: scale(0.9);
+  background: linear-gradient(#ddd, #f9f9f9);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2) inset 0 2px 2px rgba(255, 255, 255, 0.6), inset 0 -2 2px rgba(255, 255, 255, 0.5);
+}
+body .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 body .hero-content {
   position: relative;
+  top: 50%;
   max-width: 61rem;
   width: 100%;
   height: 30vh;
   margin: 0 auto;
+  border: 2px solid rgba(255, 255, 255, 0.139);
+  border-radius: 10px;
+  background-color: rgba(6, 6, 6, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgba(6, 6, 6, 0);
-  border: 1px solid white;
-  border-radius: 10px;
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
+  text-align: center;
+  padding: 1em 2em;
 }
 body .hero-content .profile-img {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 11rem;
+  width: 10.6rem;
   height: 11rem;
   border-radius: 50%;
   border: 3px solid white;
 }
-body .hero-content-text {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  flex-direction: column;
+body .hero-content-text h3 {
+  margin-bottom: 1em;
 }
 body .hero-content-text .typing {
   display: flex;
   align-items: center;
   background-color: white;
+  margin-bottom: 1em;
 }
 body .hero-content-text .typing .typing {
   margin-left: 10px;
@@ -220,7 +248,7 @@ body .hero-content .main-btn {
   border-radius: 30px;
   font-weight: 600;
   position: relative;
-  border: 0.5px solid green;
+  border: 1px solid rgb(255, 255, 255);
   display: flex;
   align-self: flex-start;
   align-items: center;
@@ -234,7 +262,7 @@ body .hero-content .main-btn .btn-text {
   font-size: 1.1rem;
 }
 body .hero-content .main-btn .btn-icon {
-  background-color: green;
+  background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -259,68 +287,65 @@ body .hero-content .main-btn:hover {
 body .hero-content .main-btn:hover::before {
   width: 100%;
   height: 100%;
-  background-color: green;
+  background-color: rgb(255, 255, 255);
   transform: translateX(0);
   transition: all 0.4s ease-out;
 }
 body .social-icons {
   position: fixed;
-  top: 0;
-  height: 150vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
 }
 body .social-icons ul {
-  transform: translate(-370px, 0);
+  transform: translate(-270px);
 }
 body .social-icons ul li {
   display: block;
   margin: 1em;
-  background-color: rebeccapurple;
-}
-body .social-icons ul li a {
-  color: rgb(255, 255, 255);
-  background-color: rgba(255, 0, 0, 0.425);
-  font-size: 22px;
-  display: block;
-  margin: 5px;
-  padding: 12px;
-  width: 300px;
+  width: 18.75em;
   text-align: right;
-  border-radius: 50px;
-  transition: 0.7s;
-  transition-property: transform;
-  border: 2px dotted white;
-  line-height: 0.5;
+  padding: 1em;
+  border-radius: 0 30px 30px 0;
+  transition: all 1s;
 }
-body .social-icons ul li a img {
-  width: 2%;
+body .social-icons ul li:hover {
+  transform: translateX(110px);
+  transform: rotate(360deg);
+  transition: all 1s;
 }
-body p {
-  font-size: 0.938rem;
-  margin-bottom: 1.5rem;
+body .social-icons ul li .icon {
+  background-color: wheat;
+  padding: 0.6em;
+  border-radius: 50%;
+  text-align: center;
+  margin-left: 0.875em;
+  width: 20%;
+  transform: rotate(0deg);
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 1s;
 }
-body .about {
+
+.about {
   min-height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
 }
-body .about .about-title {
+.about .about-title {
   text-align: center;
   margin-bottom: 1em;
   margin-top: 1em;
 }
-body .about .about-title h2 {
+.about .about-title h2 {
   position: relative;
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 700;
 }
-body .about .about-title span {
+.about .about-title span {
   color: rgb(139, 139, 139);
 }
-body .about .about-title .bg-text {
+.about .about-title .bg-text {
   position: absolute;
   top: 30%;
   left: 50%;
@@ -331,19 +356,19 @@ body .about .about-title .bg-text {
   font-weight: 800;
   font-size: 5.9rem;
 }
-body .about .about-content {
+.about .about-content {
   display: flex;
   justify-content: space-around;
 }
-body .about .about-content .about-text {
+.about .about-content .about-text {
   width: 43%;
   margin-top: 12em;
 }
-body .about .about-content .about-image {
+.about .about-content .about-image {
   width: 35%;
   position: relative;
 }
-body .about .about-content .about-image .circle {
+.about .about-content .about-image .circle {
   width: 164%;
   position: absolute;
   top: -7%;
@@ -362,27 +387,28 @@ body .about .about-content .about-image .circle {
     transform: rotate(360deg);
   }
 }
-body .about .about-content .about-image .mine {
+.about .about-content .about-image .mine {
   width: 76%;
   position: absolute;
   top: 0%;
   left: 14%;
 }
-body .portfolio .potofolio-title {
+
+.portfolio .potofolio-title {
   text-align: center;
   margin-bottom: 1em;
   margin-top: 5em;
 }
-body .portfolio .potofolio-title h2 {
+.portfolio .potofolio-title h2 {
   position: relative;
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 700;
 }
-body .portfolio .potofolio-title h2 span {
+.portfolio .potofolio-title h2 span {
   color: #8b8b8b;
 }
-body .portfolio .potofolio-title h2 .bg-text {
+.portfolio .potofolio-title h2 .bg-text {
   position: absolute;
   top: 30%;
   left: 50%;
@@ -393,63 +419,64 @@ body .portfolio .potofolio-title h2 .bg-text {
   font-weight: 800;
   font-size: 5.9rem;
 }
-body .portfolio .row {
+.portfolio .row {
   display: flex;
   flex-wrap: wrap;
 }
-body .portfolio .row .filter {
+.portfolio .row .filter {
   flex: 0 0 100%;
   max-width: 100%;
   margin-bottom: 20px;
 }
-body .portfolio .row .filter .filter-btns {
+.portfolio .row .filter .filter-btns {
   list-style: none;
   text-align: center;
   padding: 0;
 }
-body .portfolio .row .filter .filter-btns li {
+.portfolio .row .filter .filter-btns li {
   font-weight: 500;
   display: inline-block;
   margin: 0 8px;
   text-transform: uppercase;
   cursor: pointer;
 }
-body .portfolio .row .filter .filter-btns .active2 {
+.portfolio .row .filter .filter-btns .active2 {
   color: blue;
   border-bottom: 2px solid red;
   background-color: aqua;
 }
-body .portfolio .row .portfolio-gallery {
+.portfolio .row .portfolio-gallery {
   flex: 0 0 100%;
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
-body .portfolio .row .portfolio-gallery .item {
+.portfolio .row .portfolio-gallery .item {
   flex: 0 0 33.33%;
   max-width: 33.33%;
   padding: 8px;
 }
-body .portfolio .row .portfolio-gallery .item .inner img {
+.portfolio .row .portfolio-gallery .item .inner img {
   width: 90%;
   display: block;
   border-radius: 2em;
 }
-body .contact .contact-title {
+
+.contact .contact-title {
   text-align: center;
   margin-bottom: 1em;
   margin-top: 5em;
 }
-body .contact .contact-title h2 {
+.contact .contact-title h2 {
   position: relative;
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 700;
 }
-body .contact .contact-title h2 span {
+.contact .contact-title h2 span {
   color: #8b8b8b;
 }
-body .contact .contact-title h2 .bg-text {
+.contact .contact-title h2 .bg-text {
   position: absolute;
   top: 30%;
   left: 50%;
@@ -460,16 +487,16 @@ body .contact .contact-title h2 .bg-text {
   font-weight: 800;
   font-size: 5.9rem;
 }
-body .contact .contact-form form {
+.contact .contact-form form {
   width: 90%;
   margin: auto;
 }
-body .contact .contact-form form .input-group {
+.contact .contact-form form .input-group {
   margin-bottom: 2em;
   position: relative;
 }
-body .contact .contact-form form input,
-body .contact .contact-form form textarea {
+.contact .contact-form form input,
+.contact .contact-form form textarea {
   width: 73%;
   padding: 0.8em;
   background-color: rgba(0, 0, 0, 0.128);
@@ -477,13 +504,13 @@ body .contact .contact-form form textarea {
   outline: 0;
   font-size: 1rem;
 }
-body .contact .contact-form form input:focus ~ label,
-body .contact .contact-form form input:valid ~ label,
-body .contact .contact-form form textarea:focus ~ label,
-body .contact .contact-form form textarea:valid ~ label {
+.contact .contact-form form input:focus ~ label,
+.contact .contact-form form input:valid ~ label,
+.contact .contact-form form textarea:focus ~ label,
+.contact .contact-form form textarea:valid ~ label {
   top: -2.5em;
 }
-body .contact .contact-form form label {
+.contact .contact-form form label {
   height: 100%;
   position: absolute;
   left: 0;

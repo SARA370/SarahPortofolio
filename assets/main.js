@@ -51,6 +51,13 @@ function changeLanguage(e){
 }
 
 
+///////*********************************************///////
+///////************* DARK/LIGHT MODE ***************///////
+///////*********************************************///////
+let toggle = document.querySelector('.toggle')
+toggle.addEventListener('click', ()=>{
+    toggle.classList.toggle('activ')
+})
 
 
 
