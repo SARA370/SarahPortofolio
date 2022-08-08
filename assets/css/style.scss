@@ -79,6 +79,7 @@ body {
         margin-left: 2em;
         border: 2px solid white;
         border-radius: 33px;
+        padding: 0 2em;
 
         .nav {
             display: flex;
@@ -86,13 +87,14 @@ body {
             justify-content: space-around;
 
             .logo-image {
-                max-width: 13%;
+                max-width: 44%;
             }
 
             .navbar {
                 display: flex;
                 align-items: center;
                 column-gap: 1.5em;
+                margin-left: 1em;
 
                 .nav-links {
                     color: #323232;
@@ -103,8 +105,8 @@ body {
                 }
 
                 .nav-links-contact {
-                    background-color: rgba(124, 123, 123, 0.37);
                     color: #f5f5f5;
+                    background-color: rgba(124, 123, 123, 0.653);
                     padding: .2rem 1.3em;
                     border-radius: 40px;
                     border: 1px solid white;
@@ -115,550 +117,532 @@ body {
                     &:hover {
                         background-color: rgb(18, 38, 64, 25%);
                     }
-                }
-            }
 
-            .drop-down-body {
-                position: relative;
-
-                .language-img {
-                    max-width: 100%;
-                    display: block;
-                    border-radius: 5px;
-                }
-
-                .language-title {
-                    padding-left: .1em;
-                    font-size: 1rem;
-                    margin-left: .2em;
-                }
-
-                .drop-down-btn {
-                    display: flex;
-                    align-items: center;
-                    background-color: rgba(0, 0, 0, 37%);
-                    color: white;
-                    padding-right: 1em;
-                    border: 1px solid rgb(255, 255, 255);
-                    cursor: pointer;
-                    border-radius: 17px;
-                    background-color: rgb(111, 109, 109, 37%);
-
-                    &:hover {
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                }
-
-                .language-menu {
-                    margin-top: .2em;
-                    position: absolute;
-                    border-radius: 17px;
-                    background-color: rgba(0, 0, 0, 37%);
-                    border: 1px solid blue;
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: opacity .4s, visibility .4s;
-
-                    &:hover {
-                        opacity: 1;
-                        visibility: visible;
+                    &::after {
+                        content: '';
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 100%;
+                        border: 3px solid #ffffff;
+                        position: absolute;
+                        z-index: -1;
+                        top: 50%;
+                        left: 73%;
+                        transform: translate(-50%, -50%);
+                        animation: ring 1.5s infinite;
                     }
 
-                    .language-item {
-                        display: flex;
-                        align-items: center;
-                        padding: .5em;
-                        cursor: pointer;
-                        transition: background-color .4s;
+                    @keyframes ring {
+                        0% {
+                            width: 30px;
+                            height: 30px;
+                            opacity: 1;
+                        }
 
-                        &:hover {
-                            background-color: aquamarine;
+                        100% {
+                            width: 150px;
+                            height: 150px;
+                            opacity: 0;
                         }
                     }
                 }
 
-            }
+                .drop-down-body {
+                    position: relative;
 
-            .toggle{
-                width: 3.8rem;
-                height: 1.5rem;
-                background: white;
-                border-radius: 150px;
-                box-shadow: inset 0 2px 50px rgba(0, 0, 0, 0.1), inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 8px rgba(0, 0, 0, 0.1) rgba(0, 0, 0 , 0.1);
+                    .language-img {
+                        max-width: 100%;
+                        display: block;
+                        border-radius: 5px;
+                    }
 
-                &:before{
-                    position: absolute;
-                    content: "OFF";
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    left: 0;
-                    width: 30rem;
-                    height: 30rem;
-                    border-radius: 50%;
-                    transform: scale(0.9);
-                    background: linear-gradient(#ddd, #f9f9f9);
-                    box-shadow: 0 4px 4px rgba(0, 0, 0 , 0.2) inset 0 2px 2px rgba(255, 255, 255, 0.6), inset 0 -2 2px rgb(255, 255, 255, 0.5);
+                    .language-title {
+                        padding-left: .1em;
+                        font-size: 1rem;
+                        margin-left: .2em;
+                    }
+
+                    .drop-down-btn {
+                        display: flex;
+                        align-items: center;
+                        color: white;
+                        padding-right: 1em;
+                        border: 1px solid rgb(255, 255, 255);
+                        cursor: pointer;
+                        border-radius: 17px;
+                        background-color: rgb(111, 109, 109, 37%);
+
+                        &:hover {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+
+                    .language-menu {
+                        margin-top: .2em;
+                        position: absolute;
+                        border-radius: 17px;
+                        background-color: rgba(0, 0, 0, 37%);
+                        border: 1px solid blue;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: opacity .4s, visibility .4s;
+
+                        &:hover {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+
+                        .language-item {
+                            display: flex;
+                            align-items: center;
+                            padding: .5em;
+                            cursor: pointer;
+                            transition: background-color .4s;
+
+                            &:hover {
+                                background-color: aquamarine;
+                            }
+                        }
+                    }
+
                 }
             }
+
+
+                //container that holds the switch
+                .wrapper-color-switch {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    //label for switch that is interactive
+                    .color-switch {
+                        width: 4rem;
+                        height: 1.9rem;
+                        border-radius: 10em;
+                        position: absolute;
+                        cursor: pointer;
+                        margin-left: 1em;
+                        background-color: rgba(124, 123, 123, 0.37);
+                        padding: .1rem 1.3em;
+                        border-radius: 40px;
+                        border: 1px solid white;
+
+
+                        //circle toggle that animates backward and forward
+                        .color-switch-toggle {
+                            width: 1.7em;
+                            height: 1.7em;
+                            background: white;
+                            position: absolute;
+                            border-radius: 10em;
+                            top: 0.1em;
+                            left: 0.2em;
+                            cursor: pointer;
+                            transition: all 250ms ease-in-out;
+                        }
+                    }
+                }
+
+                //animate circle toggle if switch is on
+                #input-color-switch:checked~label .color-switch-toggle {
+                    transform: translatex(2em);
+                }
+
+                //hide input
+                #input-color-switch {
+                    display: none;
+                }
+
+            }
         }
-    }
 
-    /////////////////////////////////////
-    //////////// HERO SECTION ///////////
-    /////////////////////////////////////
+        /////////////////////////////////////
+        //////////// HERO SECTION ///////////
+        /////////////////////////////////////
 
-    .hero {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-
-        &-content {
-            position: relative;
-            top: 50%;
-            max-width: 61rem;
-            width: 100%;
-            height: 30vh;
-            margin: 0 auto;
-            border: 2px solid rgba(255, 255, 255, 0.139);
-            border-radius: 10px;
-            background-color: rgba(6, 6, 6, 0.1);
-            backdrop-filter: blur(20px);
+        .hero {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            text-align: center;
-            padding: 1em 2em;
+            min-height: 100vh;
+
+            &-content {
+                position: relative;
+                top: 50%;
+                max-width: 61rem;
+                width: 100%;
+                height: 30vh;
+                margin: 0 auto;
+                border: 2px solid rgba(255, 251, 251);
+                border-radius: 10px;
+                background-color: rgba(6, 6, 6, 0.2);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                padding: 1em 2em;
 
 
-            .profile-img {
-                position: absolute;
-                top: 0;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 10.6rem;
-                height: 11rem;
-                border-radius: 50%;
-                border: 3px solid white;
-            }
-
-
-            &-text {
-                h3{
-                    margin-bottom: 1em;
+                .profile-img {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 10.6rem;
+                    height: 11rem;
+                    border-radius: 50%;
+                    border: 3px solid white;
                 }
 
 
-                .typing {
-                    display: flex;
-                    align-items: center;
-                    background-color: white;
-                    margin-bottom: 1em;
+                &-text {
+                    h3 {
+                        margin-bottom: 1em;
+                    }
 
-                    //typing effect
+
                     .typing {
-                        margin-left: 10px;
+                        display: flex;
+                        align-items: center;
+                        background-color: white;
+                        margin-bottom: 1em;
 
-                        &:after {
-                            content: "";
-                            width: 1px;
-                            height: 99%;
-                            right: -4%;
-                            border-right: 2px solid rgb(0, 0, 0);
-                            animation: 0.9s infinite ease;
+                        //typing effect
+                        .typing {
+                            margin-left: 10px;
 
-                            @keyframes type {
-                                0% {
-                                    opacity: 0;
+                            &:after {
+                                content: "";
+                                width: 1px;
+                                height: 99%;
+                                right: -4%;
+                                border-right: 2px solid rgb(0, 0, 0);
+                                animation: 0.9s infinite ease;
+
+                                @keyframes type {
+                                    0% {
+                                        opacity: 0;
+                                    }
+
+                                    100% {
+                                        opacity: 1;
+                                    }
                                 }
 
-                                100% {
-                                    opacity: 1;
-                                }
                             }
+                        }
+                    }
 
+                }
+
+                .main-btn {
+                    width: 99%;
+                    border-radius: 30px;
+                    font-weight: 600;
+                    position: relative;
+                    border: 1px solid rgb(255, 255, 255);
+                    display: flex;
+                    align-self: flex-start;
+                    align-items: center;
+                    justify-content: space-between;
+                    overflow: hidden;
+                    text-decoration: none;
+
+                    .btn-text {
+                        margin-left: 8em;
+                        font-weight: bold;
+                        font-size: 1.1rem;
+                    }
+
+                    .btn-icon {
+                        background-color: rgb(255, 255, 255);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        padding: .1rem;
+
+                        img {
+                            width: 35px;
+                        }
+                    }
+
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        transform: translateX(100%);
+                        transition: all .4s ease-out;
+                        z-index: -1;
+                    }
+
+                    &:hover {
+                        transition: all .4s ease-out;
+
+                        &::before {
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgb(255, 255, 255);
+                            transform: translateX(0);
+                            transition: all .4s ease-out;
+                        }
+                    }
+                }
+            }
+        }
+
+        ///////////////////////////////////////////
+        //////////// social media icons ///////////
+        //////////////////////////////////////////
+
+        .social-icons {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+
+
+            ul {
+                transform: translate(-270px);
+
+                li {
+                    display: block;
+                    margin: 1em;
+                    width: 18.75em;
+                    text-align: right;
+                    padding: 1em;
+                    border-radius: 0 30px 30px 0;
+                    transition: all 1s;
+
+                    &:hover {
+                        transform: translateX(110px);
+                        transform: rotate(360deg);
+                        transition: all 1s;
+                    }
+
+                    .icon {
+                        background-color: wheat;
+                        padding: 0.6em;
+                        border-radius: 50%;
+                        text-align: center;
+                        margin-left: 0.875em;
+                        width: 20%;
+                        transform: rotate(0deg);
+                        display: inline-block;
+                        vertical-align: middle;
+                        transition: all 1s;
+
+                    }
+                }
+            }
+        }
+
+
+        /////////////////////////////////////
+        /////////// ABOUT SECTION ////////////
+        /////////////////////////////////////
+
+
+        .about {
+            .about-image {
+                width: 35%;
+                position: relative;
+
+
+                .circle {
+                    width: 164%;
+                    position: absolute;
+                    top: -7%;
+                    left: 170%;
+                    animation: circle 9s linear infinite;
+                    transition: 0.5s;
+
+                    @keyframes circle {
+                        100% {
+                            transform: rotate(360deg);
                         }
                     }
                 }
 
             }
+        }
 
-            .main-btn {
-                width: 99%;
-                border-radius: 30px;
-                font-weight: 600;
-                position: relative;
-                border: 1px solid rgb(255, 255, 255);
-                display: flex;
-                align-self: flex-start;
-                align-items: center;
-                justify-content: space-between;
-                overflow: hidden;
-                text-decoration: none;
 
-                .btn-text {
-                    margin-left: 8em;
-                    font-weight: bold;
-                    font-size: 1.1rem;
-                }
+        /////////////////////////////////////
+        ///////// PORTOFOLIO SECTION ////////
+        /////////////////////////////////////
 
-                .btn-icon {
-                    background-color: rgb(255, 255, 255);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 50%;
-                    padding: .1rem;
+        .portfolio {
+            min-height: 100vh;
 
-                    img {
-                        width: 35px;
+            .potofolio-title {
+                text-align: center;
+                margin-bottom: 1em;
+                margin-top: 5em;
+
+                h2 {
+                    position: relative;
+                    text-transform: uppercase;
+                    font-size: 4rem;
+                    font-weight: 700;
+
+                    span {
+                        color: #8b8b8b;
                     }
-                }
 
-
-                &:before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    transform: translateX(100%);
-                    transition: all .4s ease-out;
-                    z-index: -1;
-                }
-
-                &:hover {
-                    transition: all .4s ease-out;
-
-                    &::before {
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgb(255, 255, 255);
-                        transform: translateX(0);
-                        transition: all .4s ease-out;
+                    .bg-text {
+                        position: absolute;
+                        top: 30%;
+                        left: 50%;
+                        color: #f5f5f5;
+                        transition: all .4s ease-in-out;
+                        z-index: -1;
+                        transform: translate(-50%, -50%);
+                        font-weight: 800;
+                        font-size: 5.9rem;
                     }
                 }
             }
-        }
-    }
-
-    ///////////////////////////////////////////
-    //////////// social media icons ///////////
-    //////////////////////////////////////////
-
-    .social-icons {
-        position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
-
-
-        ul {
-            transform: translate(-270px);
-
-            li {
-                display: block;
-                margin: 1em;
-                width: 18.75em;
-                text-align: right;
-                padding: 1em;
-                border-radius: 0 30px 30px 0;
-                transition: all 1s;
-
-                &:hover {
-                    transform: translateX(110px);
-                    transform: rotate(360deg);
-                    transition: all 1s;
-                }
-
-                .icon {
-                    background-color: wheat;
-                    padding: 0.6em;
-                    border-radius: 50%;
-                    text-align: center;
-                    margin-left: 0.875em;
-                    width: 20%;
-                    transform: rotate(0deg);
-                    display: inline-block;
-                    vertical-align: middle;
-                    transition: all 1s;
-
-                }
-            }
-        }
-    }
-
-}
-
-
-
-
-
-/////////////////////////////////////
-/////////// ABOUT SECTION ////////////
-/////////////////////////////////////
-
-
-.about {
-    min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
-
-
-    .about-title {
-        text-align: center;
-        margin-bottom: 1em;
-        margin-top: 1em;
-
-        h2 {
-            position: relative;
-            text-transform: uppercase;
-            font-size: 4rem;
-            font-weight: 700;
-        }
-
-        span {
-            color: rgb(139, 139, 139);
-        }
-
-        .bg-text {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            color: #f5f5f5;
-            transition: all .4s ease-in-out;
-            z-index: -1;
-            transform: translate(-50%, -50%);
-            font-weight: 800;
-            font-size: 5.9rem;
-        }
-    }
-
-
-    .about-content {
-        display: flex;
-        justify-content: space-around;
-
-
-        .about-text {
-            width: 43%;
-            margin-top: 12em;
-
-
-
-        }
-
-        .about-image {
-            width: 35%;
-            position: relative;
-
-
-            .circle {
-
-                width: 164%;
-                position: absolute;
-                top: -7%;
-                left: 72%;
-                animation: circle 9s linear infinite;
-                transition: 0.5s;
-
-                @keyframes circle {
-                    100% {
-                        transform: rotate(360deg);
-                    }
-                }
-            }
-
-            .mine {
-                width: 76%;
-                position: absolute;
-                top: 0%;
-                left: 14%;
-            }
-
-
-
-        }
-    }
-
-
-
-}
-
-
-/////////////////////////////////////
-///////// PORTOFOLIO SECTION ////////
-/////////////////////////////////////
-
-.portfolio {
-    //min-height: 100vh;
-
-    .potofolio-title {
-        text-align: center;
-        margin-bottom: 1em;
-        margin-top: 5em;
-
-        h2 {
-            position: relative;
-            text-transform: uppercase;
-            font-size: 4rem;
-            font-weight: 700;
-
-            span {
-                color: #8b8b8b;
-            }
-
-            .bg-text {
-                position: absolute;
-                top: 30%;
-                left: 50%;
-                color: #f5f5f5;
-                transition: all .4s ease-in-out;
-                z-index: -1;
-                transform: translate(-50%, -50%);
-                font-weight: 800;
-                font-size: 5.9rem;
-            }
-        }
-    }
-
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-
-        .filter {
-            flex: 0 0 100%;
-            max-width: 100%;
-            margin-bottom: 20px;
 
             .filter-btns {
-                list-style: none;
-                text-align: center;
-                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1.25em;
+                border: 1px solid rgba(237, 237, 237, 0.6);
+                flex-wrap: wrap;
+                margin: 1.25em;
 
                 li {
-                    font-weight: 500;
-                    display: inline-block;
-                    margin: 0 8px;
-                    text-transform: uppercase;
+                    margin: 0.625;
+                    padding: 5px 20px;
+                    color: blueviolet;
+                    font-size: 1rem;
+                    letter-spacing: 0.5px;
+                    font-weight: 400;
                     cursor: pointer;
+                    user-select: none;
 
-                }
-
-                .active2 {
-                    color: blue;
-                    border-bottom: 2px solid red;
-                    background-color: aqua;
+                    .project-filter-active {
+                        background-color: #193559;
+                        color: yellowgreen;
+                    }
                 }
             }
+            .projects{
+                max-width: 1100px;
+                width: 100%;
+                margin: 0 auto;
+                
+                .projects-box{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin: auto;
+                    width: 10px;
+                    padding: 15px;
+                    border: 1px solid yellowgreen;
+                    padding: 1em;
+                    margin: 1em;
+                }
+
+                img{
+                    width: 25%;
+                    height: 25%;
+                    overflow: hidden;
+                    border-radius: 5px;
+                    margin-right: 2em;
+
+                }
+            }
+
+
         }
 
-        .portfolio-gallery {
-            flex: 0 0 100%;
-            max-width: 100%;
-            display: flex;
-            flex-wrap: wrap;
+        /////////////////////////////////////
+        /////////// CONTACT SECTION /////////
+        /////////////////////////////////////
+        .contact {
+            //min-height: 100vh;
 
-            .item {
-                flex: 0 0 33.33%;
-                max-width: 33.33%;
-                padding: 8px;
 
-                .inner {
+            .contact-title {
+                text-align: center;
+                margin-bottom: 1em;
+                margin-top: 5em;
 
-                    img {
-                        width: 90%;
-                        display: block;
-                        border-radius: 2em;
+                h2 {
+                    position: relative;
+                    text-transform: uppercase;
+                    font-size: 4rem;
+                    font-weight: 700;
+
+                    span {
+                        color: #8b8b8b;
+                    }
+
+                    .bg-text {
+                        position: absolute;
+                        top: 30%;
+                        left: 50%;
+                        color: #f5f5f5;
+                        transition: all .4s ease-in-out;
+                        z-index: -1;
+                        transform: translate(-50%, -50%);
+                        font-weight: 800;
+                        font-size: 5.9rem;
                     }
                 }
             }
 
+            .contact-form {
 
 
+                form {
+                    width: 90%;
+                    margin: auto;
 
+                    .input-group {
+                        margin-bottom: 2em;
+                        position: relative;
+                    }
+
+                    input,
+                    textarea {
+                        width: 73%;
+                        padding: .8em;
+                        background-color: rgba(0, 0, 0, 0.128);
+                        border: none;
+                        outline: 0;
+                        font-size: 1rem;
+                    }
+
+                    input:focus~label,
+                    input:valid~label,
+                    textarea:focus~label,
+                    textarea:valid~label {
+                        top: -2.5em;
+                    }
+
+                    label {
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        padding: .8em;
+                        cursor: text;
+                        transition: .2s;
+                    }
+                }
+
+            }
 
         }
-    }
-}
 
-/////////////////////////////////////
-///////// PORTOFOLIO SECTION ////////
-/////////////////////////////////////
-.contact {
-    //min-height: 100vh;
-
-
-    .contact-title {
-        text-align: center;
-        margin-bottom: 1em;
-        margin-top: 5em;
-
-        h2 {
-            position: relative;
-            text-transform: uppercase;
-            font-size: 4rem;
-            font-weight: 700;
-
-            span {
-                color: #8b8b8b;
-            }
-
-            .bg-text {
-                position: absolute;
-                top: 30%;
-                left: 50%;
-                color: #f5f5f5;
-                transition: all .4s ease-in-out;
-                z-index: -1;
-                transform: translate(-50%, -50%);
-                font-weight: 800;
-                font-size: 5.9rem;
-            }
-        }
-    }
-
-    .contact-form {
-
-
-        form {
-            width: 90%;
-            margin: auto;
-
-            .input-group {
-                margin-bottom: 2em;
-                position: relative;
-            }
-
-            input,
-            textarea {
-                width: 73%;
-                padding: .8em;
-                background-color: rgba(0, 0, 0, 0.128);
-                border: none;
-                outline: 0;
-                font-size: 1rem;
-            }
-
-            input:focus~label,
-            input:valid~label,
-            textarea:focus~label,
-            textarea:valid~label {
-                top: -2.5em;
-            }
-
-            label {
-                height: 100%;
-                position: absolute;
-                left: 0;
-                top: 0;
-                padding: .8em;
-                cursor: text;
-                transition: .2s;
-            }
-        }
 
     }
-
-}

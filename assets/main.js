@@ -2,7 +2,7 @@
 ///////*************** TYPING EFFECT *************///////
 ///////*******************************************///////
 
-const texts = ['Front-End developer', 'UX/UI designer'];
+const texts = ['Front-End developer', 'UI designer'];
 // here we need to define a counter that gose on eche word one by one inside the array 
 let count = 0;
 // we need also to check indivijual caractère(letters) we are passing by right now inside the array
@@ -54,10 +54,34 @@ function changeLanguage(e){
 ///////*********************************************///////
 ///////************* DARK/LIGHT MODE ***************///////
 ///////*********************************************///////
-let toggle = document.querySelector('.toggle')
-toggle.addEventListener('click', ()=>{
-    toggle.classList.toggle('activ')
-})
+
+//create a variable to monitor the input checkbox
+const colorSwitch = document.getElementById("input-color-switch");
+
+//when the input is clicked verify the state of the checkbox
+colorSwitch.addEventListener("click", checkMode);
+
+//1. see which state the checkbox is in
+//2. if it is checked enable the dark mode by adding the class
+//3. if it is not checked remove dark mode by removing the class
+function checkMode() {
+  console.log("checking...");
+  if (colorSwitch.checked) {
+    console.log("dark on");
+    darkModeOn();
+  } else {
+    console.log("dark off");
+    darkModeOff();
+  }
+}
+
+function darkModeOn() {
+  document.body.classList.add("dark-mode");
+}
+
+function darkModeOff() {
+  document.body.classList.remove("dark-mode");
+}
 
 
 
@@ -66,28 +90,18 @@ toggle.addEventListener('click', ()=>{
 ///////*********** GALLARY ITEM FILTER ***********///////
 ///////*******************************************///////
 
-const filterButtons = document.querySelector(".filter-btns").children;
-const items = document.querySelector(".portfolio-gallery").children;
+$(document).on('click','.filter-btns',function(){
+    $(this).addClass('project-filter-active').siblings().removeClass('project-filter-active')
+});
 
-
-for (let i = 0; i < filterButtons.length; i++) {
-    filterButtons[i].addEventListener("click", function () {
-
-            for (let j = 0; j < filterButtons.length; j++) {
-                filterButtons[j].classList.remove("active2")
-            }
-            this.classList.add("active");
-            const target = this.getAttribute("data-target")
-
-            for (let k = 0; k > items.length; k++) {
-                items[k].getElementsByClassName.display = "none";
-                if (target == items[k].getAttribute("data-id")) {
-                    items[k].getElementsByClassName.display = "block";
-                }
-
-                if (target == "all") {
-                    items[k].getElementsByClassName.display = "block";
-                }
-            }
-        })
-    }
+$(document).ready(function(){
+    $('.list').click(function(){
+        const value = $(this).attr('data-filter');
+        if(value == 'all'){
+            $('projetcs-box').show('1000');
+        }else{
+            $('.projet-box').not('.'+value).hide('1000');
+            $('.projet-box').filter('.'+value).show('1000');
+        }
+    })
+})

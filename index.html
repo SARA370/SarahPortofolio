@@ -5,7 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/imgs/favicon_package/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/imgs/favicon_package/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/imgs/favicon_package/favicon-16x16.png">
+    <link rel="manifest" href="./assets/imgs/favicon_package/site.webmanifest">
+    <link rel="mask-icon" href="./assets/imgs/favicon_package/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#a84747">
+
     <link rel="stylesheet" href="./assets/css/style.css">
+
     <title>Sarah Portofolio</title>
 </head>
 
@@ -16,7 +25,7 @@
     <header>
         <!------------------------- NAVBAR ------------------------>
         <nav class="nav container">
-            <a href="#"><img class="logo-image" src="./assets/imgs/logo_Plan de travail 1.png" alt="LOGO IMAGE"></a>
+            <a href="#"><img class="logo-image" src="./assets/imgs/LOGO.png" alt="LOGO IMAGE"></a>
 
             <ul class="navbar">
                 <li><a href="#mywork" class="nav-links">MY WORK</a></li>
@@ -37,11 +46,14 @@
                         </li>
                     </ul>
                 </div>
-                <!------------------------- DARK/LIGHT MODE ------------------------>
-                <div class="toggle">
-                    
-                </div>
             </ul>
+             <!------------------------- DARK/LIGHT MODE ------------------------>
+             <div class="wrapper-color-switch">
+                <input type="checkbox" id="input-color-switch">
+                <label for="input-color-switch" class="color-switch">
+                    <div class="color-switch-toggle"></div>
+                </label>
+            </div>
         </nav>
     </header>
 
@@ -75,23 +87,16 @@
     <!---------------------- NOTE social media icons----------------------->
     <div class="social-icons">
         <ul>
-            <li class="behance-icon"><a href="#">Behance<img class="icon"
-                        src="./assets/imgs/behance-svgrepo-com.svg" alt=""></a>
+            <li class="behance-icon"><a href="#">Behance<img class="icon" src="./assets/imgs/behance-svgrepo-com.svg"
+                        alt=""></a>
             </li>
-            <li class="github-icon"><a href="#">Github<img class="icon"
-                        src="./assets/imgs/github-svgrepo-com.svg" alt=""></a></li>
-            <li class="linkdein-icon"><a href="#">Linkedin<img  class="icon"
+            <li class="github-icon"><a href="#">Github<img class="icon" src="./assets/imgs/github-svgrepo-com.svg"
+                        alt=""></a></li>
+            <li class="linkdein-icon"><a href="#">Linkedin<img class="icon"
                         src="./assets/imgs/linkedin-social-media-svgrepo-com.svg" alt=""></a>
             </li>
         </ul>
     </div>
-
-
-
-
-
-
-
 
 
     <!--------------------------------------------------------->
@@ -99,12 +104,9 @@
     <!--------------------------------------------------------->
 
     <section class="about container" id="about">
-
         <div class="about-content">
-
             <div class="about-image">
                 <img src="./assets/imgs/circle.svg" class="circle">
-
             </div>
         </div>
     </section>
@@ -117,72 +119,35 @@
         <div class="potofolio-title">
             <h2>P<span>ortofolio</span><span class="bg-text">PORTFOLIO</span></h2>
         </div>
+        <ul class="filter-btns">
+            <li class="list project-filter-active" data-filter="all">All</li>
+            <li data-target="code" data-filter="code">Code</li>
+            <li data-target="ux/ui-design" data-filter="ui-design">UI Design</li>
+            <li data-target="graphique-design" data-filter="GD">Graphique Design</li>
+            <li data-target="email-template" data-filter="email">Emaile marketing template</li>
+        </ul>
 
-        <div class="row">
-
-            <div class="filter">
-                <ul class="filter-btns">
-                    <li class="active2" data-target="all">All</li>
-                    <li data-target="code">Code</li>
-                    <li data-target="ux/ui-design">UX/UI Design</li>
-                    <li data-target="graphique-design">Graphique Design</li>
-                    <li data-target="email-template">Emaile marketing template</li>
-                </ul>
-            </div>
-
-            <div class="row">
-                <div class="portfolio-gallery">
-
-                    <div class="item" data-id="Code">
-                        <div class="inner">
-                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
-                        </div>
-                    </div>
-
-                    <div class="item" data-id="ux/ui-design">
-                        <div class="inner">
-                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
-                        </div>
-                    </div>
-
-                    <div class="item" data-id="graphique-design">
-                        <div class="inner">
-                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
-                        </div>
-                    </div>
-
-                    <div class="item" data-id="email-template">
-                        <div class="inner">
-                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="item" data-id="email-template">
-                        <div class="inner">
-                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="item" data-id="email-template">
-                        <div class="inner">
-                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="item" data-id="email-template">
-                        <div class="inner">
-                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="item" data-id="email-template">
-                        <div class="inner">
-                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="item" data-id="email-template">
-                        <div class="inner">
-                            <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="projects">
+            <a href="" class="projets-box code">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="work">
+            </a>
+            <a href="" class="projets-box ui-design">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="work">
+            </a>
+            <a href="" class="projets-box GD">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="work">
+            </a>
+            <a href="" class="projets-box">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="work">
+            </a>
+            <a href="" class="projets-box email">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="work">
+            </a>
+            <a href="" class="projets-box code">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" alt="work">
+            </a>
+        </div>
+        
 
         </div>
     </section>
@@ -231,6 +196,7 @@
     <!--------------------------------------------------------->
     <!------------------Link to javascipt---------------------->
     <!--------------------------------------------------------->
+    <script src="./assets/jQuery.js"></script>
     <script src="./assets/main.js"></script>
 
 </body>
