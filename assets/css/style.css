@@ -68,26 +68,31 @@ body header {
 body header .nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 body header .nav .logo-image {
   max-width: 44%;
 }
-body header .nav .navbar {
+body header .nav .nav-btns {
+  display: flex;
+  justify-content: end;
+  width: 50%;
+}
+body header .nav .nav-btns .navbar {
   display: flex;
   align-items: center;
   -moz-column-gap: 1.5em;
        column-gap: 1.5em;
   margin-left: 1em;
 }
-body header .nav .navbar .nav-links {
+body header .nav .nav-btns .navbar .nav-links {
   color: #323232;
   font-family: "Sarpanch", sans-serif;
   font-weight: bold;
   font-size: 1.1rem;
   color: #193559;
 }
-body header .nav .navbar .nav-links-contact {
+body header .nav .nav-btns .navbar .nav-links-contact {
   color: #f5f5f5;
   background-color: rgba(124, 123, 123, 0.653);
   padding: 0.2rem 1.3em;
@@ -97,10 +102,10 @@ body header .nav .navbar .nav-links-contact {
   font-weight: bold;
   font-size: 1.1rem;
 }
-body header .nav .navbar .nav-links-contact:hover {
+body header .nav .nav-btns .navbar .nav-links-contact:hover {
   background-color: rgba(18, 38, 64, 0.25);
 }
-body header .nav .navbar .nav-links-contact::after {
+body header .nav .nav-btns .navbar .nav-links-contact::after {
   content: "";
   width: 30px;
   height: 30px;
@@ -138,34 +143,38 @@ body header .nav .navbar .nav-links-contact::after {
     opacity: 0;
   }
 }
-body header .nav .navbar .drop-down-body {
+body header .nav .nav-btns .drop-down-body {
   position: relative;
+  padding: 10px 20px;
 }
-body header .nav .navbar .drop-down-body .language-img {
+body header .nav .nav-btns .drop-down-body .language-img {
   max-width: 100%;
   display: block;
   border-radius: 5px;
 }
-body header .nav .navbar .drop-down-body .language-title {
+body header .nav .nav-btns .drop-down-body .language-title {
   padding-left: 0.1em;
   font-size: 1rem;
   margin-left: 0.2em;
 }
-body header .nav .navbar .drop-down-body .drop-down-btn {
+body header .nav .nav-btns .drop-down-body .drop-down-btn {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  padding-right: 2.3em;
+  padding-left: 0.7em;
   display: flex;
-  align-items: center;
+  justify-items: flex-start;
   color: white;
-  padding-right: 1em;
   border: 1px solid rgb(255, 255, 255);
   cursor: pointer;
   border-radius: 17px;
   background-color: rgba(111, 109, 109, 0.37);
 }
-body header .nav .navbar .drop-down-body .drop-down-btn:hover {
+body header .nav .nav-btns .drop-down-body .drop-down-btn:hover + .language-menu {
   opacity: 1;
   visibility: visible;
 }
-body header .nav .navbar .drop-down-body .language-menu {
+body header .nav .nav-btns .drop-down-body .language-menu {
   margin-top: 0.2em;
   position: absolute;
   border-radius: 17px;
@@ -174,27 +183,37 @@ body header .nav .navbar .drop-down-body .language-menu {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s, visibility 0.4s;
+  border-top: none;
+  border-bottom: solid 2px white;
+  border-left: solid 2px white;
+  border-right: solid 2px wite;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
 }
-body header .nav .navbar .drop-down-body .language-menu:hover {
+body header .nav .nav-btns .drop-down-body .language-menu:hover {
   opacity: 1;
   visibility: visible;
 }
-body header .nav .navbar .drop-down-body .language-menu .language-item {
+body header .nav .nav-btns .drop-down-body .language-menu .language-item {
   display: flex;
   align-items: center;
-  padding: 0.5em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  padding-right: 2.3em;
+  padding-left: 0.7em;
   cursor: pointer;
   transition: background-color 0.4s;
 }
-body header .nav .navbar .drop-down-body .language-menu .language-item:hover {
+body header .nav .nav-btns .drop-down-body .language-menu .language-item:hover {
   background-color: aquamarine;
 }
-body header .nav .wrapper-color-switch {
+body header .nav .nav-btns .wrapper-color-switch {
   display: flex;
+  margin-left: 5em;
   justify-content: flex-end;
   align-items: center;
 }
-body header .nav .wrapper-color-switch .color-switch {
+body header .nav .nav-btns .wrapper-color-switch .color-switch {
   width: 4rem;
   height: 1.9rem;
   border-radius: 10em;
@@ -206,7 +225,7 @@ body header .nav .wrapper-color-switch .color-switch {
   border-radius: 40px;
   border: 1px solid white;
 }
-body header .nav .wrapper-color-switch .color-switch .color-switch-toggle {
+body header .nav .nav-btns .wrapper-color-switch .color-switch .color-switch-toggle {
   width: 1.7em;
   height: 1.7em;
   background: white;
@@ -217,10 +236,10 @@ body header .nav .wrapper-color-switch .color-switch .color-switch-toggle {
   cursor: pointer;
   transition: all 250ms ease-in-out;
 }
-body header .nav #input-color-switch:checked ~ label .color-switch-toggle {
+body header .nav .nav-btns .wrapper-color-switch #input-color-switch:checked ~ label .color-switch-toggle {
   transform: translatex(2em);
 }
-body header .nav #input-color-switch {
+body header .nav .nav-btns .wrapper-color-switch #input-color-switch {
   display: none;
 }
 body .hero {
