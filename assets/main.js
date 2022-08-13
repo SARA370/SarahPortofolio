@@ -111,30 +111,62 @@ function filterImg(e){
         
         //Get data from data attributes
 		//Get image type data
-        const imgType = (img.dataset.img);
+        const imgType = parseInt(img.dataset.img);
 
         //Get button type data
-        const btnType = (e.target.dataset.btn);
+        const btnType = parseInt(e.target.dataset.btn);
 
 		// if the image type and the the type of the clicked button are not the same
         if(imgType !== btnType){
 			// Hide all images
-            img.classList.add('img-shrink');
             img.classList.remove('img-expand');
-        }
-    })
-}
+            img.classList.add('img-shrink');
+        };
+    });
+};
 
 // set click event for the 'All' button
 btns[0].addEventListener('click', (e)=>{
-	console.log('clicked')
-	
-	//Run the active button function
+    console.log('clicked')
+    
+    //Run the active button function
     setActiveBtn(e);
-	//Loop through all images
+    //Loop through all images
     imgs.forEach( img =>{
-		//Exapnd all images
+        //Exapnd all images
         img.classList.remove('img-shrink');
-        img.classList.add('img-expanded');
-    })
-})
+        img.classList.add('img-expand');
+    });
+});
+
+
+
+// ///////*******************************************///////
+// ///////*********** DARK LIGHT THEME  *************///////
+// ///////*******************************************//////
+
+
+const sun = "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg";
+const moon = "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg";
+const container = document.getElementsByClassName("theme-container")[0];
+const themeIcon = document.getElementById("theme-icon");
+
+
+container.addEventListener("click", setTheme);
+
+function setTheme(){
+
+    function setLight() {
+
+        themeIcon.src = sun;
+    
+      }
+      function setDark() {
+       
+        themeIcon.src = moon;
+    
+      }
+    
+    }
+
+}
