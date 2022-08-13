@@ -31,6 +31,7 @@
 
 }
 
+
 body {
     background-image: url(../imgs/Abstract_digital_background_with_technology_circuit_generated.jpg);
     background-size: cover;
@@ -552,6 +553,9 @@ body {
 .portfolio {
     min-height: 100vh;
 
+    .hide{
+        display: none;
+    }
 
     .potofolio-title {
         text-align: center;

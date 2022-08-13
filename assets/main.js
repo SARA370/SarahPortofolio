@@ -37,19 +37,7 @@
 // ///////************* DROPDOWN MENU ***************///////
 // ///////*******************************************///////
 
-let langItem = doument.getElementsByClassName('language-item');
-let btnImg = doument.getElementById('btn-title');
-let btnTitle = document.getElementById('btn-title');
 
-for (let i = 0; i < langItem.length; i++) {
-	let langItem = langItem[i];
-	langItem.onclick = changeLanguage;
-}
-
-function changeLanguage(e) {
-	btnImg.src = 'imgs/' + this.dataset.lang + '.svg';
-	btnTitle.innerText = this.dataset.lang;
-}
 
 
 // ///////*********************************************///////
@@ -95,60 +83,61 @@ function changeLanguage(e) {
 const btns = document.querySelectorAll('.portfolio-gallery button');
 const imgs = document.querySelectorAll('.portfolio-images img');
 
-//Add a click event to all buttons
-for (let i = 1; i < btns.length; i++) {
-	btns[i].addEventListener('click', filterImg);
-}
-//set active button on click
-function setActiveBtn(e) {
-	//Remove active class from all buttons
-	btns.forEach(btn => {
-		btn.classList.remove('btn-clicked')
-	});
-	//Add active class to clicked button
-	e.target.classList.add('btn-clicked');
+for(let i = 0; i < btns.length; i++){ // i = itteration
+    btns[i].addEventListener('click', filterImg);  
 }
 
+// SET ACTIVE BTN ON CLICK POUR AJOUTER UN STYLE CSS AU BOUTTON CLIQUé
+function setActiveBtn(e){ // e = event et c'est un parametre
 
-//Filter images
-function filterImg(e) {
-	//Run the actvie button function
-	setActiveBtn(e);
+    // ajout la classe active dans le boutton cliqué
+    e.target.classList.add('btn-clicked');
+    
 
-	//Loop through all images
-	imgs.forEach(img => {
+    // retirer la classe actived de tous les btns
+    btns.forEach(btn =>{
+        btn.classList.remove('btn-clicked');
+    });
+
+    
+}
 
 
-			//Expand all images
-			img.classList.remove('img-shrink');
-			img.classList.add('img-expand');
 
-			//Get data from data attributes
-			//Get image type data
-			const imgType = parseInt(img.dataset.img);
+function filterImg(e){
+    // run the active button function
 
-			//Get button type data
-			const btnType = parseInt(e.target.dataset.btn);
-		})
 
-		/* If the image type and the type of the clicked button are NOT the same */
+    setActiveBtn(e);
 
-		if (imgType !== btnType) {
-			//Hide the image
-			img.classList.remove('img-extand');
-			img.classList.add('img-shrick');
-		}
-	});
-};
+    // loop dans les img
 
-//set click event for 'All' button
-btn[0].addEventListener('click', (e) => {
-	//Run the active button function
-	setActiveBtn(e);
-	//Loop through all images
-	imgs.forEach(img => {
-		//Expand all images
-		img.classList.remove('img-shrink');
-		img.classList.add('img-expanded');
-	});
-});
+    imgs.forEach(img=>{
+
+        img.classList.remove('img-shrink');
+        img.classList.add('img-expand');
+        
+        // data-type bizarre là
+        const imgType = img.dataset.img;
+
+        //recup des btn data-btn mohem
+        const btnType = e.target.dataset.btn;
+
+        if(imgType !== btnType){
+
+            img.classList.add('img-shrink');
+            img.classList.remove('img-extand');
+
+        }
+
+    })
+
+}
+
+btns[0].addEventListener('click', (e)=>{
+    setActiveBtn(e);
+    imgs.forEach( img =>{
+        img.classList.remove('img-shrink');
+        img.classList.add('img-expanded');
+    })
+})

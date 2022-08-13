@@ -452,6 +452,9 @@ body header .nav .nav-btns .theme-container .change {
 .portfolio {
   min-height: 100vh;
 }
+.portfolio .hide {
+  display: none;
+}
 .portfolio .potofolio-title {
   text-align: center;
   margin-bottom: 1em;
