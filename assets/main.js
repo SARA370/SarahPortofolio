@@ -83,60 +83,57 @@
 const btns = document.querySelectorAll('.portfolio-gallery button');
 const imgs = document.querySelectorAll('.portfolio-images img');
 
-for(let i = 0; i < btns.length; i++){ // i = itteration
+
+// add a click event to all buttons
+for(let i = 0; i < btns.length; i++){ 
     btns[i].addEventListener('click', filterImg);  
 }
 
-// SET ACTIVE BTN ON CLICK POUR AJOUTER UN STYLE CSS AU BOUTTON CLIQUé
-function setActiveBtn(e){ // e = event et c'est un parametre
-
-    // ajout la classe active dans le boutton cliqué
+// set active button on click
+function setActiveBtn(e){ 
+	// Add active class to clicked button
     e.target.classList.add('btn-clicked');
-    
-
-    // retirer la classe actived de tous les btns
     btns.forEach(btn =>{
         btn.classList.remove('btn-clicked');
     });
-
-    
 }
-
-
-
+//Filter Images
 function filterImg(e){
     // run the active button function
 
-
     setActiveBtn(e);
 
-    // loop dans les img
-
+    // Loop through all images
     imgs.forEach(img=>{
-
+		// Expand all images
         img.classList.remove('img-shrink');
         img.classList.add('img-expand');
         
-        // data-type bizarre là
-        const imgType = img.dataset.img;
+        //Get data from data attributes
+		//Get image type data
+        const imgType = (img.dataset.img);
 
-        //recup des btn data-btn mohem
-        const btnType = e.target.dataset.btn;
+        //Get button type data
+        const btnType = (e.target.dataset.btn);
 
+		// if the image type and the the type of the clicked button are not the same
         if(imgType !== btnType){
-
+			// Hide all images
             img.classList.add('img-shrink');
-            img.classList.remove('img-extand');
-
+            img.classList.remove('img-expand');
         }
-
     })
-
 }
 
+// set click event for the 'All' button
 btns[0].addEventListener('click', (e)=>{
+	console.log('clicked')
+	
+	//Run the active button function
     setActiveBtn(e);
+	//Loop through all images
     imgs.forEach( img =>{
+		//Exapnd all images
         img.classList.remove('img-shrink');
         img.classList.add('img-expanded');
     })

@@ -525,6 +525,10 @@ body header .nav .nav-btns .theme-container .change {
   width: 0em;
   margin: -1em;
 }
+.portfolio .work-section .portfolio-images .img-expanded {
+  width: 25em;
+  margin: 1em;
+}
 
 .contact .contact-title {
   text-align: center;
