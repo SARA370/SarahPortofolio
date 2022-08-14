@@ -102,7 +102,6 @@ function filterImg(e){
     // run the active button function
 
     setActiveBtn(e);
-
     // Loop through all images
     imgs.forEach(img=>{
 		// Expand all images
@@ -111,7 +110,7 @@ function filterImg(e){
         
         //Get data from data attributes
 		//Get image type data
-        const imgType = (img.dataset.img);
+        const imgType = img.dataset.img;
 
         //Get button type data
         const btnType = (e.target.dataset.btn);
@@ -128,7 +127,7 @@ function filterImg(e){
 // set click event for the 'All' button
 btns[0].addEventListener('click', (e)=>{
 	console.log('clicked')
-	
+
 	//Run the active button function
     setActiveBtn(e);
 	//Loop through all images
