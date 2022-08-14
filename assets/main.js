@@ -134,7 +134,7 @@ for (let i = 1; i < btns.length; i++) {
 function setActiveBtn(e) {
     //Remove active class from all buttons
     btns.forEach(btn => {
-        btn.classList.remove('btn-active');
+        btn.classList.remove('btn-clicked');
     });
 
     //Add active class to clicked button
