@@ -296,45 +296,57 @@ body {
                 //         display: none;
                 //     }
                 // }
-                .theme-container {
-                    width: 30px;
-                    height: 30px;
-                    padding: 1.2em;
-                    border-radius: 64px;
-                    position: fixed;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    transition: 0.5s;
-                    background-color: #ffffff00;
-                    border: 1px solid rgb(255, 255, 255);
 
+                .dark-light-switch{
+                    display: flex;
+                    align-items: center;
+
+                    .theme-container {
+                        width: 30px;
+                        height: 30px;
+                        padding: 1.2em;
+    
+                        //margin-top: .4em; 
+    
+                        border-radius: 64px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: 0.5s;
+                        background-color: #ffffff00;
+                        border: 1px solid rgb(255, 255, 255);
+    
+                      
+    
+                        @keyframes change {
+                            0% {
+                                transform: scale(1);
+                            }
+    
+                            100% {
+                                transform: scale(1.4);
+                            }
+                        }
+    
+                        .change {
+                            animation-name: change;
+                            animation-duration: 1s;
+                            animation-direction: alternate;
+                        }
+                    }
+                    
                     .shadow-dark {
                         background: red;
                     }
-
+    
                     .shadow-light {
                         box-shadow: 7px 7px 15px -10px #bbcfda, -4px -4px 13px #ffffff,
                             inset 7px 7px 3px rgba(209, 217, 230, 0.35),
                             inset -11px -11px 3px rgba(255, 255, 255, 0.3)
                     }
 
-                    @keyframes change {
-                        0% {
-                            transform: scale(1);
-                        }
-
-                        100% {
-                            transform: scale(1.4);
-                        }
-                    }
-
-                    .change {
-                        animation-name: change;
-                        animation-duration: 1s;
-                        animation-direction: alternate;
-                    }
                 }
+                
             }
         }
     }
@@ -483,6 +495,7 @@ body {
 //////////////////////////////////////////
 
 .social-icons {
+    width: 10%;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
@@ -610,7 +623,7 @@ body {
                 border: 2px solid #111;
                 border-radius: .2em;
                 cursor: pointer;
-                transition: .3s;
+                transition: .3s ease-in-out;
             }
         }
 
@@ -624,10 +637,10 @@ body {
             img {
                 width: 20rem;
                 border-radius: .2em;
-                transition: .6s;
+                transition: .4s ease;
             }
 
-            .img-extand{
+            .img-expand{
                 width: 25em;
                 margin: 1em;
             }
@@ -635,6 +648,7 @@ body {
                 width: 0em;
                 margin: -1em;
             }
+
         }
     }
 }

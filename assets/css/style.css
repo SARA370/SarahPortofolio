@@ -227,24 +227,21 @@ body header .nav .nav-btns .drop-down-body .language-menu .language-item:hover {
   background-color: rgb(255, 255, 255);
   border-top-left-radius: 0px;
 }
-body header .nav .nav-btns .theme-container {
+body header .nav .nav-btns .dark-light-switch {
+  display: flex;
+  align-items: center;
+}
+body header .nav .nav-btns .dark-light-switch .theme-container {
   width: 30px;
   height: 30px;
   padding: 1.2em;
   border-radius: 64px;
-  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.5s;
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid rgb(255, 255, 255);
-}
-body header .nav .nav-btns .theme-container .shadow-dark {
-  background: red;
-}
-body header .nav .nav-btns .theme-container .shadow-light {
-  box-shadow: 7px 7px 15px -10px #bbcfda, -4px -4px 13px #ffffff, inset 7px 7px 3px rgba(209, 217, 230, 0.35), inset -11px -11px 3px rgba(255, 255, 255, 0.3);
 }
 @-webkit-keyframes change {
   0% {
@@ -262,13 +259,19 @@ body header .nav .nav-btns .theme-container .shadow-light {
     transform: scale(1.4);
   }
 }
-body header .nav .nav-btns .theme-container .change {
+body header .nav .nav-btns .dark-light-switch .theme-container .change {
   -webkit-animation-name: change;
           animation-name: change;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
+}
+body header .nav .nav-btns .dark-light-switch .shadow-dark {
+  background: red;
+}
+body header .nav .nav-btns .dark-light-switch .shadow-light {
+  box-shadow: 7px 7px 15px -10px #bbcfda, -4px -4px 13px #ffffff, inset 7px 7px 3px rgba(209, 217, 230, 0.35), inset -11px -11px 3px rgba(255, 255, 255, 0.3);
 }
 
 .hero {
@@ -390,6 +393,7 @@ body header .nav .nav-btns .theme-container .change {
 }
 
 .social-icons {
+  width: 10%;
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
@@ -503,7 +507,7 @@ body header .nav .nav-btns .theme-container .change {
   border: 2px solid #111;
   border-radius: 0.2em;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 .portfolio .work-section .portfolio-images {
   display: flex;
@@ -515,9 +519,9 @@ body header .nav .nav-btns .theme-container .change {
 .portfolio .work-section .portfolio-images img {
   width: 20rem;
   border-radius: 0.2em;
-  transition: 0.6s;
+  transition: 0.4s ease;
 }
-.portfolio .work-section .portfolio-images .img-extand {
+.portfolio .work-section .portfolio-images .img-expand {
   width: 25em;
   margin: 1em;
 }
