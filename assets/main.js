@@ -42,48 +42,48 @@ const dropdowns = document.querySelectorAll('.dropdown');
 
 //Loop through all dropdown elements
 dropdowns.forEach(dropdown => {
-  //Get inner elements from each dropdown
-  const select = dropdown.querySelector('.select');
-  const caret = dropdown.querySelector('.caret');
-  const menu = dropdown.querySelector('.menu');
-  const options = dropdown.querySelectorAll('.menu li');
-  const selected = dropdown.querySelector('.selected');
-  
-  /*
-    We are using this method in order to have 
-    multiple dropdown menus on the page work
-  */
-  
-  //Add a click event to the select element
-  select.addEventListener('click', () => {
-    //Add the clicked select styles to the select element
-    select.classList.toggle('select-clicked');
-    //Add the rotate styles to the caret element
-    caret.classList.toggle('caret-rotate');
-    //Add the open styles to the menu element
-    menu.classList.toggle('menu-open');
-  });
-  
-  //Loop through all option elements
-  options.forEach(option => {
-    //Add a click event to the option element
-    option.addEventListener('click', () => {
-      //Change selected inner text to clicked option inner text
-      selected.innerText = option.innerText;
-      //Add the clicked select styles to the select element
-      select.classList.remove('select-clicked');
-      //Add the rotate styles to the caret element
-      caret.classList.remove('caret-rotate');
-      //Add the open styles to the menu element
-      menu.classList.remove('menu-open');
-      //Remove active class from all option elements
-      options.forEach(option => {
-        option.classList.remove('active');
-      });
-      //Add active class to clicked option element
-      option.classList.add('active');
+    //Get inner elements from each dropdown
+    const select = dropdown.querySelector('.select');
+    const caret = dropdown.querySelector('.caret');
+    const menu = dropdown.querySelector('.menu');
+    const options = dropdown.querySelectorAll('.menu li');
+    const selected = dropdown.querySelector('.selected');
+
+    /*
+      We are using this method in order to have 
+      multiple dropdown menus on the page work
+    */
+
+    //Add a click event to the select element
+    select.addEventListener('click', () => {
+        //Add the clicked select styles to the select element
+        select.classList.toggle('select-clicked');
+        //Add the rotate styles to the caret element
+        caret.classList.toggle('caret-rotate');
+        //Add the open styles to the menu element
+        menu.classList.toggle('menu-open');
     });
-  });
+
+    //Loop through all option elements
+    options.forEach(option => {
+        //Add a click event to the option element
+        option.addEventListener('click', () => {
+            //Change selected inner text to clicked option inner text
+            selected.innerText = option.innerText;
+            //Add the clicked select styles to the select element
+            select.classList.remove('select-clicked');
+            //Add the rotate styles to the caret element
+            caret.classList.remove('caret-rotate');
+            //Add the open styles to the menu element
+            menu.classList.remove('menu-open');
+            //Remove active class from all option elements
+            options.forEach(option => {
+                option.classList.remove('active');
+            });
+            //Add active class to clicked option element
+            option.classList.add('active');
+        });
+    });
 });
 
 
@@ -99,20 +99,21 @@ const themeIcon = document.getElementById("theme-icon");
 
 container.addEventListener("click", setTheme);
 
-function setTheme(){
+function setTheme() {
 
     function setLight() {
 
         themeIcon.src = sun;
-    
-      }
-      function setDark() {
-       
-        themeIcon.src = moon;
-    
-      }
-    
+
     }
+
+    function setDark() {
+
+        themeIcon.src = moon;
+
+    }
+
+}
 
 
 
@@ -125,59 +126,58 @@ const btns = document.querySelectorAll('.portfolio-gallery button');
 const imgs = document.querySelectorAll('.portfolio-images img');
 
 //Add a click event to all buttons
-for(let i = 1; i < btns.length; i++) {
-  btns[i].addEventListener('click', filterImg);
+for (let i = 1; i < btns.length; i++) {
+    btns[i].addEventListener('click', filterImg);
 }
 
 //Set active button on click
 function setActiveBtn(e) {
-  //Remove active class from all buttons
-  btns.forEach(btn => {
-    btn.classList.remove('');
-  });
-  
-  //Add active class to clicked button
-  e.target.classList.add('btn-clicked');
+    //Remove active class from all buttons
+    btns.forEach(btn => {
+        btn.classList.remove('btn-active');
+    });
+
+    //Add active class to clicked button
+    e.target.classList.add('btn-clicked');
 }
 
 //Filter Images
 function filterImg(e) {
-  //Run the active button function
-  setActiveBtn(e);
-  
-  //Loop through all images
-  imgs.forEach(img => {
-    //Expand all images
-    img.classList.remove('img-shrink');
-    img.classList.add('img-expand');
-    
-    //Get data from data attributes
-    //Get image type data
-    const imgType = parseInt(img.dataset.img);
-    //Get button type data
-    const btnType = parseInt(e.target.dataset.btn);
-    
-    /*
-      If the image type and the type of the 
-      clicked button are NOT the same
-    */
-    if(imgType !== btnType) {
-      //Hide the image
-      img.classList.remove('img-expand');
-      img.classList.add('img-shrink');
-    }
-  });
+    //Run the active button function
+    setActiveBtn(e);
+
+    //Loop through all images
+    imgs.forEach(img => {
+        //Expand all images
+        img.classList.remove('img-shrink');
+        img.classList.add('img-expand');
+
+        //Get data from data attributes
+        //Get image type data
+        const imgType = parseInt(img.dataset.img);
+        //Get button type data
+        const btnType = parseInt(e.target.dataset.btn);
+
+        /*
+          If the image type and the type of the 
+          clicked button are NOT the same
+        */
+        if (imgType !== btnType) {
+            //Hide the image
+            img.classList.remove('img-expand');
+            img.classList.add('img-shrink');
+        }
+    });
 }
 
 //Set click event for the 'All' button
 btns[0].addEventListener('click', (e) => {
-  //Run the active button function
-  setActiveBtn(e);
-  //Loop through all images
-  imgs.forEach(img => {
-    //Expand all images
-    img.classList.remove('img-shrink');
-    img.classList.add('img-expanded');
-  });
+    //Run the active button function
+    setActiveBtn(e);
+    //Loop through all images
+    imgs.forEach(img => {
+        //Expand all images
+        img.classList.remove('img-shrink');
+        img.classList.add('img-expanded');
+    });
 });
-

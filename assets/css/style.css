@@ -511,7 +511,9 @@ body header .nav .nav-btns .dark-light-switch .shadow-light {
   transition: 0.3s;
 }
 .portfolio .work-section .portfolio-images {
-  max-width: 1360px;
+  width: 1360px;
+  padding: 0;
+  max-height: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -523,7 +525,7 @@ body header .nav .nav-btns .dark-light-switch .shadow-light {
   width: 25em;
   margin: 1em;
   border-radius: 0.2em;
-  transition: 0.6s;
+  transition: max-height 400ms ease-in-out, width 350ms ease-in-out, padding 350ms ease-in-out;
 }
 .portfolio .work-section .portfolio-images .img-expand {
   width: 25em;
