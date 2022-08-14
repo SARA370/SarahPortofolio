@@ -153,149 +153,104 @@ body {
                     }
                 }
 
-                .drop-down-body {
+                .dropdown {
+                    min-width: 15em;
                     position: relative;
-                    padding: 10px 20px;
+                    margin: 2em;
+                  }
+                  
+                  .select {
+                    background: #2a2f3b;
+                    color: #fff;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 2px #2a2f3b solid;
+                    border-radius: 0.5em;
+                    padding: 1em;
+                    cursor: pointer;
+                    transition: background 0.3s;
+                  }
+                
+                  
+                  /*
+                    Clicked styles 
+                    (added later in Javascript)
+                  */
+                  .select-clicked {
+                    border: 2px #26489a solid;
+                    box-shadow: 0 0 0.8em #26489a;
+                  }
+                  
+                  .select:hover {
+                    background: #323741;
+                  }
+                  
+                  .caret {
+                      width: 0;
+                      height: 0;
+                      border-left: 5px solid transparent;
+                      border-right: 5px solid transparent;
+                      border-top: 6px solid #fff;
+                    transition: 0.3s;
+                  }
+                  
+                  /*
+                    Rotate styles 
+                    (added later in Javascript)
+                  */
+                  .caret-rotate {
+                    transform: rotate(180deg);
+                  }
+                  
+                  .menu {
+                    list-style: none;
+                    padding: 0.2em 0.5em;
+                    background: #323741;
+                    border: 1px #363a43 solid;
+                    box-shadow: 0 0.5em  1em rgba(0, 0, 0, 0.2);
+                    border-radius: 0.5em;
+                    color: #9fa5b5;
+                    position: absolute;
+                    top: 3em;
+                    left: 50%;
+                    width: 100%;
+                    transform: translateX(-50%);
+                    opacity: 0;
+                    display: none;
+                    transition: 0.2s;
+                    z-index: 1;
+                  }
+                  
+                  .menu li {
+                    padding: 0.7em 0.5em;
+                    margin: 0.3em 0;
+                    border-radius: 0.5em;
+                    cursor: pointer;
+                  }
+                  
+                  .menu li:hover {
+                    background: #2a2d35; 
+                  }
+                  
+                  /*
+                    Active styles 
+                    (added later in Javascript)
+                  */
+                  .active {
+                    background: #23242a;
+                  }
+                  
+                  /*
+                    Open styles 
+                    (added later in Javascript)
+                  */
+                  .menu-open {
+                    display: block;
+                    opacity: 1;
+                  }
+               
 
-                    .language-title {
-                        padding-left: .1em;
-                        font-size: 1rem;
-                        margin-left: .2em;
-                    }
-
-                    .drop-down-btn {
-                        padding-top: .4em;
-                        padding-bottom: .4em;
-                        padding-right: 2.3em;
-                        padding-left: .7em;
-
-                        display: flex;
-                        justify-items: flex-start;
-                        color: white;
-                        border: 1px solid rgb(255, 255, 255);
-                        cursor: pointer;
-                        border-radius: 17px;
-                        background-color: rgb(111, 109, 109, 37%);
-
-                        &:hover+.language-menu {
-                            opacity: 1;
-                            visibility: visible;
-                        }
-
-                        .caret-1 {
-                            width: 0;
-                            height: 0;
-                            border-left: 5px solid transparent;
-                            border-right: 5px solid transparent;
-                            border-top: 6px solid whitesmoke;
-                            transition: 0.3s;
-                            position: absolute;
-                            top: 25px;
-                            left: 64px;
-                            cursor: pointer;
-
-                        }
-                    }
-
-                    .language-menu {
-                        margin-top: 0;
-                        position: absolute;
-                        border-radius: 17px;
-                        background-color: rgba(0, 0, 0, 37%);
-                        border: 1px solid blue;
-                        opacity: 0;
-                        visibility: hidden;
-                        transition: opacity .4s, visibility .4s;
-                        border-top: none;
-                        border-bottom: solid 2px white;
-                        border-left: solid 2px white;
-                        border-right: solid 2px wite;
-                        border-bottom-left-radius: 13px;
-                        border-bottom-right-radius: 13px;
-
-                        &:hover {
-                            opacity: 1;
-                            visibility: visible;
-                        }
-
-                        .caret-2 {
-                            width: 0;
-                            height: 0;
-                            border-left: 5px solid transparent;
-                            border-right: 5px solid transparent;
-                            border-bottom: 6px solid whitesmoke;
-                            transition: 0.3s;
-                            position: absolute;
-                            top: 15px;
-                            left: 43px;
-                            cursor: pointer;
-                        }
-
-                        .language-item {
-                            display: flex;
-                            align-items: center;
-                            padding-top: .4em;
-                            padding-bottom: .4em;
-                            padding-right: 2.3em;
-                            padding-left: .7em;
-
-                            cursor: pointer;
-                            transition: background-color .4s;
-
-                            &:hover {
-                                background-color: rgb(255, 255, 255);
-                                border-top-left-radius: 0px;
-                            }
-                        }
-                    }
-                }
-
-                // .wrapper-color-switch {
-                //     display: flex;
-                //     margin-left: 5em; //FIXME to check!!!!
-                //     justify-content: flex-end;
-                //     align-items: center;
-
-                //     //label for switch that is interactive
-                //     .color-switch {
-                //         width: 4rem;
-                //         height: 1.9rem;
-                //         border-radius: 10em;
-                //         position: absolute;
-                //         cursor: pointer;
-                //         margin-left: 1em;
-                //         background-color: rgba(124, 123, 123, 0.37);
-                //         padding: .1rem 1.3em;
-                //         border-radius: 40px;
-                //         border: 1px solid white;
-
-
-                //         //circle toggle that animates backward and forward
-                //         .color-switch-toggle {
-                //             width: 1.7em;
-                //             height: 1.7em;
-                //             background: white;
-                //             position: absolute;
-                //             border-radius: 10em;
-                //             top: 0.1em;
-                //             left: 0.2em;
-                //             cursor: pointer;
-                //             transition: all 250ms ease-in-out;
-                //         }
-
-
-                //     }
-                //     //container that holds the switch
-                //     //animate circle toggle if switch is on
-                //     #input-color-switch:checked~label .color-switch-toggle {
-                //         transform: translatex(2em);
-                //     }
-
-                //     //hide input
-                //     #input-color-switch {
-                //         display: none;
-                //     }
-                // }
 
                 .dark-light-switch{
                     display: flex;
@@ -623,21 +578,24 @@ body {
                 border: 2px solid #111;
                 border-radius: .2em;
                 cursor: pointer;
-                transition: .3s ease-in-out;
+                transition: 0.3s;
             }
         }
 
         .portfolio-images {
+            max-width: 1360px;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             gap: 2em;
+            margin: 0 auto;
 
             img {
-                width: 20rem;
-                border-radius: .2em;
-                transition: .4s ease;
+                width: 25em;
+                margin: 1em;
+                border-radius: 0.2em;
+                transition: 0.6s;
             }
 
             .img-expand{
