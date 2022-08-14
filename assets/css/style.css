@@ -77,22 +77,6 @@ body header .nav .nav-btns {
   display: flex;
   justify-content: end;
   width: 50%;
-  /*
-    Clicked styles 
-    (added later in Javascript)
-  */
-  /*
-    Rotate styles 
-    (added later in Javascript)
-  */
-  /*
-    Active styles 
-    (added later in Javascript)
-  */
-  /*
-    Open styles 
-    (added later in Javascript)
-  */
 }
 body header .nav .nav-btns .navbar {
   display: flex;
@@ -160,11 +144,11 @@ body header .nav .nav-btns .navbar .nav-links-contact::after {
   }
 }
 body header .nav .nav-btns .dropdown {
-  min-width: 15em;
+  min-width: 3rem;
   position: relative;
-  margin: 2em;
+  margin: 1em;
 }
-body header .nav .nav-btns .select {
+body header .nav .nav-btns .dropdown .select {
   background: #2a2f3b;
   color: #fff;
   display: flex;
@@ -172,18 +156,26 @@ body header .nav .nav-btns .select {
   align-items: center;
   border: 2px #2a2f3b solid;
   border-radius: 0.5em;
-  padding: 1em;
+  padding: 0.5em 1em;
   cursor: pointer;
   transition: background 0.3s;
+  /*
+    Clicked styles 
+    (added later in Javascript)
+  */
+  /*
+    Rotate styles 
+    (added later in Javascript)
+  */
 }
-body header .nav .nav-btns .select-clicked {
+body header .nav .nav-btns .dropdown .select .select-clicked {
   border: 2px #26489a solid;
   box-shadow: 0 0 0.8em #26489a;
 }
-body header .nav .nav-btns .select:hover {
+body header .nav .nav-btns .dropdown .select .select:hover {
   background: #323741;
 }
-body header .nav .nav-btns .caret {
+body header .nav .nav-btns .dropdown .select .caret {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -191,12 +183,12 @@ body header .nav .nav-btns .caret {
   border-top: 6px solid #fff;
   transition: 0.3s;
 }
-body header .nav .nav-btns .caret-rotate {
+body header .nav .nav-btns .dropdown .select .caret-rotate {
   transform: rotate(180deg);
 }
-body header .nav .nav-btns .menu {
+body header .nav .nav-btns .dropdown .menu {
   list-style: none;
-  padding: 0.2em 0.5em;
+  padding: 0.5em 1em;
   background: #323741;
   border: 1px #363a43 solid;
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
@@ -211,28 +203,25 @@ body header .nav .nav-btns .menu {
   display: none;
   transition: 0.2s;
   z-index: 1;
+  padding: 0;
 }
-body header .nav .nav-btns .menu li {
-  padding: 0.7em 0.5em;
+body header .nav .nav-btns .dropdown .menu li {
   margin: 0.3em 0;
   border-radius: 0.5em;
   cursor: pointer;
 }
-body header .nav .nav-btns .menu li:hover {
+body header .nav .nav-btns .dropdown .menu li:hover {
   background: #2a2d35;
 }
-body header .nav .nav-btns .active {
-  background: #23242a;
-}
-body header .nav .nav-btns .menu-open {
+body header .nav .nav-btns .dropdown .menu-open {
   display: block;
   opacity: 1;
 }
-body header .nav .nav-btns .dark-light-switch {
+body header .nav .dark-light-switch {
   display: flex;
   align-items: center;
 }
-body header .nav .nav-btns .dark-light-switch .theme-container {
+body header .nav .dark-light-switch .theme-container {
   width: 30px;
   height: 30px;
   padding: 1.2em;
@@ -260,7 +249,7 @@ body header .nav .nav-btns .dark-light-switch .theme-container {
     transform: scale(1.4);
   }
 }
-body header .nav .nav-btns .dark-light-switch .theme-container .change {
+body header .nav .dark-light-switch .theme-container .change {
   -webkit-animation-name: change;
           animation-name: change;
   -webkit-animation-duration: 1s;
@@ -268,10 +257,10 @@ body header .nav .nav-btns .dark-light-switch .theme-container .change {
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
 }
-body header .nav .nav-btns .dark-light-switch .shadow-dark {
+body header .nav .dark-light-switch .shadow-dark {
   background: red;
 }
-body header .nav .nav-btns .dark-light-switch .shadow-light {
+body header .nav .dark-light-switch .shadow-light {
   box-shadow: 7px 7px 15px -10px #bbcfda, -4px -4px 13px #ffffff, inset 7px 7px 3px rgba(209, 217, 230, 0.35), inset -11px -11px 3px rgba(255, 255, 255, 0.3);
 }
 
