@@ -33,38 +33,7 @@ function Translate() {
     }
 }
 
- //This function will be called when user click changing language ( hmtl => body onload="translate('en', 'lng-tag')" )
- function translate(lng, tagAttr) {
-    var translate = new Translate();
-    translate.init(tagAttr, lng);
-    translate.process();
-}
-
-
-// GET THE ID OF THE LANGUAGES BUTTONS
-const enTranslator = document.getElementById('enTranslator');
-const frTranslator = document.getElementById('frTranslator');
-
-//WHEN THE DOM IS LOADED AND THE USER CLICK ON THE LANGUAGE, IT WILL CHANGE
-document.addEventListener("DOMContentLoaded", () => {
-
-    //This is id of HTML element (English) with attribute lng-tag
-    enTranslator.addEventListener('click', ()=>{
-
-        translate('en', 'lng-tag');
-
-    });
-
-    //This is id of HTML element (Khmer) with attribute lng-tag
-    frTranslator.addEventListener('click', ()=>{
-
-        translate('fr', 'lng-tag');
-
-    });
-});
-
-
-// ///////*******************************************///////
+ // ///////*******************************************///////
 // ///////************* DROPDOWN MENU ***************///////
 // ///////*******************************************///////
 
@@ -119,5 +88,36 @@ dropdowns.forEach(dropdown => {
             // ADD THE ACTIVE LANGUAGE TO SHOW UP THE LANGUAGE
         
         });
+    });
+});
+
+
+// TO CHANGE THE LANGUAGE TO ALL THE DOM 
+
+ //This function will be called when user click changing language
+ function translate(lng, tagAttr) {
+    var translate = new Translate();
+    translate.init(tagAttr, lng);
+    translate.process();
+}
+
+
+// GET THE ID OF THE LANGUAGES BUTTONS
+const enTranslator = document.getElementById('enTranslator');
+const frTranslator = document.getElementById('frTranslator');
+
+//WHEN THE DOM IS LOADED AND THE USER CLICK ON THE LANGUAGE, IT WILL CHANGE
+document.addEventListener("DOMContentLoaded", () => {
+
+    console.log("DOMJ'SAIS PAS QUOI")
+    //This is id of HTML element (English) with attribute lng-tag
+    enTranslator.addEventListener('click', ()=>{
+        console.log("english here")
+        translate('en', 'lng-tag');
+    });
+    //This is id of HTML element (Khmer) with attribute lng-tag
+    frTranslator.addEventListener('click', ()=>{
+        console.log("french here")
+        translate('fr', 'lng-tag');
     });
 });
