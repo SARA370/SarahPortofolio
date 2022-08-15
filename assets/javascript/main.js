@@ -34,29 +34,29 @@ let letter = '';
 /////////************* DARK/LIGHT MODE ***************///////
 /////////*********************************************///////
 
-const sun = "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg";
-const moon = "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg";
-const container = document.getElementsByClassName("theme-container")[0];
-const themeIcon = document.getElementById("theme-icon");
+// const sun = "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg";
+// const moon = "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg";
+// const container = document.getElementsByClassName("theme-container")[0];
+// const themeIcon = document.getElementById("theme-icon");
 
 
-container.addEventListener("click", setTheme);
+// container.addEventListener("click", setTheme);
 
-function setTheme() {
+// function setTheme() {
 
-    function setLight() {
+//     function setLight() {
 
-        themeIcon.src = sun;
+//         themeIcon.src = sun;
 
-    }
+//     }
 
-    function setDark() {
+//     function setDark() {
 
-        themeIcon.src = moon;
+//         themeIcon.src = moon;
 
-    }
+//     }
 
-}
+// }
 
 
 
@@ -67,6 +67,7 @@ function setTheme() {
 
 
 //Get Elements from DOM
+
 const btns = document.querySelectorAll('.portfolio-gallery button');
 const imgs = document.querySelectorAll('.portfolio-images img');
 
@@ -77,6 +78,7 @@ for (let i = 1; i < btns.length; i++) {
 
 //Set active button on click
 function setActiveBtn(e) {
+
     //Remove active class from all buttons
     btns.forEach(btn => {
         btn.classList.remove('btn-clicked');
@@ -84,10 +86,12 @@ function setActiveBtn(e) {
 
     //Add active class to clicked button
     e.target.classList.add('btn-clicked');
+
 }
 
 //Filter Images
 function filterImg(e) {
+
     //Run the active button function
     setActiveBtn(e);
 

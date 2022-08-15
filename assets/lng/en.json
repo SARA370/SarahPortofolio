@@ -1,10 +1,10 @@
 {
 
     
-    "myWork": "MY WORK",
-    "about": "ABOUT",
-    "contact_me": "CONTACT ME"
+    "myWork_nav": "MY WORK",
+    "about_nav": "ABOUT",
+    "contact_me_nav": "CONTACT ME",
 
-
+    "hello_text" : "Hello, I'm Sarah"
 
 }

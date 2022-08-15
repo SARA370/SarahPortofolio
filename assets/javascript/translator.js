@@ -34,7 +34,7 @@ function Translate() {
 }
 
  // ///////*******************************************///////
-// ///////************* DROPDOWN MENU ***************///////
+// ///////************* DROPDOWN LANGUAGE MENU ***************///////
 // ///////*******************************************///////
 
 //Get all dropdowns from the document
@@ -109,15 +109,16 @@ const frTranslator = document.getElementById('frTranslator');
 //WHEN THE DOM IS LOADED AND THE USER CLICK ON THE LANGUAGE, IT WILL CHANGE
 document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("DOMJ'SAIS PAS QUOI")
     //This is id of HTML element (English) with attribute lng-tag
     enTranslator.addEventListener('click', ()=>{
-        console.log("english here")
+
         translate('en', 'lng-tag');
+        
     });
     //This is id of HTML element (Khmer) with attribute lng-tag
     frTranslator.addEventListener('click', ()=>{
-        console.log("french here")
+
         translate('fr', 'lng-tag');
+
     });
 });

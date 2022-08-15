@@ -1,10 +1,10 @@
 {
 
 
-    "myWork": "MES TRAVAUX",
-    "about": "A PROPOS",
-    "contact_me": "ME CONTACTER"
+    "myWork_nav": "MES TRAVAUX",
+    "about_nav" : "A PROPOS",
+    "contact_me_nav": "ME CONTACTER",
 
-
+    "hello_text" : "Bonjour, je suis Sarah"
     
 }
