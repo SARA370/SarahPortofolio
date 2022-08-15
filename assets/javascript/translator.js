@@ -26,7 +26,6 @@ function Translate() {
                             elem.innerHTML = LngObject[key];
                         }
                     }
-
                 }
             }
         }

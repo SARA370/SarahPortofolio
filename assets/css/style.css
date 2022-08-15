@@ -32,20 +32,23 @@ body {
   width: 100%;
   min-height: 200px;
   overflow-x: hidden;
+  /*////////////////////////////////////////////////////////////////////////*/
+  /*/////////////////////////// HEADER SECTION /////////////////////////////*/
+  /*////////////////////////////////////////////////////////////////////////*/
 }
 body::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
-  width: 100vw;
-  min-height: 272vh;
+  width: 100%;
+  min-height: 525vh;
   background-size: cover;
   background-color: rgba(255, 255, 255, 0.9);
   z-index: -1;
 }
 body .container {
-  max-width: 1500px;
+  max-width: 1900px;
   width: 100%;
   margin: auto;
 }
@@ -63,7 +66,7 @@ body header {
   margin-left: 2em;
   border: 2px solid white;
   border-radius: 33px;
-  padding: 0 2em;
+  padding: 0.5em 2em;
 }
 body header .nav {
   display: flex;
@@ -95,12 +98,13 @@ body header .nav .nav-btns .navbar .nav-links {
 body header .nav .nav-btns .navbar .nav-links-contact {
   color: #f5f5f5;
   background-color: rgba(124, 123, 123, 0.653);
-  padding: 0.2rem 1.3em;
-  border-radius: 40px;
+  padding: 0.2rem 1.5em;
+  border-radius: 11px;
   border: 1px solid white;
   font-family: "Sarpanch", sans-serif;
   font-weight: bold;
   font-size: 1.1rem;
+  border-bottom-left-radius: 0;
 }
 body header .nav .nav-btns .navbar .nav-links-contact:hover {
   background-color: rgba(18, 38, 64, 0.25);
@@ -114,7 +118,7 @@ body header .nav .nav-btns .navbar .nav-links-contact::after {
   position: absolute;
   z-index: -1;
   top: 50%;
-  left: 73%;
+  left: 83%;
   transform: translate(-50%, -50%);
   -webkit-animation: ring 1.5s infinite;
           animation: ring 1.5s infinite;
@@ -143,39 +147,49 @@ body header .nav .nav-btns .navbar .nav-links-contact::after {
     opacity: 0;
   }
 }
-body header .nav .nav-btns .dropdown {
-  min-width: 3rem;
+body header .nav .dropdown {
+  min-width: 4.5em;
   position: relative;
-  margin: 1em;
+  margin-left: 1em;
+  /*
+      Active styles 
+      (added later in Javascript)
+      */
+  /*
+          Open styles 
+          (added later in Javascript)
+      */
 }
-body header .nav .nav-btns .dropdown .select {
+body header .nav .dropdown .select {
   background: #2a2f3b;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 2px #2a2f3b solid;
-  border-radius: 0.5em;
-  padding: 0.5em 1em;
+  border-radius: 11px;
+  padding: 0.2em 0.5em;
   cursor: pointer;
   transition: background 0.3s;
+  border-radius: 11px;
+  border-bottom-left-radius: 0;
   /*
-    Clicked styles 
-    (added later in Javascript)
+  Clicked styles 
+  (added later in Javascript)
   */
   /*
-    Rotate styles 
-    (added later in Javascript)
+  Rotate styles 
+  (added later in Javascript)
   */
 }
-body header .nav .nav-btns .dropdown .select .select-clicked {
+body header .nav .dropdown .select:hover {
+  background: #323741;
+}
+body header .nav .dropdown .select .select-clicked {
   border: 2px #26489a solid;
   box-shadow: 0 0 0.8em #26489a;
 }
-body header .nav .nav-btns .dropdown .select .select:hover {
-  background: #323741;
-}
-body header .nav .nav-btns .dropdown .select .caret {
+body header .nav .dropdown .select .caret {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -183,19 +197,19 @@ body header .nav .nav-btns .dropdown .select .caret {
   border-top: 6px solid #fff;
   transition: 0.3s;
 }
-body header .nav .nav-btns .dropdown .select .caret-rotate {
+body header .nav .dropdown .select .caret-rotate {
   transform: rotate(180deg);
 }
-body header .nav .nav-btns .dropdown .menu {
+body header .nav .dropdown .menu {
   list-style: none;
-  padding: 0.5em 1em;
-  background: #323741;
+  padding: 0.2em 0.5em;
+  background: #363a43;
   border: 1px #363a43 solid;
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
   border-radius: 0.5em;
   color: #9fa5b5;
   position: absolute;
-  top: 3em;
+  top: 2em;
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
@@ -203,17 +217,22 @@ body header .nav .nav-btns .dropdown .menu {
   display: none;
   transition: 0.2s;
   z-index: 1;
-  padding: 0;
+  border-top-left-radius: 0;
 }
-body header .nav .nav-btns .dropdown .menu li {
+body header .nav .dropdown .menu li {
+  padding: 0.7em 0.5em;
   margin: 0.3em 0;
   border-radius: 0.5em;
   cursor: pointer;
+  text-align: centre;
 }
-body header .nav .nav-btns .dropdown .menu li:hover {
+body header .nav .dropdown .menu li:hover {
   background: #2a2d35;
 }
-body header .nav .nav-btns .dropdown .menu-open {
+body header .nav .dropdown .active {
+  background: #23242a;
+}
+body header .nav .dropdown .menu-open {
   display: block;
   opacity: 1;
 }
@@ -264,51 +283,63 @@ body header .nav .dark-light-switch .shadow-light {
   box-shadow: 7px 7px 15px -10px #bbcfda, -4px -4px 13px #ffffff, inset 7px 7px 3px rgba(209, 217, 230, 0.35), inset -11px -11px 3px rgba(255, 255, 255, 0.3);
 }
 
+/*////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////// HERO SECTION ////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////*/
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin-bottom: 8em;
+  margin-top: 6em;
 }
-.hero-content {
+.hero .hero-content {
+  max-width: 930px;
   position: relative;
-  max-width: 60rem;
-  height: 55vh;
-  margin: 0 auto;
+  width: 71%;
+  max-width: 89rem;
+  height: 62vh;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 1em 2em;
+  padding: 1em 4em;
   background-color: rgba(153, 153, 153, 0.454);
-  border: 1px solid rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
   box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
-.hero-content .profile-img {
+.hero .hero-content .profile-img {
+  background-color: rgba(153, 153, 153, 0.454);
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 10.6rem;
-  height: 11rem;
-  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 72px;
   border: 3px solid white;
 }
-.hero-content-text h3 {
-  margin-bottom: 1em;
-}
-.hero-content-text .typing {
+.hero .hero-content .hero-text {
   display: flex;
   align-items: center;
-  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2em;
+  margin-top: 3em;
+}
+.hero .hero-content .hero-text .typing {
+  display: flex;
+  align-items: center;
   margin-bottom: 1em;
 }
-.hero-content-text .typing .typing {
+.hero .hero-content .hero-text .typing .typing {
   margin-left: 10px;
 }
-.hero-content-text .typing .typing:after {
+.hero .hero-content .hero-text .typing .typing:after {
   content: "";
   width: 1px;
   height: 99%;
@@ -333,8 +364,11 @@ body header .nav .dark-light-switch .shadow-light {
     opacity: 1;
   }
 }
-.hero-content .main-btn {
-  width: 99%;
+.hero .hero-content .hero-btns {
+  margin-top: 3em;
+}
+.hero .hero-content .hero-btns .cv-btn-link {
+  display: inline-block;
   border-radius: 30px;
   font-weight: 600;
   position: relative;
@@ -342,27 +376,31 @@ body header .nav .dark-light-switch .shadow-light {
   display: flex;
   align-self: flex-start;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   overflow: hidden;
-  text-decoration: none;
+  margin-right: 1em;
 }
-.hero-content .main-btn .btn-text {
-  margin-left: 8em;
+.hero .hero-content .hero-btns .cv-btn-link .download-text {
+  padding: 0 4em 0 6em;
   font-weight: bold;
   font-size: 1.1rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.hero-content .main-btn .btn-icon {
+.hero .hero-content .hero-btns .cv-btn-link .download-icon {
   background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  padding: 0.1rem;
+  padding: 0.7rem;
 }
-.hero-content .main-btn .btn-icon img {
-  width: 35px;
+.hero .hero-content .hero-btns .cv-btn-link .download-icon img {
+  width: 29px;
 }
-.hero-content .main-btn:before {
+.hero .hero-content .hero-btns .cv-btn-link .download-icon:before {
   content: "";
   position: absolute;
   top: 0;
@@ -371,10 +409,10 @@ body header .nav .dark-light-switch .shadow-light {
   transition: all 0.4s ease-out;
   z-index: -1;
 }
-.hero-content .main-btn:hover {
+.hero .hero-content .hero-btns .cv-btn-link .download-icon:hover {
   transition: all 0.4s ease-out;
 }
-.hero-content .main-btn:hover::before {
+.hero .hero-content .hero-btns .cv-btn-link .download-icon:hover::before {
   width: 100%;
   height: 100%;
   background-color: rgb(255, 255, 255);
@@ -382,10 +420,12 @@ body header .nav .dark-light-switch .shadow-light {
   transition: all 0.4s ease-out;
 }
 
+/*////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////// SOCIAL MEDIAS ICONS/////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////*/
 .social-icons {
-  width: 10%;
   position: fixed;
-  top: 50%;
+  top: 70%;
   transform: translateY(-50%);
 }
 .social-icons ul {
@@ -393,10 +433,11 @@ body header .nav .dark-light-switch .shadow-light {
 }
 .social-icons ul li {
   display: block;
-  margin: 1em;
-  width: 18.75em;
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 300px;
   text-align: right;
-  padding: 1em;
+  padding: 10px;
   border-radius: 0 30px 30px 0;
   transition: all 1s;
 }
@@ -405,7 +446,14 @@ body header .nav .dark-light-switch .shadow-light {
   transform: rotate(360deg);
   transition: all 1s;
 }
-.social-icons ul li .icon {
+.social-icons ul li a {
+  color: #ffffff;
+}
+.social-icons ul li a img {
+  transform: rotate(360deg);
+  transition: all 1s;
+}
+.social-icons ul .icon {
   background-color: wheat;
   padding: 0.6em;
   border-radius: 50%;
@@ -418,14 +466,14 @@ body header .nav .dark-light-switch .shadow-light {
   transition: all 1s;
 }
 
-.about-image {
+.about-circle-image-right {
   width: 35%;
   position: absolute;
-  top: 70%;
+  top: 89%;
   transform: translateX(220px);
   right: 0;
 }
-.about-image .circle {
+.about-circle-image-right .circle-Right {
   width: 100%;
   -webkit-animation: circle 9s linear infinite;
           animation: circle 9s linear infinite;
@@ -443,27 +491,30 @@ body header .nav .dark-light-switch .shadow-light {
   }
 }
 
+/*////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////// PORTFOLIO SECTION ///////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////*/
 .portfolio {
-  min-height: 100vh;
+  min-height: 150vh;
 }
-.portfolio .hide {
+.portfolio .portfolio-content .hide {
   display: none;
 }
-.portfolio .potofolio-title {
+.portfolio .portfolio-content .potofolio-title {
   text-align: center;
   margin-bottom: 1em;
   margin-top: 5em;
 }
-.portfolio .potofolio-title h2 {
+.portfolio .portfolio-content .potofolio-title h2 {
   position: relative;
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 700;
 }
-.portfolio .potofolio-title h2 span {
+.portfolio .portfolio-content .potofolio-title h2 span {
   color: #8b8b8b;
 }
-.portfolio .potofolio-title h2 .bg-text {
+.portfolio .portfolio-content .potofolio-title h2 .bg-text {
   position: absolute;
   top: 30%;
   left: 50%;
@@ -474,47 +525,56 @@ body header .nav .dark-light-switch .shadow-light {
   font-weight: 800;
   font-size: 5.9rem;
 }
-.portfolio .work-section {
+.portfolio .portfolio-content .work-section {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.portfolio .work-section .portfolio-gallery {
-  padding: 2em 0 6em 0;
+.portfolio .portfolio-content .work-section .portfolio-gallery {
+  padding: 0.1em 0.1em;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  background-color: rosybrown;
+  margin-bottom: 2em;
+  border-radius: 10px;
 }
-.portfolio .work-section .portfolio-gallery .button {
+.portfolio .portfolio-content .work-section .portfolio-gallery .button {
+  margin: 1em;
+  padding: 0.1em 1.5em;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 0.2em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.portfolio .portfolio-content .work-section .portfolio-gallery .button .active {
+  background: yellow;
+}
+.portfolio .portfolio-content .work-section .portfolio-gallery .btn-clicked {
   margin: 1em;
   padding: 0.7em 1.5em;
   font-size: 1.1em;
   border: none;
-  background: #111;
-  color: wheat;
+  background: rgb(255, 255, 255);
   border: 2px solid #111;
   border-radius: 0.2em;
   cursor: pointer;
   transition: 0.3s;
 }
-.portfolio .work-section .portfolio-gallery .btn-clicked {
-  margin: 1em;
-  padding: 0.7em 1.5em;
-  font-size: 1.1em;
-  border: none;
-  background: rgb(78, 227, 49);
-  color: wheat;
-  border: 2px solid #111;
-  border-radius: 0.2em;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.portfolio .work-section .portfolio-images {
-  width: 1360px;
-  padding: 0;
-  max-height: 100%;
+.portfolio .portfolio-content .work-section .portfolio-images {
+  background-color: rosybrown;
+  border-radius: 10px;
+  border-top: 16px solid #f5deb3;
+  border-bottom: 16px solid #f5deb3;
+  padding: 2em 0;
+  height: 92vh;
+  max-width: 930px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -522,36 +582,68 @@ body header .nav .dark-light-switch .shadow-light {
   gap: 2em;
   margin: 0 auto;
 }
-.portfolio .work-section .portfolio-images img {
-  width: 25em;
-  margin: 1em;
+.portfolio .portfolio-content .work-section .portfolio-images img {
+  width: 16em;
   border-radius: 0.2em;
   transition: margin 400ms ease-in-out, width 400ms ease-in-out;
 }
-.portfolio .work-section .portfolio-images .img-expand {
+.portfolio .portfolio-content .work-section .portfolio-images .img-expand {
   width: 25em;
   margin: 1em;
 }
-.portfolio .work-section .portfolio-images .img-shrink {
+.portfolio .portfolio-content .work-section .portfolio-images .img-shrink {
   width: 0em;
   margin: -1em;
 }
 
-.contact .contact-title {
+.about-circle-image-left {
+  width: 35%;
+  position: absolute;
+  top: 299%;
+  transform: translateX(-229px);
+  right: 105;
+}
+.about-circle-image-left .circle-left {
+  width: 100%;
+  -webkit-animation: circle 9s linear infinite;
+          animation: circle 9s linear infinite;
+  transition: 0.5s;
+  overflow-x: hidden;
+}
+@keyframes circle {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////// CONTACT SECTION ////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////*/
+.contact {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contact-content {
+  width: 100%;
+  max-width: 930px;
+}
+.contact .contact-content .contact-title {
   text-align: center;
   margin-bottom: 1em;
-  margin-top: 5em;
+  margin-top: -20em;
 }
-.contact .contact-title h2 {
+.contact .contact-content .contact-title h2 {
   position: relative;
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 700;
 }
-.contact .contact-title h2 span {
+.contact .contact-content .contact-title h2 span {
   color: #8b8b8b;
 }
-.contact .contact-title h2 .bg-text {
+.contact .contact-content .contact-title h2 .bg-text {
   position: absolute;
   top: 30%;
   left: 50%;
@@ -562,35 +654,125 @@ body header .nav .dark-light-switch .shadow-light {
   font-weight: 800;
   font-size: 5.9rem;
 }
-.contact .contact-form form {
-  width: 90%;
-  margin: auto;
+.contact .contact-content .contact-form {
+  width: 100%;
+  max-width: 930px;
 }
-.contact .contact-form form .input-group {
-  margin-bottom: 2em;
+.contact .contact-content .contact-form form {
+  padding: 2.3em 2.2em;
+  z-index: 10;
+  overflow: hidden;
   position: relative;
 }
-.contact .contact-form form input,
-.contact .contact-form form textarea {
-  width: 73%;
-  padding: 0.8em;
-  background-color: rgba(0, 0, 0, 0.128);
-  border: none;
-  outline: 0;
-  font-size: 1rem;
+.contact .contact-content .contact-form form .input-container {
+  position: relative;
+  margin: 1em 0;
 }
-.contact .contact-form form input:focus ~ label,
-.contact .contact-form form input:valid ~ label,
-.contact .contact-form form textarea:focus ~ label,
-.contact .contact-form form textarea:valid ~ label {
-  top: -2.5em;
+.contact .contact-content .contact-form form .input-container .input {
+  width: 100%;
+  outline: none;
+  border: 2px solid #fafafa;
+  background: none;
+  padding: 0.6em 1.2em;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  transition: 0.3s;
+  background-color: rgba(6, 6, 6, 0.2);
 }
-.contact .contact-form form label {
-  height: 100%;
+.contact .contact-content .contact-form form .input-container label {
   position: absolute;
-  left: 0;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  padding: 0 0.4rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  pointer-events: none;
+  z-index: 1000;
+  transition: 0.5s;
   top: 0;
-  padding: 0.8em;
-  cursor: text;
-  transition: 0.2s;
+  transform: translateY(-50%);
+  left: 25px;
+  font-size: 0.8rem;
+}
+.contact .contact-content .contact-form form .input-container span {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  padding: 0 0.4rem;
+  color: transparent;
+  pointer-events: none;
+  z-index: 500;
+}
+.contact .contact-content .contact-form form .input-container span:before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  opacity: 0;
+  transition: 0.3s;
+  height: 5px;
+  background-color: #1abc9c;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  width: 50%;
+  opacity: 1;
+}
+.contact .contact-content .contact-form form .input-container span:after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  opacity: 0;
+  transition: 0.3s;
+  height: 5px;
+  background-color: #1abc9c;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50%;
+  width: 50%;
+  opacity: 1;
+}
+.contact .contact-content .contact-form form .input-container:focus {
+  top: 0;
+  transform: translateY(-50%);
+  left: 25px;
+  font-size: 0.8rem;
+  width: 50%;
+  opacity: 1;
+}
+.contact .contact-content .contact-form form textarea {
+  min-height: 35vh;
+}
+.contact .contact-content .contact-form form textarea .input {
+  padding: 0.8rem 1.2rem;
+  border-radius: 22px;
+  resize: none;
+  overflow-y: auto;
+}
+.contact .contact-content .contact-form form .input-container.textarea label {
+  top: 1rem;
+  transform: translateY(0);
+}
+.contact .contact-content .contact-form form .btn {
+  padding: 0.6rem 1.3rem;
+  background-color: #fff;
+  border: 2px solid #fafafa;
+  font-size: 0.95rem;
+  color: #1abc9c;
+  line-height: 1;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
+}
+.contact .contact-content .contact-form form .btn:hover {
+  background-color: transparent;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

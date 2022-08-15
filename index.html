@@ -29,7 +29,7 @@
 
       <div class="nav-btns">
 
-        <ul class="navbar english">
+        <ul class="navbar">
           <li><a href="#mywork" class="nav-links" lng-tag="myWork"> </a></li>
           <li><a href="#about" class="nav-links" lng-tag="about"> </a></li>
           <li><a href="#contact" class="nav-links-contact" lng-tag="contact_me"> </a></li>
@@ -41,15 +41,13 @@
             <span class="selected">EN</span>
             <div class="caret"></div>
           </div>
-          <ul class="menu menu-open">
+          <ul class="menu">
             <li class="active" id="enTranslator">EN</li>
             <li id="frTranslator">FR</li>
           </ul>
         </div>
-
-      </div>
-      <!------------------------- DARK/LIGHT MODE ------------------------>
-      <!-- <div class="wrapper-color-switch">
+        <!------------------------- DARK/LIGHT MODE ------------------------>
+        <!-- <div class="wrapper-color-switch">
                     <input type="checkbox" id="input-color-switch">
                     <label for="input-color-switch" class="color-switch">
                         <div class="color-switch-toggle">
@@ -59,9 +57,9 @@
                     </label>
                 </div> -->
 
-      <div class="theme-container shadow-dark">
-        <img id="theme-icon" src="./assets/imgs/moon.svg" alt="ERR">
-      </div>
+        <!-- <div class="theme-container shadow-dark">
+          <img id="theme-icon" src="./assets/imgs/moon.svg" alt="ERR">
+        </div> -->
       </div>
     </nav>
   </header>
@@ -85,9 +83,9 @@
       </div>
 
       <div class="hero-btns">
-        <a href="./assets/pdf/CV- SARAH AL-RASHID.pdf" class="main-btn">
-          <span class="btn-text">Download CV</span>
-          <!-- <span class="btn-icon"><img src="./assets/imgs/download-arrow-svgrepo-com.svg"></span> -->
+        <a href="./assets/pdf/CV- SARAH AL-RASHID.pdf" class="cv-btn-link">
+          <span class="download-text">Download CV</span>
+          <span class="download-icon"><img src="./assets/imgs/download-arrow-svgrepo-com.svg"></span>
         </a>
       </div>
     </div>
@@ -107,8 +105,8 @@
     </ul>
   </div>
 
-  <div class="about-image">
-    <img src="./assets/imgs/circle.svg" class="circle">
+  <div class="about-circle-image-right ">
+    <img src="./assets/imgs/circle.svg" class="circle-Right">
   </div>
 
 
@@ -126,7 +124,7 @@
 
       <div class="work-section">
         <div class="portfolio-gallery">
-          <button type="button" class="button" data-btn="all">All</button>
+          <button type="button" class="button active" data-btn="all">All</button>
           <button type="button" class="button" data-btn="1">Code</button>
           <button type="button" class="button" data-btn="2">UI Design</button>
           <button type="button" class="button" data-btn="3">Email template</button>
@@ -141,9 +139,12 @@
           <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="1" alt="code work">
           <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="3" alt="code work">
           <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="4" alt="code work">
+          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="2" alt="code work">
           <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="1" alt="code work">
           <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="4" alt="code work">
           <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="3" alt="code work">
+          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="4" alt="code work">
+          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="1" alt="code work">
         </div>
 
       </div>
@@ -151,32 +152,48 @@
     </div>
   </section>
 
+
+  <div class="about-circle-image-left">
+    <img src="./assets/imgs/circle.svg" class="circle-left">
+  </div>
   <!--------------------------------------------------------->
   <!------------------- CONTACT SECTION --------------------->
   <!--------------------------------------------------------->
 
   <section class="contact container" id="contact">
     <div class="contact-content">
-      <div class="contact-title">
-        <h2>C<span>ontact</span><span class="bg-text">CONTACT</span></h2>
-      </div>
 
+          <!---Title--->
+          <div class="contact-title">
+            <h2>C<span>ontact</span><span class="bg-text">CONTACT</span></h2>
+          </div>
+          
+          <!---Contact form content--->
       <div class="contact-form">
-        <form>
-          <div class="input-group">
-            <input type="text" id="name" required>
-            <label for="name">Your Name</label>
+        <form action="index.html" autocomplete="off">
+          <div class="input-container">
+
+            <input type="text" name="name" class="input" />
+            <label for="">Username</label>
+            <span>Username</span>
           </div>
-          <div class="input-group">
-            <input type="email" id="email" required>
-            <label for="email">Email Id</label>
+          <div class="input-container">
+            <input type="email" name="email" class="input" />
+            <label for="">Email</label>
+            <span>Email</span>
           </div>
-          <div class="input-group">
-            <textarea id="message" rows="8" required></textarea>
-            <label for="message">Your Message</label>
+          <div class="input-container">
+            <input type="tel" name="phone" class="input" />
+            <label for="">Phone</label>
+            <span>Phone</span>
           </div>
+          <div class="input-container textarea">
+            <textarea name="message" class="input"></textarea>
+            <label for="">Message</label>
+            <span>Message</span>
+          </div>
+          <input type="submit" value="Send" class="btn" />
         </form>
-        <button type="submit">SUBMIT</button>
       </div>
     </div>
   </section>
@@ -198,8 +215,7 @@
   <!------------------Link to javascipt---------------------->
   <!--------------------------------------------------------->
 
-  <script src="./assets/javascript/main.js"></script>
-  <script src="./assets/javascript/translator.js"></script>
+  <script src="./assets/main.js"></script>
 
 </body>
 
