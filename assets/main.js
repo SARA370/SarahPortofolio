@@ -91,28 +91,28 @@ dropdowns.forEach(dropdown => {
 /////////************* DARK/LIGHT MODE ***************///////
 /////////*********************************************///////
 
-const sun = "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg";
-const moon = "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg";
-const container = document.getElementsByClassName("theme-container")[0];
-const themeIcon = document.getElementById("theme-icon");
+// const sun = "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg";
+// const moon = "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg";
+// const container = document.getElementsByClassName("theme-container")[0];
+// const themeIcon = document.getElementById("theme-icon");
 
 
-container.addEventListener("click", setTheme);
+// container.addEventListener("click", setTheme);
 
-function setTheme() {
+// function setTheme() {
 
-    function setLight() {
+//     function setLight() {
 
-        themeIcon.src = sun;
+//         themeIcon.src = sun;
 
-    }
+//     }
 
-    function setDark() {
+//     function setDark() {
 
-        themeIcon.src = moon;
+//         themeIcon.src = moon;
 
-    }
-}
+//     }
+// }
 
 /////////*******************************************///////
 /////////************ SERVICES SECTION *************///////
@@ -226,20 +226,20 @@ btns[0].addEventListener('click', (e) => {
 const inputs = document.querySelectorAll(".input");
 
 function focusFunc() {
-    let parent = this.parentNode;
-    parent.classList.add("focus");
+  let parent = this.parentNode;
+  parent.classList.add("focus");
 }
 
 function blurFunc() {
-    let parent = this.parentNode;
-    if (this.value == "") {
-        parent.classList.remove("focus");
-    }
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
 }
 
 inputs.forEach((input) => {
-    input.addEventListener("focus", focusFunc);
-    input.addEventListener("blur", blurFunc);
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
 });
 
 
