@@ -492,6 +492,211 @@ body header .nav .dark-light-switch .shadow-light {
 }
 
 /*////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////// SERVICES SECTION ////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////*/
+.wrapper {
+  padding: 60px auto;
+}
+.wrapper .icon-wrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0px;
+}
+.wrapper .icon-wrap .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  align-items: space-between;
+  align-self: stretch;
+  justify-self: stretch;
+  margin-bottom: 30px;
+  padding: 30px;
+  background: white;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(96, 37, 102, 0.5);
+  border-radius: 10px;
+}
+.wrapper .icon-wrap .card svg {
+  width: 100%;
+  padding: 10px;
+}
+.wrapper .icon-wrap .card h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.wrapper .icon-wrap .card .icon-develop {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.wrapper .icon-wrap .card .icon-develop .gear-b {
+  -webkit-animation: rotate-reverse 6s;
+          animation: rotate-reverse 6s;
+}
+.wrapper .icon-wrap .card .icon-develop .gear-s {
+  -webkit-animation: rotate 12s linear infinite;
+          animation: rotate 12s linear infinite;
+}
+.wrapper .icon-wrap .card .icon-develop #XMLID_87_,
+.wrapper .icon-wrap .card .icon-develop #XMLID_85_,
+.wrapper .icon-wrap .card .icon-develop #XMLID_83_ {
+  -webkit-animation: twinkle 3s ease-in-out infinite;
+          animation: twinkle 3s ease-in-out infinite;
+}
+.wrapper .icon-wrap .card .icon-develop #XMLID_85_ {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.wrapper .icon-wrap .card .icon-develop #XMLID_83_ {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.wrapper .icon-wrap .card .icon-develop .line-t,
+.wrapper .icon-wrap .card .icon-develop .line-m,
+.wrapper .icon-wrap .card .icon-develop .line-b {
+  -webkit-animation: shrink 1.8s ease-in-out infinite;
+          animation: shrink 1.8s ease-in-out infinite;
+}
+.wrapper .icon-wrap .card .icon-develop .line-m {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.wrapper .icon-wrap .card .icon-develop .line-b {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.wrapper .icon-wrap .card .icon-develop .code-letter_o {
+  -webkit-animation: typingO 3s linear infinite;
+          animation: typingO 3s linear infinite;
+}
+.wrapper .icon-wrap .card .icon-develop .code-letter_d {
+  -webkit-animation: typingD 3s linear infinite;
+          animation: typingD 3s linear infinite;
+}
+.wrapper .icon-wrap .card .icon-develop .code-letter_e {
+  -webkit-animation: typingE 3s linear infinite;
+          animation: typingE 3s linear infinite;
+}
+@-webkit-keyframes typingE {
+  20.1%, 80% {
+    fill: transparent;
+  }
+  20%, 80.1% {
+    fill: #fff;
+  }
+}
+@keyframes typingE {
+  20.1%, 80% {
+    fill: transparent;
+  }
+  20%, 80.1% {
+    fill: #fff;
+  }
+}
+@-webkit-keyframes typingD {
+  30.1%, 70% {
+    fill: transparent;
+  }
+  30%, 70.1% {
+    fill: #fff;
+  }
+}
+@keyframes typingD {
+  30.1%, 70% {
+    fill: transparent;
+  }
+  30%, 70.1% {
+    fill: #fff;
+  }
+}
+@-webkit-keyframes typingO {
+  40.1%, 60% {
+    fill: transparent;
+  }
+  40%, 60.1% {
+    fill: #fff;
+  }
+}
+@keyframes typingO {
+  40.1%, 60% {
+    fill: transparent;
+  }
+  40%, 60.1% {
+    fill: #fff;
+  }
+}
+.wrapper .icon-wrap .card .icon-design {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.wrapper .icon-wrap .card .icon-design .anchor-part {
+  -webkit-animation: move 2s linear infinite;
+          animation: move 2s linear infinite;
+}
+.wrapper .icon-wrap .card .icon-design .anchor-part--2 {
+  -webkit-animation: move2 2s linear infinite;
+          animation: move2 2s linear infinite;
+}
+.wrapper .icon-wrap .card .icon-design .pen-part {
+  transform-origin: 140px 180px;
+  -webkit-animation: bounce2 2s ease-in-out infinite;
+          animation: bounce2 2s ease-in-out infinite;
+}
+.wrapper .icon-wrap .card .icon-design .ruler-part {
+  transform-origin: 140px 180px;
+  -webkit-animation: bounce 1s ease-in-out infinite;
+          animation: bounce 1s ease-in-out infinite;
+}
+.wrapper .icon-wrap .card .icon-design .circle-part {
+  transform-origin: 139.8px 167.8px;
+  -webkit-animation: rotate 4s linear infinite;
+          animation: rotate 4s linear infinite;
+}
+.wrapper .icon-wrap .card .icon-design .cursor-part {
+  -webkit-animation: bounceBFt2 2s ease-in-out infinite;
+          animation: bounceBFt2 2s ease-in-out infinite;
+}
+@-webkit-keyframes move {
+  0%, 100% {
+    transform: translate(1px, 1px);
+  }
+  50% {
+    transform: translate(-1px, -1px);
+  }
+}
+@keyframes move {
+  0%, 100% {
+    transform: translate(1px, 1px);
+  }
+  50% {
+    transform: translate(-1px, -1px);
+  }
+}
+@-webkit-keyframes move2 {
+  0%, 100% {
+    transform: translate(-1px, -1px);
+  }
+  50% {
+    transform: translate(1px, 1px);
+  }
+}
+@keyframes move2 {
+  0%, 100% {
+    transform: translate(-1px, -1px);
+  }
+  50% {
+    transform: translate(1px, 1px);
+  }
+}
+
+/*////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////// PORTFOLIO SECTION ///////////////////////////*/
 /*////////////////////////////////////////////////////////////////////////*/
 .portfolio {
@@ -658,18 +863,19 @@ body header .nav .dark-light-switch .shadow-light {
 .contact .contact-content .contact-form {
   width: 100%;
   max-width: 930px;
+  z-index: -100;
 }
-.contact .contact-content .contact-form form {
+.contact .contact-content .contact-form .form-container {
   padding: 2.3em 2.2em;
   z-index: 10;
   overflow: hidden;
   position: relative;
 }
-.contact .contact-content .contact-form form .input-container {
+.contact .contact-content .contact-form .form-container .input-container {
   position: relative;
   margin: 1em 0;
 }
-.contact .contact-content .contact-form form .input-container .input {
+.contact .contact-content .contact-form .form-container .input-container .input {
   width: 100%;
   outline: none;
   border: 2px solid #fafafa;
@@ -683,7 +889,7 @@ body header .nav .dark-light-switch .shadow-light {
   transition: 0.3s;
   background-color: rgba(6, 6, 6, 0.2);
 }
-.contact .contact-content .contact-form form .input-container label {
+.contact .contact-content .contact-form .form-container .input-container label {
   position: absolute;
   top: 50%;
   left: 15px;
@@ -700,7 +906,7 @@ body header .nav .dark-light-switch .shadow-light {
   left: 25px;
   font-size: 0.8rem;
 }
-.contact .contact-content .contact-form form .input-container span {
+.contact .contact-content .contact-form .form-container .input-container span {
   position: absolute;
   top: 0;
   left: 25px;
@@ -711,7 +917,7 @@ body header .nav .dark-light-switch .shadow-light {
   pointer-events: none;
   z-index: 500;
 }
-.contact .contact-content .contact-form form .input-container span:before {
+.contact .contact-content .contact-form .form-container .input-container span:before {
   content: "";
   position: absolute;
   width: 10%;
@@ -725,7 +931,7 @@ body header .nav .dark-light-switch .shadow-light {
   width: 50%;
   opacity: 1;
 }
-.contact .contact-content .contact-form form .input-container span:after {
+.contact .contact-content .contact-form .form-container .input-container span:after {
   content: "";
   position: absolute;
   width: 10%;
@@ -739,7 +945,7 @@ body header .nav .dark-light-switch .shadow-light {
   width: 50%;
   opacity: 1;
 }
-.contact .contact-content .contact-form form .input-container:focus {
+.contact .contact-content .contact-form .form-container .input-container span:focus {
   top: 0;
   transform: translateY(-50%);
   left: 25px;
@@ -747,20 +953,20 @@ body header .nav .dark-light-switch .shadow-light {
   width: 50%;
   opacity: 1;
 }
-.contact .contact-content .contact-form form textarea {
-  min-height: 35vh;
+.contact .contact-content .contact-form .form-container textarea {
+  min-height: 31vh;
 }
-.contact .contact-content .contact-form form textarea .input {
+.contact .contact-content .contact-form .form-container textarea .input {
   padding: 0.8rem 1.2rem;
   border-radius: 22px;
   resize: none;
   overflow-y: auto;
 }
-.contact .contact-content .contact-form form .input-container.textarea label {
+.contact .contact-content .contact-form .form-container .input-container.textarea label {
   top: 1rem;
   transform: translateY(0);
 }
-.contact .contact-content .contact-form form .btn {
+.contact .contact-content .contact-form .form-container .btn {
   padding: 0.6rem 1.3rem;
   background-color: #fff;
   border: 2px solid #fafafa;
@@ -773,7 +979,7 @@ body header .nav .dark-light-switch .shadow-light {
   transition: 0.3s;
   margin: 0;
 }
-.contact .contact-content .contact-form form .btn:hover {
+.contact .contact-content .contact-form .form-container .btn:hover {
   background-color: transparent;
   color: #fff;
 }/*# sourceMappingURL=style.css.map */

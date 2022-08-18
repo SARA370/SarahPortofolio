@@ -545,6 +545,212 @@ body {
 
 }
 
+/*////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////// SERVICES SECTION ////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////*/
+.wrapper {
+    padding: 60px auto;
+
+    .icon-wrap {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 0px;
+
+        .card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            align-items: space-between;
+            align-self: stretch;
+            justify-self: stretch;
+            margin-bottom: 30px;
+            padding: 30px;
+            background: white;
+            overflow: hidden;
+            box-shadow: 5px 5px 15px rgba(#602566, .5);
+            border-radius: 10px;
+
+            svg {
+                width: 100%;
+                padding: 10px;
+            }
+
+            h2 {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 1.2em;
+            }
+
+            .icon-develop {
+
+                animation-play-state: running;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+
+                .gear-b {
+                    animation: rotate-reverse 6s;
+                }
+
+                .gear-s {
+                    animation: rotate 12s linear infinite;
+                }
+
+                #XMLID_87_,
+                #XMLID_85_,
+                #XMLID_83_ {
+                    animation: twinkle 3s ease-in-out infinite;
+                }
+
+                #XMLID_85_ {
+                    animation-delay: .4s;
+                }
+
+                #XMLID_83_ {
+                    animation-delay: .6s;
+                }
+
+                .line-t,
+                .line-m,
+                .line-b {
+                    animation: shrink 1.8s ease-in-out infinite;
+                }
+
+                .line-m {
+                    animation-delay: .3s;
+                }
+
+                .line-b {
+                    animation-delay: .6s;
+                }
+
+                .code {
+
+                    &-letter_o {
+                        animation: typingO 3s linear infinite;
+                    }
+
+                    &-letter_d {
+                        animation: typingD 3s linear infinite;
+                    }
+
+                    &-letter_e {
+                        animation: typingE 3s linear infinite;
+                    }
+
+                    @keyframes typingE {
+
+                        20.1%,
+                        80% {
+                            fill: transparent;
+                        }
+
+                        20%,
+                        80.1% {
+                            fill: #fff;
+                        }
+                    }
+
+                    @keyframes typingD {
+
+                        30.1%,
+                        70% {
+                            fill: transparent;
+                        }
+
+                        30%,
+                        70.1% {
+                            fill: #fff;
+                        }
+                    }
+
+                    @keyframes typingO {
+
+                        40.1%,
+                        60% {
+                            fill: transparent;
+                        }
+
+                        40%,
+                        60.1% {
+                            fill: #fff;
+                        }
+                    }
+                }
+
+            }
+
+
+            .icon-design {
+
+                animation-play-state: running;
+
+                .anchor-part {
+                    animation: move 2s linear infinite;
+                }
+
+                .anchor-part--2 {
+                    animation: move2 2s linear infinite;
+                }
+
+                .pen-part {
+                    transform-origin: 140px 180px;
+                    animation: bounce2 2s ease-in-out infinite;
+                }
+
+                .ruler-part {
+                    transform-origin: 140px 180px;
+                    animation: bounce 1s ease-in-out infinite;
+                }
+
+                .circle-part {
+                    transform-origin: 139.8px 167.8px;
+                    animation: rotate 4s linear infinite;
+                }
+
+                .cursor-part {
+                    animation: bounceBFt2 2s ease-in-out infinite;
+                }
+
+                @keyframes move {
+
+                    0%,
+                    100% {
+                        transform: translate(1px, 1px);
+                    }
+
+                    50% {
+                        transform: translate(-1px, -1px);
+                    }
+                }
+
+                @keyframes move2 {
+
+                    0%,
+                    100% {
+                        transform: translate(-1px, -1px);
+                    }
+
+                    50% {
+                        transform: translate(1px, 1px);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
 
 /*////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////// PORTFOLIO SECTION ///////////////////////////*/
@@ -745,8 +951,9 @@ body {
         .contact-form {
             width: 100%;
             max-width: 930px;
+            z-index: -100;
 
-            form {
+            .form-container {
                 padding: 2.3em 2.2em;
                 z-index: 10;
                 overflow: hidden;
@@ -830,20 +1037,21 @@ body {
                             width: 50%;
                             opacity: 1;
                         }
-                    }
 
-                    &:focus {
-                        top: 0;
-                        transform: translateY(-50%);
-                        left: 25px;
-                        font-size: 0.8rem;
-                        width: 50%;
-                        opacity: 1;
+
+                        &:focus {
+                            top: 0;
+                            transform: translateY(-50%);
+                            left: 25px;
+                            font-size: 0.8rem;
+                            width: 50%;
+                            opacity: 1;
+                        }
                     }
                 }
 
                 textarea {
-                    min-height: 35vh;
+                    min-height: 31vh;
 
                     .input {
                         padding: 0.8rem 1.2rem;
