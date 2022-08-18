@@ -429,7 +429,7 @@ body header .nav .dark-light-switch .shadow-light {
   transform: translateY(-50%);
 }
 .social-icons ul {
-  transform: translate(-270px);
+  transform: translateX(-270px);
 }
 .social-icons ul li {
   display: block;
@@ -443,24 +443,22 @@ body header .nav .dark-light-switch .shadow-light {
 }
 .social-icons ul li:hover {
   transform: translateX(110px);
-  transform: rotate(360deg);
-  transition: all 1s;
 }
-.social-icons ul li a {
+.social-icons ul li img {
   color: #ffffff;
+  transform: rotate(0deg);
 }
-.social-icons ul li a img {
+.social-icons ul li:hover img {
   transform: rotate(360deg);
   transition: all 1s;
 }
-.social-icons ul .icon {
+.social-icons ul li .icon {
   background-color: wheat;
   padding: 0.6em;
   border-radius: 50%;
   text-align: center;
   margin-left: 0.875em;
   width: 20%;
-  transform: rotate(0deg);
   display: inline-block;
   vertical-align: middle;
   transition: all 1s;
