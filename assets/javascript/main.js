@@ -59,6 +59,41 @@ let letter = '';
 // }
 
 
+/////////*******************************************///////
+/////////************ SERVICES SECTION *************///////
+/////////*******************************************///////
+
+let elementsCC = document.querySelectorAll('.origin-center');
+ 
+elementsCC.forEach(element => {
+  let bbox = element.getBBox(),
+    x = bbox.x,
+    y = bbox.y,
+    w = bbox.width,
+    h = bbox.height;
+                 
+  //center center
+  let resultCC = (x + (w / 2)) + 'px ' + (y + (h / 2)) + 'px';
+  
+  element.style.setProperty("transform-origin", resultCC)
+}); // forEach
+
+
+let elementsTL = document.querySelectorAll('.origin-left');
+ 
+elementsTL.forEach(element => {
+  let bbox = element.getBBox(),
+    x = bbox.x,
+    y = bbox.y,
+    w = bbox.width,
+    h = bbox.height;
+                 
+  //top left
+  let resultTL = x + 'px ' + y + 'px';
+  
+  element.style.setProperty("transform-origin", resultTL)
+}); // forEach
+
 
 
 /////////*******************************************///////
@@ -136,6 +171,8 @@ btns[0].addEventListener('click', (e) => {
 /////////*******************************************///////
 
 
+/////////***************** FORM CONTAINER ****************///////
+
 const inputs = document.querySelectorAll(".input");
 
 function focusFunc() {
@@ -154,3 +191,50 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 });
+
+
+/////////***************** SUBMIT BUTTON ****************///////
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyB6Izsku_qLcnr9lc0Ivj5eejB7-5FCaRE",
+    authDomain: "test-form-d3492.firebaseapp.com",
+    databaseURL: "https://test-form-d3492.firebaseio.com",
+    projectId: "test-form-d3492",
+    storageBucket: "test-form-d3492.appspot.com",
+    messagingSenderId: "222398070278",
+    appId: "1:222398070278:web:bf51f5c8a26dcfff9ecd87",
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  // Refernece contactInfo collections
+  let contactInfo = firebase.database().ref("infos");
+  
+// listen for a submit
+document.querySelector(".form-container").addEventListener("submit", submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+
+    //   Get input Values
+    let name = document.querySelector(".name").value;
+    let email = document.querySelector(".email").value;
+    let number = document.querySelector(".number").value;
+    let message = document.querySelector(".message").value;
+    console.log(name, email, number, message);
+
+    saveContactInfo(name, email, number, message);
+    document.querySelector(".contact-form").reset();
+}
+
+// Save infos to Firebase
+function saveContactInfo(name, email, number, message) {
+    let newContactInfo = contactInfo.push();
+
+    newContactInfo.set({
+        name: name,
+        email: email,
+        number: number,
+        message: message,
+    });
+}

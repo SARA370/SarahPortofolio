@@ -551,241 +551,259 @@ body {
 .wrapper {
     padding: 60px auto;
 
-    .icon-wrap {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        align-items: center;
-        margin-bottom: 0px;
+    margin-bottom: 0px;
 
-        .card {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: column;
-            align-items: space-between;
-            align-self: stretch;
-            justify-self: stretch;
-            margin-bottom: 30px;
-            padding: 30px;
-            background: white;
-            overflow: hidden;
-            box-shadow: 5px 5px 15px rgba(#602566, .5);
-            border-radius: 10px;
+}
 
-            svg {
-                width: 100%;
-                padding: 10px;
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    align-items: space-between;
+    align-self: stretch;
+    justify-self: stretch;
+    margin-bottom: 30px;
+    padding: 30px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(#602566, .5);
+    border-radius: 10px;
+
+    svg {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1.2em;
+    }
+
+}
+
+.icon-wrap {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.icon-develop {
+
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    .gear-b {
+        animation: rotate-reverse 6s;
+    }
+
+    .gear-s {
+        animation: rotate 12s linear infinite;
+    }
+
+    #XMLID_87_,
+    #XMLID_85_,
+    #XMLID_83_ {
+        animation: twinkle 3s ease-in-out infinite;
+    }
+
+    #XMLID_85_ {
+        animation-delay: .4s;
+    }
+
+    #XMLID_83_ {
+        animation-delay: .6s;
+    }
+
+    .line-t,
+    .line-m,
+    .line-b {
+        animation: shrink 1.8s ease-in-out infinite;
+    }
+
+    .line-m {
+        animation-delay: .3s;
+    }
+
+    .line-b {
+        animation-delay: .6s;
+    }
+
+    .code {
+
+        &-letter_o {
+            animation: typingO 3s linear infinite;
+        }
+
+        &-letter_d {
+            animation: typingD 3s linear infinite;
+        }
+
+        &-letter_e {
+            animation: typingE 3s linear infinite;
+        }
+
+        @keyframes typingE {
+
+            20.1%,
+            80% {
+                fill: transparent;
             }
 
-            h2 {
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                font-size: 1.2em;
+            20%,
+            80.1% {
+                fill: #fff;
+            }
+        }
+
+        @keyframes typingD {
+
+            30.1%,
+            70% {
+                fill: transparent;
             }
 
+            30%,
+            70.1% {
+                fill: #fff;
+            }
+        }
 
-            .icon-develop {
+        @keyframes typingO {
 
-                animation-play-state: running;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-
-
-                .gear-b {
-                    animation: rotate-reverse 6s;
-                }
-
-                .gear-s {
-                    animation: rotate 12s linear infinite;
-                }
-
-                #XMLID_87_,
-                #XMLID_85_,
-                #XMLID_83_ {
-                    animation: twinkle 3s ease-in-out infinite;
-                }
-
-                #XMLID_85_ {
-                    animation-delay: .4s;
-                }
-
-                #XMLID_83_ {
-                    animation-delay: .6s;
-                }
-
-                .line-t,
-                .line-m,
-                .line-b {
-                    animation: shrink 1.8s ease-in-out infinite;
-                }
-
-                .line-m {
-                    animation-delay: .3s;
-                }
-
-                .line-b {
-                    animation-delay: .6s;
-                }
-
-                .code {
-
-                    &-letter_o {
-                        animation: typingO 3s linear infinite;
-                    }
-
-                    &-letter_d {
-                        animation: typingD 3s linear infinite;
-                    }
-
-                    &-letter_e {
-                        animation: typingE 3s linear infinite;
-                    }
-
-                    @keyframes typingE {
-
-                        20.1%,
-                        80% {
-                            fill: transparent;
-                        }
-
-                        20%,
-                        80.1% {
-                            fill: #fff;
-                        }
-                    }
-
-                    @keyframes typingD {
-
-                        30.1%,
-                        70% {
-                            fill: transparent;
-                        }
-
-                        30%,
-                        70.1% {
-                            fill: #fff;
-                        }
-                    }
-
-                    @keyframes typingO {
-
-                        40.1%,
-                        60% {
-                            fill: transparent;
-                        }
-
-                        40%,
-                        60.1% {
-                            fill: #fff;
-                        }
-                    }
-                }
-
-                @keyframes twinkle {
-                    0%, 50%, 100% {
-                      transform: scale(1);
-                    }
-                    25%, 75% {
-                      transform: scale(1.6);
-                    }
-                }
-                @keyframes shrink {
-                    50% {
-                    transform: scaleX(0.3);
-                    }
-                }
-    
-                @keyframes rotate {
-                to {
-                    transform: rotate(1turn);
-                }
-                }
-    
-                @keyframes rotate-reverse {
-                to {
-                    transform: rotate(-1turn);
-                }
-                }
-
+            40.1%,
+            60% {
+                fill: transparent;
             }
 
-
-            .icon-design {
-
-                animation-play-state: running;
-
-                .anchor-part {
-                    animation: move 2s linear infinite;
-                }
-
-                .anchor-part--2 {
-                    animation: move2 2s linear infinite;
-                }
-
-                .pen-part {
-                    transform-origin: 140px 180px;
-                    animation: bounce2 2s ease-in-out infinite;
-                }
-
-                .ruler-part {
-                    transform-origin: 140px 180px;
-                    animation: bounce 1s ease-in-out infinite;
-                }
-
-                .circle-part {
-                    transform-origin: 139.8px 167.8px;
-                    animation: rotate 4s linear infinite;
-                }
-
-                .cursor-part {
-                    animation: bounceBFt2 2s ease-in-out infinite;
-                }
-
-                @keyframes move {
-
-                    0%,
-                    100% {
-                        transform: translate(1px, 1px);
-                    }
-
-                    50% {
-                        transform: translate(-1px, -1px);
-                    }
-                }
-
-                @keyframes move2 {
-
-                    0%,
-                    100% {
-                        transform: translate(-1px, -1px);
-                    }
-
-                    50% {
-                        transform: translate(1px, 1px);
-                    }
-                }
+            40%,
+            60.1% {
+                fill: #fff;
             }
-            //  ANIMATIONS MISSING
+        }
+    }
 
-            // FOR ICON
-            
-            
-            @keyframes bounce {
-                50% {
-                    transform: rotate(-6deg);
-                }
-            }
-            
-            @keyframes bounce2 {
-                50% {
-                    transform: rotate(6deg);
-                }
-            }
+}
 
+
+.icon-design {
+
+    animation-play-state: running;
+
+    .anchor-part {
+        animation: move 2s linear infinite;
+    }
+
+    .anchor-part--2 {
+        animation: move2 2s linear infinite;
+    }
+
+    .pen-part {
+        transform-origin: 140px 180px;
+        animation: bounce2 2s ease-in-out infinite;
+    }
+
+    .ruler-part {
+        transform-origin: 140px 180px;
+        animation: bounce 1s ease-in-out infinite;
+    }
+
+    .circle-part {
+        transform-origin: 139.8px 167.8px;
+        animation: rotate 4s linear infinite;
+    }
+
+    .cursor-part {
+        animation: bounceBFt2 2s ease-in-out infinite;
+    }
+
+    @keyframes move {
+
+        0%,
+        100% {
+            transform: translate(1px, 1px);
+        }
+
+        50% {
+            transform: translate(-1px, -1px);
+        }
+    }
+
+    @keyframes move2 {
+
+        0%,
+        100% {
+            transform: translate(-1px, -1px);
+        }
+
+        50% {
+            transform: translate(1px, 1px);
         }
     }
 }
+
+@keyframes twinkle {
+
+    0%,
+    50%,
+    100% {
+        transform: scale(1);
+    }
+
+    25%,
+    75% {
+        transform: scale(1.3);
+    }
+}
+
+@keyframes bounce {
+    50% {
+        transform: rotate(-6deg);
+    }
+}
+
+@keyframes bounce2 {
+    50% {
+        transform: rotate(6deg);
+    }
+}
+
+@keyframes bounceBFt2 {
+
+    0%,
+    100% {
+        transform: rotate(4.6deg);
+    }
+
+    50% {
+        transform: rotate(-4.6deg);
+    }
+}
+
+@keyframes shrink {
+    50% {
+        transform: scaleX(0.3);
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes rotate-reverse {
+    to {
+        transform: rotate(-1turn);
+    }
+}
+
+
+
 
 
 
@@ -1022,9 +1040,9 @@ body {
                         transition: 0.3s;
                     }
 
-                    
 
-                    label{
+
+                    label {
                         position: absolute;
                         top: 50%;
                         left: 15px;
@@ -1038,11 +1056,11 @@ body {
                         transition: 0.5s;
                         background-color: #602566;
                     }
-                    
 
-                    &.focus{
 
-                        label{
+                    &.focus {
+
+                        label {
                             background-color: pink;
                             top: 0;
                             transform: translateY(-50%);
@@ -1050,18 +1068,18 @@ body {
                             font-size: 0.8rem;
                         }
 
-                        span:before{
+                        span:before {
                             width: 50%;
                             opacity: 1;
                         }
 
-                        span:after{
+                        span:after {
                             width: 50%;
                             opacity: 1;
                         }
 
-                    } 
-                    
+                    }
+
 
                     span {
                         position: absolute;
@@ -1086,20 +1104,20 @@ body {
                             background-color: #1abc9c;
                             top: 50%;
                             transform: translateY(-50%);
-                            
+
                         }
                     }
 
-                    span:before{
+                    span:before {
                         left: 50%;
                     }
-                    
-                    span:after{
+
+                    span:after {
                         right: 50%;
                     }
                 }
-                
-                .textarea{
+
+                .textarea {
 
                     .input {
                         min-height: 31vh;
@@ -1107,9 +1125,9 @@ body {
                         border-radius: 22px;
                         resize: none;
                         overflow-y: auto;
-                    } 
+                    }
 
-                    label{
+                    label {
                         top: 1rem;
                         transform: translateY(0);
                         background-color: aquamarine;
