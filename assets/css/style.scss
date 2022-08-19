@@ -584,11 +584,13 @@ body {
                 font-size: 1.2em;
             }
 
+
             .icon-develop {
 
                 animation-play-state: running;
                 animation-iteration-count: infinite;
                 animation-timing-function: linear;
+
 
                 .gear-b {
                     animation: rotate-reverse 6s;
@@ -680,6 +682,32 @@ body {
                     }
                 }
 
+                @keyframes twinkle {
+                    0%, 50%, 100% {
+                      transform: scale(1);
+                    }
+                    25%, 75% {
+                      transform: scale(1.6);
+                    }
+                }
+                @keyframes shrink {
+                    50% {
+                    transform: scaleX(0.3);
+                    }
+                }
+    
+                @keyframes rotate {
+                to {
+                    transform: rotate(1turn);
+                }
+                }
+    
+                @keyframes rotate-reverse {
+                to {
+                    transform: rotate(-1turn);
+                }
+                }
+
             }
 
 
@@ -736,6 +764,22 @@ body {
                     50% {
                         transform: translate(1px, 1px);
                     }
+                }
+            }
+            //  ANIMATIONS MISSING
+
+            // FOR ICON
+            
+            
+            @keyframes bounce {
+                50% {
+                    transform: rotate(-6deg);
+                }
+            }
+            
+            @keyframes bounce2 {
+                50% {
+                    transform: rotate(6deg);
                 }
             }
 

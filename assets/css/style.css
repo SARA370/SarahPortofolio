@@ -630,6 +630,52 @@ body header .nav .dark-light-switch .shadow-light {
     fill: #fff;
   }
 }
+@-webkit-keyframes twinkle {
+  0%, 50%, 100% {
+    transform: scale(1);
+  }
+  25%, 75% {
+    transform: scale(1.6);
+  }
+}
+@keyframes twinkle {
+  0%, 50%, 100% {
+    transform: scale(1);
+  }
+  25%, 75% {
+    transform: scale(1.6);
+  }
+}
+@-webkit-keyframes shrink {
+  50% {
+    transform: scaleX(0.3);
+  }
+}
+@keyframes shrink {
+  50% {
+    transform: scaleX(0.3);
+  }
+}
+@-webkit-keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@-webkit-keyframes rotate-reverse {
+  to {
+    transform: rotate(-1turn);
+  }
+}
+@keyframes rotate-reverse {
+  to {
+    transform: rotate(-1turn);
+  }
+}
 .wrapper .icon-wrap .card .icon-design {
   -webkit-animation-play-state: running;
           animation-play-state: running;
@@ -691,6 +737,26 @@ body header .nav .dark-light-switch .shadow-light {
   }
   50% {
     transform: translate(1px, 1px);
+  }
+}
+@-webkit-keyframes bounce {
+  50% {
+    transform: rotate(-6deg);
+  }
+}
+@keyframes bounce {
+  50% {
+    transform: rotate(-6deg);
+  }
+}
+@-webkit-keyframes bounce2 {
+  50% {
+    transform: rotate(6deg);
+  }
+}
+@keyframes bounce2 {
+  50% {
+    transform: rotate(6deg);
   }
 }
 
