@@ -166,10 +166,12 @@ btns[0].addEventListener('click', (e) => {
     });
 });
 
+
+
+
 /////////*******************************************///////
 /////////************* CONTACT SECTION *************///////
 /////////*******************************************///////
-
 
 /////////***************** FORM CONTAINER ****************///////
 
@@ -193,48 +195,24 @@ inputs.forEach((input) => {
 });
 
 
-/////////***************** SUBMIT BUTTON ****************///////
-// Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyB6Izsku_qLcnr9lc0Ivj5eejB7-5FCaRE",
-    authDomain: "test-form-d3492.firebaseapp.com",
-    databaseURL: "https://test-form-d3492.firebaseio.com",
-    projectId: "test-form-d3492",
-    storageBucket: "test-form-d3492.appspot.com",
-    messagingSenderId: "222398070278",
-    appId: "1:222398070278:web:bf51f5c8a26dcfff9ecd87",
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  
-  // Refernece contactInfo collections
-  let contactInfo = firebase.database().ref("infos");
-  
+// SUBMIT CONTACT FORM !!!! 
+
 // listen for a submit
 document.querySelector(".form-container").addEventListener("submit", submitForm);
 
 function submitForm(e) {
     e.preventDefault();
+    console.log("hello");
 
     //   Get input Values
-    let name = document.querySelector(".name").value;
-    let email = document.querySelector(".email").value;
-    let number = document.querySelector(".number").value;
-    let message = document.querySelector(".message").value;
-    console.log(name, email, number, message);
+    const clientName = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;   
+    
+    console.log(clientName, email, phone, message)
+    
 
-    saveContactInfo(name, email, number, message);
-    document.querySelector(".contact-form").reset();
-}
-
-// Save infos to Firebase
-function saveContactInfo(name, email, number, message) {
-    let newContactInfo = contactInfo.push();
-
-    newContactInfo.set({
-        name: name,
-        email: email,
-        number: number,
-        message: message,
-    });
+    saveContactInfo(clientName, email, number, message);
+    document.querySelector(".form-container").reset();
 }
