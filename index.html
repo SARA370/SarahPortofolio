@@ -538,29 +538,29 @@
           
           <!---Contact form content--->
       <div class="contact-form">
-        <form action="index.html" autocomplete="off" class="form-container">
+        <form  autocomplete="off" class="form-container" onsubmit="sendEmail(); reset(); return false;">
 
           <div class="input-container">
-            <input type="text" name="name" class="input" />
+            <input type="text" name="name" class="input" id="Name"/>
             <label for="">Username</label>
             <span>Username</span>
           </div>
 
           <div class="input-container">
-            <input type="email" name="email" cols="30" rows="10" class="input" />
+            <input type="email" name="email" cols="30" rows="10" class="input" id="Email" />
             <label for="">Email</label>
             <span>Email</span>
           </div>
 
           <div class="input-container">
-            <input type="tel" name="phone" class="input" />
+            <input type="tel" name="phone" class="input" id="Phone"/>
             <label for="">Phone</label>
             <span>Phone</span>
           </div>
 
           <div class="input-container textarea">
-            <textarea name="message" class="input"></textarea>
             <label class="casse-tete" for="">Message</label>
+            <textarea name="message" class="input" id="Message" ></textarea>
             <span>Message</span>
           </div>
 
@@ -590,6 +590,7 @@
 
   <script src="./assets/javascript/main.js"></script>
   <script src="./assets/javascript/translator.js"></script>
+  <script src="./assets/smtp.js"></script>
 
 </body>
 </html>
