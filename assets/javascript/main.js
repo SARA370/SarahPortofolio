@@ -193,26 +193,3 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 });
-
-
-// SUBMIT CONTACT FORM !!!! 
-
-// listen for a submit
-document.querySelector(".form-container").addEventListener("submit", submitForm);
-
-function submitForm(e) {
-    e.preventDefault();
-    console.log("hello");
-
-    //   Get input Values
-    const clientName = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const message = document.getElementById("message").value;   
-    
-    console.log(clientName, email, phone, message)
-    
-
-    saveContactInfo(clientName, email, number, message);
-    document.querySelector(".form-container").reset();
-}

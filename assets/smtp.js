@@ -5,10 +5,11 @@ var Email = { send: function (a) { return new Promise(function (n, e) { a.nocach
 /////////***************** SUBMIT BUTTON ****************///////
 
 
-let name = document.getElementById("Name").value;
-let email = document.getElementById("Email").value;
-let phone = document.getElementById("Phone").value;
-let message = document.getElementById("Message").value;
+const userName = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const subject = document.getElementById("subject").value;
+const phone = document.getElementById("phone").value;
+const message = document.getElementById("message").value;
 
 
 function sendEmail(){
@@ -16,10 +17,10 @@ function sendEmail(){
         Host : "smtp.elasticemail.com",
         Username : "selenadam07@gmail.com",
         Password : "BE11F2CEC841C2CD9BE1327B9FFC5F238807",
-        To : 'sarahalrashid370@gmail.com',
-        From : "selenadam07@gmail.com",
-        Subject : "This is the subject",
-        Body : "And this is the body"
+        To : "selenadam07@gmail.com",
+        From : "sarahalrashid370@gmail.com",
+        Subject : "Formulaire de contact dans le porfolio",
+        Body : "Nom: " + userName + "<br/> Adress mail: " + email + "<br/> Sujet: " + subject + "<br/> Numéro de téléphone: " + phone +"<br/> Message du user : " + message
     }).then(
       message => alert(message)
     );
