@@ -5,22 +5,25 @@ var Email = { send: function (a) { return new Promise(function (n, e) { a.nocach
 /////////***************** SUBMIT BUTTON ****************///////
 
 
-const userName = document.getElementById("name").value;
-const email = document.getElementById("email").value;
-const subject = document.getElementById("subject").value;
-const phone = document.getElementById("phone").value;
-const message = document.getElementById("message").value;
+
 
 
 function sendEmail(){
+
+  const userName = document.querySelector("#Name").value;
+  const email = document.querySelector("#Email").value;
+  const subject = document.querySelector("#Subject").value;
+  const phone = document.querySelector("#Phone").value;
+  const message = document.querySelector("#Message").value;
+
     Email.send({
         Host : "smtp.elasticemail.com",
-        Username : "selenadam07@gmail.com",
-        Password : "BE11F2CEC841C2CD9BE1327B9FFC5F238807",
-        To : "selenadam07@gmail.com",
-        From : "sarahalrashid370@gmail.com",
+        Username : "sarah_3701@outlook.com",
+        Password : "83B4812820C99F6F96DD9A5A3936CC92F04E",
+        To : "sarah_3701@outlook.com",
+        From : "sarahadam0075@gmail.com",
         Subject : "Formulaire de contact dans le porfolio",
-        Body : "Nom: " + userName + "<br/> Adress mail: " + email + "<br/> Sujet: " + subject + "<br/> Numéro de téléphone: " + phone +"<br/> Message du user : " + message
+        Body : " Nom: " + userName + "<br/> Adress mail: " + email + "<br/> Sujet: " + subject + "<br/> Numéro de téléphone: " + phone +"<br/> Message du user : " + message
     }).then(
       message => alert(message)
     );
