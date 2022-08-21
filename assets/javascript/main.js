@@ -15,18 +15,18 @@ let letter = '';
 // now defining the function for our typing effect, and we wanna to call it directly, it's called "self invoked function ", means whenevere she gets read, it gets invoked at the same time.
 (function type() {
 
-    if (count == texts.length) { // == for the 2 content that i have inside the array function
-        count = 0;
-    }
-    currentText = texts[count];
-    letter = currentText.slice(0, ++index);
+  if (count == texts.length) { // == for the 2 content that i have inside the array function
+    count = 0;
+  }
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
 
-    document.querySelector('.typing').textContent = letter;
-    if (letter.length == currentText.length) {
-        count++;
-        index = 0;
-    }
-    setTimeout(type, 300);
+  document.querySelector('.typing').textContent = letter;
+  if (letter.length == currentText.length) {
+    count++;
+    index = 0;
+  }
+  setTimeout(type, 300);
 
 })();
 
@@ -34,29 +34,53 @@ let letter = '';
 /////////************* DARK/LIGHT MODE ***************///////
 /////////*********************************************///////
 
-// const sun = "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg";
-// const moon = "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg";
-// const container = document.getElementsByClassName("theme-container")[0];
-// const themeIcon = document.getElementById("theme-icon");
+const sun =  "./assets/imgs/sun.svg";
+const moon = "./assets/imgs/moon.svg";
 
+var theme = "dark";
 
-// container.addEventListener("click", setTheme);
+const root = document.querySelector(":root");
+const container = document.getElementsByClassName("theme-container")[0];
+const themeIcon = document.getElementById("theme-icon");
+container.addEventListener("click", setTheme);
 
-// function setTheme() {
+function setTheme() {
+  switch (theme) {
+    case "dark":
+      setLight();
+      theme = "light";
+      break;
+    case "light":
+      setDark();
+      theme = "dark";
+      break;
+  }
+}
 
-//     function setLight() {
+function setLight() {
+  root.style.setProperty(
+    "--bs-dark",
+    "linear-gradient(318.32deg, #c3d1e4 0%, #dde7f3 55%, #d4e0ed 100%)"
+  );
+  container.classList.remove("shadow-dark");
+  setTimeout(() => {
+    container.classList.add("shadow-light");
+    themeIcon.classList.remove("change");
+  }, 300);
+  themeIcon.classList.add("change");
+  themeIcon.src = sun;
+}
 
-//         themeIcon.src = sun;
-
-//     }
-
-//     function setDark() {
-
-//         themeIcon.src = moon;
-
-//     }
-
-// }
+function setDark() {
+  root.style.setProperty("--bs-dark", "#212529");
+  container.classList.remove("shadow-light");
+  setTimeout(() => {
+    container.classList.add("shadow-dark");
+    themeIcon.classList.remove("change");
+  }, 300);
+  themeIcon.classList.add("change");
+  themeIcon.src = moon;
+}
 
 
 /////////*******************************************///////
@@ -64,33 +88,33 @@ let letter = '';
 /////////*******************************************///////
 
 let elementsCC = document.querySelectorAll('.origin-center');
- 
+
 elementsCC.forEach(element => {
   let bbox = element.getBBox(),
     x = bbox.x,
     y = bbox.y,
     w = bbox.width,
     h = bbox.height;
-                 
+
   //center center
   let resultCC = (x + (w / 2)) + 'px ' + (y + (h / 2)) + 'px';
-  
+
   element.style.setProperty("transform-origin", resultCC)
 }); // forEach
 
 
 let elementsTL = document.querySelectorAll('.origin-left');
- 
+
 elementsTL.forEach(element => {
   let bbox = element.getBBox(),
     x = bbox.x,
     y = bbox.y,
     w = bbox.width,
     h = bbox.height;
-                 
+
   //top left
   let resultTL = x + 'px ' + y + 'px';
-  
+
   element.style.setProperty("transform-origin", resultTL)
 }); // forEach
 
@@ -108,62 +132,62 @@ const imgs = document.querySelectorAll('.portfolio-images img');
 
 //Add a click event to all buttons
 for (let i = 1; i < btns.length; i++) {
-    btns[i].addEventListener('click', filterImg);
+  btns[i].addEventListener('click', filterImg);
 }
 
 //Set active button on click
 function setActiveBtn(e) {
 
-    //Remove active class from all buttons
-    btns.forEach(btn => {
-        btn.classList.remove('btn-clicked');
-    });
+  //Remove active class from all buttons
+  btns.forEach(btn => {
+    btn.classList.remove('btn-clicked');
+  });
 
-    //Add active class to clicked button
-    e.target.classList.add('btn-clicked');
+  //Add active class to clicked button
+  e.target.classList.add('btn-clicked');
 
 }
 
 //Filter Images
 function filterImg(e) {
 
-    //Run the active button function
-    setActiveBtn(e);
+  //Run the active button function
+  setActiveBtn(e);
 
-    //Loop through all images
-    imgs.forEach(img => {
-        //Expand all images
-        img.classList.remove('img-shrink');
-        img.classList.add('img-expand');
+  //Loop through all images
+  imgs.forEach(img => {
+    //Expand all images
+    img.classList.remove('img-shrink');
+    img.classList.add('img-expand');
 
-        //Get data from data attributes
-        //Get image type data
-        const imgType = parseInt(img.dataset.img);
-        //Get button type data
-        const btnType = parseInt(e.target.dataset.btn);
+    //Get data from data attributes
+    //Get image type data
+    const imgType = parseInt(img.dataset.img);
+    //Get button type data
+    const btnType = parseInt(e.target.dataset.btn);
 
-        /*
-          If the image type and the type of the 
-          clicked button are NOT the same
-        */
-        if (imgType !== btnType) {
-            //Hide the image
-            img.classList.remove('img-expand');
-            img.classList.add('img-shrink');
-        }
-    });
+    /*
+      If the image type and the type of the 
+      clicked button are NOT the same
+    */
+    if (imgType !== btnType) {
+      //Hide the image
+      img.classList.remove('img-expand');
+      img.classList.add('img-shrink');
+    }
+  });
 }
 
 //Set click event for the 'All' button
 btns[0].addEventListener('click', (e) => {
-    //Run the active button function
-    setActiveBtn(e);
-    //Loop through all images
-    imgs.forEach(img => {
-        //Expand all images
-        img.classList.remove('img-shrink');
-        img.classList.add('img-expanded');
-    });
+  //Run the active button function
+  setActiveBtn(e);
+  //Loop through all images
+  imgs.forEach(img => {
+    //Expand all images
+    img.classList.remove('img-shrink');
+    img.classList.add('img-expanded');
+  });
 });
 
 
