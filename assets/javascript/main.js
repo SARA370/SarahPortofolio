@@ -59,6 +59,41 @@ let letter = '';
 // }
 
 
+/////////*******************************************///////
+/////////************ SERVICES SECTION *************///////
+/////////*******************************************///////
+
+let elementsCC = document.querySelectorAll('.origin-center');
+ 
+elementsCC.forEach(element => {
+  let bbox = element.getBBox(),
+    x = bbox.x,
+    y = bbox.y,
+    w = bbox.width,
+    h = bbox.height;
+                 
+  //center center
+  let resultCC = (x + (w / 2)) + 'px ' + (y + (h / 2)) + 'px';
+  
+  element.style.setProperty("transform-origin", resultCC)
+}); // forEach
+
+
+let elementsTL = document.querySelectorAll('.origin-left');
+ 
+elementsTL.forEach(element => {
+  let bbox = element.getBBox(),
+    x = bbox.x,
+    y = bbox.y,
+    w = bbox.width,
+    h = bbox.height;
+                 
+  //top left
+  let resultTL = x + 'px ' + y + 'px';
+  
+  element.style.setProperty("transform-origin", resultTL)
+}); // forEach
+
 
 
 /////////*******************************************///////
@@ -131,10 +166,14 @@ btns[0].addEventListener('click', (e) => {
     });
 });
 
+
+
+
 /////////*******************************************///////
 /////////************* CONTACT SECTION *************///////
 /////////*******************************************///////
 
+/////////***************** FORM CONTAINER ****************///////
 
 const inputs = document.querySelectorAll(".input");
 
@@ -154,3 +193,26 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 });
+
+
+// SUBMIT CONTACT FORM !!!! 
+
+// listen for a submit
+document.querySelector(".form-container").addEventListener("submit", submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+    console.log("hello");
+
+    //   Get input Values
+    const clientName = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;   
+    
+    console.log(clientName, email, phone, message)
+    
+
+    saveContactInfo(clientName, email, number, message);
+    document.querySelector(".form-container").reset();
+}

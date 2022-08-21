@@ -494,15 +494,10 @@ body header .nav .dark-light-switch .shadow-light {
 /*////////////////////////////////////////////////////////////////////////*/
 .wrapper {
   padding: 60px auto;
-}
-.wrapper .icon-wrap {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
   margin-bottom: 0px;
 }
-.wrapper .icon-wrap .card {
+
+.card {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -517,16 +512,24 @@ body header .nav .dark-light-switch .shadow-light {
   box-shadow: 5px 5px 15px rgba(96, 37, 102, 0.5);
   border-radius: 10px;
 }
-.wrapper .icon-wrap .card svg {
+.card svg {
   width: 100%;
   padding: 10px;
 }
-.wrapper .icon-wrap .card h2 {
+.card h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1.2em;
 }
-.wrapper .icon-wrap .card .icon-develop {
+
+.icon-wrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.icon-develop {
   -webkit-animation-play-state: running;
           animation-play-state: running;
   -webkit-animation-iteration-count: infinite;
@@ -534,51 +537,51 @@ body header .nav .dark-light-switch .shadow-light {
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
-.wrapper .icon-wrap .card .icon-develop .gear-b {
+.icon-develop .gear-b {
   -webkit-animation: rotate-reverse 6s;
           animation: rotate-reverse 6s;
 }
-.wrapper .icon-wrap .card .icon-develop .gear-s {
+.icon-develop .gear-s {
   -webkit-animation: rotate 12s linear infinite;
           animation: rotate 12s linear infinite;
 }
-.wrapper .icon-wrap .card .icon-develop #XMLID_87_,
-.wrapper .icon-wrap .card .icon-develop #XMLID_85_,
-.wrapper .icon-wrap .card .icon-develop #XMLID_83_ {
+.icon-develop #XMLID_87_,
+.icon-develop #XMLID_85_,
+.icon-develop #XMLID_83_ {
   -webkit-animation: twinkle 3s ease-in-out infinite;
           animation: twinkle 3s ease-in-out infinite;
 }
-.wrapper .icon-wrap .card .icon-develop #XMLID_85_ {
+.icon-develop #XMLID_85_ {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.wrapper .icon-wrap .card .icon-develop #XMLID_83_ {
+.icon-develop #XMLID_83_ {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
-.wrapper .icon-wrap .card .icon-develop .line-t,
-.wrapper .icon-wrap .card .icon-develop .line-m,
-.wrapper .icon-wrap .card .icon-develop .line-b {
+.icon-develop .line-t,
+.icon-develop .line-m,
+.icon-develop .line-b {
   -webkit-animation: shrink 1.8s ease-in-out infinite;
           animation: shrink 1.8s ease-in-out infinite;
 }
-.wrapper .icon-wrap .card .icon-develop .line-m {
+.icon-develop .line-m {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
-.wrapper .icon-wrap .card .icon-develop .line-b {
+.icon-develop .line-b {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
-.wrapper .icon-wrap .card .icon-develop .code-letter_o {
+.icon-develop .code-letter_o {
   -webkit-animation: typingO 3s linear infinite;
           animation: typingO 3s linear infinite;
 }
-.wrapper .icon-wrap .card .icon-develop .code-letter_d {
+.icon-develop .code-letter_d {
   -webkit-animation: typingD 3s linear infinite;
           animation: typingD 3s linear infinite;
 }
-.wrapper .icon-wrap .card .icon-develop .code-letter_e {
+.icon-develop .code-letter_e {
   -webkit-animation: typingE 3s linear infinite;
           animation: typingE 3s linear infinite;
 }
@@ -630,80 +633,35 @@ body header .nav .dark-light-switch .shadow-light {
     fill: #fff;
   }
 }
-@-webkit-keyframes twinkle {
-  0%, 50%, 100% {
-    transform: scale(1);
-  }
-  25%, 75% {
-    transform: scale(1.6);
-  }
-}
-@keyframes twinkle {
-  0%, 50%, 100% {
-    transform: scale(1);
-  }
-  25%, 75% {
-    transform: scale(1.6);
-  }
-}
-@-webkit-keyframes shrink {
-  50% {
-    transform: scaleX(0.3);
-  }
-}
-@keyframes shrink {
-  50% {
-    transform: scaleX(0.3);
-  }
-}
-@-webkit-keyframes rotate {
-  to {
-    transform: rotate(1turn);
-  }
-}
-@keyframes rotate {
-  to {
-    transform: rotate(1turn);
-  }
-}
-@-webkit-keyframes rotate-reverse {
-  to {
-    transform: rotate(-1turn);
-  }
-}
-@keyframes rotate-reverse {
-  to {
-    transform: rotate(-1turn);
-  }
-}
-.wrapper .icon-wrap .card .icon-design {
+
+.icon-design {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
-.wrapper .icon-wrap .card .icon-design .anchor-part {
+.icon-design .anchor-part {
   -webkit-animation: move 2s linear infinite;
           animation: move 2s linear infinite;
 }
-.wrapper .icon-wrap .card .icon-design .anchor-part--2 {
+.icon-design .anchor-part--2 {
   -webkit-animation: move2 2s linear infinite;
           animation: move2 2s linear infinite;
 }
-.wrapper .icon-wrap .card .icon-design .pen-part {
+.icon-design .pen-part {
   transform-origin: 140px 180px;
   -webkit-animation: bounce2 2s ease-in-out infinite;
           animation: bounce2 2s ease-in-out infinite;
 }
-.wrapper .icon-wrap .card .icon-design .ruler-part {
+.icon-design .ruler-part {
   transform-origin: 140px 180px;
   -webkit-animation: bounce 1s ease-in-out infinite;
           animation: bounce 1s ease-in-out infinite;
 }
-.wrapper .icon-wrap .card .icon-design .circle-part {
+.icon-design .circle-part {
   transform-origin: 139.8px 167.8px;
   -webkit-animation: rotate 4s linear infinite;
           animation: rotate 4s linear infinite;
 }
-.wrapper .icon-wrap .card .icon-design .cursor-part {
+.icon-design .cursor-part {
   -webkit-animation: bounceBFt2 2s ease-in-out infinite;
           animation: bounceBFt2 2s ease-in-out infinite;
 }
@@ -739,6 +697,24 @@ body header .nav .dark-light-switch .shadow-light {
     transform: translate(1px, 1px);
   }
 }
+
+@-webkit-keyframes twinkle {
+  0%, 50%, 100% {
+    transform: scale(1);
+  }
+  25%, 75% {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes twinkle {
+  0%, 50%, 100% {
+    transform: scale(1);
+  }
+  25%, 75% {
+    transform: scale(1.3);
+  }
+}
 @-webkit-keyframes bounce {
   50% {
     transform: rotate(-6deg);
@@ -759,7 +735,52 @@ body header .nav .dark-light-switch .shadow-light {
     transform: rotate(6deg);
   }
 }
-
+@-webkit-keyframes bounceBFt2 {
+  0%, 100% {
+    transform: rotate(4.6deg);
+  }
+  50% {
+    transform: rotate(-4.6deg);
+  }
+}
+@keyframes bounceBFt2 {
+  0%, 100% {
+    transform: rotate(4.6deg);
+  }
+  50% {
+    transform: rotate(-4.6deg);
+  }
+}
+@-webkit-keyframes shrink {
+  50% {
+    transform: scaleX(0.3);
+  }
+}
+@keyframes shrink {
+  50% {
+    transform: scaleX(0.3);
+  }
+}
+@-webkit-keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@-webkit-keyframes rotate-reverse {
+  to {
+    transform: rotate(-1turn);
+  }
+}
+@keyframes rotate-reverse {
+  to {
+    transform: rotate(-1turn);
+  }
+}
 /*////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////// PORTFOLIO SECTION ///////////////////////////*/
 /*////////////////////////////////////////////////////////////////////////*/
