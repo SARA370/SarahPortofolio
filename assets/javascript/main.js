@@ -47,19 +47,21 @@ container.addEventListener("click", setTheme);
 function setTheme() {
   switch (theme) {
     case "dark":
-      document.documentElement.setAttribute('data-theme', 'dark'); // va insrérer le data-theme="dark" dans l'élément racine du document. En l'occurance => celui de l'html (balise)
-      theme="dark"
+      document.documentElement.setAttribute('data-theme', 'dark');
+      theme = "light"; // va localiser tous les elements dans tous le document (et html et css) pour replacer le "theme" par "light"
       darkMode();
       break;
-    case "light":
-      document.documentElement.setAttribute('data-theme', 'light');
-      theme = "light"; // va localiser tous les elements dans tous le document (et html et css) pour replacer le "theme" par "light"
-      lightMode();
+      case "light":
+        document.documentElement.setAttribute('data-theme', 'light'); // va insrérer le data-theme="dark" dans l'élément racine du document. En l'occurance => celui de l'html (balise)
+        localStorage.setItem('theme', 'dark');
+        theme = "dark"
+        lightMode();
       break;
   }
 }
 
 function lightMode() {
+  console.log("light here")
   root.style.setProperty(
     "--bs-dark",
     "linear-gradient(318.32deg, #c3d1e4 0%, #dde7f3 55%, #d4e0ed 100%)"
@@ -73,11 +75,12 @@ function lightMode() {
   }, 300);
 
   themeIcon.classList.add("change");
-
+  
   themeIcon.src = sun;
 }
 
 function darkMode() {
+  console.log("dark here")
   root.style.setProperty("--bs-dark", "#212529");
 
   container.classList.remove("shadow-light");
@@ -90,6 +93,7 @@ function darkMode() {
   themeIcon.classList.add("change");
 
   themeIcon.src = moon;
+
 }
 
 
