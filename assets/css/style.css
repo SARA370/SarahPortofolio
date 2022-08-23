@@ -37,18 +37,18 @@
   --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
 }
 
-[data-theme="dark"] {  /* qui se mettra dans l'html */
+[data-theme=dark] { /* qui se mettra dans l'html */
   --primary-color: rgb(150, 65, 255);
   --primary-variant: #6c63ff;
   --secondary-color: #03dac5;
   --on-primary: #000;
-  --on-background: rgba(255, 255, 255, 0.9);
+  --on-background: rgba(236, 7, 7, 0.9);
   --on-background-alt: rgba(255, 255, 255, 0.7);
   --background: #121212;
 }
 
 body {
-  background-image: url(../imgs/abs.jpg);
+  background-image: url("../imgs/abs.jpg");
   background-size: contain;
   width: 100%;
   min-height: auto;
@@ -95,7 +95,7 @@ body button {
   font-size: 1rem;
 }
 body header {
-  background-color: rgba(6, 6, 6, 0.2);
+  background-color: --on-background;
   position: fixed;
   top: 4%;
   width: 95%;

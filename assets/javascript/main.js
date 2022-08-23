@@ -48,14 +48,14 @@ function setTheme() {
   switch (theme) {
     case "dark":
       document.documentElement.setAttribute('data-theme', 'dark'); // va insrérer le data-theme="dark" dans l'élément racine du document. En l'occurance => celui de l'html (balise)
-      localStorage.setItem('theme', 'light');
+      theme="dark"
+      darkMode();
+      break;
+    case "light":
+      document.documentElement.setAttribute('data-theme', 'light');
+      theme = "light"; // va localiser tous les elements dans tous le document (et html et css) pour replacer le "theme" par "light"
       lightMode();
       break;
-      case "light":
-        document.documentElement.setAttribute('data-theme', 'light');
-        theme = "dark"; // va localiser tous les elements dans tous le document (et html et css) pour replacer le "theme" par "light"
-        darkMode();
-        break;
   }
 }
 
@@ -73,7 +73,7 @@ function lightMode() {
   }, 300);
 
   themeIcon.classList.add("change");
-  
+
   themeIcon.src = sun;
 }
 
