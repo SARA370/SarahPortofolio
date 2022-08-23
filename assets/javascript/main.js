@@ -34,7 +34,7 @@ let letter = '';
 /////////************* DARK/LIGHT MODE ***************///////
 /////////*********************************************///////
 
-const sun =  "./assets/imgs/sun.svg";
+const sun = "./assets/imgs/sun.svg";
 const moon = "./assets/imgs/moon.svg";
 
 var theme = "dark";
@@ -47,38 +47,48 @@ container.addEventListener("click", setTheme);
 function setTheme() {
   switch (theme) {
     case "dark":
-      setLight();
-      theme = "light";
+      document.documentElement.setAttribute('data-theme', 'dark'); // va insrérer le data-theme="dark" dans l'élément racine du document. En l'occurance => celui de l'html (balise)
+      localStorage.setItem('theme', 'light');
+      lightMode();
       break;
-    case "light":
-      setDark();
-      theme = "dark";
-      break;
+      case "light":
+        document.documentElement.setAttribute('data-theme', 'light');
+        theme = "dark"; // va localiser tous les elements dans tous le document (et html et css) pour replacer le "theme" par "light"
+        darkMode();
+        break;
   }
 }
 
-function setLight() {
+function lightMode() {
   root.style.setProperty(
     "--bs-dark",
     "linear-gradient(318.32deg, #c3d1e4 0%, #dde7f3 55%, #d4e0ed 100%)"
   );
+
   container.classList.remove("shadow-dark");
+
   setTimeout(() => {
     container.classList.add("shadow-light");
     themeIcon.classList.remove("change");
   }, 300);
+
   themeIcon.classList.add("change");
+  
   themeIcon.src = sun;
 }
 
-function setDark() {
+function darkMode() {
   root.style.setProperty("--bs-dark", "#212529");
+
   container.classList.remove("shadow-light");
+
   setTimeout(() => {
     container.classList.add("shadow-dark");
     themeIcon.classList.remove("change");
   }, 300);
+
   themeIcon.classList.add("change");
+
   themeIcon.src = moon;
 }
 
