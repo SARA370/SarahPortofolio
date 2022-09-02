@@ -125,45 +125,45 @@ button {
 
 }
 
-    @keyframes cursorAnim {
-        from {
-            transform: scale(1);
-        }
-
-        to {
-            transform: scale(.7);
-        }
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
     }
 
-    @keyframes cursorAnim2 {
-        from {
-            transform: scale(1);
-        }
+    to {
+        transform: scale(.7);
+    }
+}
 
-        to {
-            transform: scale(.5);
-        }
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
     }
 
-    @keyframes cursorAnim3 {
-        0% {
-            transform: scale(1);
-        }
+    to {
+        transform: scale(.5);
+    }
+}
 
-        50% {
-            transform: scale(3);
-        }
-
-        100% {
-            transform: scale(1);
-            opacity: 0;
-        }
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
     }
 
-    .expand {
-        animation: cursorAnim3 .5s forwards;
-        border: 2px solid #41AED9;
+    50% {
+        transform: scale(3);
     }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 2px solid #41AED9;
+}
 
 
 /*////////////////////////////////////////////////////////////////////////*/
@@ -1087,16 +1087,58 @@ header {
                 flex-wrap: wrap;
                 gap: 2em;
 
-                img {
-                    width: 20rem;
-                    margin: 1em;
-                    border-radius: 0.2em;
-                    // transition: .95s;
+                .portfolio-overlay {
+                    position: relative;
+                    overflow: hidden;
 
-                    transition: margin 400ms ease-in-out,
-                        width 400ms ease-in-out;
+                    .portfolio-img {
+                        width: 20rem;
+                        margin: 1em;
+                        border-radius: 0.2em;
+                        // transition: .95s;
+                        transition: margin 400ms ease-in-out,
+                            width 400ms ease-in-out;
+                    }
+
+                    &:hover .portfolio-overlay {
+                        top: 0;
+                        transition: 0.3s all ease;
+                    }
+
+
+                    .portfolio-links {
+                        position: absolute;
+                        top: -100%;
+                        left: 0;
+                        width: 20rem;
+                        height: 13.4rem;
+                        margin: 1em;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: rgba(245, 222, 179, 0.412);
+
+                        h2 {
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            margin-bottom: 1em;
+                        }
+
+
+                        .portfolio-link {
+                            width: 3rem;
+                            background: red;
+
+                            &:hover {
+                                background: yellow;
+                                transition: 0.3 all linear;
+                            }
+
+                        }
+
+                    }
                 }
-
                 .img-expand {
                     width: 14rem;
                     margin: 1em;
@@ -1108,6 +1150,7 @@ header {
                 }
 
             }
+
         }
     }
 }
