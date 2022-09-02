@@ -1,8 +1,28 @@
 /////////*******************************************///////
+/////////*************** CURSORS EFFECT ************///////
+/////////*******************************************///////
+
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', e => {
+  cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
+})
+
+document.addEventListener('click', () => {
+  cursor.classList.add("expand");
+
+  setTimeout(() => {
+    cursor.classList.remove("expand");
+  }, 500)
+})
+
+
+
+
+/////////*******************************************///////
 /////////*************** TYPING EFFECT *************///////
 /////////*******************************************///////
 
-const texts = ['Front-End developer', 'UI designer'];
+const texts = ['Junior Front-End developer', 'UX/UI designer'];
 // here we need to define a counter that gose on eche word one by one inside the array 
 let count = 0;
 // we need also to check indivijual caractère(letters) we are passing by right now inside the array
@@ -51,11 +71,11 @@ function setTheme() {
       theme = "light"; // va localiser tous les elements dans tous le document (et html et css) pour replacer le "theme" par "light"
       darkMode();
       break;
-      case "light":
-        document.documentElement.setAttribute('data-theme', 'light'); // va insrérer le data-theme="dark" dans l'élément racine du document. En l'occurance => celui de l'html (balise)
-        localStorage.setItem('theme', 'dark');
-        theme = "dark"
-        lightMode();
+    case "light":
+      document.documentElement.setAttribute('data-theme', 'light'); // va insrérer le data-theme="dark" dans l'élément racine du document. En l'occurance => celui de l'html (balise)
+      localStorage.setItem('theme', 'dark');
+      theme = "dark"
+      lightMode();
       break;
   }
 }
@@ -75,7 +95,7 @@ function lightMode() {
   }, 300);
 
   themeIcon.classList.add("change");
-  
+
   themeIcon.src = sun;
 }
 
