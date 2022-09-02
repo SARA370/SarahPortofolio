@@ -1041,45 +1041,11 @@ header .nav .theme-container .change {
   flex-wrap: wrap;
   gap: 2em;
 }
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay {
-  position: relative;
-  overflow: hidden;
-}
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-img {
+.portfolio .portfolio-content .work-section .portfolio-images img {
   width: 20rem;
   margin: 1em;
   border-radius: 0.2em;
   transition: margin 400ms ease-in-out, width 400ms ease-in-out;
-}
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay:hover .portfolio-overlay {
-  top: 0;
-  transition: 0.3s all ease;
-}
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-links {
-  position: absolute;
-  top: -100%;
-  left: 0;
-  width: 20rem;
-  height: 13.4rem;
-  margin: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(245, 222, 179, 0.412);
-}
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-links h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1em;
-}
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
-  width: 3rem;
-  background: red;
-}
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link:hover {
-  background: yellow;
-  transition: 0.3 all linear;
 }
 .portfolio .portfolio-content .work-section .portfolio-images .img-expand {
   width: 14rem;
