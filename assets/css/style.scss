@@ -109,6 +109,7 @@ button {
     transition-timing-function: ease-out;
     animation: cursorAnim .5s infinite alternate;
     pointer-events: none;
+    z-index: 100;
 
     &::after {
         content: "";
@@ -178,7 +179,7 @@ header {
     position: fixed;
     top: 4%;
     width: 95%;
-    margin-left: 2em;
+    margin-left: 1.7em;
     border: 0.1px solid white;
     border-radius: 33px;
     padding: .5em 2em;
@@ -189,41 +190,41 @@ header {
         justify-content: space-between;
 
         .logo-image {
-            max-width: 44%;
+            max-width: 32%;
+            margin-top: 0.3em;
         }
 
-        .nav-btns {
+        .nav-items {
             display: flex;
             justify-content: end;
-            width: 59%;
+            width: 65%;
 
             .navbar {
                 display: flex;
                 align-items: center;
-                column-gap: 1.5em;
+                gap: 1rem;
                 margin-left: 1em;
 
                 .nav-links {
                     color: #575656;
                     font-weight: bold;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     letter-spacing: .1em;
                 }
 
                 .nav-links-contact {
                     display: inline-block;
-                    padding: .7em 2em;
+                    padding: .6em 1.9em;
                     border: 0;
                     text-decoration: none;
                     border-radius: 30px;
                     background-color: rgba(255, 255, 255, 0.692);
                     color: #575656;
-                    font-size: 1.3rem;
+                    font-size: .9rem;
                     letter-spacing: .1em;
                     cursor: pointer;
                     text-transform: uppercase;
                     font-weight: bolder;
-                    font-size: 1rem;
                     transition: 0.3s;
 
                     &:hover {
@@ -239,7 +240,7 @@ header {
                         position: absolute;
                         z-index: -1;
                         top: 50%;
-                        left: 82%;
+                        left: 79%;
                         transform: translate(-50%, -50%);
                         animation: ring 1.5s infinite;
                     }
@@ -271,14 +272,12 @@ header {
 
             .select {
                 background-color: rgba(255, 255, 255, 0.331);
-                border-right: 1px solid white;
-                border-left: 1px solid white;
-                border-top: 1px solid white;
+                border: 1px solid white;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 border-radius: 11px;
-                padding: .5em 1em;
+                padding: .25em .8em;
                 cursor: pointer;
                 transition: background 0.3s;
                 border-radius: 16px;
@@ -286,6 +285,7 @@ header {
                 color: #575656;
                 font-weight: bold;
                 transition: 0.3s;
+                font-size: .9rem;
 
 
                 &:hover {
@@ -325,18 +325,16 @@ header {
 
             .menu {
                 list-style: none;
-                padding: 0.2em 0.5em;
+                padding: 0 0.6em;
                 background-color: rgba(255, 255, 255, 0.331);
-                border-bottom: 1px solid white;
-                border-right: 1px solid white;
-                border-left: 1px solid white;
+                border: 1px solid white;
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
                 box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
                 border-radius: 16px;
                 color: #575656;
                 position: absolute;
-                top: 2em;
+                top: 1.8em;
                 left: 50%;
                 width: 100%;
                 transform: translateX(-50%);
@@ -344,10 +342,10 @@ header {
                 display: none;
                 transition: 0.2s;
                 z-index: 1;
-                margin-top: .7em;
+                margin-top: .21em;
 
                 li {
-                    padding: 0.7em 0.5em;
+                    padding: 0.5em 0.5em;
                     margin: 0.3em 0;
                     border-radius: 0.5em;
                     cursor: pointer;
@@ -378,13 +376,12 @@ header {
             }
         }
 
-
         .theme-container {
             background-color: rgba(159, 159, 159, 0.653);
             width: 5.4%;
             border-radius: 50px;
             border: 1px solid white;
-            padding: .5em .5em;
+            padding: .4em;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -438,28 +435,25 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 60vh;
-    margin-bottom: 8em;
-    margin-top: 17em;
+    min-height: 56vh;
+    margin-top: 12em;
 
     .hero-content {
         max-width: 930px;
         position: relative;
         width: 64%;
         max-width: 89rem;
-        height: 62vh;
+        height: 76vh;
         border-radius: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         text-align: center;
-        padding: 1em 4em;
+        padding: 0 4em;
         box-shadow: 0 0.5% 1% rgba(0, 0, 0, .3);
         backdrop-filter: blur(8px);
         box-shadow: 0 20px 50px -10px rgba(118, 118, 118, 0.5);
-        border: 0.1px solid rgb(178, 178, 178);
-
         z-index: -1;
 
         &::before {
@@ -468,34 +462,35 @@ header {
 
 
         .profile-img {
-            background-color: #41aed960;
+            background: rgba(255, 255, 255, 0.032);
             box-shadow: 0 0.5% 1% rgba(255, 255, 255, 0.863);
-            backdrop-filter: blur(2px);
+            backdrop-filter: blur(8px);
             box-shadow: 0 20px 50px -10px rgba(118, 118, 118, 0.5);
-            border: 0.1px solid rgb(178, 178, 178);
             position: absolute;
             top: 0;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 18rem;
-            height: 18rem;
-            border-radius: 100%;
+            width: 11rem;
+            height: 13rem;
+            border-radius: 100px;
+            border-top-left-radius: 0;
         }
-
 
         .hero-text {
             display: flex;
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            gap: .2em;
-            margin-top: 3em;
+            gap: .3em;
+            margin: 2em 0 ;
+            font-size: 1.1rem;
+            text-align: left;
 
             .typing {
                 display: flex;
                 align-items: center;
                 margin-bottom: 1em;
-                font-size: 1rem;
+                font-size: 1.2rem;
 
 
                 //typing effect
@@ -535,10 +530,11 @@ header {
             backdrop-filter: blur(30px);
             display: flex;
             align-items: center;
+            z-index: 100;
 
 
             .download-text {
-                padding: 0 4em 0 6em;
+                padding: 0 2.7em 0 4em;
                 font-weight: bold;
                 font-size: 1.1rem;
                 color: black;
@@ -554,7 +550,7 @@ header {
                 align-items: center;
                 justify-content: center;
                 border-radius: 50%;
-                padding: .7rem;
+                padding: .4rem;
 
                 img {
                     width: 29px;
@@ -598,39 +594,38 @@ header {
 
 .social-icons {
     position: fixed;
-    top: 79%;
+    top: 84%;
     transform: translateY(-50%);
 
 
     ul {
-        transform: translateX(-268px);
+        transform: translateX(-168px);
 
         li {
             display: block;
-            margin: 1em;
+            margin: .7em;
             background-color: rgba(255, 255, 255, 0.2);
             border: 1px solid rgb(255, 255, 255);
             backdrop-filter: blur(30px);
             border-radius: 80px;
-            width: 20rem;
+            width: 13rem;
             text-align: right;
             border-radius: 0 45px 45px 0;
             transition: all 1s;
             font-size: 1rem;
-            padding: .4em;
+            padding: .1em;
 
             &:hover {
-                transform: translateX(170px);
+                transform: translateX(120px);
             }
 
             a {
                 color: white;
-                font-size: 1.7rem;
+                font-size: 1.3rem;
 
             }
 
             img {
-
                 transform: rotate(0deg);
 
             }
@@ -646,7 +641,7 @@ header {
                 border-radius: 50%;
                 text-align: center;
                 margin-left: 0.875em;
-                width: 3.6rem;
+                width: 3rem;
                 display: inline-block;
                 vertical-align: middle;
                 transition: all 1s;
@@ -664,7 +659,7 @@ header {
     width: 30%;
     position: absolute;
     top: 89%;
-    transform: translateX(248px);
+    transform: translateX(191px);
     right: 0;
 
     .circle-Right {
@@ -688,7 +683,7 @@ header {
 /*////////////////////////////////////////////////////////////////////////*/
 .wrapper {
     margin-bottom: 0px;
-    min-height: 100vh;
+    min-height: 85vh;
 
     .services-title {
         text-align: center;
@@ -702,14 +697,14 @@ header {
             font-weight: 700;
 
             span {
-                color: #8b8b8b;
+                color: #ffffff;
             }
 
             .bg-text {
                 position: absolute;
                 top: 30%;
                 left: 50%;
-                color: #f5f5f5;
+                color: #f5f5f530;
                 transition: all .4s ease-in-out;
                 z-index: -1;
                 transform: translate(-50%, -50%);
@@ -728,10 +723,10 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    gap: 6rem;
+    gap: 4rem;
 
     .card {
-        width: 36rem;
+        width: 27rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -739,18 +734,23 @@ header {
         // align-items: space-between;
         // align-self: stretch;
         // justify-self: stretch;
-        padding: 2em;
+        padding: 1em;
         border-radius: 10px;
         box-shadow: 0 0.5% 1% rgba(0, 0, 0, .3);
         backdrop-filter: blur(4px);
         box-shadow: 0 20px 50px -10px rgba(118, 118, 118, 0.5);
         border: .1px solid #F2B199;
         z-index: -1;
-        margin-top: 4em;
+        margin-top: 1em;
 
-        svg {
-            width: 63%;
-            height: 51vh;
+        .icon-develop {
+            height: 38vh;
+            width: 55%;
+        }
+
+        .icon-design{
+            height: 32vh;
+            width: 90%;
         }
 
         h2 {
@@ -761,7 +761,7 @@ header {
         }
 
         .service-text {
-            width: 60%;
+            width: 100%;
             color: white;
 
         }
@@ -1006,14 +1006,14 @@ header {
                 font-weight: 700;
 
                 span {
-                    color: #8b8b8b;
+                    color: #ffffff;
                 }
 
                 .bg-text {
                     position: absolute;
                     top: 30%;
                     left: 50%;
-                    color: #f5f5f5;
+                    color: #f5f5f530;
                     transition: all .4s ease-in-out;
                     z-index: -1;
                     transform: translate(-50%, -50%);
@@ -1033,7 +1033,7 @@ header {
 
 
             .portfolio-gallery {
-                padding: .1em 5em;
+                padding: 0em 3em;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -1048,8 +1048,8 @@ header {
 
                 .button {
                     margin: 1em;
-                    padding: .4em 1.5em;
-                    font-size: 1.2rem;
+                    padding: .3em 1.5em;
+                    font-size: 1rem;
                     border: none;
                     border-radius: 2em;
                     cursor: pointer;
@@ -1079,18 +1079,18 @@ header {
 
             .portfolio-images {
                 padding: 2em 0;
-                max-width: 1300px;
+                max-width: 70rem;;
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
-                gap: 2em;
+                gap: 1.5em;
 
                 img {
-                    width: 20rem;
-                    margin: 1em;
-                    border-radius: 0.2em;
+                    width: 16rem;
+                    margin: 0.5em;
+                    border-radius: 0.5em;
                     // transition: .95s;
 
                     transition: margin 400ms ease-in-out,
@@ -1098,7 +1098,7 @@ header {
                 }
 
                 .img-expand {
-                    width: 14rem;
+                    width: 16rem;
                     margin: 1em;
                 }
 
@@ -1113,10 +1113,10 @@ header {
 }
 
 .about-circle-image-left {
-    width: 30%;
+    width: 25%;
     position: absolute;
-    top: 379%;
-    transform: translateX(-248px);
+    top: 383%;
+    transform: translateX(-159px);
     right: 105;
 
     .circle-left {
@@ -1160,14 +1160,14 @@ header {
                 font-weight: 700;
 
                 span {
-                    color: #8b8b8b;
+                    color: #ffffff;
                 }
 
                 .bg-text {
                     position: absolute;
                     top: 30%;
                     left: 50%;
-                    color: #f5f5f539;
+                    color: #f5f5f530;
                     transition: all .4s ease-in-out;
                     z-index: -1;
                     transform: translate(-50%, -50%);
