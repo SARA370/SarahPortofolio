@@ -22,7 +22,7 @@ document.addEventListener('click', () => {
 /////////*************** TYPING EFFECT *************///////
 /////////*******************************************///////
 
-const texts = ['Junior Front-End developer', 'UX/UI designer'];
+const texts = ['Junior Front-End developer', 'UX/UI Designer'];
 // here we need to define a counter that gose on eche word one by one inside the array 
 let count = 0;
 // we need also to check indivijual caractère(letters) we are passing by right now inside the array
