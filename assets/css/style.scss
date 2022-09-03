@@ -185,6 +185,7 @@ header {
     border: 0.1px solid white;
     border-radius: 33px;
     padding: .5em 2em;
+    z-index: 100;
 
     .nav {
         display: flex;
