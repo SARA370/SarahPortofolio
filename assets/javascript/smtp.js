@@ -18,10 +18,10 @@ function sendEmail(){
 
     Email.send({
         Host : "smtp.elasticemail.com",
-        Username : "sarah_3701@outlook.com",
-        Password : "83B4812820C99F6F96DD9A5A3936CC92F04E",
-        To : "sarah_3701@outlook.com",
-        From : "sarahadam0075@gmail.com",
+        Username : "sarahalrashid539@gmail.com",
+        Password : "AFC0AC6C6AC128DA7CA525F0241DA0CB2048",
+        To : "sarahalrashid539@gmail.com",
+        From : "sarahalrashid370@gmail.com",
         Subject : "Formulaire de contact dans le porfolio",
         Body : " Nom: " + userName + "<br/> Adress mail: " + email + "<br/> Sujet: " + subject + "<br/> Numéro de téléphone: " + phone +"<br/> Message du user : " + message
     }).then(
