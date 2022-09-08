@@ -34,14 +34,13 @@
   <header>
     <!------------------------- NAVBAR ------------------------>
     <nav class="nav container">
-      <a href="#"><img class="logo-image" src="./assets/imgs/logo.png" alt="LOGO IMAGE"></a>
+      <a href="index.html"><img class="logo-image" src="./assets/imgs/logo.png" alt="LOGO IMAGE"></a>
 
       <div class="nav-items">
-
         <ul class="navbar">
+          <li><a href="#hero" class="nav-links" lng-tag="about-nav">about</a></li>
+          <li><a href="#services" class="nav-links" lng-tag="services-nav"> </a></li>
           <li><a href="#mywork" class="nav-links" lng-tag="myWork-nav"> </a></li>
-          <li><a href="#about" class="nav-links" lng-tag="about-nav"> </a></li>
-          <li><a href="#services" class="nav-links" lng-tag="services-nav" lng-tag="service_nav"> </a></li>
           <li><a href="#contact" class="nav-links-contact" lng-tag="contact-me-nav"> </a></li>
         </ul>
 
@@ -72,7 +71,12 @@
   <!--------------------------------------------------------->
   <section id="hero" class="hero">
     <div class="hero-content">
-      <img class="profile-img" src="./assets/imgs/20220224_224112-removebg-preview.png" alt="MY PHOTO">
+
+      <div class="profil-img-container">
+        <div class="profil-img-content">
+          <img src="./assets/imgs/sarah.svg" alt="my profile image">
+        </div>
+      </div>
 
 
       <div class="hero-text">
@@ -84,7 +88,7 @@
 
       <a href="./assets/pdf/CV- SARAH AL-RASHID.pdf" class="cv-link">
         <span class="download-text">Download CV</span>
-        <span class="download-icon"><img src="./assets/imgs/icons8-télécharger.gif"></span>
+        <span class="download-icon"><img src="./assets/imgs/icons8-télécharger.gif" ></span>
       </a>
     </div>
   </section>
@@ -111,7 +115,7 @@
   <!--------------------------------------------------------->
   <!-------------------- SERVICES SECTION ------------------->
   <!--------------------------------------------------------->
-  <main class="wrapper">
+  <main class="wrapper" id="services">
     <div class="services-title">
       <h2><span>Services</span><span class="bg-text">SERVICES</span></h2>
     </div>
@@ -539,7 +543,7 @@
   <!------------------ PORTFOLIO SECTION -------------------->
   <!--------------------------------------------------------->
 
-  <section class="portfolio container" id="portfolio">
+  <section class="portfolio container" id="mywork">
     <div class="portfolio-content">
 
       <div class="potofolio-title">
@@ -556,22 +560,88 @@
         </div>
 
         <div class="portfolio-images">
-          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="1" alt="code work">
-          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="2" alt="code work">
-          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="2" alt="code work">
-          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="1" alt="code work">
-          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="3" alt="code work">
-          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="4" alt="code work">
-          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="2" alt="code work">
-          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="1" alt="code work">
-          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="4" alt="code work">
-          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="3" alt="code work">
-          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="4" alt="code work">
-          <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="1" alt="code work">
-        </div>
+
+            <div class="portfolio-overlay">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="1" class="portfolio-img" alt="code work">
+                <div class="portfolio-links">
+                    <h2>Code</h2>
+                    <a href="#" class="portfolio-link"><img src="./assets/imgs/link.svg" alt="code link" ></a>
+                </div>
+            </div>
+
+
+            <div class="portfolio-overlay">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="2" class="portfolio-img" alt="design work">
+                <div class="portfolio-links">
+                    <h2>Code</h2>
+                    <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/link.svg" alt="design link"  ></a>
+                </div>
+            </div>
+            <div class="portfolio-overlay">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="1" class="portfolio-img" alt="code work">
+                <div class="portfolio-links">
+                    <h2>Code</h2>
+                    <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/link.svg" alt="code link" ></a>
+                </div>
+            </div>
+            <div class="portfolio-overlay">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="2" class="portfolio-img" alt="design work">
+                <div class="portfolio-links">
+                    <h2>Code</h2>
+                    <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/link.svg" alt="design link" ></a>
+                </div>
+            </div>
+            <div class="portfolio-overlay">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="2" class="portfolio-img" alt="design work">
+                <div class="portfolio-links">
+                    <h2>Code</h2>
+                    <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/link.svg" alt="design link" ></a>
+                </div>
+            </div>
+            <div class="portfolio-overlay">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="2" class="portfolio-img" alt="design work">
+                <div class="portfolio-links">
+                    <h2>Code</h2>
+                    <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/link.svg" alt="design link" ></a>
+                </div>
+            </div>
+            <div class="portfolio-overlay">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="1" class="portfolio-img" alt="code work">
+                <div class="portfolio-links">
+                    <h2>Code</h2>
+                    <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/link.svg" alt="code link" ></a>
+                </div>
+            </div>
+            <div class="portfolio-overlay">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="4" class="portfolio-img" alt="videos work">
+                <div class="portfolio-links">
+                    <h2>Code</h2>
+                    <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/link.svg" alt="videos link" ></a>
+                </div>
+            </div>
+            <div class="portfolio-overlay">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="2" class="portfolio-img" alt="design work">
+                <div class="portfolio-links">
+                    <h2>Code</h2>
+                    <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/link.svg" alt="design link" ></a>
+                </div>
+            </div>
+            <div class="portfolio-overlay">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="4" class="portfolio-img" alt="videos work">
+                <div class="portfolio-links">
+                    <h2>Code</h2>
+                    <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/link.svg" alt="videos link" ></a>
+                </div>
+            </div>
+            <div class="portfolio-overlay">
+                <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="3" class="portfolio-img" alt="template work">
+                <div class="portfolio-links">
+                    <h2>Code</h2>
+                    <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/link.svg" alt="template link"></a>
+                </div>
+            </div>
 
       </div>
-
     </div>
   </section>
 
@@ -638,13 +708,9 @@
   <!--------------------------------------------------------->
   <!------------------- FOOTER SECTION ---------------------->
   <!--------------------------------------------------------->
-  <section class="footer-container" id="footer">
-    <p>Sarah Al-Rashid&#169;, All right reserved</p>
-
+  <section class="footer container" id="footer">
+    <p lng-tag="footer-text"></p>
   </section>
-
-
-
 
   <!--------------------------------------------------------->
   <!------------------Link to javascipt---------------------->

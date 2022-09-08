@@ -13,6 +13,7 @@
     "all-btn" : "All",
     "username-input" : "Username",
     "subject-input" : "Subject",
-    "phone-input" :"Phone"
+    "phone-input" :"Phone",
+    "footer-text" : "Sarah Al-Rashid&#169; all rights reserved"
 
 }
