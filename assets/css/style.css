@@ -90,7 +90,7 @@ button {
   -webkit-animation: cursorAnim 0.5s infinite alternate;
           animation: cursorAnim 0.5s infinite alternate;
   pointer-events: none;
-  z-index: 100;
+  z-index: 11;
 }
 .cursor::after {
   content: "";
@@ -183,8 +183,8 @@ header {
   margin-inline: 4em;
   border: 0.1px solid white;
   border-radius: 33px;
-  padding: 0.2em 2em;
-  z-index: 1;
+  padding: 0.5em 2em;
+  z-index: 10;
 }
 header .nav {
   display: flex;
