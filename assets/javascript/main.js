@@ -56,12 +56,21 @@ let letter = '';
 
 const sun = "./assets/imgs/sun.svg";
 const moon = "./assets/imgs/moon.svg";
+// FOR THE RIGHT CIRCLE THEME
+const rightLightCircle = "./assets/imgs/circle-light.svg";
+const rightDarkCircle = "./assets/imgs/circle-dark.svg";
+
+// FOR THE LEFT CIRCLE THEME
+const leftLightCircle = "./assets/imgs/sarah.svg";
+const leftDarkCircle = "./assets/imgs/favicon.png";
 
 var theme = "dark";
 
 const root = document.querySelector(":root");
 const container = document.getElementsByClassName("theme-container")[0];
 const themeIcon = document.getElementById("theme-icon");
+const rightCircleImg = document.querySelector(".circle-Right");
+const leftCircleImg = document.querySelector(".circle-left");
 container.addEventListener("click", setTheme);
 
 function setTheme() {
@@ -70,13 +79,28 @@ function setTheme() {
       document.documentElement.setAttribute('data-theme', 'dark');
       theme = "light"; // va localiser tous les elements dans tous le document (et html et css) pour replacer le "theme" par "light"
       themeIcon.src = sun;
+      
+      //RIGHT IMG
+      rightCircleImg.src = rightDarkCircle;
+      
+      //LEFT IMG
+      leftCircleImg.src = leftDarkCircle;
+
       darkMode();
+
       break;
       case "light":
         document.documentElement.setAttribute('data-theme', 'light'); // va insrérer le data-theme="dark" dans l'élément racine du document. En l'occurance => celui de l'html (balise)
         localStorage.setItem('theme', 'dark');
         theme = "dark"
         themeIcon.src = moon;
+
+        // RIGHT IMG
+        rightCircleImg.src = rightLightCircle;
+
+        // LEFT IMG
+        leftCircleImg.src = leftLightCircle;
+
         lightMode();
       break;
   }

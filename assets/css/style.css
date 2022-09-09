@@ -34,7 +34,7 @@
 /* ------------------- */
 :root {
   /* COLORS */
-  --font-color-light: #575656;
+  --font-color: #575656;
   /* IMAGES */
   --background-image: url("../imgs/bg-light-1.jpg");
   --circle-image: url("../imgs/circle-light.svg");
@@ -53,7 +53,7 @@
 }
 
 [data-theme=dark] {
-  --font-color-dark: #ffffff;
+  --font-color: #ffffff;
   --background-image: url("../imgs/bg-dark-2.jpg");
   --circle-image: url("../imgs/circle-dark.svg");
 }
@@ -451,6 +451,9 @@ header .nav .theme-container .change {
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
 }
+header .nav .theme-container #theme-icon {
+  width: 100%;
+}
 
 /*////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////////// HERO SECTION ////////////////////////////*/
@@ -528,7 +531,7 @@ header .nav .theme-container .change {
   z-index: 0;
 }
 .hero .hero-content .hero-text {
-  color: #575656;
+  color: var(--font-color);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1393,14 +1396,145 @@ header .nav .theme-container .change {
 }
 
 /************************************/
-/* BELOW 1440px (large desktop) */
+/* BELOW 2000px ("big" screen) */
 /************************************/
+@media (max-width: 125rem) and (min-width: 90rem) {
+  .container {
+    max-width: 2000px;
+    width: 100%;
+    margin: auto;
+  }
+  body header {
+    background-color: #6197e7;
+  }
+  body .hero {
+    margin-top: 5rem;
+  }
+  body .hero .hero-content {
+    height: 74vh;
+    padding: 0 14em;
+  }
+  body .hero .hero-content .profil-img-container {
+    position: relative;
+    width: 200px;
+    top: -12%;
+    height: 700px;
+    background: rgba(176, 176, 176, 0.2588235294);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+/************************************/
+/* BELOW 1440px ("small" screen) */
+/************************************/
+@media (max-width: 90rem) {
+  body {
+    background-size: contain;
+    background-repeat: repeat;
+  }
+  body header {
+    width: 91%;
+    padding: 0.2em 0.2em;
+    position: fixed;
+    background-color: #0D3C51;
+  }
+  body header .nav-items {
+    display: flex;
+    justify-content: end;
+    width: 90%;
+  }
+  body header .nav-links {
+    padding: 0.2rem 1rem;
+    font-size: 0.1rem;
+  }
+  body header .nav-links:hover {
+    background-color: rgba(255, 255, 255, 0.977);
+  }
+  body header .theme-container {
+    background-color: #0D3C51;
+    width: 3%;
+    border-radius: 50px;
+    border: 1px solid white;
+    padding: 1em;
+  }
+  body .hero-text {
+    color: var(--font-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.1rem;
+    gap: 0.1em;
+    text-align: left;
+  }
+  body .hero-text .intro-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.1em;
+  }
+  body .hero-text .description {
+    font-size: 1rem;
+    line-height: 1.9em;
+    margin-bottom: 4em;
+  }
+  body .hero-text .typing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    font-size: 1rem;
+  }
+  body .hero-text .typing .typing {
+    font-size: 1rem;
+  }
+  body .hero-text .typing .typing:after {
+    content: "";
+    width: 1px;
+    height: 99%;
+    right: -4%;
+    border-right: 2px solid rgb(0, 0, 0);
+    -webkit-animation: 0.9s infinite ease;
+            animation: 0.9s infinite ease;
+  }
+  @-webkit-keyframes type {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes type {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  body .social-icons {
+    top: 55%;
+  }
+}
 /**************************/
 /* BELOW 1024px (desktop) */
 /**************************/
+@media (max-width: 64rem) {
+  body header {
+    background-color: #CE5C59;
+  }
+}
 /*********************************/
 /* BELOW 768px (Smaller tablets) */
 /*********************************/
+@media (max-width: 48rem) {
+  body header {
+    background-color: #3ea55f;
+  }
+}
 /**************************/
 /* BELOW 425px (Phones) */
-/**************************//*# sourceMappingURL=style.css.map */
+/**************************/
+@media (max-width: 27rem) {
+  body header {
+    background-color: #f555dd;
+  }
+}/*# sourceMappingURL=style.css.map */
