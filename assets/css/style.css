@@ -496,14 +496,14 @@ header .nav .theme-container .change {
   position: absolute;
   inset: 0.4em;
   background: rgba(215, 215, 215, 0.9960784314);
-  border-radius: 50%;
+  border-radius: 50px;
   z-index: 0;
 }
 .hero .hero-content .profil-img-container .profil-img-content {
   position: absolute;
   inset: 0.2em;
   z-index: 2;
-  border-radius: 50%;
+  border-radius: 50px;
   overflow: hidden;
 }
 .hero .hero-content .profil-img-container .profil-img-content img {
@@ -1360,44 +1360,6 @@ header .nav .theme-container .change {
 /************************************/
 /* BELOW 1440px (large desktop) */
 /************************************/
-@media (max-width: 90rem) {
-  body {
-    background-image: var(--background-image);
-    background-size: cover;
-  }
-  body .about-circle-image-right {
-    transform: translateX(37rem);
-  }
-  body header {
-    width: 91%;
-    padding: 0.9em 2em;
-    position: fixed;
-  }
-  body header .nav-items {
-    display: flex;
-    justify-content: end;
-    width: 90%;
-  }
-  body header .theme-container {
-    background-color: #0D3C51;
-    width: 3%;
-    border-radius: 50px;
-    border: 1px solid white;
-    padding: 1em;
-  }
-  body .hero {
-    margin-top: 6em;
-    min-height: 100vh;
-  }
-  body .hero .hero-content {
-    max-width: 80rem;
-    padding: 0 6em;
-    height: 59vh;
-  }
-  body .social-icons {
-    top: 55%;
-  }
-}
 /**************************/
 /* BELOW 1024px (desktop) */
 /**************************/

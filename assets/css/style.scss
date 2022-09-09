@@ -508,7 +508,7 @@ header {
                 position: absolute;
                 inset: .4em;
                 background: #d7d7d7fe;
-                border-radius: 50%;
+                border-radius: 50px;
                 z-index: 0;
             }
 
@@ -516,7 +516,7 @@ header {
                 position: absolute;
                 inset: .2em;
                 z-index: 2;
-                border-radius: 50%;
+                border-radius: 50px;
                 overflow: hidden;
 
                 img {
@@ -1481,58 +1481,58 @@ header {
 /* BELOW 1440px (large desktop) */
 /************************************/
 
-@media (max-width: 90rem) {
+// @media (max-width: 90rem) {
 
-    body {
-        background-image: var(--background-image);
-        background-size: cover;
+//     body {
+//         background-image: var(--background-image);
+//         background-size: cover;
 
-        .about-circle-image-right {
-            transform: translateX(37rem);
-        }
+//         .about-circle-image-right {
+//             transform: translateX(37rem);
+//         }
 
-        header {
-            width: 91%;
-            padding: .9em 2em;
-            position: fixed;
+//         header {
+//             width: 91%;
+//             padding: .9em 2em;
+//             position: fixed;
 
-            .nav-items {
-                display: flex;
-                justify-content: end;
-                width: 90%;
-            }
+//             .nav-items {
+//                 display: flex;
+//                 justify-content: end;
+//                 width: 90%;
+//             }
 
-            .theme-container {
-                background-color: #0D3C51;
-                width: 3%;
-                border-radius: 50px;
-                border: 1px solid white;
-                padding: 1em;
-            }
-        }
-
-
-        .hero {
-            margin-top: 6em;
-            min-height: 100vh;
+//             .theme-container {
+//                 background-color: #0D3C51;
+//                 width: 3%;
+//                 border-radius: 50px;
+//                 border: 1px solid white;
+//                 padding: 1em;
+//             }
+//         }
 
 
-            .hero-content {
-                max-width: 80rem;
-                padding: 0 6em;
-                height: 59vh;
+//         .hero {
+//             margin-top: 6em;
+//             min-height: 100vh;
+
+
+//             .hero-content {
+//                 max-width: 80rem;
+//                 padding: 0 6em;
+//                 height: 59vh;
 
 
 
-            }
-        }
+//             }
+//         }
 
-        .social-icons {
-            top: 55%;
-        }
-    }
+//         .social-icons {
+//             top: 55%;
+//         }
+//     }
 
-}
+// }
 
 /**************************/
 /* BELOW 1024px (desktop) */
