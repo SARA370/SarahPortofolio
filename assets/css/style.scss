@@ -456,7 +456,7 @@ header {
         position: relative;
         width: 100%;
         max-width: 89rem;
-        height: 70vh;
+        height: 90vh;
         border-radius: 10px;
         display: flex;
         justify-content: flex-start;
@@ -471,13 +471,12 @@ header {
         }
 
         .profil-img-container {
-            position: relative;
             top: -10%;
-            left: 0;
-            width: 20rem;
-            height: 20rem;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background:#b0b0b042;
             border-radius: 50%;
-            background-color: #b0b0b042;
             overflow: hidden;
 
             &::before {
@@ -508,42 +507,11 @@ header {
                 position: absolute;
                 inset: .4em;
                 background: #d7d7d7fe;
-                border-radius: 50px;
+                background-image: url("../imgs/sarah.svg");
+                background-size: cover;
+                border-radius: 50%;
                 z-index: 0;
             }
-
-            .profil-img-content {
-                position: absolute;
-                inset: .2em;
-                z-index: 2;
-                border-radius: 50px;
-                overflow: hidden;
-
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                    transition: .5s;
-                }
-            }
-
-            // img {
-            //     background: rgba(255, 255, 255, 0.032);
-            //     box-shadow: 0 0.5% 1% rgba(255, 255, 255, 0.863);
-            //     backdrop-filter: blur(8px);
-            //     box-shadow: 0 20px 50px -10px rgba(118, 118, 118, 0.5);
-            //     position: absolute;
-            //     top: 0;
-            //     left: 50%;
-            //     transform: translate(-50%, -50%);
-            //     width: 16rem;
-            //     height: 16rem;
-            //     border-radius: 50%;
-            //     border: 1px solid white;
-            // }
         }
 
 
