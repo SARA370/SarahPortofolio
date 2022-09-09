@@ -1,24 +1,22 @@
+@charset "UTF-8";
+/* ------------------- */
+/* ---- FONT SIZE ---- */
+/* ------------------- */
 @font-face {
-  font-family: "Sarpanch", sans-serif;
-  src: url(../fonts/Sarpanch/Sarpanch-Black.ttf);
-  src: url(../fonts/Sarpanch/Sarpanch-Bold.ttf);
-  src: url(../fonts/Sarpanch/Sarpanch-ExtraBold.ttf);
-  src: url(../fonts/Sarpanch/Sarpanch-Medium.ttf);
-  src: url(../fonts/Sarpanch/Sarpanch-Regular.ttf);
-  src: url(../fonts/Sarpanch/Sarpanch-SemiBold.ttf);
+  font-family: "Electrolize", sans-serif;
+  src: url(../fonts/Electrolize/Electrolize-Regular.ttf);
 }
 @font-face {
   font-family: "Aldrich", sans-serif;
   src: url(../fonts/Aldrich/Aldrich-Regular.ttf);
 }
 @font-face {
-  font-family: "Gruppo", cursive;
-  src: url(../fonts/Gruppo/Gruppo-Regular.ttf);
+  font-family: "olney", sans-serif;
+  src: url(../fonts/olney/olney_light.otf);
 }
-@font-face {
-  font-family: "Electrolize", sans-serif;
-  src: url(../fonts/Electrolize/Electrolize-Regular.ttf);
-}
+/* ------------------- */
+/* ------ RESET ------ */
+/* ------------------- */
 * {
   font-family: "Electrolize", sans-serif;
   margin: 0;
@@ -31,27 +29,33 @@
   cursor: none;
 }
 
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
 :root {
-  --primary-color: rgba(255, 255, 255, 0.253);
-  --primary-variant: #ff2d2d;
-  --secondary-color: #ffffff5e;
-  --on-primary: rgb(250, 250, 250);
-  --on-background: rgb(66, 66, 66);
-  --on-background-alt: rgba(66, 66, 66, 0.7);
-  --background: rgb(255, 255, 255);
-  --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+  /* COLORS */
+  --font-color-light: #575656;
+  /* IMAGES */
   --background-image: url("../imgs/bg-light-1.jpg");
+  --circle-image: url("../imgs/circle-light.svg");
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.75rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+  /* font-families */
+  --ff-Electrolize: "Electrolize", sans-serif;
+  --ff-Aldrich: "Aldrich", sans-serif;
+  --ff-olney: "olney", sans-serif;
 }
 
 [data-theme=dark] {
-  --primary-color: rgba(14, 0, 207, 0.085);
-  --primary-variant: #6c63ff;
-  --secondary-color: #ffffff;
-  --on-primary: #000;
-  --on-background: rgba(255, 255, 255, 0.9);
-  --on-background-alt: rgba(255, 255, 255, 0.7);
-  --background: #121212;
+  --font-color-dark: #ffffff;
   --background-image: url("../imgs/bg-dark-2.jpg");
+  --circle-image: url("../imgs/circle-dark.svg");
 }
 
 body {
@@ -59,10 +63,25 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
+  line-height: 1.5;
   min-height: auto;
   overflow-x: hidden;
 }
 
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* make images easier to work with */
 .container {
   max-width: 1900px;
   width: 100%;
@@ -76,6 +95,9 @@ button {
   font-size: 1rem;
 }
 
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
 /*////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////////// CURSORS /////////////////////////////////*/
 /*////////////////////////////////////////////////////////////////////////*/
@@ -204,10 +226,12 @@ header .nav .nav-items .navbar {
   align-items: center;
   gap: 1rem;
   margin-left: 1em;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
 }
 header .nav .nav-items .navbar .nav-links {
   display: inline-block;
-  padding: 0.6em 1.9em;
+  padding: 0.45rem 1.9rem;
   border: 0;
   text-decoration: none;
   border-radius: 30px;
@@ -223,9 +247,12 @@ header .nav .nav-items .navbar .nav-links {
   font-weight: bolder;
   transition: 0.3s;
 }
+header .nav .nav-items .navbar .nav-links:hover {
+  background-color: rgba(255, 255, 255, 0.977);
+}
 header .nav .nav-items .navbar .nav-links-contact {
   display: inline-block;
-  padding: 0.6em 1.9em;
+  padding: 0.45rem 1.9rem;
   border: 0;
   text-decoration: none;
   border-radius: 30px;
@@ -306,7 +333,7 @@ header .nav .dropdown .select {
   justify-content: space-between;
   align-items: center;
   border-radius: 11px;
-  padding: 0.4em 0.8em;
+  padding: 0.2rem 0.7rem;
   cursor: pointer;
   transition: background 0.3s;
   border-radius: 16px;
@@ -351,7 +378,7 @@ header .nav .dropdown .menu {
   border-radius: 16px;
   color: #575656;
   position: absolute;
-  top: 1.8em;
+  top: 2rem;
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
@@ -432,14 +459,14 @@ header .nav .theme-container .change {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8em;
+  margin-top: 9rem;
   min-height: 100vh;
 }
 .hero .hero-content {
   position: relative;
   width: 100%;
   max-width: 89rem;
-  height: 90vh;
+  height: 74vh;
   border-radius: 10px;
   display: flex;
   justify-content: flex-start;
@@ -454,9 +481,9 @@ header .nav .theme-container .change {
   box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.5);
 }
 .hero .hero-content .profil-img-container {
-  top: -10%;
   position: relative;
   width: 300px;
+  top: -12%;
   height: 300px;
   background: rgba(176, 176, 176, 0.2588235294);
   border-radius: 50%;
@@ -687,25 +714,25 @@ header .nav .theme-container .change {
 /*////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////////// SERVICES SECTION ////////////////////////////*/
 /*////////////////////////////////////////////////////////////////////////*/
-.wrapper {
+.services {
   margin-bottom: 15em;
   min-height: 100vh;
 }
-.wrapper .services-title {
+.services .services-title {
   text-align: center;
   margin-bottom: 3em;
   margin-top: 15em;
 }
-.wrapper .services-title h2 {
+.services .services-title h2 {
   position: relative;
   text-transform: uppercase;
   font-size: 5rem;
   font-weight: 700;
 }
-.wrapper .services-title h2 span {
+.services .services-title h2 span {
   color: #ffffff;
 }
-.wrapper .services-title h2 .bg-text {
+.services .services-title h2 .bg-text {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -1123,7 +1150,10 @@ header .nav .theme-container .change {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(245, 222, 179, 0.412);
+  box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  box-shadow: 0 20px 50px -10px rgba(118, 118, 118, 0.5);
 }
 .portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-links h2 {
   font-size: 1.5rem;
@@ -1131,14 +1161,16 @@ header .nav .theme-container .change {
   margin-bottom: 1em;
 }
 .portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
-  width: 3rem;
-  background: red;
+  width: 7rem;
+  height: 7rem;
+  background-color: white;
+  border-radius: 100%;
 }
 .portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
   width: 100%;
 }
 .portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link:hover {
-  background: yellow;
+  background: rgb(255, 255, 255);
   transition: 0.3 all linear;
 }
 .portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay:hover .portfolio-links {
@@ -1170,7 +1202,7 @@ header .nav .theme-container .change {
 /*/////////////////////////// CONTACT SECTION ////////////////////////////*/
 /*////////////////////////////////////////////////////////////////////////*/
 .contact {
-  min-height: 66vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1182,7 +1214,7 @@ header .nav .theme-container .change {
 .contact .contact-content .contact-title {
   text-align: center;
   margin-bottom: 1em;
-  margin-top: -20em;
+  margin-top: -8em;
 }
 .contact .contact-content .contact-title h2 {
   position: relative;
@@ -1323,6 +1355,14 @@ header .nav .theme-container .change {
   cursor: pointer;
   border: 1px solid white;
   color: #575656;
+  position: relative;
+}
+.contact .contact-content .contact-form .form-container .btn::after {
+  content: url(../imgs/icons8-boîte-aux-lettres-fermée-vide.gif);
+  display: inline-block;
+  border-radius: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .contact .contact-content .contact-form .form-container .btn:hover {
   background-color: rgba(255, 255, 255, 0.977);
@@ -1333,12 +1373,23 @@ header .nav .theme-container .change {
 /*/////////////////////////// FOOTER SECTION ////////////////////////////*/
 /*////////////////////////////////////////////////////////////////////////*/
 .footer {
-  text-align: center;
+  box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  box-shadow: 0 20px 50px -10px rgba(118, 118, 118, 0.5);
+  width: 95%;
+  margin-inline: auto;
+  border: 0.1px solid white;
+  border-radius: 33px;
+  padding: 0.5em 2em;
+  z-index: 10;
+  margin-bottom: 4rem;
 }
 .footer p {
   font-size: 1.7rem;
   margin-bottom: 0.2em;
   color: #575656;
+  text-align: center;
 }
 
 /************************************/
