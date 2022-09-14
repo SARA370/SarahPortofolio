@@ -193,6 +193,33 @@ header {
   padding: 0.5rem 2rem;
   z-index: 10;
 }
+header .hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.3s;
+}
+header .hamburgerMenu div {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 24px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+header .move .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+header .move .line2 {
+  opacity: 0;
+}
+header .move .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
 header nav {
   display: flex;
   align-items: center;
@@ -393,33 +420,6 @@ header nav .nav-items .dropdown .menu-open {
 }
 header nav .nav-items .social-icons-menu {
   display: none;
-}
-header nav .nav-items .hamburgerMenu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  row-gap: 5px;
-  cursor: pointer;
-  z-index: 1000;
-  transition: 0.3s;
-}
-header nav .nav-items .hamburgerMenu div {
-  display: block;
-  background: white;
-  height: 2px;
-  width: 24px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-header nav .nav-items .hamburgerMenu div .move .line1 {
-  transform: rotate(-45deg) translate(-5px, 5px);
-}
-header nav .nav-items .hamburgerMenu div .move .line2 {
-  opacity: 0;
-}
-header nav .nav-items .hamburgerMenu div .move .line3 {
-  transform: rotate(45deg) translate(-5px, -5px);
 }
 header nav .nav-items .theme-container {
   background-color: rgba(159, 159, 159, 0.653);
@@ -3249,22 +3249,13 @@ header nav .nav-items .theme-container #theme-icon {
     background-position: center;
   }
   body .container {
-    background-color: rgba(184, 141, 3, 0.137254902);
+    background-color: rgba(156, 120, 0, 0.137254902);
     max-width: 550px;
     width: 100%;
     margin: auto;
   }
   body header {
     background-color: rgba(184, 141, 3, 0.137254902);
-  }
-  body header nav .logo-image {
-    max-width: 53%;
-  }
-  body header nav .nav-items {
-    width: 220%;
-  }
-  body header nav .nav-items .navbar {
-    position: absolute;
     top: 0;
     right: 0;
     width: 300px;
@@ -3275,6 +3266,27 @@ header nav .nav-items .theme-container #theme-icon {
     align-items: center;
     padding: 50px 20px;
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  body header .hamburgerMenu {
+    top: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  body header nav {
+    position: absolute;
+  }
+  body header nav .logo-image {
+    max-width: 53%;
+  }
+  body header nav .nav-items {
+    width: 220%;
+    display: flex;
+    flex-direction: column;
+  }
+  body header nav .nav-items .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   body header nav .nav-items .navbar .open-menu {
     right: 0;
@@ -3316,30 +3328,33 @@ header nav .nav-items .theme-container #theme-icon {
       opacity: 0;
     }
   }
-  body header nav .nav-items .navbar .dropdown {
+  body header nav .nav-items .dropdown {
     margin: 0 0.5rem;
     min-width: 2rem;
     display: block;
     margin: 0.9rem 0;
   }
-  body header nav .nav-items .navbar .dropdown .select {
+  body header nav .nav-items .dropdown .select {
     font-size: 0.7rem;
     padding: 0.3rem 0.8rem;
   }
-  body header nav .nav-items .navbar .theme-container {
+  body header nav .nav-items .theme-container {
     width: 2.5rem;
     height: 2.5rem;
     padding: 0.3rem;
     display: block;
   }
-  body header nav .nav-items .navbar .social-icons-menu {
+  body header nav .nav-items .menu-toggle-social-icons {
+    display: block;
+  }
+  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
   }
-  body header nav .nav-items .navbar .social-icons-menu img {
-    width: 1rem;
+  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu img {
+    width: 100%;
     display: flex;
   }
   body .social-icons {

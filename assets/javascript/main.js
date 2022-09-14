@@ -22,10 +22,11 @@ document.addEventListener('click', () => {
 
 let menu = document.querySelector('.hamburgerMenu')
 
-menu.onclick = () => {
-  navbar.classList.toggle("open-menu")
+menu.addEventListener('click', () => {
+
   menu.classList.toggle('move');
-};
+  
+});
 
 
 
