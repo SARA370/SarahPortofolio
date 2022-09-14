@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ------------------- */
 /* ---- FONT SIZE ---- */
 /* ------------------- */
@@ -34,18 +33,11 @@
 /* ------------------- */
 :root {
   /* COLORS */
-  --font-color: #575656;
+  --primary-font-color: #575656;
+  --secondary-font-color: #575656;
   /* IMAGES */
   --background-image: url("../imgs/bg-light-1.jpg");
   --circle-image: url("../imgs/circle-light.svg");
-  --fs-900: 9.375rem;
-  --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-600: 2rem;
-  --fs-500: 1.75rem;
-  --fs-400: 1.125rem;
-  --fs-300: 1rem;
-  --fs-200: 0.875rem;
   /* font-families */
   --ff-Electrolize: "Electrolize", sans-serif;
   --ff-Aldrich: "Aldrich", sans-serif;
@@ -53,7 +45,8 @@
 }
 
 [data-theme=dark] {
-  --font-color: #ffffff;
+  --primary-font-color: #ffffff;
+  --secondary-font-color: #006c78;
   --background-image: url("../imgs/bg-dark-2.jpg");
   --circle-image: url("../imgs/circle-dark.svg");
 }
@@ -62,7 +55,6 @@ body {
   background-image: var(--background-image);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
   line-height: 1.5;
   min-height: auto;
   overflow-x: hidden;
@@ -83,16 +75,9 @@ body {
 }
 /* make images easier to work with */
 .container {
-  max-width: 1900px;
+  max-width: 1800px;
   width: 100%;
   margin: auto;
-}
-
-li,
-a,
-button {
-  font-weight: 500;
-  font-size: 1rem;
 }
 
 /* ------------------- */
@@ -202,34 +187,34 @@ header {
   position: fixed;
   top: 4%;
   width: 95%;
-  margin-inline: 4em;
+  margin-inline: 4rem;
   border: 0.1px solid white;
   border-radius: 33px;
-  padding: 0.5em 2em;
+  padding: 0.5rem 2rem;
   z-index: 10;
 }
-header .nav {
+header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header .nav .logo-image {
+header nav .logo-image {
+  margin-top: 0.5rem;
   max-width: 45%;
 }
-header .nav .nav-items {
+header nav .nav-items {
   display: flex;
   justify-content: end;
   width: 65%;
 }
-header .nav .nav-items .navbar {
+header nav .nav-items .navbar {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-left: 1em;
   -webkit-animation-fill-mode: none;
           animation-fill-mode: none;
 }
-header .nav .nav-items .navbar .nav-links {
+header nav .nav-items .navbar .nav-links {
   display: inline-block;
   padding: 0.45rem 1.9rem;
   border: 0;
@@ -239,18 +224,19 @@ header .nav .nav-items .navbar .nav-links {
   border: 1px solid rgb(255, 255, 255);
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
-  color: #575656;
+  color: var(--primary-font-color);
   font-size: 1rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1rem;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bolder;
   transition: 0.3s;
 }
-header .nav .nav-items .navbar .nav-links:hover {
+header nav .nav-items .navbar .nav-links:hover {
   background-color: rgba(255, 255, 255, 0.977);
+  color: var(--secondary-font-color);
 }
-header .nav .nav-items .navbar .nav-links-contact {
+header nav .nav-items .navbar .nav-links-contact {
   display: inline-block;
   padding: 0.45rem 1.9rem;
   border: 0;
@@ -260,18 +246,18 @@ header .nav .nav-items .navbar .nav-links-contact {
   border: 1px solid rgb(255, 255, 255);
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
-  color: #575656;
+  color: var(--secondary-font-color);
   font-size: 1rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1rem;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bolder;
   transition: 0.3s;
 }
-header .nav .nav-items .navbar .nav-links-contact:hover {
+header nav .nav-items .navbar .nav-links-contact:hover {
   background-color: rgba(255, 255, 255, 0.977);
 }
-header .nav .nav-items .navbar .nav-links-contact::after {
+header nav .nav-items .navbar .nav-links-contact::after {
   content: "";
   width: 30px;
   height: 30px;
@@ -309,10 +295,10 @@ header .nav .nav-items .navbar .nav-links-contact::after {
     opacity: 0;
   }
 }
-header .nav .dropdown {
+header nav .nav-items .dropdown {
   min-width: 4rem;
   position: relative;
-  margin: 0 1em;
+  margin: 0 1rem;
   display: flex;
   align-items: center;
   /*
@@ -324,7 +310,7 @@ header .nav .dropdown {
               (added later in Javascript)
           */
 }
-header .nav .dropdown .select {
+header nav .nav-items .dropdown .select {
   background-color: rgba(255, 255, 255, 0.201);
   border: 1px solid rgb(255, 255, 255);
   -webkit-backdrop-filter: blur(30px);
@@ -338,7 +324,7 @@ header .nav .dropdown .select {
   transition: background 0.3s;
   border-radius: 16px;
   font-weight: bolder;
-  color: #575656;
+  color: var(--primary-font-color);
   font-weight: bold;
   transition: 0.3s;
   font-size: 1rem;
@@ -348,33 +334,33 @@ header .nav .dropdown .select {
       */
   /* Rotate styles (added later in Javascript) */
 }
-header .nav .dropdown .select:hover {
-  background-color: rgba(255, 255, 255, 0.977);
+header nav .nav-items .dropdown .select:hover {
+  color: var(--primary-font-color);
 }
-header .nav .dropdown .select .select-clicked {
+header nav .nav-items .dropdown .select .select-clicked {
   border: 2px #26489a solid;
   box-shadow: 0 0 0.8em #26489a;
 }
-header .nav .dropdown .select .caret {
+header nav .nav-items .dropdown .select .caret {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 6px solid #707070;
+  border-top: 6px solid var(--primary-font-color);
   transition: 0.3s;
-  margin-left: 0.5em;
+  margin-left: 0.5rem;
 }
-header .nav .dropdown .select .caret-rotate {
+header nav .nav-items .dropdown .select .caret-rotate {
   transform: rotate(180deg);
 }
-header .nav .dropdown .menu {
+header nav .nav-items .dropdown .menu {
   list-style: none;
-  padding: 0 0.6em;
+  padding: 0 0.6rem;
   background-color: rgba(255, 255, 255, 0.331);
   border: 1px solid white;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   border-radius: 16px;
   color: #575656;
   position: absolute;
@@ -386,26 +372,56 @@ header .nav .dropdown .menu {
   display: none;
   transition: 0.2s;
   z-index: 1;
-  margin-top: 0.6em;
+  margin-top: 0.6rem;
 }
-header .nav .dropdown .menu li {
-  padding: 0.5em 0.5em;
-  margin: 0.3em 0;
-  border-radius: 0.5em;
+header nav .nav-items .dropdown .menu li {
+  padding: 0.5rem 0.5rem;
+  margin: 0.3rem 0;
+  border-radius: 0.5rem;
   cursor: pointer;
   text-align: centre;
 }
-header .nav .dropdown .menu li:hover {
+header nav .nav-items .dropdown .menu li:hover {
   background-color: rgba(255, 255, 255, 0.744);
 }
-header .nav .dropdown .active {
+header nav .nav-items .dropdown .active {
   background-color: rgba(255, 255, 255, 0.744);
 }
-header .nav .dropdown .menu-open {
+header nav .nav-items .dropdown .menu-open {
   display: block;
   opacity: 1;
 }
-header .nav .theme-container {
+header nav .nav-items .social-icons-menu {
+  display: none;
+}
+header nav .nav-items .hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.3s;
+}
+header nav .nav-items .hamburgerMenu div {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 24px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+header nav .nav-items .hamburgerMenu div .move .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+header nav .nav-items .hamburgerMenu div .move .line2 {
+  opacity: 0;
+}
+header nav .nav-items .hamburgerMenu div .move .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+header nav .nav-items .theme-container {
   background-color: rgba(159, 159, 159, 0.653);
   width: 3.5%;
   border-radius: 50px;
@@ -417,7 +433,7 @@ header .nav .theme-container {
   transition: 0.5s;
   cursor: pointer;
 }
-header .nav .theme-container:hover {
+header nav .nav-items .theme-container:hover {
   opacity: 0.8;
 }
 @-webkit-keyframes change {
@@ -436,14 +452,14 @@ header .nav .theme-container:hover {
     transform: scale(1.4);
   }
 }
-header .nav .theme-container .shadow-dark {
+header nav .nav-items .theme-container .shadow-dark {
   background: linear-gradient(145deg, #23282c, #1e2125);
   box-shadow: 17px 17px 23px #1a1d20, -17px -17px 23px #282d32, inset 5px 5px 4px #1e2226, inset -5px -5px 4px #24282c;
 }
-header .nav .theme-container .shadow-light {
+header nav .nav-items .theme-container .shadow-light {
   box-shadow: 7px 7px 15px -10px #bbcfda, -4px -4px 13px #ffffff, inset 7px 7px 3px rgba(209, 217, 230, 0.35), inset -11px -11px 3px rgba(255, 255, 255, 0.3);
 }
-header .nav .theme-container .change {
+header nav .nav-items .theme-container .change {
   -webkit-animation-name: change;
           animation-name: change;
   -webkit-animation-duration: 1s;
@@ -451,7 +467,7 @@ header .nav .theme-container .change {
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
 }
-header .nav .theme-container #theme-icon {
+header nav .nav-items .theme-container #theme-icon {
   width: 100%;
 }
 
@@ -468,7 +484,7 @@ header .nav .theme-container #theme-icon {
 .hero .hero-content {
   position: relative;
   width: 100%;
-  max-width: 89rem;
+  max-width: 113rem;
   height: 74vh;
   border-radius: 10px;
   display: flex;
@@ -530,35 +546,25 @@ header .nav .theme-container #theme-icon {
   border-radius: 50%;
   z-index: 0;
 }
-.hero .hero-content .hero-text {
-  color: var(--font-color);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 1.1rem;
-  gap: 0.1em;
-  text-align: left;
-}
-.hero .hero-content .hero-text .intro-title {
+.hero .hero-content .intro-title {
   font-size: 2.5rem;
   margin-bottom: 0.3em;
+  color: var(--primary-font-color);
 }
-.hero .hero-content .hero-text .description {
+.hero .hero-content .description {
   font-size: 1.5rem;
   line-height: 1.9em;
   margin-bottom: 4em;
+  color: var(--primary-font-color);
 }
-.hero .hero-content .hero-text .typing {
+.hero .hero-content .typing {
   display: flex;
   align-items: center;
   margin-bottom: 1em;
   font-size: 1.6rem;
+  color: var(--primary-font-color);
 }
-.hero .hero-content .hero-text .typing .typing {
-  font-size: 3rem;
-}
-.hero .hero-content .hero-text .typing .typing:after {
+.hero .hero-content .typing .typing:after {
   content: "";
   width: 1px;
   height: 99%;
@@ -583,7 +589,7 @@ header .nav .theme-container #theme-icon {
     opacity: 1;
   }
 }
-.hero .hero-content .cv-link {
+.hero .cv-link {
   display: inline-block;
   border-radius: 30px;
   font-weight: 600;
@@ -597,28 +603,27 @@ header .nav .theme-container #theme-icon {
   overflow: hidden;
   text-decoration: none;
 }
-.hero .hero-content .cv-link .download-text {
+.hero .cv-link .download-text {
   padding: 0 2.7em 0 4em;
   font-weight: bold;
   font-size: 1.3rem;
-  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #575656;
+  color: var(--secondary-font-color);
 }
-.hero .hero-content .cv-link .download-icon {
+.hero .cv-link .download-icon {
   background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  padding: 0.4rem;
+  padding: 0.5rem;
 }
-.hero .hero-content .cv-link .download-icon img {
+.hero .cv-link .download-icon img {
   width: 29px;
 }
-.hero .hero-content .cv-link::before {
+.hero .cv-link::before {
   content: "";
   position: absolute;
   top: 0;
@@ -627,10 +632,10 @@ header .nav .theme-container #theme-icon {
   transition: all 0.4s ease-out;
   z-index: -1;
 }
-.hero .hero-content .cv-link:hover {
+.hero .cv-link:hover {
   transition: all 0.4s ease-out;
 }
-.hero .hero-content .cv-link:hover::before {
+.hero .cv-link:hover::before {
   width: 100%;
   height: 100%;
   background-color: rgb(255, 255, 255);
@@ -643,7 +648,7 @@ header .nav .theme-container #theme-icon {
   position: fixed;
   top: 84%;
   transform: translateY(-50%);
-  z-index: 100;
+  z-index: 10;
 }
 .social-icons ul {
   transform: translateX(-152px);
@@ -658,7 +663,6 @@ header .nav .theme-container #theme-icon {
   border-radius: 80px;
   width: 13rem;
   text-align: right;
-  border-radius: 0 45px 45px 0;
   transition: all 1s;
   font-size: 1rem;
   padding: 0.2em;
@@ -689,42 +693,15 @@ header .nav .theme-container #theme-icon {
   transition: all 1s;
 }
 
-.about-circle-image-right {
-  width: 25%;
-  position: absolute;
-  top: 110%;
-  transform: translateX(20rem);
-  right: 0;
-}
-.about-circle-image-right .circle-Right {
-  width: 100%;
-  -webkit-animation: circle 9s linear infinite;
-          animation: circle 9s linear infinite;
-  transition: 0.5s;
-  overflow-x: hidden;
-}
-@-webkit-keyframes circle {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes circle {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /*////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////////// SERVICES SECTION ////////////////////////////*/
 /*////////////////////////////////////////////////////////////////////////*/
 .services {
-  margin-bottom: 15em;
   min-height: 100vh;
 }
 .services .services-title {
   text-align: center;
-  margin-bottom: 3em;
-  margin-top: 15em;
+  margin-bottom: 2em;
 }
 .services .services-title h2 {
   position: relative;
@@ -750,26 +727,28 @@ header .nav .theme-container #theme-icon {
 .icon-wrap {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
+  width: 100%;
+  max-width: 113rem;
+  margin: auto;
 }
 .icon-wrap .card {
-  width: 100%;
-  max-width: 89rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 5em 8em;
+  min-height: 10vh;
   border-radius: 10px;
   box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.3);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   box-shadow: 0 20px 50px -10px rgba(118, 118, 118, 0.5);
   border: 0.1px solid #F2B199;
-  z-index: -1;
-  margin-top: 1em;
+  z-index: 1;
+  margin-top: 1rem;
+  width: 50%;
+  padding: 5rem;
 }
 .icon-wrap .card h2 {
   text-transform: uppercase;
@@ -789,8 +768,8 @@ header .nav .theme-container #theme-icon {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  height: 38vh;
-  width: 45%;
+  height: 41vh;
+  max-width: 30rem;
 }
 .icon-wrap .icon-develop .gear-b {
   -webkit-animation: rotate-reverse 6s;
@@ -892,7 +871,7 @@ header .nav .theme-container #theme-icon {
   -webkit-animation-play-state: running;
           animation-play-state: running;
   height: 38vh;
-  width: 40%;
+  max-width: 50rem;
 }
 .icon-wrap .icon-design .anchor-part {
   -webkit-animation: move 2s linear infinite;
@@ -1042,24 +1021,23 @@ header .nav .theme-container #theme-icon {
 .portfolio {
   min-height: 150vh;
 }
-.portfolio .portfolio-content .hide {
+.portfolio .hide {
   display: none;
 }
-.portfolio .portfolio-content .potofolio-title {
+.portfolio .potofolio-title {
   text-align: center;
-  margin-bottom: 1em;
-  margin-top: 5em;
+  margin-bottom: 2rem;
 }
-.portfolio .portfolio-content .potofolio-title h2 {
+.portfolio .potofolio-title h2 {
   position: relative;
   text-transform: uppercase;
   font-size: 5rem;
   font-weight: 700;
 }
-.portfolio .portfolio-content .potofolio-title h2 span {
+.portfolio .potofolio-title h2 span {
   color: #ffffff;
 }
-.portfolio .portfolio-content .potofolio-title h2 .bg-text {
+.portfolio .potofolio-title h2 .bg-text {
   position: absolute;
   top: 30%;
   left: 50%;
@@ -1070,27 +1048,25 @@ header .nav .theme-container #theme-icon {
   font-weight: 800;
   font-size: 6.5rem;
 }
-.portfolio .portfolio-content .work-section {
+.portfolio .work-section {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.portfolio .portfolio-content .work-section .portfolio-gallery {
-  padding: 0.1em 6em;
+.portfolio .work-section .portfolio-gallery {
+  padding: 0.1rem 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.3);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   box-shadow: 0 20px 50px -10px rgba(118, 118, 118, 0.5);
   border: 1px solid white;
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
   border-radius: 40px;
 }
-.portfolio .portfolio-content .work-section .portfolio-gallery .button {
+.portfolio .work-section .portfolio-gallery button {
   margin: 1em;
   padding: 0.4em 1.5em;
   font-size: 1.2rem;
@@ -1100,24 +1076,25 @@ header .nav .theme-container #theme-icon {
   transition: 0.3s;
   background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid rgb(255, 255, 255);
-  color: #575656;
+  color: var(--primary-font-color);
   font-weight: bold;
 }
-.portfolio .portfolio-content .work-section .portfolio-gallery .button:hover {
+.portfolio .work-section .portfolio-gallery button:hover {
   background-color: rgba(255, 255, 255, 0.977);
+  color: var(--secondary-font-color);
 }
-.portfolio .portfolio-content .work-section .portfolio-gallery .actve {
+.portfolio .work-section .portfolio-gallery .actve {
   background-color: white;
+  color: var(--secondary-font-color);
 }
-.portfolio .portfolio-content .work-section .portfolio-gallery .btn-clicked {
+.portfolio .work-section .portfolio-gallery .btn-clicked {
   border: none;
   border-radius: 2em;
   cursor: pointer;
   transition: 0.3s;
 }
-.portfolio .portfolio-content .work-section .portfolio-images {
+.portfolio .work-section .portfolio-images {
   padding: 2em 0;
-  max-width: 89rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1125,80 +1102,57 @@ header .nav .theme-container #theme-icon {
   flex-wrap: wrap;
   gap: 2em;
 }
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay {
+.portfolio .work-section .portfolio-images .portfolio-overlay {
   position: relative;
   overflow: hidden;
   height: 100%;
 }
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-img {
-  width: 28rem;
+.portfolio .work-section .portfolio-images .portfolio-overlay .portfolio-img {
+  width: 32rem;
   height: 100%;
   border-radius: 0.2em;
   transition: 0.95s;
   transition: margin 400ms ease-in-out, width 400ms ease-in-out;
 }
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .img-expand {
-  width: 28rem;
+.portfolio .work-section .portfolio-images .portfolio-overlay .img-expand {
+  width: 32rem;
 }
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .img-shrink {
+.portfolio .work-section .portfolio-images .portfolio-overlay .img-shrink {
   width: 0em;
 }
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-links {
+.portfolio .work-section .portfolio-images .portfolio-overlay .portfolio-links {
   position: absolute;
   top: -100%;
   left: 0;
-  width: 28rem;
-  height: 18.7rem;
+  width: 35.5rem;
+  height: 98%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.3);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
-  box-shadow: 0 20px 50px -10px rgba(118, 118, 118, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgb(255, 255, 255);
 }
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-links h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1em;
-}
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
-  width: 7rem;
-  height: 7rem;
+.portfolio .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+  width: 5rem;
+  height: 5rem;
   background-color: white;
   border-radius: 100%;
+  position: relative;
 }
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
-  width: 100%;
+.portfolio .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+  width: 50%;
+  position: absolute;
+  top: 18px;
+  left: 18px;
 }
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link:hover {
+.portfolio .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link:hover {
   background: rgb(255, 255, 255);
   transition: 0.3 all linear;
 }
-.portfolio .portfolio-content .work-section .portfolio-images .portfolio-overlay:hover .portfolio-links {
+.portfolio .work-section .portfolio-images .portfolio-overlay:hover .portfolio-links {
   top: 0;
   transition: 0.5s all ease;
-}
-
-.about-circle-image-left {
-  width: 20%;
-  position: absolute;
-  top: 383%;
-  transform: translateX(-16rem);
-  right: 105;
-}
-.about-circle-image-left .circle-left {
-  width: 100%;
-  -webkit-animation: circle 9s linear infinite;
-          animation: circle 9s linear infinite;
-  transition: 0.5s;
-  overflow-x: hidden;
-}
-@keyframes circle {
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*////////////////////////////////////////////////////////////////////////*/
@@ -1211,13 +1165,11 @@ header .nav .theme-container #theme-icon {
   align-items: center;
 }
 .contact .contact-content {
-  width: 100%;
-  max-width: 89rem;
+  max-width: 100rem;
 }
 .contact .contact-content .contact-title {
   text-align: center;
-  margin-bottom: 1em;
-  margin-top: -8em;
+  margin-bottom: 2rem;
 }
 .contact .contact-content .contact-title h2 {
   position: relative;
@@ -1239,17 +1191,19 @@ header .nav .theme-container #theme-icon {
   font-weight: 800;
   font-size: 5.9rem;
 }
-.contact .contact-content .contact-form {
-  width: 100%;
-}
 .contact .contact-content .contact-form .form-container {
   padding: 2em 2.2em;
   overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .contact .contact-content .contact-form .form-container .input-container {
   position: relative;
-  margin: 1.5em 0;
+  margin: 0.7rem 0;
+  width: 67rem;
 }
 .contact .contact-content .contact-form .form-container .input-container .input {
   width: 100%;
@@ -1263,7 +1217,7 @@ header .nav .theme-container #theme-icon {
   padding: 1.2rem 1.2rem;
   color: #fff;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 1rem;
   letter-spacing: 0.5px;
   border-radius: 25px;
   transition: 0.3s;
@@ -1292,11 +1246,11 @@ header .nav .theme-container #theme-icon {
   left: 25px;
   font-size: 1rem;
 }
-.contact .contact-content .contact-form .form-container .input-container.focus span:before {
+.contact .contact-content .contact-form .form-container .input-container.focus::before {
   width: 50%;
   opacity: 1;
 }
-.contact .contact-content .contact-form .form-container .input-container.focus span:after {
+.contact .contact-content .contact-form .form-container .input-container.focus::after {
   width: 50%;
   opacity: 1;
 }
@@ -1342,34 +1296,26 @@ header .nav .theme-container #theme-icon {
   top: 1rem;
   transform: translateY(0);
 }
-.contact .contact-content .contact-form .form-container .btn {
-  padding: 0.7em 2em;
+.contact .contact-content .contact-form .form-container button {
+  padding: 0.9rem 4rem;
   border-radius: 30px;
-  background-color: rgba(255, 255, 255, 0.692);
-  font-size: 1.3rem;
+  color: #575656;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: bolder;
-  font-size: 1rem;
   transition: 0.3s;
   font-size: 0.95rem;
   line-height: 1;
   outline: none;
   cursor: pointer;
-  border: 1px solid white;
-  color: #575656;
+  background-color: rgba(255, 255, 255, 0.201);
+  border: 1px solid rgb(255, 255, 255);
+  color: white;
   position: relative;
 }
-.contact .contact-content .contact-form .form-container .btn::after {
-  content: url(../imgs/icons8-boîte-aux-lettres-fermée-vide.gif);
-  display: inline-block;
-  border-radius: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.contact .contact-content .contact-form .form-container .btn:hover {
-  background-color: rgba(255, 255, 255, 0.977);
-  color: #575656;
+.contact .contact-content .contact-form .form-container button:hover {
+  background-color: white;
+  color: var(--secondary-font-color);
 }
 
 /*////////////////////////////////////////////////////////////////////////*/
@@ -1380,161 +1326,2034 @@ header .nav .theme-container #theme-icon {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   box-shadow: 0 20px 50px -10px rgba(118, 118, 118, 0.5);
-  width: 95%;
-  margin-inline: auto;
+  width: 25%;
   border: 0.1px solid white;
   border-radius: 33px;
-  padding: 0.5em 2em;
+  padding: 0.1rem 2rem;
   z-index: 10;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .footer p {
-  font-size: 1.7rem;
-  margin-bottom: 0.2em;
-  color: #575656;
+  font-size: 1.35rem;
+  color: #ffffff;
   text-align: center;
 }
 
+/*************************************/
+/*** BELOW 2000px (XXlarge screen) ***/
+/*************************************/
+@media (max-width: 125rem) {
+  body .container {
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(57, 132, 244, 0.2392156863);
+  }
+  body header {
+    background-color: rgba(57, 132, 244, 0.2392156863);
+  }
+  body .social-icons {
+    top: 88%;
+  }
+  body .hero {
+    margin-top: 8rem;
+    min-height: 100vh;
+  }
+  body .hero .hero-content {
+    max-width: 100rem;
+    height: 74vh;
+    padding: 0 12rem;
+  }
+  body .hero .hero-content .profil-img-container {
+    width: 260px;
+    height: 260px;
+    top: -11%;
+  }
+  body .hero .hero-content .hero-text {
+    font-size: 0.8rem;
+    gap: 0.1em;
+    margin-top: 1rem;
+  }
+  body .hero .hero-content .hero-text .intro-title {
+    font-size: 2.4rem;
+    margin-bottom: 0.3em;
+  }
+  body .hero .hero-content .hero-text .description {
+    font-size: 1.45rem;
+    line-height: 1.8em;
+    margin-bottom: 4em;
+  }
+  body .hero .hero-content .hero-text .typing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    font-size: 1.5rem;
+  }
+  body .portfolio {
+    min-height: 160vh;
+    margin-bottom: 7rem;
+  }
+  body .portfolio .portfolio-links {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 35.5rem;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgb(255, 255, 255);
+  }
+  body .portfolio .portfolio-links .portfolio-link {
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 100%;
+    position: relative;
+    left: -2rem;
+    top: 1rem;
+  }
+  body .portfolio .portfolio-links .portfolio-link .logo-link {
+    width: 50%;
+    position: absolute;
+    top: 18px;
+    left: 18px;
+  }
+  body .input-container {
+    max-width: 80rem;
+  }
+  body .footer {
+    width: 25%;
+    margin-bottom: 2rem;
+  }
+  body .footer p {
+    padding: 0.1rem 1rem;
+  }
+}
 /************************************/
-/* BELOW 2000px ("big" screen) */
+/*** BELOW 1743px (large screen) ***/
 /************************************/
-@media (max-width: 125rem) and (min-width: 90rem) {
-  .container {
-    max-width: 2000px;
+@media (max-width: 109rem) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+  body .container {
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(255, 255, 0, 0.143);
+  }
+  body header {
+    background-color: rgba(255, 255, 0, 0.143);
+    max-width: 93%;
+  }
+  body header nav .logo-image {
+    max-width: 40%;
+  }
+  body header nav .nav-items {
+    width: 51%;
+    background-color: red;
+  }
+  body header nav .nav-items .navbar {
+    gap: 0.8rem;
+  }
+  body header nav .nav-items .navbar .nav-links {
+    font-size: 1rem;
+  }
+  body header nav .nav-items .navbar .nav-links-contact {
+    font-size: 1rem;
+  }
+  body header nav .nav-items .theme-container {
+    width: 5%;
+    padding: 0.3rem;
+  }
+  body .hero {
+    margin-top: 8rem;
+    min-height: 100vh;
+  }
+  body .hero .hero-content {
+    max-width: 100rem;
+    height: 74vh;
+    padding: 0 12rem;
+  }
+  body .hero .hero-content .profil-img-container {
+    width: 260px;
+    height: 260px;
+    top: -11%;
+  }
+  body .hero .hero-content .hero-text {
+    font-size: 0.8rem;
+    gap: 0.1em;
+    margin-top: 1rem;
+  }
+  body .hero .hero-content .hero-text .intro-title {
+    font-size: 2.4rem;
+    margin-bottom: 0.3em;
+  }
+  body .hero .hero-content .hero-text .description {
+    font-size: 1.45rem;
+    line-height: 1.8em;
+    margin-bottom: 4em;
+  }
+  body .hero .hero-content .hero-text .typing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    font-size: 1.5rem;
+  }
+  body .portfolio {
+    min-height: 160vh;
+    margin-bottom: 7rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title {
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 5em;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 700;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 span {
+    color: #ffffff;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    color: rgba(245, 245, 245, 0.1882352941);
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    font-size: 6.5rem;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+    padding: 0.1rem 2rem;
+    margin-bottom: 2em;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+    margin: 1.2rem;
+    font-size: 1rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images {
+    gap: 1rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+    width: 28rem;
+    height: 100%;
+    border-radius: 0.2em;
+    transition: 0.95s;
+    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+    width: 28rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+    width: 0em;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+    top: -100%;
+    left: 0;
+    width: 28rem;
+    height: 97.5%;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 100%;
+    position: relative;
+    left: 0rem;
+    top: 1rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+    width: 50%;
+    position: absolute;
+    top: 18px;
+    left: 18px;
+  }
+  body .services {
+    min-height: 80vh;
+  }
+  body .services .card {
+    padding: 3rem;
+    min-height: 25vh;
+  }
+  body .services .icon-develop {
+    height: 30vh;
+    max-width: 25rem;
+  }
+  body .services .icon-design {
+    height: 27vh;
+    max-width: 38rem;
+  }
+  body .footer {
+    width: 27%;
+    margin-bottom: 2rem;
+  }
+  body .footer p {
+    padding: 0.1rem 1rem;
+  }
+}
+/**************************************/
+/**************************************/
+@media (max-width: 96rem) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+  body .container {
+    max-width: 1260px;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(255, 0, 0, 0.143);
+  }
+  body header {
+    background-color: rgba(255, 0, 0, 0.143);
+    max-width: 93%;
+  }
+  body header nav .logo-image {
+    max-width: 40%;
+  }
+  body header nav .nav-items {
+    width: 51%;
+    background-color: red;
+  }
+  body header nav .nav-items .navbar {
+    gap: 0.8rem;
+  }
+  body header nav .nav-items .navbar .nav-links {
+    font-size: 1rem;
+  }
+  body header nav .nav-items .navbar .nav-links-contact {
+    font-size: 1rem;
+  }
+  body header nav .nav-items .theme-container {
+    width: 5%;
+    padding: 0.3rem;
+  }
+  body .hero {
+    margin-top: 8rem;
+    min-height: 100vh;
+  }
+  body .hero .hero-content {
+    max-width: 100rem;
+    height: 74vh;
+    padding: 0 12rem;
+  }
+  body .hero .hero-content .profil-img-container {
+    width: 260px;
+    height: 260px;
+    top: -11%;
+  }
+  body .hero .hero-content .hero-text {
+    font-size: 0.8rem;
+    gap: 0.1em;
+    margin-top: 1rem;
+  }
+  body .hero .hero-content .hero-text .intro-title {
+    font-size: 2.4rem;
+    margin-bottom: 0.3em;
+  }
+  body .hero .hero-content .hero-text .description {
+    font-size: 1.45rem;
+    line-height: 1.8em;
+    margin-bottom: 4em;
+  }
+  body .hero .hero-content .hero-text .typing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    font-size: 1.5rem;
+  }
+  body .services {
+    min-height: 80vh;
+  }
+  body .services .card {
+    padding: 3rem;
+    min-height: 26vh;
+  }
+  body .services .card h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.4em;
+  }
+  body .services .card .service-text {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.7em;
+  }
+  body .services .icon-develop {
+    height: 30vh;
+    max-width: 23rem;
+  }
+  body .services .icon-design {
+    height: 24vh;
+    max-width: 53rem;
+  }
+  body .portfolio {
+    min-height: 130vh;
+    margin-bottom: 7rem;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+    padding: 0.1rem 2rem;
+    margin-bottom: 2em;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+    margin: 1.2rem;
+    font-size: 1rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images {
+    gap: 1rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+    width: 25rem;
+    height: 100%;
+    border-radius: 0.2em;
+    transition: 0.95s;
+    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+    width: 25rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+    width: 0em;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+    top: -100%;
+    left: 0;
+    width: 28rem;
+    height: 97.5%;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 100%;
+    position: relative;
+    left: 0rem;
+    top: 1rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+    width: 50%;
+    position: absolute;
+    top: 18px;
+    left: 18px;
+  }
+  body .contact .contact-content .contact-form .form-container {
+    padding: 2rem 2rem;
+  }
+  body .contact .contact-content .contact-form .form-container .input-container {
+    margin: 0.7rem 0;
+    width: 57rem;
+  }
+  body .contact .contact-content .contact-form .form-container .input-container .input {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  body .contact .contact-content .contact-form .form-container .input-container label {
+    padding: 0 0.4rem;
+    color: rgba(250, 250, 250, 0.5882352941);
+    font-size: 1.15rem;
+    font-weight: 400;
+  }
+  body .contact .contact-content .contact-form .form-container button {
+    padding: 0.8rem 3rem;
+  }
+  body .footer {
+    width: 33%;
+    margin-bottom: 2rem;
+  }
+}
+/************************************/
+/*** BELOW 1440px (large screen) ***/
+/************************************/
+@media (max-width: 90rem) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+  body .container {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(77, 255, 213, 0.2274509804);
+  }
+  body header {
+    background-color: rgba(77, 255, 213, 0.2274509804);
+    max-width: 90%;
+    padding: 0.1rem 1rem;
+  }
+  body header nav .logo-image {
+    max-width: 40%;
+  }
+  body header nav .nav-items {
+    width: 59%;
+  }
+  body header nav .nav-items .navbar {
+    gap: 0.5rem;
+  }
+  body header nav .nav-items .navbar .nav-links {
+    font-size: 0.8rem;
+    padding: 0.45rem 1.5rem;
+  }
+  body header nav .nav-items .navbar .nav-links-contact {
+    font-size: 0.8rem;
+    padding: 0.45rem 1.5rem;
+  }
+  @-webkit-keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 130px;
+      height: 130px;
+      opacity: 0;
+    }
+  }
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 130px;
+      height: 130px;
+      opacity: 0;
+    }
+  }
+  body header nav .nav-items .dropdown {
+    margin: 0 0.5rem;
+    min-width: 3rem;
+  }
+  body header nav .nav-items .dropdown .select {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.7rem;
+  }
+  body header nav .nav-items .theme-container {
+    width: 6%;
+    padding: 0.3rem;
+  }
+  body .hero {
+    margin-top: 10rem;
+    min-height: 125vh;
+  }
+  body .hero .hero-content {
+    max-width: 63rem;
+    height: 110vh;
+    padding: 0 6rem;
+  }
+  body .hero .hero-content .profil-img-container {
+    width: 240px;
+    height: 240px;
+    top: -14%;
+  }
+  body .hero .hero-content .intro-title {
+    font-size: 1.7rem;
+    margin-bottom: 0.3rem;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .typing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    font-size: 1.3rem;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .description {
+    font-size: 1.3rem;
+    line-height: 1.5em;
+    margin-bottom: 4em;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .cv-link {
+    position: relative;
+    top: -5rem;
+  }
+  body .hero .hero-content .cv-link .download-text {
+    padding: 0 2.7em 0 4em;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-font-color);
+  }
+  body .hero .hero-content .cv-link .download-icon {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+  }
+  body .hero .hero-content .cv-link .download-icon img {
+    width: 29px;
+  }
+  body .social-icons {
+    top: 80%;
+  }
+  body .social-icons ul {
+    transform: translateX(-156px);
+  }
+  body .social-icons ul li {
+    margin: 0.7em;
+    border-radius: 80px;
+    width: 13rem;
+    text-align: right;
+    font-size: 0.8rem;
+    padding: 0.2em;
+  }
+  body .social-icons ul li:hover {
+    transform: translateX(120px);
+  }
+  body .social-icons ul li a {
+    color: white;
+    font-size: 1.5rem;
+  }
+  body .social-icons ul li .icon {
+    padding: 0.4em;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 0.875em;
+    width: 3.3rem;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 1s;
+  }
+  body .services {
+    min-height: 100vh;
+  }
+  body .services .services-title {
+    margin-bottom: 2rem;
+  }
+  body .services .services-title h2 {
+    font-size: 4rem;
+  }
+  body .services .services-title h2 .bg-text {
+    font-size: 5.5rem;
+  }
+  body .services .card {
+    padding: 3rem;
+  }
+  body .services .card h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+  }
+  body .services .card .service-text {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+  body .services .icon-develop {
+    height: 43.5vh;
+    max-width: 17rem;
+  }
+  body .services .icon-design {
+    height: 36vh;
+    max-width: 53rem;
+  }
+  body .portfolio {
+    min-height: 100vh;
+    margin-bottom: 14rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title {
+    margin-bottom: 2rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 {
+    font-size: 4rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+    top: 40%;
+    font-size: 5.5rem;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+    padding: 0.6rem 2rem;
+    margin-bottom: 2em;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+    margin: 0 0.4rem;
+    font-size: 1rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images {
+    gap: 1rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+    width: 20rem;
+    height: 100%;
+    border-radius: 0.2em;
+    transition: 0.95s;
+    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+    width: 20rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+    width: 0em;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+    top: -100%;
+    left: 0;
+    width: 20rem;
+    height: 97.5%;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    border-radius: 100%;
+    position: relative;
+    left: -0.5rem;
+    top: 0rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+    width: 50%;
+    position: absolute;
+    top: 15px;
+    left: 17px;
+  }
+  body .contact {
+    min-height: 140vh;
+  }
+  body .contact .contact-content .contact-title {
+    margin-bottom: 2rem;
+  }
+  body .contact .contact-content .contact-title h2 {
+    font-size: 4rem;
+  }
+  body .contact .contact-content .contact-title h2 span {
+    color: #ffffff;
+  }
+  body .contact .contact-content .contact-title h2 .bg-text {
+    font-size: 5.5rem;
+  }
+  body .contact .contact-content h2 {
+    font-size: 4rem;
+  }
+  body .contact .contact-content h2 span {
+    color: #ffffff;
+  }
+  body .contact .contact-content h2 .bg-text {
+    font-size: 5.5rem;
+  }
+  body .contact .contact-form .form-container {
+    padding: 2rem 2rem;
+  }
+  body .contact .contact-form .form-container .input-container {
+    margin: 0.5rem 0;
+    width: 45rem;
+  }
+  body .contact .contact-form .form-container .textarea .input {
+    min-height: 60vh;
+  }
+  body .contact .contact-form .form-container button {
+    padding: 0.6rem 2rem;
+  }
+  .footer {
+    width: 41%;
+    margin-bottom: 1rem;
+  }
+  .footer p {
+    font-size: 1.2rem;
+  }
+}
+/*************************************/
+/*** BELOW 1123px (desktop screen) ***/
+/*************************************/
+@media (max-width: 70rem) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+  body .container {
+    max-width: 870px;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(13, 18, 81, 0.3176470588);
+  }
+  body header {
+    background-color: rgba(13, 18, 81, 0.3176470588);
+    max-width: 94%;
+    margin-left: 2rem;
+  }
+  body header nav .logo-image {
+    max-width: 32%;
+  }
+  body header nav .nav-items {
+    width: 59%;
+  }
+  body header nav .nav-items .navbar {
+    gap: 0.4rem;
+  }
+  body header nav .nav-items .navbar .nav-links {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.9rem;
+  }
+  body header nav .nav-items .navbar .nav-links-contact {
+    font-size: 0.8rem;
+    padding: 0.45rem 1.5rem;
+  }
+  @-webkit-keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 120px;
+      height: 120px;
+      opacity: 0;
+    }
+  }
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 120px;
+      height: 120px;
+      opacity: 0;
+    }
+  }
+  body header nav .nav-items .dropdown {
+    margin: 0 0.5rem;
+    min-width: 3rem;
+  }
+  body header nav .nav-items .dropdown .select {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.7rem;
+  }
+  body header nav .nav-items .theme-container {
+    width: 6%;
+    padding: 0.3rem;
+  }
+  body .hero {
+    margin-top: 10rem;
+    min-height: 125vh;
+  }
+  body .hero .hero-content {
+    max-width: 54rem;
+    min-height: 75vh;
+    padding: 0 5rem;
+  }
+  body .hero .hero-content .profil-img-container {
+    width: 220px;
+    height: 220px;
+    top: -14%;
+  }
+  body .hero .hero-content .intro-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .typing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    font-size: 1.2rem;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .description {
+    font-size: 1.25rem;
+    line-height: 1.5em;
+    margin-bottom: 4em;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .cv-link {
+    position: relative;
+    top: -5rem;
+  }
+  body .hero .hero-content .cv-link .download-text {
+    padding: 0 2.7em 0 4em;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-font-color);
+  }
+  body .hero .hero-content .cv-link .download-icon {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+  }
+  body .hero .hero-content .cv-link .download-icon img {
+    width: 29px;
+  }
+  body .social-icons {
+    top: 80%;
+  }
+  body .social-icons ul {
+    transform: translateX(-158px);
+  }
+  body .social-icons ul li {
+    margin: 0.7em;
+    border-radius: 80px;
+    width: 13rem;
+    text-align: right;
+    font-size: 0.7rem;
+    padding: 0.2em;
+  }
+  body .social-icons ul li:hover {
+    transform: translateX(120px);
+  }
+  body .social-icons ul li a {
+    color: white;
+    font-size: 1.5rem;
+  }
+  body .social-icons ul li .icon {
+    padding: 0.4em;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 0.875em;
+    width: 3.1rem;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 1s;
+  }
+  body .services {
+    min-height: 100vh;
+  }
+  body .services .services-title {
+    margin-bottom: 2rem;
+  }
+  body .services .services-title h2 {
+    font-size: 4rem;
+  }
+  body .services .services-title h2 .bg-text {
+    font-size: 5.5rem;
+  }
+  body .services .card {
+    padding: 3rem;
+  }
+  body .services .card h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1rem;
+  }
+  body .services .card .service-text {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+  body .services .icon-develop {
+    height: 19h;
+    margin-bottom: 0.5rem;
+    max-width: 15rem;
+  }
+  body .services .icon-design {
+    height: 36vh;
+    max-width: 53rem;
+  }
+  body .portfolio {
+    min-height: 100vh;
+    margin-bottom: 14rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title {
+    margin-bottom: 2rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 {
+    font-size: 4rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+    top: 40%;
+    font-size: 5.5rem;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+    padding: 0.6rem 2rem;
+    margin-bottom: 2em;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+    margin: 0 0.4rem;
+    font-size: 0.9rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images {
+    gap: 1rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+    width: 17rem;
+    height: 100%;
+    border-radius: 0.2em;
+    transition: 0.95s;
+    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+    width: 17rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+    width: 0em;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+    top: -100%;
+    left: 0;
+    width: 20rem;
+    height: 97.5%;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: white;
+    border-radius: 100%;
+    position: relative;
+    left: -1.7rem;
+    top: 0rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+    width: 50%;
+    position: absolute;
+    top: 13px;
+    left: 14px;
+  }
+  body .contact {
+    min-height: 140vh;
+  }
+  body .contact .contact-content {
+    margin-bottom: 2rem;
+  }
+  body .contact .contact-content .contact-title {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  body .contact .contact-content .contact-title h2 {
+    font-size: 4rem;
+  }
+  body .contact .contact-content .contact-title h2 span {
+    color: #ffffff;
+  }
+  body .contact .contact-content .contact-title h2 .bg-text {
+    font-size: 5.5rem;
+  }
+  body .contact .contact-content .contact-form .form-container {
+    padding: 2rem 2rem;
+  }
+  body .contact .contact-content .contact-form .form-container .input-container {
+    margin: 0.5rem 0;
+    width: 40rem;
+  }
+  body .contact .contact-content .contact-form .form-container .textarea .input {
+    min-height: 60vh;
+  }
+  body .contact .contact-content .contact-form .form-container button {
+    padding: 0.4rem 2rem;
+  }
+  body .footer {
+    width: 41%;
+    padding: 0.1rem 2rem;
+    margin-bottom: 1rem;
+  }
+  body .footer p {
+    font-size: 1.1rem;
+  }
+}
+/*************************************/
+/*** BELOW 985px ( tablets screen) ***/
+/*************************************/
+@media (max-width: 62rem) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+  body .container {
+    background-color: rgba(251, 4, 197, 0.2666666667);
+    max-width: 800px;
     width: 100%;
     margin: auto;
   }
   body header {
-    background-color: #6197e7;
+    background-color: rgba(251, 4, 197, 0.2666666667);
+    max-width: 100%;
+    margin-left: 1.5rem;
+  }
+  body header nav .logo-image {
+    max-width: 32%;
+  }
+  body header nav .nav-items {
+    width: 61%;
+  }
+  body header nav .nav-items .navbar {
+    gap: 0.5rem;
+  }
+  body header nav .nav-items .navbar .nav-links {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.85rem;
+  }
+  body header nav .nav-items .navbar .nav-links-contact {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.85rem;
+  }
+  @-webkit-keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 120px;
+      height: 120px;
+      opacity: 0;
+    }
+  }
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 120px;
+      height: 120px;
+      opacity: 0;
+    }
+  }
+  body header nav .nav-items .dropdown {
+    margin: 0 0.5rem;
+    min-width: 3rem;
+  }
+  body header nav .nav-items .dropdown .select {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.7rem;
+  }
+  body header nav .nav-items .theme-container {
+    width: 7%;
+    padding: 0.3rem;
+  }
+  body .social-icons {
+    top: 80%;
+  }
+  body .social-icons ul {
+    transform: translateX(-163px);
+  }
+  body .social-icons ul li {
+    margin: 0.7em;
+    width: 13rem;
+    text-align: right;
+    font-size: 0.5rem;
+    padding: 0.2em;
+  }
+  body .social-icons ul li .icon {
+    padding: 0.4em;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 0.875em;
+    width: 2.8rem;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 1s;
   }
   body .hero {
-    margin-top: 5rem;
+    margin-top: 9rem;
+    min-height: 100vh;
+    margin-bottom: 6rem;
   }
   body .hero .hero-content {
-    height: 74vh;
-    padding: 0 14em;
+    max-width: 50rem;
+    min-height: 76vh;
+    padding: 0 4rem;
   }
   body .hero .hero-content .profil-img-container {
-    position: relative;
     width: 200px;
-    top: -12%;
-    height: 700px;
-    background: rgba(176, 176, 176, 0.2588235294);
-    border-radius: 50%;
-    overflow: hidden;
+    height: 200px;
+    top: -10%;
   }
-}
-/************************************/
-/* BELOW 1440px ("small" screen) */
-/************************************/
-@media (max-width: 90rem) {
-  body {
-    background-size: contain;
-    background-repeat: repeat;
-  }
-  body header {
-    width: 91%;
-    padding: 0.2em 0.2em;
-    position: fixed;
-    background-color: #0D3C51;
-  }
-  body header .nav-items {
-    display: flex;
-    justify-content: end;
-    width: 90%;
-  }
-  body header .nav-links {
-    padding: 0.2rem 1rem;
-    font-size: 0.1rem;
-  }
-  body header .nav-links:hover {
-    background-color: rgba(255, 255, 255, 0.977);
-  }
-  body header .theme-container {
-    background-color: #0D3C51;
-    width: 3%;
-    border-radius: 50px;
-    border: 1px solid white;
-    padding: 1em;
-  }
-  body .hero-text {
-    color: var(--font-color);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 1.1rem;
-    gap: 0.1em;
-    text-align: left;
-  }
-  body .hero-text .intro-title {
+  body .hero .hero-content .intro-title {
     font-size: 1.5rem;
-    margin-bottom: 0.1em;
+    margin-bottom: 0.3rem;
+    position: relative;
+    top: -3rem;
   }
-  body .hero-text .description {
-    font-size: 1rem;
-    line-height: 1.9em;
-    margin-bottom: 4em;
-  }
-  body .hero-text .typing {
+  body .hero .hero-content .typing {
     display: flex;
     align-items: center;
     margin-bottom: 1em;
+    font-size: 1.1rem;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .description {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    margin-bottom: 4em;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .cv-link {
+    position: relative;
+    top: -5rem;
+  }
+  body .hero .hero-content .cv-link .download-text {
+    padding: 0 2.7em 0 4em;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-font-color);
+  }
+  body .hero .hero-content .cv-link .download-icon {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+  }
+  body .hero .hero-content .cv-link .download-icon img {
+    width: 29px;
+  }
+  body .services {
+    min-height: 90vh;
+  }
+  body .services .services-title {
+    margin-bottom: 2rem;
+  }
+  body .services .services-title h2 {
+    font-size: 3rem;
+  }
+  body .services .services-title h2 .bg-text {
+    font-size: 4.5rem;
+  }
+  body .services .card {
+    padding: 2.5rem;
+  }
+  body .services .card h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
     font-size: 1rem;
   }
-  body .hero-text .typing .typing {
-    font-size: 1rem;
+  body .services .card .service-text {
+    color: white;
+    font-size: 0.95rem;
+    line-height: 1.5em;
   }
-  body .hero-text .typing .typing:after {
-    content: "";
-    width: 1px;
-    height: 99%;
-    right: -4%;
-    border-right: 2px solid rgb(0, 0, 0);
-    -webkit-animation: 0.9s infinite ease;
-            animation: 0.9s infinite ease;
+  body .services .icon-develop {
+    height: 21h;
+    margin-bottom: 0.4rem;
+    max-width: 14rem;
   }
-  @-webkit-keyframes type {
+  body .services .icon-design {
+    height: 36vh;
+    max-width: 53rem;
+  }
+  body .portfolio {
+    min-height: 90vh;
+    margin-bottom: 14rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title {
+    margin-bottom: 2rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 {
+    font-size: 3rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+    top: 40%;
+    font-size: 4.5rem;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+    padding: 0.6rem 1rem;
+    margin-bottom: 2em;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+    margin: 0 0.4rem;
+    font-size: 0.8rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images {
+    gap: 1rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+    width: 16rem;
+    height: 100%;
+    border-radius: 0.2em;
+    transition: 0.95s;
+    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+    width: 16rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+    width: 0em;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+    top: -100%;
+    left: 0;
+    width: 16rem;
+    height: 97.5%;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: white;
+    border-radius: 100%;
+    position: relative;
+    left: -0.2rem;
+    top: 0rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+    width: 50%;
+    position: absolute;
+    top: 13px;
+    left: 14px;
+  }
+  body .contact {
+    min-height: 140vh;
+  }
+  body .contact .contact-content .contact-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  body .contact .contact-content .contact-title h2 {
+    font-size: 3rem;
+  }
+  body .contact .contact-content .contact-title h2 span {
+    color: #ffffff;
+  }
+  body .contact .contact-content .contact-title h2 .bg-text {
+    font-size: 4.5rem;
+  }
+  body .contact .contact-content .contact-form .form-container {
+    padding: 2rem 2rem;
+  }
+  body .contact .contact-content .contact-form .form-container .input-container {
+    margin: 0.4rem 0;
+    width: 37rem;
+  }
+  body .contact .contact-content .contact-form .form-container .textarea .input {
+    min-height: 65vh;
+  }
+  body .contact .contact-content .contact-form .form-container button {
+    padding: 0.4rem 2rem;
+  }
+  body .footer {
+    width: 42%;
+    padding: 0.1rem 2rem;
+    margin-bottom: 1rem;
+  }
+  body .footer p {
+    font-size: 1.1rem;
+  }
+}
+/*************************************/
+/*** BELOW 904px ( tablets screen) ***/
+/*************************************/
+@media (max-width: 57rem) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+  body .container {
+    background-color: rgba(123, 3, 45, 0.462745098);
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+  }
+  body header {
+    background-color: rgba(123, 3, 45, 0.462745098);
+    max-width: 100%;
+    margin-left: 1.5rem;
+  }
+  body header nav .logo-image {
+    max-width: 35%;
+  }
+  body header nav .nav-items {
+    width: 72%;
+  }
+  body header nav .nav-items .navbar {
+    gap: 0.4rem;
+  }
+  body header nav .nav-items .navbar .nav-links {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.75rem;
+  }
+  body header nav .nav-items .navbar .nav-links-contact {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.75rem;
+  }
+  @-webkit-keyframes ring {
     0% {
-      opacity: 0;
-    }
-    100% {
+      width: 30px;
+      height: 30px;
       opacity: 1;
     }
-  }
-  @keyframes type {
-    0% {
+    100% {
+      width: 120px;
+      height: 120px;
       opacity: 0;
     }
-    100% {
+  }
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
       opacity: 1;
     }
+    100% {
+      width: 120px;
+      height: 120px;
+      opacity: 0;
+    }
+  }
+  body header nav .nav-items .dropdown {
+    margin: 0 0.5rem;
+    min-width: 2rem;
+  }
+  body header nav .nav-items .dropdown .select {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.7rem;
+  }
+  body header nav .nav-items .theme-container {
+    width: 6%;
+    padding: 0.3rem;
   }
   body .social-icons {
-    top: 55%;
+    top: 80%;
+  }
+  body .social-icons ul {
+    transform: translateX(-163px);
+  }
+  body .social-icons ul li {
+    margin: 0.7em;
+    width: 13rem;
+    text-align: right;
+    font-size: 0.5rem;
+    padding: 0.2em;
+  }
+  body .social-icons ul li .icon {
+    padding: 0.4em;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 0.875em;
+    width: 2.8rem;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 1s;
+  }
+  body .hero {
+    margin-top: 10rem;
+    min-height: 102vh;
+    margin-bottom: 6rem;
+  }
+  body .hero .hero-content {
+    max-width: 50rem;
+    height: 100vh;
+    padding: 0 3rem;
+  }
+  body .hero .hero-content .profil-img-container {
+    width: 180px;
+    height: 180px;
+    top: -10%;
+  }
+  body .hero .hero-content .intro-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .typing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    font-size: 1.1rem;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .description {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    margin-bottom: 4em;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .cv-link {
+    position: relative;
+    top: -5rem;
+  }
+  body .hero .hero-content .cv-link .download-text {
+    padding: 0 2.7em 0 4em;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-font-color);
+  }
+  body .hero .hero-content .cv-link .download-icon {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+  }
+  body .hero .hero-content .cv-link .download-icon img {
+    width: 29px;
+  }
+  body .services {
+    min-height: 100vh;
+  }
+  body .services .services-title {
+    margin-bottom: 2rem;
+  }
+  body .services .services-title h2 {
+    font-size: 2rem;
+  }
+  body .services .services-title h2 .bg-text {
+    font-size: 3.5rem;
+  }
+  body .services .card {
+    padding: 2rem;
+  }
+  body .services .card h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+  }
+  body .services .card .service-text {
+    color: white;
+    font-size: 0.85rem;
+    line-height: 1.3em;
+  }
+  body .services .icon-develop {
+    height: 21h;
+    margin-bottom: 0.4rem;
+    max-width: 15rem;
+  }
+  body .services .icon-design {
+    height: 39vh;
+    max-width: 53rem;
+  }
+  body .portfolio {
+    min-height: 100vh;
+    margin-bottom: 5rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title {
+    margin-bottom: 2rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 {
+    font-size: 2rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+    top: 40%;
+    font-size: 3.5rem;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+    padding: 0.6rem 1rem;
+    margin-bottom: 2em;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+    margin: 0 0.4rem;
+    font-size: 0.8rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images {
+    gap: 0.8rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+    width: 14rem;
+    height: 100%;
+    border-radius: 0.2em;
+    transition: 0.95s;
+    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+    width: 14rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+    width: 0em;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+    top: -100%;
+    left: 0;
+    width: 14rem;
+    height: 97.5%;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 100%;
+    position: relative;
+    left: -0.2rem;
+    top: 0rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+    width: 50%;
+    position: absolute;
+    top: 12px;
+    left: 11.5px;
+  }
+  body .contact {
+    min-height: 100vh;
+  }
+  body .contact .contact-content .contact-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  body .contact .contact-content .contact-title h2 {
+    font-size: 2rem;
+  }
+  body .contact .contact-content .contact-title h2 span {
+    color: #ffffff;
+  }
+  body .contact .contact-content .contact-title h2 .bg-text {
+    font-size: 3.5rem;
+  }
+  body .contact .contact-content .contact-form .form-container {
+    padding: 1rem 2rem;
+  }
+  body .contact .contact-content .contact-form .form-container .input-container {
+    margin: 0.4rem 0;
+    width: 35rem;
+  }
+  body .contact .contact-content .contact-form .form-container .input-container label {
+    font-size: 1rem;
+  }
+  body .contact .contact-content .contact-form .form-container .textarea .input {
+    min-height: 65vh;
+  }
+  body .contact .contact-content .contact-form .form-container button {
+    padding: 0.4rem 2rem;
+  }
+  body .footer {
+    width: 46%;
+    padding: 0.1rem 2rem;
+    margin-bottom: 1rem;
+  }
+  body .footer p {
+    font-size: 1.1rem;
   }
 }
-/**************************/
-/* BELOW 1024px (desktop) */
-/**************************/
-@media (max-width: 64rem) {
+/*************************************/
+/*** BELOW 797px ( tablets screen) ***/
+/*************************************/
+@media (max-width: 50rem) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+  body .container {
+    background-color: rgba(0, 1, 0, 0.2666666667);
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+  }
   body header {
-    background-color: #CE5C59;
+    background-color: rgba(0, 1, 0, 0.2666666667);
+  }
+  body header nav .logo-image {
+    max-width: 53%;
+  }
+  body header nav .nav-items {
+    width: 162%;
+  }
+  body header nav .nav-items .navbar {
+    gap: 0.4rem;
+  }
+  body header nav .nav-items .navbar .nav-links {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.75rem;
+  }
+  body header nav .nav-items .navbar .nav-links-contact {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.75rem;
+  }
+  @-webkit-keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 120px;
+      height: 120px;
+      opacity: 0;
+    }
+  }
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 120px;
+      height: 120px;
+      opacity: 0;
+    }
+  }
+  body header nav .nav-items .dropdown {
+    margin: 0 0.5rem;
+    min-width: 2rem;
+  }
+  body header nav .nav-items .dropdown .select {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.7rem;
+  }
+  body header nav .nav-items .theme-container {
+    width: 6%;
+    padding: 0.3rem;
+  }
+  body .social-icons {
+    top: 82%;
+  }
+  body .social-icons ul {
+    transform: translateX(-167px);
+  }
+  body .social-icons ul li {
+    margin: 0.7em;
+    width: 13rem;
+    text-align: right;
+    font-size: 0.4rem;
+    padding: 0.2em;
+  }
+  body .social-icons ul li a {
+    font-size: 1.3rem;
+  }
+  body .social-icons ul li .icon {
+    padding: 0.4em;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 0.875em;
+    width: 2.6rem;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 1s;
+  }
+  body .hero {
+    margin-top: 9rem;
+    min-height: 100vh;
+    margin-bottom: 4rem;
+  }
+  body .hero .hero-content {
+    max-width: 38rem;
+    height: 131vh;
+    padding: 0 3rem;
+  }
+  body .hero .hero-content .profil-img-container {
+    width: 150px;
+    height: 150px;
+    top: -10%;
+  }
+  body .hero .hero-content .intro-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .typing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    font-size: 1.1rem;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .description {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    margin-bottom: 4em;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .cv-link {
+    position: relative;
+    top: -5rem;
+  }
+  body .hero .hero-content .cv-link .download-text {
+    padding: 0 2.7em 0 4em;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-font-color);
+  }
+  body .hero .hero-content .cv-link .download-icon {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.3rem;
+  }
+  body .hero .hero-content .cv-link .download-icon img {
+    max-width: 1.5rem;
+  }
+  body .services {
+    min-height: 100vh;
+  }
+  body .services .services-title {
+    margin-bottom: 2rem;
+  }
+  body .services .services-title h2 {
+    font-size: 2rem;
+  }
+  body .services .services-title h2 .bg-text {
+    font-size: 3.5rem;
+  }
+  body .services .icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  body .services .icon-wrap .card {
+    padding: 3rem;
+    width: 100%;
+  }
+  body .services .icon-wrap .card h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+  }
+  body .services .icon-wrap .card .service-text {
+    color: white;
+    font-size: 0.85rem;
+    line-height: 1.3em;
+  }
+  body .services .icon-wrap .icon-develop {
+    height: 25h;
+    margin-bottom: 0.4rem;
+    max-width: 20rem;
+  }
+  body .services .icon-wrap .icon-design {
+    height: 45vh;
+    max-width: 61rem;
+  }
+  body .portfolio {
+    min-height: 100vh;
+    margin-bottom: 5rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title {
+    margin-bottom: 2rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 {
+    font-size: 2rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+    top: 40%;
+    font-size: 3.5rem;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+    padding: 0.6rem 1rem;
+    margin-bottom: 2em;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+    margin: 0 0.4rem;
+    font-size: 0.8rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images {
+    gap: 0.8rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+    width: 18rem;
+    height: 100%;
+    border-radius: 0.2em;
+    transition: 0.95s;
+    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+    width: 18rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+    width: 0em;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+    top: -100%;
+    left: 0;
+    width: 18rem;
+    height: 97.5%;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 100%;
+    position: relative;
+    left: -0.2rem;
+    top: 0rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+    width: 50%;
+    position: absolute;
+    top: 12px;
+    left: 11.5px;
+  }
+  body .contact {
+    min-height: 100vh;
+  }
+  body .contact .contact-content .contact-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  body .contact .contact-content .contact-title h2 {
+    font-size: 2rem;
+  }
+  body .contact .contact-content .contact-title h2 span {
+    color: #ffffff;
+  }
+  body .contact .contact-content .contact-title h2 .bg-text {
+    font-size: 3.5rem;
+  }
+  body .contact .contact-content .contact-form .form-container {
+    padding: 0.5rem 2rem;
+  }
+  body .contact .contact-content .contact-form .form-container .input-container {
+    margin: 0.4rem 0;
+    width: 35rem;
+  }
+  body .contact .contact-content .contact-form .form-container .input-container label {
+    font-size: 1rem;
+  }
+  body .contact .contact-content .contact-form .form-container .textarea .input {
+    min-height: 65vh;
+  }
+  body .contact .contact-content .contact-form .form-container button {
+    padding: 0.4rem 2rem;
+  }
+  body .footer {
+    width: 55%;
+    padding: 0.1rem 2rem;
+    margin-bottom: 1rem;
+  }
+  body .footer p {
+    font-size: 1.1rem;
   }
 }
-/*********************************/
-/* BELOW 768px (Smaller tablets) */
-/*********************************/
-@media (max-width: 48rem) {
+/***********************************/
+/*** BELOW 688px (Phones screen) ***/
+/***********************************/
+@media (max-width: 43rem) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+  body .container {
+    background-color: rgba(184, 141, 3, 0.137254902);
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+  }
   body header {
-    background-color: #3ea55f;
+    background-color: rgba(184, 141, 3, 0.137254902);
+  }
+  body header nav .logo-image {
+    max-width: 53%;
+  }
+  body header nav .nav-items {
+    width: 220%;
+  }
+  body header nav .nav-items .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #C19B79 20%, rgba(35, 119, 221, 0.7803921569) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  body header nav .nav-items .navbar .open-menu {
+    right: 0;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  body header nav .nav-items .navbar .nav-links {
+    font-size: 0.8rem;
+    padding: 0.3rem 1.5rem;
+    display: block;
+    margin: 0.9rem 0;
+  }
+  body header nav .nav-items .navbar .nav-links-contact {
+    font-size: 0.8rem;
+    padding: 0.3rem 1.1rem;
+    display: block;
+    margin: 0.9rem 0;
+  }
+  @-webkit-keyframes ring {
+    0% {
+      width: 0px;
+      height: 0px;
+      opacity: 1;
+    }
+    100% {
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+  }
+  @keyframes ring {
+    0% {
+      width: 0px;
+      height: 0px;
+      opacity: 1;
+    }
+    100% {
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+  }
+  body header nav .nav-items .navbar .dropdown {
+    margin: 0 0.5rem;
+    min-width: 2rem;
+    display: block;
+    margin: 0.9rem 0;
+  }
+  body header nav .nav-items .navbar .dropdown .select {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+  }
+  body header nav .nav-items .navbar .theme-container {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.3rem;
+    display: block;
+  }
+  body header nav .nav-items .navbar .social-icons-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  body header nav .nav-items .navbar .social-icons-menu img {
+    width: 1rem;
+    display: flex;
+  }
+  body .social-icons {
+    display: none;
   }
 }
-/**************************/
-/* BELOW 425px (Phones) */
-/**************************/
+/***********************************/
+/*** BELOW 425px (Phones screen) ***/
+/***********************************/
 @media (max-width: 27rem) {
+  body .container {
+    background-color: rgba(21, 60, 40, 0.137254902);
+  }
   body header {
-    background-color: #f555dd;
+    background-color: rgba(21, 60, 40, 0.137254902);
   }
 }/*# sourceMappingURL=style.css.map */

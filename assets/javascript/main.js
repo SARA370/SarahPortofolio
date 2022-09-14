@@ -16,6 +16,18 @@ document.addEventListener('click', () => {
 })
 
 
+/////////********************************************///////
+/////////*************** HAMBURGER MENU *************///////
+/////////********************************************///////
+
+let menu = document.querySelector('.hamburgerMenu')
+
+menu.onclick = () => {
+  navbar.classList.toggle("open-menu")
+  menu.classList.toggle('move');
+};
+
+
 
 
 /////////*******************************************///////
@@ -50,6 +62,8 @@ let letter = '';
 
 })();
 
+
+
 /////////*********************************************///////
 /////////************* DARK/LIGHT MODE ***************///////
 /////////*********************************************///////
@@ -61,8 +75,8 @@ const rightLightCircle = "./assets/imgs/circle-light.svg";
 const rightDarkCircle = "./assets/imgs/circle-dark.svg";
 
 // FOR THE LEFT CIRCLE THEME
-const leftLightCircle = "./assets/imgs/sarah.svg";
-const leftDarkCircle = "./assets/imgs/favicon.png";
+const leftLightCircle = "./assets/imgs/circle-dark.svg";
+const leftDarkCircle = "./assets/imgs/circle-dark.svg";
 
 var theme = "dark";
 
@@ -144,7 +158,6 @@ function darkMode() {
 /////////*******************************************///////
 
 let elementsCC = document.querySelectorAll('.origin-center');
-
 elementsCC.forEach(element => {
   let bbox = element.getBBox(),
     x = bbox.x,

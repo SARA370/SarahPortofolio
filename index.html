@@ -33,17 +33,18 @@
   <!--------------------------------------------------------->
   <header>
     <!------------------------- NAVBAR ------------------------>
-    <nav class="nav">
+    <nav>
       <a href="index.html"><img class="logo-image" src="./assets/imgs/logo.png" alt="LOGO IMAGE"></a>
 
       <div class="nav-items">
+
         <ul class="navbar">
-          <li><a href="#hero" class="nav-links" lng-tag="about-nav">about</a></li>
+
+          <li><a href="#hero" class="nav-links" lng-tag="about-nav"></a></li>
           <li><a href="#services" class="nav-links" lng-tag="services-nav"> </a></li>
           <li><a href="#mywork" class="nav-links" lng-tag="myWork-nav"> </a></li>
           <li><a href="#contact" class="nav-links-contact" lng-tag="contact-me-nav"> </a></li>
         </ul>
-
         <!------------------------- LISTE OF LANGUAGES ------------------------>
         <div class="dropdown">
           <div class="select">
@@ -61,6 +62,30 @@
         <div class="theme-container shadow-dark">
           <img id="theme-icon" src="./assets/imgs/moon.svg">
         </div>
+
+
+        <!---------------------- SOCIAL MENDIA ICONS MENU ----------------------->
+        <div class="social-icons-menu">
+          <ul>
+            <li class="behance-icon"><a href="#"><img class="icon" src="./assets/imgs/icons8-behance.svg"
+                  alt="behance-icon"></a>
+            </li>
+            <li class="github-icon"><a href="https://github.com/SARA370"><img class="icon"
+                  src="./assets/imgs/icons8-github.gif" alt="github-icon"></a>
+            </li>
+            <li class="linkdein-icon"><a href="https://www.linkedin.com/in/sarah-al-rashid-92ab2a220/"><img
+                  class="icon" src="./assets/imgs/icons8-linkedin.gif" alt="linkedin-icon"></a>
+            </li>
+          </ul>
+        </div>
+
+
+        <!------------------------- HAMBURGER MENU ------------------------>
+        <div class="hamburgerMenu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
       </div>
     </nav>
   </header>
@@ -75,13 +100,11 @@
       <div class="profil-img-container">
       </div>
 
+      <h3 class="intro-title" lng-tag="intro-text"></h3>
+      <h3 class="typing"></h3>
+      <p class="description" lng-tag="hero-description">
+      </p>
 
-      <div class="hero-text">
-        <h3 class="intro-title" lng-tag="intro-text"></h3>
-        <h3 class="typing"></h3>
-        <p class="description" lng-tag="hero-description">
-        </p>
-      </div>
 
       <a href="./assets/pdf/CV- SARAH AL-RASHID.pdf" class="cv-link">
         <span class="download-text" lng-tag="Cv-button"></span>
@@ -99,15 +122,15 @@
       <li class="github-icon"><a href="https://github.com/SARA370">Github<img class="icon"
             src="./assets/imgs/icons8-github.gif" alt="github-icon"></a>
       </li>
-      <li class="linkdein-icon"><a href="https://www.linkedin.com/feed/">Linkedin<img class="icon"
-            src="./assets/imgs/icons8-linkedin.gif" alt="linkedin-icon"></a>
+      <li class="linkdein-icon"><a href="https://www.linkedin.com/in/sarah-al-rashid-92ab2a220/">Linkedin<img
+            class="icon" src="./assets/imgs/icons8-linkedin.gif" alt="linkedin-icon"></a>
       </li>
     </ul>
   </div>
 
-  <div class="about-circle-image-right">
+  <!-- <div class="about-circle-image-right">
     <img src="./assets/imgs/circle-light.svg" class="circle-Right">
-  </div>
+  </div> -->
 
   <!--------------------------------------------------------->
   <!-------------------- SERVICES SECTION ------------------->
@@ -119,8 +142,9 @@
 
     <div class="icon-wrap">
 
+
       <!--Front End Development-->
-      <div class="card">
+      <div class="card code-card">
         <h2>Development web Front End</h2>
         <svg class="icon-develop" viewBox="0 0 359.4 338.2">
           <linearGradient id="XMLID_143_x" gradientUnits="userSpaceOnUse" x1="215.598" y1="126.7459" x2="110.5261"
@@ -336,8 +360,8 @@
       <!-------------------->
       <!--UIUX Design card-->
       <!-------------------->
-      <div class="card">
-        <h2>UIUX Design</h2>
+      <div class="card design-card">
+        <h2>UI/UX Design</h2>
         <svg class="icon-design" viewBox="0 0 310.4 336">
 
           <linearGradient id="XMLID_130_v" gradientUnits="userSpaceOnUse" x1="263.4456" y1="-35.5969" x2="114.7688"
@@ -549,11 +573,11 @@
 
       <div class="work-section">
         <div class="portfolio-gallery">
-          <button type="button" class="button actve" data-btn="All" lng-tag="all-btn">All</button>
-          <button type="button" class="button" data-btn="1">CODE</button>
-          <button type="button" class="button" data-btn="2">UI/UI DESIGN</button>
-          <button type="button" class="button" data-btn="3">EMAIL TEMPLETE</button>
-          <button class="button" class="button" data-btn="4">VIDEOS</button>
+          <button type="button" class="actve" data-btn="All" lng-tag="all-btn">All</button>
+          <button type="button" data-btn="1">CODE</button>
+          <button type="button" data-btn="2">UI/UI DESIGN</button>
+          <button type="button" data-btn="3">EMAIL TEMPLETE</button>
+          <button class="button" data-btn="4">VIDEOS</button>
         </div>
 
         <div class="portfolio-images">
@@ -562,7 +586,6 @@
             <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="1" class="portfolio-img"
               alt="code work">
             <div class="portfolio-links">
-              <h2>Code</h2>
               <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/icons8-nuage-actualiser.gif"
                   alt="code link"></a>
             </div>
@@ -572,7 +595,6 @@
             <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="2" class="portfolio-img"
               alt="design work">
             <div class="portfolio-links">
-              <h2>Code</h2>
               <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/icons8-nuage-actualiser.gif"
                   alt="design link"></a>
             </div>
@@ -581,7 +603,6 @@
             <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="1" class="portfolio-img"
               alt="code work">
             <div class="portfolio-links">
-              <h2>Code</h2>
               <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/icons8-nuage-actualiser.gif"
                   alt="code link"></a>
             </div>
@@ -590,7 +611,6 @@
             <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="2" class="portfolio-img"
               alt="design work">
             <div class="portfolio-links">
-              <h2>Code</h2>
               <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/icons8-nuage-actualiser.gif"
                   alt="design link"></a>
             </div>
@@ -599,7 +619,6 @@
             <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="2" class="portfolio-img"
               alt="design work">
             <div class="portfolio-links">
-              <h2>Code</h2>
               <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/icons8-nuage-actualiser.gif"
                   alt="design link"></a>
             </div>
@@ -608,7 +627,6 @@
             <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="2" class="portfolio-img"
               alt="design work">
             <div class="portfolio-links">
-              <h2>Code</h2>
               <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/icons8-nuage-actualiser.gif"
                   alt="design link"></a>
             </div>
@@ -617,7 +635,6 @@
             <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="1" class="portfolio-img"
               alt="code work">
             <div class="portfolio-links">
-              <h2>Code</h2>
               <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/icons8-nuage-actualiser.gif"
                   alt="code link"></a>
             </div>
@@ -626,7 +643,6 @@
             <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="4" class="portfolio-img"
               alt="videos work">
             <div class="portfolio-links">
-              <h2>Code</h2>
               <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/icons8-nuage-actualiser.gif"
                   alt="videos link"></a>
             </div>
@@ -635,7 +651,6 @@
             <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="2" class="portfolio-img"
               alt="design work">
             <div class="portfolio-links">
-              <h2>Code</h2>
               <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/icons8-nuage-actualiser.gif"
                   alt="design link"></a>
             </div>
@@ -644,29 +659,32 @@
             <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="4" class="portfolio-img"
               alt="videos work">
             <div class="portfolio-links">
-              <h2>Code</h2>
               <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/icons8-nuage-actualiser.gif"
                   alt="videos link"></a>
             </div>
           </div>
+
+
           <div class="portfolio-overlay">
             <img src="./assets/imgs/pexels-tima-miroshnichenko-5380642.jpg" data-img="3" class="portfolio-img"
               alt="template work">
+
             <div class="portfolio-links">
-              <h2>Code</h2>
               <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/icons8-nuage-actualiser.gif"
                   alt="template link"></a>
             </div>
           </div>
+
+
 
         </div>
       </div>
   </section>
 
 
-  <div class="about-circle-image-left">
+  <!-- <div class="about-circle-image-left">
     <img src="./assets/imgs/circle-light.svg" class="circle-left">
-  </div>
+  </div> -->
   <!--------------------------------------------------------->
   <!------------------- CONTACT SECTION --------------------->
   <!--------------------------------------------------------->
@@ -686,8 +704,8 @@
 
           <div class="input-container">
             <input type="text" name="name" class="input" id="Name" lng-tag="username-input" />
-            <label for="" lng-tag="username-input">Username</label>
-            <span lng-tag="username-input">Username</span>
+            <label for="" lng-tag="username-input"></label>
+            <span lng-tag="username-input"></span>
           </div>
 
           <div class="input-container">
@@ -698,14 +716,14 @@
 
           <div class="input-container">
             <input type="text" name="subject" class="input" id="Subject" lng-tag="subject-input" />
-            <label for="" lng-tag="subject-input">Subject</label>
-            <span lng-tag="subject-input">Subject</span>
+            <label for="" lng-tag="subject-input"></label>
+            <span lng-tag="subject-input"></span>
           </div>
 
           <div class="input-container">
             <input type="tel" name="phone" class="input" id="Phone" lng-tag="phone-input" />
             <label for="" lng-tag="phone-input">Phone</label>
-            <span lng-tag="phone-input">Phone</span>
+            <span lng-tag="phone-input"></span>
           </div>
 
           <div class="input-container textarea">
@@ -714,11 +732,7 @@
             <span>Message</span>
           </div>
 
-          <button type="submit" value="Send" class="submitBtn btn" lng-tag="send-btn"></button>
-
-
-
-
+          <button type="submit" value="Send" lng-tag="send-btn"></button>
         </form>
       </div>
     </div>
