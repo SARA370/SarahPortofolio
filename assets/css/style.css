@@ -3252,6 +3252,7 @@ header nav .nav-items .theme-container #theme-icon {
   body header {
     background-color: rgba(184, 141, 3, 0.137254902);
     display: flex;
+    flex-direction: row-reverse;
   }
   body header .hamburgerMenu {
     display: flex;
@@ -3282,8 +3283,8 @@ header nav .nav-items .theme-container #theme-icon {
     transform: rotate(45deg) translate(-5px, -5px);
   }
   body header nav {
-    position: relative;
-    left: -30px;
+    position: absolute;
+    left: 0;
   }
   body header nav .logo-image {
     width: 40%;
@@ -3296,7 +3297,7 @@ header nav .nav-items .theme-container #theme-icon {
     padding: 3rem 1rem;
     position: absolute;
     top: 0;
-    right: -144%;
+    right: -140%;
     width: 300px;
     height: 100vh;
     background-image: linear-gradient(135deg, #C19B79 20%, rgba(35, 119, 221, 0.7803921569) 100%);
@@ -3306,10 +3307,6 @@ header nav .nav-items .theme-container #theme-icon {
     padding: 50px 20px;
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
     border-top-right-radius: 35px;
-  }
-  body header nav .nav-items .open-menu {
-    right: 0;
-    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   body header nav .nav-items .navbar {
     gap: 0.7rem;
@@ -3397,6 +3394,10 @@ header nav .nav-items .theme-container #theme-icon {
     background-color: #ffffff;
     border-radius: 50px;
     padding: 0.3rem;
+  }
+  body header nav .open-menu {
+    right: -50%;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   body .social-icons {
     display: none;
