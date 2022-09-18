@@ -20,12 +20,12 @@ document.addEventListener('click', () => {
 /////////*************** HAMBURGER MENU *************///////
 /////////********************************************///////
 
-let menu = document.querySelector('.hamburgerMenu')
+let menu = document.querySelector(".hamburgerMenu");
+let navItems = document.querySelector(".nav-items");
 
 menu.addEventListener('click', () => {
-
-  menu.classList.toggle('move');
-  
+  menu.classList.toggle("move");
+  navItems.classList.toggle("open-menu");
 });
 
 

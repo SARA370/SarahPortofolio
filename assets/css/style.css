@@ -194,18 +194,17 @@ header {
   z-index: 10;
 }
 header .hamburgerMenu {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  row-gap: 5px;
+  row-gap: 0.3rem;
   cursor: pointer;
   z-index: 1000;
-  transition: 0.3s;
 }
 header .hamburgerMenu div {
   display: block;
-  background: white;
+  background-color: rgb(0, 0, 0);
   height: 2px;
   width: 24px;
   border-radius: 10px;
@@ -3256,8 +3255,54 @@ header nav .nav-items .theme-container #theme-icon {
   }
   body header {
     background-color: rgba(184, 141, 3, 0.137254902);
+    display: flex;
+  }
+  body header .hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0.3rem;
+    cursor: pointer;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    right: -618px;
+  }
+  body header .hamburgerMenu div {
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 3px;
+    width: 24px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  body header .move .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  body header .move .line2 {
+    opacity: 0;
+  }
+  body header .move .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+  body header nav {
+    position: relative;
+    left: -30px;
+  }
+  body header nav .logo-image {
+    width: 40%;
+  }
+  body header nav .nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+    position: absolute;
     top: 0;
-    right: 0;
+    right: -144%;
     width: 300px;
     height: 100vh;
     background-image: linear-gradient(135deg, #C19B79 20%, rgba(35, 119, 221, 0.7803921569) 100%);
@@ -3266,31 +3311,17 @@ header nav .nav-items .theme-container #theme-icon {
     align-items: center;
     padding: 50px 20px;
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-top-right-radius: 35px;
   }
-  body header .hamburgerMenu {
-    top: 0;
+  body header nav .nav-items .open-menu {
     right: 0;
-    z-index: 1000;
-  }
-  body header nav {
-    position: absolute;
-  }
-  body header nav .logo-image {
-    max-width: 53%;
-  }
-  body header nav .nav-items {
-    width: 220%;
-    display: flex;
-    flex-direction: column;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   body header nav .nav-items .navbar {
+    gap: 0.7rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  body header nav .nav-items .navbar .open-menu {
-    right: 0;
-    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   body header nav .nav-items .navbar .nav-links {
     font-size: 0.8rem;
@@ -3345,17 +3376,33 @@ header nav .nav-items .theme-container #theme-icon {
     display: block;
   }
   body header nav .nav-items .menu-toggle-social-icons {
-    display: block;
+    display: inline-block;
+    margin-top: 1rem;
   }
   body header nav .nav-items .menu-toggle-social-icons .social-icons-menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
   }
+  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu li {
+    margin-right: 1rem;
+    background-color: yellow;
+    padding: 0.3rem;
+    border-radius: 50px;
+    width: 100%;
+    height: 4.3vh;
+  }
+  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu a {
+    display: inline-block;
+  }
   body header nav .nav-items .menu-toggle-social-icons .social-icons-menu img {
     width: 100%;
+    height: 3.5vh;
     display: flex;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 0.3rem;
   }
   body .social-icons {
     display: none;
