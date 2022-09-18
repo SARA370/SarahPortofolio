@@ -601,10 +601,10 @@ header {
         max-width: 113rem;
         height: 74vh;
         border-radius: 10px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column;
+        // display: flex;
+        // // justify-content: flex-start;
+        // align-items: center;
+        // flex-direction: column;
         padding: 0 14em;
         backdrop-filter: blur(8px);
         box-shadow: 0 20px 50px -10px rgba(118, 118, 118, 0.5);
@@ -4157,8 +4157,6 @@ header {
                 z-index: 1000;
                 width: 50px;
                 height: 50px;
-                position: relative;
-                right: -618px;
         
                 div {
                     display: block;
@@ -4315,6 +4313,291 @@ header {
         .social-icons {
             display: none;
         }
+
+        .hero {
+            margin-top: 20rem;
+            min-height: 9vh;
+            margin-bottom: 4rem;
+
+            .hero-content {
+                display: flex;
+                // justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                max-width: 38rem;
+                height: 9vh;
+                padding: 0 3rem;
+
+
+                .profil-img-container {
+                    width: 150px;
+                    height: 150px;
+                    top: -10%;
+                }
+
+                .intro-title {
+                    font-size: 1.3rem;
+                    margin-bottom: .3rem;
+                    position: relative;
+                    top: -3rem;
+                }
+
+                .typing {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1em;
+                    font-size: 1.1rem;
+                    position: relative;
+                    top: -3rem;
+
+                }
+
+                .description {
+                    font-size: 1.1rem;
+                    line-height: 1.5em;
+                    margin-bottom: 4em;
+                    position: relative;
+                    top: -3rem;
+                }
+
+
+                .cv-link {
+                    position: relative;
+                    top: -5rem;
+
+
+                    .download-text {
+                        padding: 0 2.7em 0 4em;
+                        font-weight: bold;
+                        font-size: 1rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: var(--secondary-font-color);
+                    }
+
+                    .download-icon {
+                        background-color: rgb(255, 255, 255);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        padding: .3rem;
+
+                        img {
+                            max-width: 1.5rem;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .services {
+            min-height: 100vh;
+
+            .services-title {
+                margin-bottom: 2rem;
+
+                h2 {
+                    font-size: 2rem;
+
+
+                    .bg-text {
+                        font-size: 3.5rem;
+                    }
+                }
+            }
+
+            .icon-wrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .card {
+                    padding: 3rem;
+                    width: 100%;
+
+                    h2 {
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-size: .85rem;
+                    }
+
+                    .service-text {
+                        color: white;
+                        font-size: .85rem;
+                        line-height: 1.3em;
+
+                    }
+                }
+
+                .icon-develop {
+                    height: 25h;
+                    margin-bottom: .4rem;
+                    max-width: 20rem;
+                }
+
+                .icon-design {
+                    height: 45vh;
+                    max-width: 61rem;
+                }
+            }
+        }
+
+        .portfolio {
+            min-height: 100vh;
+            margin-bottom: 5rem;
+
+            .portfolio-content {
+
+                .potofolio-title {
+                    margin-bottom: 2rem;
+
+                    h2 {
+                        font-size: 2rem;
+
+                        .bg-text {
+                            top: 40%;
+                            font-size: 3.5rem;
+                        }
+                    }
+                }
+
+                .work-section {
+
+                    .portfolio-gallery {
+                        padding: .6rem 1rem;
+                        margin-bottom: 2em;
+
+                        button {
+                            margin: 0 .4rem;
+                            font-size: .8rem;
+                        }
+                    }
+                }
+
+                .portfolio-images {
+                    gap: .8rem;
+
+                    .portfolio-overlay {
+
+                        .portfolio-img {
+                            width: 18rem;
+                            height: 100%;
+                            border-radius: 0.2em;
+                            transition: .95s;
+                            transition: margin 400ms ease-in-out,
+                                width 400ms ease-in-out;
+                        }
+
+                        .img-expand {
+                            width: 18rem;
+                        }
+
+                        .img-shrink {
+                            width: 0em;
+                        }
+
+
+                        .portfolio-links {
+                            top: -100%;
+                            left: 0;
+                            width: 18rem;
+                            height: 97.5%;
+
+                            .portfolio-link {
+                                width: 3rem;
+                                height: 3rem;
+                                background-color: white;
+                                border-radius: 100%;
+                                position: relative;
+                                left: -0.2rem;
+                                top: 0rem;
+
+                                .logo-link {
+                                    width: 50%;
+                                    position: absolute;
+                                    top: 12px;
+                                    left: 11.5px;
+                                }
+                            }
+
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+        .contact {
+            min-height: 100vh;
+
+            .contact-content {
+
+                .contact-title {
+                    text-align: center;
+                    margin-bottom: 2rem;
+
+                    h2 {
+
+                        font-size: 2rem;
+
+                        span {
+                            color: #ffffff;
+                        }
+
+                        .bg-text {
+                            font-size: 3.5rem;
+                        }
+                    }
+                }
+
+                .contact-form {
+
+                    .form-container {
+                        padding: .5rem 2rem;
+
+                        .input-container {
+                            margin: .4rem 0;
+                            width: 35rem;
+
+                            label {
+                                font-size: 1rem;
+
+                            }
+                        }
+                        .textarea {
+
+                            .input {
+                                min-height: 65vh;
+                            }
+                        }
+
+                        button {
+                            padding: .4rem 2rem;
+
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+        .footer {
+            width: 55%;
+            padding: .1rem 2rem;
+            margin-bottom: 1rem;
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+
 
     }
 

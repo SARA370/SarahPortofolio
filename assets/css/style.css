@@ -486,10 +486,6 @@ header nav .nav-items .theme-container #theme-icon {
   max-width: 113rem;
   height: 74vh;
   border-radius: 10px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
   padding: 0 14em;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
@@ -3267,8 +3263,6 @@ header nav .nav-items .theme-container #theme-icon {
     z-index: 1000;
     width: 50px;
     height: 50px;
-    position: relative;
-    right: -618px;
   }
   body header .hamburgerMenu div {
     display: block;
@@ -3406,6 +3400,209 @@ header nav .nav-items .theme-container #theme-icon {
   }
   body .social-icons {
     display: none;
+  }
+  body .hero {
+    margin-top: 20rem;
+    min-height: 9vh;
+    margin-bottom: 4rem;
+  }
+  body .hero .hero-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 38rem;
+    height: 9vh;
+    padding: 0 3rem;
+  }
+  body .hero .hero-content .profil-img-container {
+    width: 150px;
+    height: 150px;
+    top: -10%;
+  }
+  body .hero .hero-content .intro-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .typing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    font-size: 1.1rem;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .description {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    margin-bottom: 4em;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .cv-link {
+    position: relative;
+    top: -5rem;
+  }
+  body .hero .hero-content .cv-link .download-text {
+    padding: 0 2.7em 0 4em;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-font-color);
+  }
+  body .hero .hero-content .cv-link .download-icon {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.3rem;
+  }
+  body .hero .hero-content .cv-link .download-icon img {
+    max-width: 1.5rem;
+  }
+  body .services {
+    min-height: 100vh;
+  }
+  body .services .services-title {
+    margin-bottom: 2rem;
+  }
+  body .services .services-title h2 {
+    font-size: 2rem;
+  }
+  body .services .services-title h2 .bg-text {
+    font-size: 3.5rem;
+  }
+  body .services .icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  body .services .icon-wrap .card {
+    padding: 3rem;
+    width: 100%;
+  }
+  body .services .icon-wrap .card h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+  }
+  body .services .icon-wrap .card .service-text {
+    color: white;
+    font-size: 0.85rem;
+    line-height: 1.3em;
+  }
+  body .services .icon-wrap .icon-develop {
+    height: 25h;
+    margin-bottom: 0.4rem;
+    max-width: 20rem;
+  }
+  body .services .icon-wrap .icon-design {
+    height: 45vh;
+    max-width: 61rem;
+  }
+  body .portfolio {
+    min-height: 100vh;
+    margin-bottom: 5rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title {
+    margin-bottom: 2rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 {
+    font-size: 2rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+    top: 40%;
+    font-size: 3.5rem;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+    padding: 0.6rem 1rem;
+    margin-bottom: 2em;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+    margin: 0 0.4rem;
+    font-size: 0.8rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images {
+    gap: 0.8rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+    width: 18rem;
+    height: 100%;
+    border-radius: 0.2em;
+    transition: 0.95s;
+    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+    width: 18rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+    width: 0em;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+    top: -100%;
+    left: 0;
+    width: 18rem;
+    height: 97.5%;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 100%;
+    position: relative;
+    left: -0.2rem;
+    top: 0rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+    width: 50%;
+    position: absolute;
+    top: 12px;
+    left: 11.5px;
+  }
+  body .contact {
+    min-height: 100vh;
+  }
+  body .contact .contact-content .contact-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  body .contact .contact-content .contact-title h2 {
+    font-size: 2rem;
+  }
+  body .contact .contact-content .contact-title h2 span {
+    color: #ffffff;
+  }
+  body .contact .contact-content .contact-title h2 .bg-text {
+    font-size: 3.5rem;
+  }
+  body .contact .contact-content .contact-form .form-container {
+    padding: 0.5rem 2rem;
+  }
+  body .contact .contact-content .contact-form .form-container .input-container {
+    margin: 0.4rem 0;
+    width: 35rem;
+  }
+  body .contact .contact-content .contact-form .form-container .input-container label {
+    font-size: 1rem;
+  }
+  body .contact .contact-content .contact-form .form-container .textarea .input {
+    min-height: 65vh;
+  }
+  body .contact .contact-content .contact-form .form-container button {
+    padding: 0.4rem 2rem;
+  }
+  body .footer {
+    width: 55%;
+    padding: 0.1rem 2rem;
+    margin-bottom: 1rem;
+  }
+  body .footer p {
+    font-size: 1.1rem;
   }
 }
 /***********************************/
