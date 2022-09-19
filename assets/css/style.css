@@ -484,7 +484,7 @@ header nav .nav-items .theme-container #theme-icon {
   position: relative;
   width: 100%;
   max-width: 113rem;
-  height: 74vh;
+  height: 73vh;
   border-radius: 10px;
   padding: 0 14em;
   -webkit-backdrop-filter: blur(8px);
@@ -498,6 +498,7 @@ header nav .nav-items .theme-container #theme-icon {
   position: relative;
   width: 300px;
   top: -12%;
+  left: 35%;
   height: 300px;
   background: rgba(176, 176, 176, 0.2588235294);
   border-radius: 50%;
@@ -511,6 +512,7 @@ header nav .nav-items .theme-container #theme-icon {
   transition: 0.5s;
   -webkit-animation: animate 4s linear infinite;
           animation: animate 4s linear infinite;
+  text-align: center;
 }
 .hero .hero-content .profil-img-container:hover::before {
   inset: -2em 0px;
@@ -545,6 +547,7 @@ header nav .nav-items .theme-container #theme-icon {
   font-size: 2.5rem;
   margin-bottom: 0.3em;
   color: var(--primary-font-color);
+  text-align: center;
 }
 .hero .hero-content .description {
   font-size: 1.5rem;
@@ -554,6 +557,7 @@ header nav .nav-items .theme-container #theme-icon {
 }
 .hero .hero-content .typing {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 1em;
   font-size: 1.6rem;
@@ -592,11 +596,14 @@ header nav .nav-items .theme-container #theme-icon {
   background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid rgb(255, 255, 255);
   -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
   text-decoration: none;
+  align-items: center;
+  width: 19.5rem;
+  margin: auto;
 }
 .hero .cv-link .download-text {
   padding: 0 2.7em 0 4em;
@@ -3245,7 +3252,7 @@ header nav .nav-items .theme-container #theme-icon {
   }
   body .container {
     background-color: rgba(156, 120, 0, 0.137254902);
-    max-width: 550px;
+    max-width: 600px;
     width: 100%;
     margin: auto;
   }
@@ -3253,6 +3260,7 @@ header nav .nav-items .theme-container #theme-icon {
     background-color: rgba(184, 141, 3, 0.137254902);
     display: flex;
     flex-direction: row-reverse;
+    width: 93%;
   }
   body header .hamburgerMenu {
     display: flex;
@@ -3284,7 +3292,7 @@ header nav .nav-items .theme-container #theme-icon {
   }
   body header nav {
     position: absolute;
-    left: 0;
+    left: 1.6rem;
   }
   body header nav .logo-image {
     width: 40%;
@@ -3292,21 +3300,19 @@ header nav .nav-items .theme-container #theme-icon {
   body header nav .nav-items {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 3rem 1rem;
+    padding: 7rem 1rem;
     position: absolute;
     top: 0;
-    right: -140%;
-    width: 300px;
+    right: -227%;
+    width: 700px;
     height: 100vh;
     background-image: linear-gradient(135deg, #C19B79 20%, rgba(35, 119, 221, 0.7803921569) 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
+    border: 4px soild white;
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
-    border-top-right-radius: 35px;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 29px;
   }
   body header nav .nav-items .navbar {
     gap: 0.7rem;
@@ -3378,47 +3384,50 @@ header nav .nav-items .theme-container #theme-icon {
   }
   body header nav .nav-items .menu-toggle-social-icons .social-icons-menu li {
     margin-right: 1rem;
-    background-color: yellow;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgb(255, 255, 255);
     padding: 0.3rem;
     border-radius: 50px;
-    width: 100%;
-    height: 4.3vh;
+    width: 3rem;
+    height: 8vh;
   }
   body header nav .nav-items .menu-toggle-social-icons .social-icons-menu a {
     display: inline-block;
   }
   body header nav .nav-items .menu-toggle-social-icons .social-icons-menu img {
-    width: 100%;
-    height: 3.5vh;
+    width: 2.5rem;
+    height: 2.5rem;
     display: flex;
     background-color: #ffffff;
     border-radius: 50px;
     padding: 0.3rem;
+    position: relative;
+    top: -2px;
+    left: -2px;
   }
   body header nav .open-menu {
-    right: -50%;
+    right: -60%;
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   body .social-icons {
     display: none;
   }
   body .hero {
-    margin-top: 20rem;
-    min-height: 9vh;
+    margin-top: 12rem;
+    min-height: 50vh;
     margin-bottom: 4rem;
   }
   body .hero .hero-content {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     max-width: 38rem;
-    height: 9vh;
+    height: 100vh;
     padding: 0 3rem;
   }
   body .hero .hero-content .profil-img-container {
-    width: 150px;
-    height: 150px;
-    top: -10%;
+    width: 160px;
+    height: 160px;
+    top: -16%;
+    left: 0%;
+    margin: auto;
   }
   body .hero .hero-content .intro-title {
     font-size: 1.3rem;
@@ -3444,6 +3453,7 @@ header nav .nav-items .theme-container #theme-icon {
   body .hero .hero-content .cv-link {
     position: relative;
     top: -5rem;
+    width: 15rem;
   }
   body .hero .hero-content .cv-link .download-text {
     padding: 0 2.7em 0 4em;
@@ -3548,7 +3558,7 @@ header nav .nav-items .theme-container #theme-icon {
     top: -100%;
     left: 0;
     width: 18rem;
-    height: 97.5%;
+    height: 96.5%;
   }
   body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
     width: 3rem;
@@ -3556,7 +3566,7 @@ header nav .nav-items .theme-container #theme-icon {
     background-color: white;
     border-radius: 100%;
     position: relative;
-    left: -0.2rem;
+    left: -1rem;
     top: 0rem;
   }
   body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
@@ -3598,7 +3608,7 @@ header nav .nav-items .theme-container #theme-icon {
     padding: 0.4rem 2rem;
   }
   body .footer {
-    width: 55%;
+    width: 62%;
     padding: 0.1rem 2rem;
     margin-bottom: 1rem;
   }
@@ -3610,10 +3620,359 @@ header nav .nav-items .theme-container #theme-icon {
 /*** BELOW 425px (Phones screen) ***/
 /***********************************/
 @media (max-width: 27rem) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
   body .container {
     background-color: rgba(21, 60, 40, 0.137254902);
+    max-width: 380px;
+    width: 100%;
+    margin: auto;
   }
   body header {
     background-color: rgba(21, 60, 40, 0.137254902);
+    width: 91%;
+    padding: 0 2rem;
+  }
+  body header .hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0.3rem;
+    cursor: pointer;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+  }
+  body header .hamburgerMenu div {
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 3px;
+    width: 24px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  body header .move .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  body header .move .line2 {
+    opacity: 0;
+  }
+  body header .move .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+  body header nav {
+    position: absolute;
+    left: 2.3rem;
+  }
+  body header nav .logo-image {
+    width: 32%;
+    margin-top: 0.8rem;
+  }
+  body header nav .nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 7rem 1rem;
+    position: absolute;
+    top: 0;
+    right: -185%;
+    width: 434px;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #C19B79 20%, rgba(35, 119, 221, 0.7803921569) 100%);
+    border: 4px soild white;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-top-left-radius: 2141px;
+    border-top-right-radius: 149px;
+  }
+  body header nav .nav-items .navbar {
+    gap: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body header nav .nav-items .navbar .nav-links {
+    font-size: 0.8rem;
+    padding: 0.3rem 1.5rem;
+    display: block;
+    margin: 0.9rem 0;
+  }
+  body header nav .nav-items .navbar .nav-links-contact {
+    font-size: 0.8rem;
+    padding: 0.3rem 1.1rem;
+    display: block;
+    margin: 0.9rem 0;
+  }
+  @-webkit-keyframes ring {
+    0% {
+      width: 0px;
+      height: 0px;
+      opacity: 1;
+    }
+    100% {
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+  }
+  @keyframes ring {
+    0% {
+      width: 0px;
+      height: 0px;
+      opacity: 1;
+    }
+    100% {
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+  }
+  body header nav .nav-items .menu-toggle-social-icons {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu li {
+    margin-right: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 0.3rem;
+    border-radius: 50px;
+    width: 2.4rem;
+    height: 6vh;
+  }
+  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu a {
+    display: inline-block;
+  }
+  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu img {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 0.3rem;
+    position: relative;
+    top: -2px;
+    left: -2px;
+  }
+  body header nav .open-menu {
+    right: -5%;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  body .social-icons {
+    display: none;
+  }
+  body .hero {
+    margin-top: 10rem;
+    min-height: 100vh;
+    margin-bottom: 4rem;
+  }
+  body .hero .hero-content {
+    max-width: 38rem;
+    height: 122vh;
+    padding: 0 3rem;
+  }
+  body .hero .hero-content .profil-img-container {
+    width: 160px;
+    height: 160px;
+    top: -11%;
+    left: 0%;
+    margin: auto;
+  }
+  body .hero .hero-content .intro-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .typing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    font-size: 1.1rem;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .description {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    margin-bottom: 4em;
+    position: relative;
+    top: -3rem;
+  }
+  body .hero .hero-content .cv-link {
+    position: relative;
+    top: -5rem;
+    width: 15rem;
+  }
+  body .hero .hero-content .cv-link .download-text {
+    padding: 0 2.7em 0 4em;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-font-color);
+  }
+  body .hero .hero-content .cv-link .download-icon {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.3rem;
+  }
+  body .hero .hero-content .cv-link .download-icon img {
+    max-width: 1.5rem;
+  }
+  body .services {
+    min-height: 100vh;
+  }
+  body .services .services-title {
+    margin-bottom: 2rem;
+  }
+  body .services .services-title h2 {
+    font-size: 2rem;
+  }
+  body .services .services-title h2 .bg-text {
+    font-size: 3.5rem;
+  }
+  body .services .icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  body .services .icon-wrap .card {
+    padding: 2rem;
+    width: 100%;
+  }
+  body .services .icon-wrap .card h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1rem;
+  }
+  body .services .icon-wrap .card .service-text {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.3em;
+  }
+  body .services .icon-wrap .icon-develop {
+    height: 25h;
+    margin-bottom: 0.4rem;
+    max-width: 20rem;
+  }
+  body .services .icon-wrap .icon-design {
+    height: 45vh;
+    max-width: 61rem;
+  }
+  body .portfolio {
+    min-height: 100vh;
+    margin-bottom: 5rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title {
+    margin-bottom: 2rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 {
+    font-size: 2rem;
+  }
+  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+    top: 40%;
+    font-size: 3.5rem;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+    padding: 0.6rem 1rem;
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+    border-radius: 8px;
+  }
+  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+    margin: 0.3rem 0.4rem;
+    font-size: 0.8rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images {
+    gap: 0.8rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+    width: 20rem;
+    height: 100%;
+    border-radius: 0.2em;
+    transition: 0.95s;
+    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+    width: 20rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+    width: 0em;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+    top: -100%;
+    left: 0;
+    width: 20rem;
+    height: 96.5%;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 100%;
+    position: relative;
+    left: -0.3rem;
+    top: 0rem;
+  }
+  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+    width: 70%;
+    position: absolute;
+    top: 6px;
+    left: 7.5px;
+  }
+  body .contact {
+    min-height: 100vh;
+  }
+  body .contact .contact-content .contact-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  body .contact .contact-content .contact-title h2 {
+    font-size: 2rem;
+  }
+  body .contact .contact-content .contact-title h2 span {
+    color: #ffffff;
+  }
+  body .contact .contact-content .contact-title h2 .bg-text {
+    font-size: 3.5rem;
+  }
+  body .contact .contact-content .contact-form .form-container {
+    padding: 0.5rem 2rem;
+  }
+  body .contact .contact-content .contact-form .form-container .input-container {
+    margin: 0.4rem 0;
+    width: 23rem;
+  }
+  body .contact .contact-content .contact-form .form-container .input-container label {
+    font-size: 1rem;
+  }
+  body .contact .contact-content .contact-form .form-container .textarea .input {
+    min-height: 65vh;
+  }
+  body .contact .contact-content .contact-form .form-container button {
+    padding: 0.4rem 1rem;
+  }
+  body .footer {
+    width: 75%;
+    padding: 0.1rem 2rem;
+    margin-bottom: 1rem;
+  }
+  body .footer p {
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=style.css.map */
