@@ -290,6 +290,7 @@ header nav .nav-items .navbar .nav-links:hover {
 }
 header nav .nav-items .navbar .nav-links-contact {
   display: inline-block;
+  position: relative;
   padding: 0.45rem 1.9rem;
   border: 0;
   text-decoration: none;
@@ -507,7 +508,6 @@ header nav .nav-items .theme-container #theme-icon {
   min-height: 100vh;
 }
 .hero .hero-content {
-  position: relative;
   width: 100%;
   max-width: 113rem;
   height: 73vh;
@@ -570,20 +570,23 @@ header nav .nav-items .theme-container #theme-icon {
   border-radius: 50%;
   z-index: 0;
 }
-.hero .hero-content .intro-title {
+.hero .hero-content .hero-mdl-content {
+  display: flex;
+  flex-direction: column;
+}
+.hero .hero-content .hero-mdl-content .intro-title {
   font-size: 2.5rem;
   margin-bottom: 0.3em;
   color: var(--primary-font-color);
   text-align: center;
   font-family: var(--ff-Electrolize);
 }
-.hero .hero-content .description {
+.hero .hero-content .hero-mdl-content .description {
   font-size: 1.5rem;
   line-height: 1.9em;
-  margin-bottom: 4em;
   color: var(--primary-font-color);
 }
-.hero .hero-content .typing {
+.hero .hero-content .hero-mdl-content .typing {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -591,10 +594,10 @@ header nav .nav-items .theme-container #theme-icon {
   font-size: 1.6rem;
   color: var(--primary-font-color);
 }
-.hero .hero-content .typing .typing {
+.hero .hero-content .hero-mdl-content .typing .typing {
   font-family: var(--ff-Electrolize);
 }
-.hero .hero-content .typing .typing:after {
+.hero .hero-content .hero-mdl-content .typing .typing:after {
   content: "";
   width: 1px;
   height: 99%;
@@ -620,7 +623,7 @@ header nav .nav-items .theme-container #theme-icon {
   }
 }
 .hero .cv-link {
-  display: inline-block;
+  width: 17rem;
   border-radius: 30px;
   font-weight: 600;
   position: relative;
@@ -629,16 +632,17 @@ header nav .nav-items .theme-container #theme-icon {
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   overflow: hidden;
   text-decoration: none;
   align-items: center;
-  width: 19.5rem;
   margin: auto;
   font-family: var(--ff-Aldrich);
 }
 .hero .cv-link .download-text {
-  padding: 0 2.7em 0 4em;
+  width: 15rem;
+  position: relative;
+  left: 11px;
   font-weight: bold;
   font-size: 1.3rem;
   display: flex;
@@ -649,13 +653,14 @@ header nav .nav-items .theme-container #theme-icon {
 .hero .cv-link .download-icon {
   background-color: rgb(255, 255, 255);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: 0.4rem;
+  width: 40px;
 }
 .hero .cv-link .download-icon img {
-  width: 29px;
+  width: 28px;
 }
 .hero .cv-link::before {
   content: "";
@@ -1379,107 +1384,10 @@ header nav .nav-items .theme-container #theme-icon {
 /*************************************/
 /*** BELOW 2560px (XXlarge screen) ***/
 /*************************************/
-@media (max-width: 160rem) {
-  .hero {
-    margin-top: 12rem;
-    min-height: 100vh;
-    margin-bottom: 5rem;
-  }
-  .hero .hero-content {
-    max-width: 106rem;
-    height: 88vh;
-    padding: 0 12rem;
-  }
-  .hero .hero-content .profil-img-container {
-    width: 290px;
-    height: 290px;
-    top: -12%;
-  }
-  .hero .hero-content .intro-title {
-    font-size: 2.4rem;
-    margin-bottom: 0.3em;
-  }
-  .hero .hero-content .description {
-    font-size: 1.6rem;
-    line-height: 3rem;
-    margin-bottom: 4em;
-  }
-  .hero .hero-content .typing {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
-    font-size: 1.7rem;
-  }
-  .services {
-    min-height: 100vh;
-    margin-bottom: 5rem;
-  }
-  .services .card {
-    height: 82vh;
-    margin-top: 1rem;
-    max-width: 100rem;
-  }
-  .services .icon-develop {
-    height: 40vh;
-    max-width: 37rem;
-  }
-  .portfolio {
-    min-height: 150vh;
-    margin-bottom: 4rem;
-  }
-  .portfolio .portfolio-content .portfolio-links {
-    top: -100%;
-    left: 0;
-    width: 28rem;
-    height: 97.5%;
-  }
-  .portfolio .portfolio-content .portfolio-links .portfolio-link {
-    width: 5rem;
-    height: 5rem;
-    background-color: white;
-    border-radius: 100%;
-    transform: translate(-13%, -5%);
-  }
-  .portfolio .portfolio-content .portfolio-links .portfolio-link .logo-link {
-    width: 50%;
-    position: absolute;
-    top: 18px;
-    left: 18px;
-  }
-  .portfolio .contact {
-    min-height: 100vh;
-  }
-  /*************************************/
-  /*** BELOW 2000px (XXlarge screen) ***/
-  /*************************************/
-  /************************************/
-  /*** BELOW 1743px (large screen) ***/
-  /************************************/
-  /**************************************/
-  /**************************************/
-  /************************************/
-  /*** BELOW 1440px (large screen) ***/
-  /************************************/
-  /*************************************/
-  /*** BELOW 1123px (desktop screen) ***/
-  /*************************************/
-  /*************************************/
-  /*** BELOW 985px ( tablets screen) ***/
-  /*************************************/
-  /*************************************/
-  /*** BELOW 904px ( tablets screen) ***/
-  /*************************************/
-  /*************************************/
-  /*** BELOW 797px ( tablets screen) ***/
-  /*************************************/
-  /***********************************/
-  /*** BELOW 688px (Phones screen) ***/
-  /***********************************/
-  /***********************************/
-  /*** BELOW 425px (Phones screen) ***/
-  /***********************************/
-}
-@media (max-width: 160rem) and (max-width: 125rem) {
+/*************************************/
+/*** BELOW 2000px (XXlarge screen) ***/
+/*************************************/
+@media (max-width: 125rem) {
   body .container {
     max-width: 1600px;
     width: 100%;
@@ -1514,7 +1422,6 @@ header nav .nav-items .theme-container #theme-icon {
   body .hero .hero-content .description {
     font-size: 1.8rem;
     line-height: 1.8em;
-    margin-bottom: 4em;
   }
   body .hero .hero-content .typing {
     display: flex;
@@ -1590,7 +1497,10 @@ header nav .nav-items .theme-container #theme-icon {
     padding: 0.1rem 1rem;
   }
 }
-@media (max-width: 160rem) and (max-width: 109rem) {
+/************************************/
+/*** BELOW 1743px (large screen) ***/
+/************************************/
+@media (max-width: 109rem) {
   body {
     background-size: cover;
     background-position: center;
@@ -1647,7 +1557,6 @@ header nav .nav-items .theme-container #theme-icon {
   body .hero .hero-content .description {
     font-size: 1.6rem;
     line-height: 1.8em;
-    margin-bottom: 4em;
   }
   body .hero .hero-content .typing {
     display: flex;
@@ -1761,7 +1670,9 @@ header nav .nav-items .theme-container #theme-icon {
     padding: 0.1rem 1rem;
   }
 }
-@media (max-width: 160rem) and (max-width: 96rem) {
+/**************************************/
+/**************************************/
+@media (max-width: 96rem) {
   body {
     background-size: cover;
     background-position: center;
@@ -1929,7 +1840,10 @@ header nav .nav-items .theme-container #theme-icon {
     margin-bottom: 1rem;
   }
 }
-@media (max-width: 160rem) and (max-width: 90rem) {
+/************************************/
+/*** BELOW 1440px (large screen) ***/
+/************************************/
+@media (max-width: 90rem) {
   body {
     background-size: cover;
     background-position: center;
@@ -2013,50 +1927,21 @@ header nav .nav-items .theme-container #theme-icon {
     height: 200px;
     top: -14%;
   }
-  body .hero .hero-content .intro-title {
+  body .hero .hero-content .hero-mdl-content .intro-title {
     font-size: 1.5rem;
     margin-bottom: 0.3rem;
     position: relative;
     top: -3rem;
   }
-  body .hero .hero-content .typing {
+  body .hero .hero-content .hero-mdl-content .typing {
     display: flex;
     align-items: center;
     margin-bottom: 1em;
     font-size: 1.3rem;
-    position: relative;
-    top: -3rem;
   }
-  body .hero .hero-content .description {
-    font-size: 1.2rem;
+  body .hero .hero-content .hero-mdl-content .description {
+    font-size: 1rem;
     line-height: 1.7em;
-    position: relative;
-    top: -3rem;
-  }
-  body .hero .hero-content .cv-link {
-    position: relative;
-    top: -5rem;
-    width: 17.5rem;
-  }
-  body .hero .hero-content .cv-link .download-text {
-    padding: 0 2.9rem 0 5.07rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--secondary-font-color);
-  }
-  body .hero .hero-content .cv-link .download-icon {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    padding: 0.47rem;
-  }
-  body .hero .hero-content .cv-link .download-icon img {
-    width: 29px;
   }
   body .social-icons {
     top: 80%;
@@ -2225,7 +2110,10 @@ header nav .nav-items .theme-container #theme-icon {
     font-size: 1.2rem;
   }
 }
-@media (max-width: 160rem) and (max-width: 70rem) {
+/*************************************/
+/*** BELOW 1123px (desktop screen) ***/
+/*************************************/
+@media (max-width: 70rem) {
   body {
     background-size: cover;
     background-position: center;
@@ -2373,30 +2261,6 @@ header nav .nav-items .theme-container #theme-icon {
     position: relative;
     top: -3rem;
   }
-  body .hero .hero-content .cv-link {
-    top: -5rem;
-    width: 16.9rem;
-  }
-  body .hero .hero-content .cv-link .download-text {
-    padding: 0 2.3rem 0 5.07rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--secondary-font-color);
-  }
-  body .hero .hero-content .cv-link .download-icon {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    padding: 0.47rem;
-  }
-  body .hero .hero-content .cv-link .download-icon img {
-    width: 29px;
-  }
   body .services {
     min-height: 100vh;
     margin-bottom: 2rem;
@@ -2543,7 +2407,10 @@ header nav .nav-items .theme-container #theme-icon {
     font-size: 1.1rem;
   }
 }
-@media (max-width: 160rem) and (max-width: 62rem) {
+/*************************************/
+/*** BELOW 985px ( tablets screen) ***/
+/*************************************/
+@media (max-width: 62rem) {
   body {
     background-size: cover;
     background-position: center;
@@ -2560,7 +2427,7 @@ header nav .nav-items .theme-container #theme-icon {
     margin-left: 1.5rem;
   }
   body header nav .logo-image {
-    max-width: 32%;
+    max-width: 34%;
   }
   body header nav .nav-items {
     width: 61%;
@@ -2583,8 +2450,8 @@ header nav .nav-items .theme-container #theme-icon {
       opacity: 1;
     }
     100% {
-      width: 120px;
-      height: 120px;
+      width: 100px;
+      height: 100px;
       opacity: 0;
     }
   }
@@ -2595,8 +2462,8 @@ header nav .nav-items .theme-container #theme-icon {
       opacity: 1;
     }
     100% {
-      width: 120px;
-      height: 120px;
+      width: 100px;
+      height: 100px;
       opacity: 0;
     }
   }
@@ -2616,7 +2483,7 @@ header nav .nav-items .theme-container #theme-icon {
     top: 80%;
   }
   body .social-icons ul {
-    transform: translateX(-163px);
+    transform: translateX(-165px);
   }
   body .social-icons ul li {
     margin: 0.7em;
@@ -2630,28 +2497,28 @@ header nav .nav-items .theme-container #theme-icon {
     border-radius: 50%;
     text-align: center;
     margin-left: 0.875em;
-    width: 2.8rem;
+    width: 2.6rem;
     display: inline-block;
     vertical-align: middle;
     transition: all 1s;
   }
   body .hero {
-    margin-top: 9rem;
+    margin-top: 12rem;
     min-height: 100vh;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
   }
   body .hero .hero-content {
     max-width: 50rem;
-    min-height: 76vh;
+    min-height: 100vh;
     padding: 0 4rem;
   }
   body .hero .hero-content .profil-img-container {
     width: 200px;
     height: 200px;
-    top: -10%;
+    top: -15%;
   }
   body .hero .hero-content .intro-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 0.3rem;
     position: relative;
     top: -3rem;
@@ -2660,25 +2527,33 @@ header nav .nav-items .theme-container #theme-icon {
     display: flex;
     align-items: center;
     margin-bottom: 1em;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     position: relative;
     top: -3rem;
   }
   body .hero .hero-content .description {
-    font-size: 1.2rem;
-    line-height: 1.5em;
+    font-size: 1.1rem;
+    line-height: 1.6em;
     margin-bottom: 4em;
     position: relative;
     top: -3rem;
   }
   body .hero .hero-content .cv-link {
+    width: 15rem;
     position: relative;
     top: -5rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    text-decoration: none;
+    align-items: center;
   }
   body .hero .hero-content .cv-link .download-text {
-    padding: 0 2.7em 0 4em;
+    width: 13rem;
+    position: relative;
+    left: 12px;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2687,13 +2562,14 @@ header nav .nav-items .theme-container #theme-icon {
   body .hero .hero-content .cv-link .download-icon {
     background-color: rgb(255, 255, 255);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
     border-radius: 50%;
-    padding: 0.5rem;
+    padding: 0.4rem;
+    width: 40px;
   }
   body .hero .hero-content .cv-link .download-icon img {
-    width: 29px;
+    width: 26px;
   }
   body .services {
     min-height: 90vh;
@@ -2829,7 +2705,10 @@ header nav .nav-items .theme-container #theme-icon {
     font-size: 1.1rem;
   }
 }
-@media (max-width: 160rem) and (max-width: 57rem) {
+/*************************************/
+/*** BELOW 904px ( tablets screen) ***/
+/*************************************/
+@media (max-width: 57rem) {
   body {
     background-size: cover;
     background-position: center;
@@ -3115,7 +2994,10 @@ header nav .nav-items .theme-container #theme-icon {
     font-size: 1.1rem;
   }
 }
-@media (max-width: 160rem) and (max-width: 50rem) {
+/*************************************/
+/*** BELOW 797px ( tablets screen) ***/
+/*************************************/
+@media (max-width: 50rem) {
   body {
     background-size: cover;
     background-position: center;
@@ -3409,7 +3291,10 @@ header nav .nav-items .theme-container #theme-icon {
     font-size: 1.1rem;
   }
 }
-@media (max-width: 160rem) and (max-width: 43rem) {
+/***********************************/
+/*** BELOW 688px (Phones screen) ***/
+/***********************************/
+@media (max-width: 43rem) {
   body {
     background-size: cover;
     background-position: center;
@@ -3780,7 +3665,10 @@ header nav .nav-items .theme-container #theme-icon {
     font-size: 1.1rem;
   }
 }
-@media (max-width: 160rem) and (max-width: 27rem) {
+/***********************************/
+/*** BELOW 425px (Phones screen) ***/
+/***********************************/
+@media (max-width: 27rem) {
   body {
     background-size: cover;
     background-position: center;
