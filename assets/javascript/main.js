@@ -28,8 +28,10 @@ menu.addEventListener('click', () => {
   navItems.classList.toggle("open-menu");
 });
 
-
-
+window.addEventListener('scroll', () => {
+  menu.classList.remove("move");
+  navItems.classList.remove("open-menu");
+});
 
 /////////*******************************************///////
 /////////*************** TYPING EFFECT *************///////

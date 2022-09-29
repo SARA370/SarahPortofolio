@@ -3363,7 +3363,9 @@ header {
             background-color: #fb04c544;
             max-width: 800px;
         }
-
+        .cursor{
+            display: none;
+        }
         header {
             background-color: #fb04c544;
             max-width: 100%;
@@ -3730,6 +3732,9 @@ header {
             // 44rem
             background-color: #7b032d76;
             max-width: 700px;
+        }
+        .cursor{
+            display: none;
         }
 
         header {
@@ -4153,6 +4158,9 @@ header {
             width: 100%;
             margin: auto;
         }
+        .cursor{
+            display: none;
+        }
 
         header {
             background-color: #00010044;
@@ -4574,6 +4582,9 @@ header {
             max-width: 600px;
             width: 100%;
             margin: auto;
+        }
+        .cursor{
+            display: none;
         }
 
         header {
@@ -5045,6 +5056,9 @@ header {
             width: 100%;
             margin: auto;
         }
+        .cursor{
+            display: none;
+        }
 
 
         header {
@@ -5505,6 +5519,10 @@ header {
             max-width: 330px;
         }
 
+        .cursor{
+            display: none;
+        }
+
         header {
             background-color: #153c2823;
             width: 93%;
@@ -5888,7 +5906,6 @@ header {
                     margin-bottom: 2rem;
     
                     h2 {
-    
                         font-size: 1.6rem;
     
                         .bg-text {
@@ -5909,7 +5926,6 @@ header {
     
                             label {
                                 font-size: .8rem;
-    
                             }
                         }
     
@@ -5958,6 +5974,10 @@ header {
             // 18rem
             background-color: #5617af23;
             max-width: 295px;
+        }
+
+        .cursor{
+            display: none;
         }
 
         header {
@@ -6106,7 +6126,7 @@ header {
         .hero {
             margin-top: 8rem;
             min-height: 100vh;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
 
             .hero-content {
                 max-width: 19rem;
@@ -6117,13 +6137,13 @@ header {
                 .profil-img-container {
                     width: 140px;
                     height: 140px;
-                    top: -13%;
+                    top: -11%;
                     left: 23%;
                 }
 
                 .hero-mdl-content {
                     position: relative;
-                    top: -3.5rem;
+                    top: -1.5rem;
 
 
                     .intro-title {
@@ -6132,8 +6152,8 @@ header {
                     }
 
                     .description {
-                        font-size: .8rem;
-                        line-height: 1.1rem;
+                        font-size: .9rem;
+                        line-height: 1.2rem;
                         margin-bottom: 1rem;
                     }
 
@@ -6191,7 +6211,7 @@ header {
 
         .services {
             min-height: 100vh;
-            margin-bottom: 0;
+            margin-bottom: 2rem;
 
             .services-title {
                 margin-bottom: 0rem;
@@ -6244,7 +6264,7 @@ header {
 
         .portfolio {
             min-height: 100vh;
-            margin-bottom: 5rem;
+            margin-bottom: 2rem;
 
             .portfolio-content {
 
@@ -6331,6 +6351,7 @@ header {
                 }
             }
         }
+
         .contact {
             min-height: 100vh;
     
@@ -6362,7 +6383,6 @@ header {
     
                             label {
                                 font-size: .8rem;
-    
                             }
                         }
     
@@ -6376,11 +6396,8 @@ header {
                         button {
                             padding: .4rem 1rem;
                             font-size: .7rem;
-    
                         }
-    
                     }
-    
                 }
             }
         }

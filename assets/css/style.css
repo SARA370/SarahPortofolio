@@ -2610,6 +2610,9 @@ header nav .nav-items .theme-container #theme-icon {
     background-color: rgba(251, 4, 197, 0.2666666667);
     max-width: 800px;
   }
+  body .cursor {
+    display: none;
+  }
   body header {
     background-color: rgba(251, 4, 197, 0.2666666667);
     max-width: 100%;
@@ -2881,6 +2884,9 @@ header nav .nav-items .theme-container #theme-icon {
   body .container {
     background-color: rgba(123, 3, 45, 0.462745098);
     max-width: 700px;
+  }
+  body .cursor {
+    display: none;
   }
   body header {
     background-color: rgba(123, 3, 45, 0.462745098);
@@ -3200,6 +3206,9 @@ header nav .nav-items .theme-container #theme-icon {
     width: 100%;
     margin: auto;
   }
+  body .cursor {
+    display: none;
+  }
   body header {
     background-color: rgba(0, 1, 0, 0.2666666667);
   }
@@ -3517,6 +3526,9 @@ header nav .nav-items .theme-container #theme-icon {
     max-width: 600px;
     width: 100%;
     margin: auto;
+  }
+  body .cursor {
+    display: none;
   }
   body header {
     background-color: rgba(184, 141, 3, 0.137254902);
@@ -3869,6 +3881,9 @@ header nav .nav-items .theme-container #theme-icon {
     width: 100%;
     margin: auto;
   }
+  body .cursor {
+    display: none;
+  }
   body header {
     background-color: rgba(21, 60, 40, 0.137254902);
     width: 91%;
@@ -4202,6 +4217,9 @@ header nav .nav-items .theme-container #theme-icon {
   body .container {
     background-color: rgba(255, 119, 34, 0.137254902);
     max-width: 330px;
+  }
+  body .cursor {
+    display: none;
   }
   body header {
     background-color: rgba(21, 60, 40, 0.137254902);
@@ -4539,6 +4557,9 @@ header nav .nav-items .theme-container #theme-icon {
     background-color: rgba(86, 23, 175, 0.137254902);
     max-width: 295px;
   }
+  body .cursor {
+    display: none;
+  }
   body header {
     background-color: rgba(21, 60, 40, 0.137254902);
     width: 92%;
@@ -4656,7 +4677,7 @@ header nav .nav-items .theme-container #theme-icon {
   body .hero {
     margin-top: 8rem;
     min-height: 100vh;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   body .hero .hero-content {
     max-width: 19rem;
@@ -4666,20 +4687,20 @@ header nav .nav-items .theme-container #theme-icon {
   body .hero .hero-content .profil-img-container {
     width: 140px;
     height: 140px;
-    top: -13%;
+    top: -11%;
     left: 23%;
   }
   body .hero .hero-content .hero-mdl-content {
     position: relative;
-    top: -3.5rem;
+    top: -1.5rem;
   }
   body .hero .hero-content .hero-mdl-content .intro-title {
     font-size: 1.1rem;
     margin-bottom: 0.2em;
   }
   body .hero .hero-content .hero-mdl-content .description {
-    font-size: 0.8rem;
-    line-height: 1.1rem;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
     margin-bottom: 1rem;
   }
   body .hero .hero-content .hero-mdl-content .typing {
@@ -4724,7 +4745,7 @@ header nav .nav-items .theme-container #theme-icon {
   }
   body .services {
     min-height: 100vh;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
   }
   body .services .services-title {
     margin-bottom: 0rem;
@@ -4762,7 +4783,7 @@ header nav .nav-items .theme-container #theme-icon {
   }
   body .portfolio {
     min-height: 100vh;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
   body .portfolio .portfolio-content .potofolio-title {
     margin-bottom: 2rem;
