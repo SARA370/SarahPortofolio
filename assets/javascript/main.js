@@ -22,21 +22,15 @@ document.addEventListener('click', () => {
 
 let menu = document.querySelector(".hamburgerMenu");
 let navItems = document.querySelector(".nav-items");
-let language = document.querySelector(".dropdown");
-let mode = document.querySelector(".theme-container");
 
 menu.addEventListener('click', () => {
   menu.classList.toggle("move");
   navItems.classList.toggle("open-menu");
-  language.classList.toggle("open-menu");
-  mode.classList.toggle(".open-menu");
 });
 
 window.addEventListener('scroll', () => {
   menu.classList.remove("move");
   navItems.classList.remove("open-menu");
-  language.classList.remove("open-menu");
-  mode.classList.remove("open-menu");
 });
 
 /////////*******************************************///////

@@ -409,7 +409,7 @@ header nav .nav-items .dropdown .select .caret {
 header nav .nav-items .dropdown .select .caret-rotate {
   transform: rotate(180deg);
 }
-header nav .nav-items .dropdown .menu {
+header nav .nav-items .dropdown .menu-translator {
   list-style: none;
   padding: 0 0.6rem;
   background-color: rgba(255, 255, 255, 0.331);
@@ -430,14 +430,14 @@ header nav .nav-items .dropdown .menu {
   z-index: 1;
   margin-top: 0.6rem;
 }
-header nav .nav-items .dropdown .menu li {
+header nav .nav-items .dropdown .menu-translator li {
   padding: 0.5rem 0.5rem;
   margin: 0.3rem 0;
   border-radius: 0.5rem;
   cursor: pointer;
   text-align: centre;
 }
-header nav .nav-items .dropdown .menu li:hover {
+header nav .nav-items .dropdown .menu-translator li:hover {
   background-color: rgba(255, 255, 255, 0.744);
 }
 header nav .nav-items .dropdown .active {
@@ -4687,12 +4687,12 @@ header nav .nav-items .theme-container #theme-icon {
   }
   body .hero {
     margin-top: 10rem;
-    min-height: 50vh;
+    min-height: 41vh;
     margin-bottom: 2rem;
   }
   body .hero .hero-content {
     max-width: 19rem;
-    height: 50vh;
+    height: 41vh;
     padding: 0 1rem;
   }
   body .hero .hero-content .profil-img-container {
