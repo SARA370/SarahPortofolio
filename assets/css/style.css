@@ -47,7 +47,7 @@
   list-style: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-padding-top: 9em;
+  scroll-padding-top: 9rem;
   cursor: none;
 }
 
@@ -79,7 +79,10 @@ body {
   font-family: var(--ff-olney);
   background-image: var(--background-image);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+  -o-object-fit: contain;
+     object-fit: contain;
   line-height: 1.5;
   min-height: auto;
   overflow-x: hidden;
@@ -307,7 +310,7 @@ header nav .nav-items .navbar .nav-links-contact {
   font-weight: bolder;
   transition: 0.3s;
 }
-header nav .nav-items .navbar .nav-links-contact:hover {
+header nav .nav-items .navbar .nav-links-contact:hover, header nav .nav-items .navbar .nav-links-contact:focus {
   background-color: rgba(255, 255, 255, 0.977);
 }
 header nav .nav-items .navbar .nav-links-contact::after {
@@ -586,6 +589,7 @@ header nav .nav-items .theme-container #theme-icon {
   line-height: 1.9em;
   color: var(--primary-font-color);
   margin-bottom: 5rem;
+  text-align: justify;
 }
 .hero .hero-content .hero-mdl-content .typing {
   display: flex;
@@ -801,8 +805,9 @@ header nav .nav-items .theme-container #theme-icon {
 .icon-wrap .card .service-text {
   color: white;
   font-size: 1.3rem;
-  line-height: 1.9em;
+  line-height: 1.7rem;
   font-family: var(--ff-olney);
+  text-align: justify;
 }
 .icon-wrap .icon-develop {
   -webkit-animation-play-state: running;
@@ -913,8 +918,8 @@ header nav .nav-items .theme-container #theme-icon {
 .icon-wrap .icon-design {
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  height: 38vh;
-  max-width: 50rem;
+  height: 27vh;
+  max-width: 52rem;
 }
 .icon-wrap .icon-design .anchor-part {
   -webkit-animation: move 2s linear infinite;
@@ -1182,6 +1187,8 @@ header nav .nav-items .theme-container #theme-icon {
   background-color: white;
   border-radius: 100%;
   position: relative;
+  left: -4.5rem;
+  top: 0rem;
 }
 .portfolio .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
   width: 50%;
@@ -1339,7 +1346,7 @@ header nav .nav-items .theme-container #theme-icon {
   transform: translateY(0);
 }
 .contact .contact-content .contact-form .form-container button {
-  padding: 0.9rem 4rem;
+  padding: 0.7rem 2rem;
   border-radius: 30px;
   color: #575656;
   letter-spacing: 0.1em;
@@ -1354,10 +1361,14 @@ header nav .nav-items .theme-container #theme-icon {
   border: 1px solid rgb(255, 255, 255);
   color: white;
   position: relative;
+  transform: scale(1);
+  transition: transform 250ms;
 }
-.contact .contact-content .contact-form .form-container button:hover {
+.contact .contact-content .contact-form .form-container button:hover, .contact .contact-content .contact-form .form-container button:focus {
   background-color: white;
   color: var(--secondary-font-color);
+  transition: 0.5s;
+  transform: scale(1.1);
 }
 
 /*////////////////////////////////////////////////////////////////////////*/
@@ -2088,7 +2099,7 @@ header nav .nav-items .theme-container #theme-icon {
   }
   body .hero {
     margin-top: 12rem;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
     min-height: 100vh;
   }
   body .hero .hero-content {
@@ -2171,7 +2182,7 @@ header nav .nav-items .theme-container #theme-icon {
   }
   body .services {
     min-height: 100vh;
-    margin-bottom: 5rem;
+    margin-bottom: 0rem;
   }
   body .services .services-title h2 {
     font-size: 3rem;
@@ -4337,32 +4348,32 @@ header nav .nav-items .theme-container #theme-icon {
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   body .hero {
-    margin-top: 8rem;
-    min-height: 100vh;
-    margin-bottom: 4rem;
+    margin-top: 10rem;
+    min-height: 43vh;
+    margin-bottom: 2rem;
   }
   body .hero .hero-content {
-    max-width: 27rem;
-    height: 100vh;
-    padding: 0 2rem;
+    max-width: 19rem;
+    height: 43vh;
+    padding: 0 1rem;
   }
   body .hero .hero-content .profil-img-container {
     width: 140px;
     height: 140px;
-    top: -13%;
+    top: -9%;
     left: 23%;
   }
   body .hero .hero-content .hero-mdl-content {
     position: relative;
-    top: -3.5rem;
+    top: -1.5rem;
   }
   body .hero .hero-content .hero-mdl-content .intro-title {
     font-size: 1.1rem;
     margin-bottom: 0.2em;
   }
   body .hero .hero-content .hero-mdl-content .description {
-    font-size: 0.8rem;
-    line-height: 1.5em;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
     margin-bottom: 1rem;
   }
   body .hero .hero-content .hero-mdl-content .typing {
@@ -4372,19 +4383,19 @@ header nav .nav-items .theme-container #theme-icon {
     font-size: 0.9rem;
   }
   body .hero .hero-content .hero-mdl-content .cv-link {
-    width: 11rem;
+    width: 9rem;
   }
   body .hero .hero-content .hero-mdl-content .cv-link .download-text {
     width: 19rem;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
   body .hero .hero-content .hero-mdl-content .cv-link .download-icon {
     border-radius: 50%;
     padding: 0.3rem;
-    width: 25px;
+    width: 30px;
   }
   body .hero .hero-content .hero-mdl-content .cv-link .download-icon img {
-    width: 16px;
+    width: 17px;
   }
   body .hero .hero-content .hero-mdl-content .cv-link::before {
     content: "";
@@ -4406,42 +4417,42 @@ header nav .nav-items .theme-container #theme-icon {
     transition: all 0.4s ease-out;
   }
   body .services {
-    min-height: 100vh;
-    margin-bottom: 0;
+    min-height: 85vh;
+    margin-bottom: 0rem;
   }
   body .services .services-title {
     margin-bottom: 0rem;
   }
   body .services .services-title h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   body .services .services-title h2 .bg-text {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
   }
   body .services .icon-wrap .card {
-    padding: 1.5rem;
+    padding: 2rem;
     width: 100%;
-    height: 23rem;
-    padding: 0 0.5;
+    height: 31rem;
+    padding: 0 1rem;
   }
   body .services .icon-wrap .card h2 {
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+    text-align: center;
   }
   body .services .icon-wrap .card .service-text {
     color: white;
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     line-height: 1.7em;
   }
   body .services .icon-wrap .icon-develop {
-    height: 31h;
-    margin-bottom: 0.4rem;
-    max-width: 20rem;
+    height: 17vh;
+    max-width: 15rem;
   }
   body .services .icon-wrap .icon-design {
-    height: 45vh;
-    max-width: 61rem;
+    height: 18vh;
+    max-width: 14rem;
   }
   body .portfolio {
     min-height: 100vh;
@@ -4550,7 +4561,7 @@ header nav .nav-items .theme-container #theme-icon {
 /***********************************/
 @media (max-width: 20rem) {
   body {
-    background-size: cover;
+    background-size: center;
     background-position: center;
   }
   body .container {
@@ -4675,19 +4686,19 @@ header nav .nav-items .theme-container #theme-icon {
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   body .hero {
-    margin-top: 8rem;
-    min-height: 100vh;
+    margin-top: 10rem;
+    min-height: 50vh;
     margin-bottom: 2rem;
   }
   body .hero .hero-content {
     max-width: 19rem;
-    height: 100vh;
+    height: 50vh;
     padding: 0 1rem;
   }
   body .hero .hero-content .profil-img-container {
     width: 140px;
     height: 140px;
-    top: -11%;
+    top: -9%;
     left: 23%;
   }
   body .hero .hero-content .hero-mdl-content {
@@ -4701,7 +4712,7 @@ header nav .nav-items .theme-container #theme-icon {
   body .hero .hero-content .hero-mdl-content .description {
     font-size: 0.9rem;
     line-height: 1.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.4rem;
   }
   body .hero .hero-content .hero-mdl-content .typing {
     display: flex;
@@ -4710,7 +4721,7 @@ header nav .nav-items .theme-container #theme-icon {
     font-size: 0.9rem;
   }
   body .hero .hero-content .hero-mdl-content .cv-link {
-    width: 9rem;
+    width: 11rem;
   }
   body .hero .hero-content .hero-mdl-content .cv-link .download-text {
     width: 19rem;
@@ -4744,8 +4755,8 @@ header nav .nav-items .theme-container #theme-icon {
     transition: all 0.4s ease-out;
   }
   body .services {
-    min-height: 100vh;
-    margin-bottom: 2rem;
+    min-height: 85vh;
+    margin-bottom: 0rem;
   }
   body .services .services-title {
     margin-bottom: 0rem;
@@ -4757,29 +4768,29 @@ header nav .nav-items .theme-container #theme-icon {
     font-size: 2.5rem;
   }
   body .services .icon-wrap .card {
-    padding: 1.5rem;
+    padding: 2rem;
     width: 100%;
-    height: 23rem;
-    padding: 0 0.5;
+    height: 31rem;
+    padding: 0 1rem;
   }
   body .services .icon-wrap .card h2 {
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+    text-align: center;
   }
   body .services .icon-wrap .card .service-text {
     color: white;
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     line-height: 1.7em;
   }
   body .services .icon-wrap .icon-develop {
-    height: 31h;
-    margin-bottom: 0.4rem;
-    max-width: 20rem;
+    height: 17vh;
+    max-width: 15rem;
   }
   body .services .icon-wrap .icon-design {
-    height: 45vh;
-    max-width: 61rem;
+    height: 18vh;
+    max-width: 14rem;
   }
   body .portfolio {
     min-height: 100vh;
@@ -4803,7 +4814,7 @@ header nav .nav-items .theme-container #theme-icon {
   }
   body .portfolio .portfolio-content .work-section .portfolio-gallery button {
     margin: 0.3rem 0.4rem;
-    font-size: 0.55rem;
+    font-size: 0.6rem;
   }
   body .portfolio .portfolio-content .portfolio-images {
     gap: 0.8rem;
@@ -4844,7 +4855,7 @@ header nav .nav-items .theme-container #theme-icon {
     left: 7.5px;
   }
   body .contact {
-    min-height: 100vh;
+    min-height: 88vh;
   }
   body .contact .contact-content .contact-title {
     text-align: center;
@@ -4868,7 +4879,7 @@ header nav .nav-items .theme-container #theme-icon {
     font-size: 0.8rem;
   }
   body .contact .contact-content .contact-form .form-container .textarea .input {
-    min-height: 65vh;
+    min-height: 20vh;
   }
   body .contact .contact-content .contact-form .form-container button {
     padding: 0.4rem 1rem;

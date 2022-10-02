@@ -137,7 +137,7 @@
     </div>
     <div class="icon-wrap">
       <!--Front End Development-->
-      <div class="card code-card">
+      <div class="card design-card">
         <h2>Development web Front End</h2>
         <svg class="icon-develop" viewBox="0 0 359.4 338.2">
           <linearGradient id="XMLID_143_x" gradientUnits="userSpaceOnUse" x1="215.598" y1="126.7459" x2="110.5261"
@@ -346,10 +346,10 @@
         c0-0.2-0.2-0.3-0.3-0.3h-4.3c-0.2,0-0.3,0.1-0.3,0.3v23.6c0,0.2-0.1,0.3-0.3,0.3h-4.3L287.2,154.3z" />
           </g>
         </svg>
+
         <p class="service-text" lng-tag="code-service">
         </p>
       </div>
-
       <!-------------------->
       <!--UIUX Design card-->
       <!-------------------->
@@ -774,32 +774,32 @@
         <form class="form-container" onsubmit="sendEmail(); reset(); return false;">
 
           <div class="input-container">
-            <input type="text" name="name" class="input" id="Name" lng-tag="username-input" />
+            <input type="text" name="name" class="input" id="Name" lng-tag="username-input" required/>
             <label for="" lng-tag="username-input"></label>
             <span lng-tag="username-input"></span>
           </div>
 
           <div class="input-container">
-            <input type="email" name="email" class="input" id="Email" />
+            <input type="email" name="email" class="input" id="Email" required />
             <label for="">Email</label>
             <span>Email</span>
           </div>
 
           <div class="input-container">
-            <input type="text" name="subject" class="input" id="Subject" lng-tag="subject-input" />
+            <input type="text" name="subject" class="input" id="Subject" lng-tag="subject-input" required/>
             <label for="" lng-tag="subject-input"></label>
             <span lng-tag="subject-input"></span>
           </div>
 
           <div class="input-container">
-            <input type="tel" name="phone" class="input" id="Phone" lng-tag="phone-input" />
+            <input type="tel" name="phone" class="input" id="Phone" lng-tag="phone-input" required/>
             <label for="" lng-tag="phone-input">Phone</label>
             <span lng-tag="phone-input"></span>
           </div>
 
           <div class="input-container textarea">
             <label class="casse-tete" for="">Message</label>
-            <textarea name="message" class="input" id="Message"></textarea>
+            <textarea name="message" class="input" id="Message" required></textarea>
             <span>Message</span>
           </div>
 
