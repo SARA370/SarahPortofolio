@@ -4877,6 +4877,7 @@ header nav .nav-items .theme-container #theme-icon {
   }
   body .contact .contact-content .contact-form .form-container .input-container label {
     font-size: 0.8rem;
+    z-index: 1;
   }
   body .contact .contact-content .contact-form .form-container .textarea .input {
     min-height: 20vh;
