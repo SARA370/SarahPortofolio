@@ -432,7 +432,7 @@ header {
                     }
                 }
 
-                .menu-translator {
+                .menu{
                     list-style: none;
                     padding: 0 0.6rem;
                     background-color: rgba(255, 255, 255, 0.331);
@@ -6084,6 +6084,10 @@ header {
         
                         }
                     }
+
+                    .theme-container{
+                        display: none;
+                    }
         
         
                     .menu-toggle-social-icons {
@@ -6160,12 +6164,12 @@ header {
 
 
                     .intro-title {
-                        font-size: 1.1rem;
+                        font-size: 4.1rem;
                         margin-bottom: .2em;
                     }
 
                     .description {
-                        font-size: .9rem;
+                        font-size: 43rem;
                         line-height: 2rem;
                         margin-bottom: 1.4rem;
                     }

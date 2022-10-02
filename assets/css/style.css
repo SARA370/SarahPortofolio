@@ -409,7 +409,7 @@ header nav .nav-items .dropdown .select .caret {
 header nav .nav-items .dropdown .select .caret-rotate {
   transform: rotate(180deg);
 }
-header nav .nav-items .dropdown .menu-translator {
+header nav .nav-items .dropdown .menu {
   list-style: none;
   padding: 0 0.6rem;
   background-color: rgba(255, 255, 255, 0.331);
@@ -430,14 +430,14 @@ header nav .nav-items .dropdown .menu-translator {
   z-index: 1;
   margin-top: 0.6rem;
 }
-header nav .nav-items .dropdown .menu-translator li {
+header nav .nav-items .dropdown .menu li {
   padding: 0.5rem 0.5rem;
   margin: 0.3rem 0;
   border-radius: 0.5rem;
   cursor: pointer;
   text-align: centre;
 }
-header nav .nav-items .dropdown .menu-translator li:hover {
+header nav .nav-items .dropdown .menu li:hover {
   background-color: rgba(255, 255, 255, 0.744);
 }
 header nav .nav-items .dropdown .active {
@@ -4648,6 +4648,9 @@ header nav .nav-items .theme-container #theme-icon {
     display: block;
     margin: 0.6rem 0;
   }
+  body header nav .nav-items .theme-container {
+    display: none;
+  }
   body header nav .nav-items .menu-toggle-social-icons {
     display: inline-block;
     margin-top: 1rem;
@@ -4706,11 +4709,11 @@ header nav .nav-items .theme-container #theme-icon {
     top: -1.5rem;
   }
   body .hero .hero-content .hero-mdl-content .intro-title {
-    font-size: 1.1rem;
+    font-size: 4.1rem;
     margin-bottom: 0.2em;
   }
   body .hero .hero-content .hero-mdl-content .description {
-    font-size: 0.9rem;
+    font-size: 43rem;
     line-height: 2rem;
     margin-bottom: 1.4rem;
   }

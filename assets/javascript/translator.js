@@ -46,8 +46,8 @@ dropdowns.forEach(dropdown => {
     //Get inner elements from each dropdown
     const select = dropdown.querySelector('.select');
     const caret = dropdown.querySelector('.caret');
-    const menu = dropdown.querySelector('.menu-translator');
-    const options = dropdown.querySelectorAll('menu-translator li');
+    const menu = dropdown.querySelector('.menu');
+    const options = dropdown.querySelectorAll('.menu li');
     const selected = dropdown.querySelector('.selected');
 
     /*
