@@ -221,7 +221,8 @@ header {
   padding: 0.5rem 2rem;
   z-index: 10;
 }
-header .hamburgerMenu {
+
+.hamburgerMenu {
   display: none;
   flex-direction: column;
   align-items: center;
@@ -230,7 +231,7 @@ header .hamburgerMenu {
   cursor: pointer;
   z-index: 1000;
 }
-header .hamburgerMenu div {
+.hamburgerMenu div {
   display: block;
   background-color: rgb(0, 0, 0);
   height: 2px;
@@ -238,37 +239,43 @@ header .hamburgerMenu div {
   border-radius: 10px;
   transition: 0.3s;
 }
-header .move .line1 {
+
+.move .line1 {
   transform: rotate(-45deg) translate(-5px, 5px);
 }
-header .move .line2 {
+
+.move .line2 {
   opacity: 0;
 }
-header .move .line3 {
+
+.move .line3 {
   transform: rotate(45deg) translate(-5px, -5px);
 }
-header nav {
+
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header nav .logo-image {
+nav .logo-image {
   margin-top: 0.5rem;
   max-width: 45%;
 }
-header nav .nav-items {
+
+.nav-items {
   display: flex;
   justify-content: end;
   width: 65%;
 }
-header nav .nav-items .navbar {
+
+.navbar {
   display: flex;
   align-items: center;
   gap: 1rem;
   -webkit-animation-fill-mode: none;
           animation-fill-mode: none;
 }
-header nav .nav-items .navbar .nav-links {
+.navbar .nav-links {
   display: inline-block;
   padding: 0.45rem 1.9rem;
   border: 0;
@@ -287,11 +294,11 @@ header nav .nav-items .navbar .nav-links {
   transition: 0.3s;
   font-family: var(--ff-Aldrich);
 }
-header nav .nav-items .navbar .nav-links:hover {
+.navbar .nav-links:hover {
   background-color: rgba(255, 255, 255, 0.977);
   color: var(--secondary-font-color);
 }
-header nav .nav-items .navbar .nav-links-contact {
+.navbar .nav-links-contact {
   display: inline-block;
   position: relative;
   padding: 0.45rem 1.9rem;
@@ -310,10 +317,10 @@ header nav .nav-items .navbar .nav-links-contact {
   font-weight: bolder;
   transition: 0.3s;
 }
-header nav .nav-items .navbar .nav-links-contact:hover, header nav .nav-items .navbar .nav-links-contact:focus {
+.navbar .nav-links-contact:hover, .navbar .nav-links-contact:focus {
   background-color: rgba(255, 255, 255, 0.977);
 }
-header nav .nav-items .navbar .nav-links-contact::after {
+.navbar .nav-links-contact::after {
   content: "";
   width: 30px;
   height: 30px;
@@ -351,22 +358,23 @@ header nav .nav-items .navbar .nav-links-contact::after {
     opacity: 0;
   }
 }
-header nav .nav-items .dropdown {
+
+.dropdown {
   min-width: 4rem;
   position: relative;
   margin: 0 1rem;
   display: flex;
   align-items: center;
   /*
-          Active styles 
-          (added later in Javascript)
-          */
+                      Active styles 
+                      (added later in Javascript)
+                      */
   /*
-              Open styles 
-              (added later in Javascript)
-          */
+                          Open styles 
+                          (added later in Javascript)
+                      */
 }
-header nav .nav-items .dropdown .select {
+.dropdown .select {
   background-color: rgba(255, 255, 255, 0.201);
   border: 1px solid rgb(255, 255, 255);
   -webkit-backdrop-filter: blur(30px);
@@ -385,19 +393,19 @@ header nav .nav-items .dropdown .select {
   transition: 0.3s;
   font-size: 1rem;
   /*
-      Clicked styles 
-      (added later in Javascript)
-      */
+                  Clicked styles 
+                  (added later in Javascript)
+                  */
   /* Rotate styles (added later in Javascript) */
 }
-header nav .nav-items .dropdown .select:hover {
+.dropdown .select:hover {
   color: var(--primary-font-color);
 }
-header nav .nav-items .dropdown .select .select-clicked {
+.dropdown .select .select-clicked {
   border: 2px #26489a solid;
   box-shadow: 0 0 0.8em #26489a;
 }
-header nav .nav-items .dropdown .select .caret {
+.dropdown .select .caret {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -406,10 +414,10 @@ header nav .nav-items .dropdown .select .caret {
   transition: 0.3s;
   margin-left: 0.5rem;
 }
-header nav .nav-items .dropdown .select .caret-rotate {
+.dropdown .select .caret-rotate {
   transform: rotate(180deg);
 }
-header nav .nav-items .dropdown .menu {
+.dropdown .menu {
   list-style: none;
   padding: 0 0.6rem;
   background-color: rgba(255, 255, 255, 0.331);
@@ -430,27 +438,29 @@ header nav .nav-items .dropdown .menu {
   z-index: 1;
   margin-top: 0.6rem;
 }
-header nav .nav-items .dropdown .menu li {
+.dropdown .menu li {
   padding: 0.5rem 0.5rem;
   margin: 0.3rem 0;
   border-radius: 0.5rem;
   cursor: pointer;
   text-align: centre;
 }
-header nav .nav-items .dropdown .menu li:hover {
+.dropdown .menu li:hover {
   background-color: rgba(255, 255, 255, 0.744);
 }
-header nav .nav-items .dropdown .active {
+.dropdown .active {
   background-color: rgba(255, 255, 255, 0.744);
 }
-header nav .nav-items .dropdown .menu-open {
+.dropdown .menu-open {
   display: block;
   opacity: 1;
 }
-header nav .nav-items .social-icons-menu {
+
+.social-icons-menu {
   display: none;
 }
-header nav .nav-items .theme-container {
+
+.theme-container {
   background-color: rgba(159, 159, 159, 0.653);
   width: 3.5%;
   border-radius: 50px;
@@ -462,7 +472,7 @@ header nav .nav-items .theme-container {
   transition: 0.5s;
   cursor: pointer;
 }
-header nav .nav-items .theme-container:hover {
+.theme-container:hover {
   opacity: 0.8;
 }
 @-webkit-keyframes change {
@@ -481,14 +491,14 @@ header nav .nav-items .theme-container:hover {
     transform: scale(1.4);
   }
 }
-header nav .nav-items .theme-container .shadow-dark {
+.theme-container .shadow-dark {
   background: linear-gradient(145deg, #23282c, #1e2125);
   box-shadow: 17px 17px 23px #1a1d20, -17px -17px 23px #282d32, inset 5px 5px 4px #1e2226, inset -5px -5px 4px #24282c;
 }
-header nav .nav-items .theme-container .shadow-light {
+.theme-container .shadow-light {
   box-shadow: 7px 7px 15px -10px #bbcfda, -4px -4px 13px #ffffff, inset 7px 7px 3px rgba(209, 217, 230, 0.35), inset -11px -11px 3px rgba(255, 255, 255, 0.3);
 }
-header nav .nav-items .theme-container .change {
+.theme-container .change {
   -webkit-animation-name: change;
           animation-name: change;
   -webkit-animation-duration: 1s;
@@ -496,7 +506,7 @@ header nav .nav-items .theme-container .change {
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
 }
-header nav .nav-items .theme-container #theme-icon {
+.theme-container #theme-icon {
   width: 100%;
 }
 
@@ -505,93 +515,57 @@ header nav .nav-items .theme-container #theme-icon {
 /*////////////////////////////////////////////////////////////////////////*/
 .hero {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 9rem;
+  justify-content: center;
   min-height: 100vh;
+  margin-top: 6rem;
 }
-.hero .hero-content {
+
+.hero-content {
   width: 100%;
-  max-width: 113rem;
-  height: 73vh;
+  max-width: 100rem;
+  min-height: 75vh;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.149);
-  padding: 0 14em;
+  padding: 0 12rem;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   box-shadow: 0 20px 50px -10px rgba(118, 118, 118, 0.5);
 }
-.hero .hero-content::before {
-  box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.5);
-}
-.hero .hero-content .profil-img-container {
-  position: relative;
-  width: 300px;
-  top: -12%;
-  left: 35%;
-  height: 300px;
-  background: rgba(176, 176, 176, 0.2588235294);
+
+.profil-img-container {
+  width: 19rem;
+  height: 19rem;
+  margin: -7rem auto 5rem auto;
   border-radius: 50%;
-  overflow: hidden;
-}
-.hero .hero-content .profil-img-container::before {
-  content: "";
-  position: absolute;
-  inset: -1em 5em;
-  background: linear-gradient(315deg, #41AED9, #CE5C59);
-  transition: 0.5s;
-  -webkit-animation: animate 4s linear infinite;
-          animation: animate 4s linear infinite;
-  text-align: center;
-}
-.hero .hero-content .profil-img-container:hover::before {
-  inset: -2em 0px;
-}
-@-webkit-keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.hero .hero-content .profil-img-container::after {
-  content: "";
-  position: absolute;
-  inset: 0.4em;
-  background: rgba(215, 215, 215, 0.9960784314);
-  background-image: url("../imgs/sarah.svg");
-  background-size: cover;
-  border-radius: 50%;
-  z-index: 0;
-}
-.hero .hero-content .hero-mdl-content {
+  background: rgb(255, 255, 255);
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.hero .hero-content .hero-mdl-content .intro-title {
+.profil-img-container img {
+  width: 95%;
+  height: 95%;
+  border-radius: inherit;
+}
+
+.intro-title {
   font-size: 2.5rem;
   margin-bottom: 0.3em;
   color: var(--primary-font-color);
   text-align: center;
   font-family: var(--ff-Electrolize);
 }
-.hero .hero-content .hero-mdl-content .description {
+
+.description {
   font-size: 1.5rem;
   line-height: 1.9em;
   color: var(--primary-font-color);
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
   text-align: justify;
 }
-.hero .hero-content .hero-mdl-content .typing {
+
+.typing {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -599,10 +573,10 @@ header nav .nav-items .theme-container #theme-icon {
   font-size: 1.6rem;
   color: var(--primary-font-color);
 }
-.hero .hero-content .hero-mdl-content .typing .typing {
+.typing .typing {
   font-family: var(--ff-Electrolize);
 }
-.hero .hero-content .hero-mdl-content .typing .typing:after {
+.typing .typing:after {
   content: "";
   width: 1px;
   height: 99%;
@@ -627,7 +601,8 @@ header nav .nav-items .theme-container #theme-icon {
     opacity: 1;
   }
 }
-.hero .cv-link {
+
+.cv-link {
   width: 21rem;
   border-radius: 30px;
   font-weight: 600;
@@ -644,7 +619,7 @@ header nav .nav-items .theme-container #theme-icon {
   margin: auto;
   font-family: var(--ff-Aldrich);
 }
-.hero .cv-link .download-text {
+.cv-link .download-text {
   width: 19rem;
   position: relative;
   left: 11px;
@@ -655,7 +630,7 @@ header nav .nav-items .theme-container #theme-icon {
   align-items: center;
   color: var(--secondary-font-color);
 }
-.hero .cv-link .download-icon {
+.cv-link .download-icon {
   background-color: rgb(255, 255, 255);
   display: flex;
   align-items: flex-end;
@@ -664,10 +639,10 @@ header nav .nav-items .theme-container #theme-icon {
   padding: 0.4rem;
   width: 40px;
 }
-.hero .cv-link .download-icon img {
+.cv-link .download-icon img {
   width: 28px;
 }
-.hero .cv-link::before {
+.cv-link::before {
   content: "";
   position: absolute;
   top: 0;
@@ -676,10 +651,10 @@ header nav .nav-items .theme-container #theme-icon {
   transition: all 0.4s ease-out;
   z-index: -1;
 }
-.hero .cv-link:hover {
+.cv-link:hover {
   transition: all 0.4s ease-out;
 }
-.hero .cv-link:hover::before {
+.cv-link:hover::before {
   width: 100%;
   height: 100%;
   background-color: rgb(255, 255, 255);
@@ -744,20 +719,21 @@ header nav .nav-items .theme-container #theme-icon {
 .services {
   min-height: 85vh;
 }
-.services .services-title {
+
+.services-title {
   text-align: center;
   margin-bottom: 2em;
 }
-.services .services-title h2 {
+.services-title h2 {
   position: relative;
   text-transform: uppercase;
   font-size: 5rem;
   font-weight: 700;
 }
-.services .services-title h2 span {
+.services-title h2 span {
   color: #ffffff;
 }
-.services .services-title h2 .bg-text {
+.services-title h2 .bg-text {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -778,12 +754,13 @@ header nav .nav-items .theme-container #theme-icon {
   max-width: 113rem;
   margin: auto;
 }
-.icon-wrap .card {
+
+.card {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 55vh;
+  min-height: 55vh;
   border-radius: 10px;
   box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.3);
   -webkit-backdrop-filter: blur(4px);
@@ -795,75 +772,76 @@ header nav .nav-items .theme-container #theme-icon {
   width: 50%;
   padding: 5rem;
 }
-.icon-wrap .card h2 {
+.card h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1.5em;
   color: white;
   font-family: var(--ff-Electrolize);
 }
-.icon-wrap .card .service-text {
+.card .service-text {
   color: white;
   font-size: 1.3rem;
   line-height: 1.7rem;
   font-family: var(--ff-olney);
   text-align: justify;
 }
-.icon-wrap .icon-develop {
+
+.icon-develop {
   -webkit-animation-play-state: running;
           animation-play-state: running;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  height: 32vh;
-  max-width: 39rem;
+  min-height: 11vh;
+  max-width: 27rem;
 }
-.icon-wrap .icon-develop .gear-b {
+.icon-develop .gear-b {
   -webkit-animation: rotate-reverse 6s;
           animation: rotate-reverse 6s;
 }
-.icon-wrap .icon-develop .gear-s {
+.icon-develop .gear-s {
   -webkit-animation: rotate 12s linear infinite;
           animation: rotate 12s linear infinite;
 }
-.icon-wrap .icon-develop #XMLID_87_,
-.icon-wrap .icon-develop #XMLID_85_,
-.icon-wrap .icon-develop #XMLID_83_ {
+.icon-develop #XMLID_87_,
+.icon-develop #XMLID_85_,
+.icon-develop #XMLID_83_ {
   -webkit-animation: twinkle 3s ease-in-out infinite;
           animation: twinkle 3s ease-in-out infinite;
 }
-.icon-wrap .icon-develop #XMLID_85_ {
+.icon-develop #XMLID_85_ {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.icon-wrap .icon-develop #XMLID_83_ {
+.icon-develop #XMLID_83_ {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
-.icon-wrap .icon-develop .line-t,
-.icon-wrap .icon-develop .line-m,
-.icon-wrap .icon-develop .line-b {
+.icon-develop .line-t,
+.icon-develop .line-m,
+.icon-develop .line-b {
   -webkit-animation: shrink 1.8s ease-in-out infinite;
           animation: shrink 1.8s ease-in-out infinite;
 }
-.icon-wrap .icon-develop .line-m {
+.icon-develop .line-m {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
-.icon-wrap .icon-develop .line-b {
+.icon-develop .line-b {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
-.icon-wrap .icon-develop .code-letter_o {
+.icon-develop .code-letter_o {
   -webkit-animation: typingO 3s linear infinite;
           animation: typingO 3s linear infinite;
 }
-.icon-wrap .icon-develop .code-letter_d {
+.icon-develop .code-letter_d {
   -webkit-animation: typingD 3s linear infinite;
           animation: typingD 3s linear infinite;
 }
-.icon-wrap .icon-develop .code-letter_e {
+.icon-develop .code-letter_e {
   -webkit-animation: typingE 3s linear infinite;
           animation: typingE 3s linear infinite;
 }
@@ -915,36 +893,37 @@ header nav .nav-items .theme-container #theme-icon {
     fill: #fff;
   }
 }
-.icon-wrap .icon-design {
+
+.icon-design {
   -webkit-animation-play-state: running;
           animation-play-state: running;
-  height: 27vh;
-  max-width: 52rem;
+  min-height: 27vh;
+  max-width: 21rem;
 }
-.icon-wrap .icon-design .anchor-part {
+.icon-design .anchor-part {
   -webkit-animation: move 2s linear infinite;
           animation: move 2s linear infinite;
 }
-.icon-wrap .icon-design .anchor-part--2 {
+.icon-design .anchor-part--2 {
   -webkit-animation: move2 2s linear infinite;
           animation: move2 2s linear infinite;
 }
-.icon-wrap .icon-design .pen-part {
+.icon-design .pen-part {
   transform-origin: 140px 180px;
   -webkit-animation: bounce2 2s ease-in-out infinite;
           animation: bounce2 2s ease-in-out infinite;
 }
-.icon-wrap .icon-design .ruler-part {
+.icon-design .ruler-part {
   transform-origin: 140px 180px;
   -webkit-animation: bounce 1s ease-in-out infinite;
           animation: bounce 1s ease-in-out infinite;
 }
-.icon-wrap .icon-design .circle-part {
+.icon-design .circle-part {
   transform-origin: 139.8px 167.8px;
   -webkit-animation: rotate 4s linear infinite;
           animation: rotate 4s linear infinite;
 }
-.icon-wrap .icon-design .cursor-part {
+.icon-design .cursor-part {
   -webkit-animation: bounceBFt2 2s ease-in-out infinite;
           animation: bounceBFt2 2s ease-in-out infinite;
 }
@@ -980,6 +959,7 @@ header nav .nav-items .theme-container #theme-icon {
     transform: translate(1px, 1px);
   }
 }
+
 @-webkit-keyframes twinkle {
   0%, 50%, 100% {
     transform: scale(1);
@@ -988,6 +968,7 @@ header nav .nav-items .theme-container #theme-icon {
     transform: scale(1.3);
   }
 }
+
 @keyframes twinkle {
   0%, 50%, 100% {
     transform: scale(1);
@@ -1062,7 +1043,6 @@ header nav .nav-items .theme-container #theme-icon {
     transform: rotate(-1turn);
   }
 }
-
 /*////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////// PORTFOLIO SECTION ///////////////////////////*/
 /*////////////////////////////////////////////////////////////////////////*/
@@ -1070,23 +1050,25 @@ header nav .nav-items .theme-container #theme-icon {
   min-height: 150vh;
   margin-bottom: 3rem;
 }
-.portfolio .hide {
+
+.hide {
   display: none;
 }
-.portfolio .potofolio-title {
+
+.potofolio-title {
   text-align: center;
   margin-bottom: 2rem;
 }
-.portfolio .potofolio-title h2 {
+.potofolio-title h2 {
   position: relative;
   text-transform: uppercase;
   font-size: 5rem;
   font-weight: 700;
 }
-.portfolio .potofolio-title h2 span {
+.potofolio-title h2 span {
   color: #ffffff;
 }
-.portfolio .potofolio-title h2 .bg-text {
+.potofolio-title h2 .bg-text {
   position: absolute;
   top: 30%;
   left: 50%;
@@ -1097,13 +1079,15 @@ header nav .nav-items .theme-container #theme-icon {
   font-weight: 800;
   font-size: 6.5rem;
 }
-.portfolio .work-section {
+
+.work-section {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.portfolio .work-section .portfolio-gallery {
+
+.portfolio-gallery {
   padding: 0.1rem 6rem;
   display: flex;
   justify-content: center;
@@ -1115,7 +1099,7 @@ header nav .nav-items .theme-container #theme-icon {
   margin-bottom: 2rem;
   border-radius: 40px;
 }
-.portfolio .work-section .portfolio-gallery button {
+.portfolio-gallery button {
   margin: 1em;
   padding: 0.4em 1.5em;
   font-size: 1.2rem;
@@ -1129,21 +1113,22 @@ header nav .nav-items .theme-container #theme-icon {
   font-weight: bold;
   font-family: var(--ff-Aldrich);
 }
-.portfolio .work-section .portfolio-gallery button:hover {
+.portfolio-gallery button:hover {
   background-color: rgba(255, 255, 255, 0.977);
   color: var(--secondary-font-color);
 }
-.portfolio .work-section .portfolio-gallery .actve {
+.portfolio-gallery .actve {
   background-color: white;
   color: var(--secondary-font-color);
 }
-.portfolio .work-section .portfolio-gallery .btn-clicked {
+.portfolio-gallery .btn-clicked {
   border: none;
   border-radius: 2em;
   cursor: pointer;
   transition: 0.3s;
 }
-.portfolio .work-section .portfolio-images {
+
+.portfolio-images {
   padding: 2em 0;
   width: 100%;
   display: flex;
@@ -1152,23 +1137,24 @@ header nav .nav-items .theme-container #theme-icon {
   flex-wrap: wrap;
   gap: 1rem;
 }
-.portfolio .work-section .portfolio-images .portfolio-overlay {
+
+.portfolio-overlay {
   position: relative;
   overflow: hidden;
 }
-.portfolio .work-section .portfolio-images .portfolio-overlay .portfolio-img {
+.portfolio-overlay .portfolio-img {
   width: 27rem;
   border-radius: 0.2em;
   transition: 0.95s;
   transition: margin 400ms ease-in-out, width 400ms ease-in-out;
 }
-.portfolio .work-section .portfolio-images .portfolio-overlay .img-expand {
+.portfolio-overlay .img-expand {
   width: 27rem;
 }
-.portfolio .work-section .portfolio-images .portfolio-overlay .img-shrink {
+.portfolio-overlay .img-shrink {
   width: 0;
 }
-.portfolio .work-section .portfolio-images .portfolio-overlay .portfolio-links {
+.portfolio-overlay .portfolio-links {
   position: absolute;
   top: -100%;
   left: 0;
@@ -1181,7 +1167,7 @@ header nav .nav-items .theme-container #theme-icon {
   background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid rgb(255, 255, 255);
 }
-.portfolio .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+.portfolio-overlay .portfolio-links .portfolio-link {
   width: 5rem;
   height: 5rem;
   background-color: white;
@@ -1190,17 +1176,17 @@ header nav .nav-items .theme-container #theme-icon {
   left: -4.5rem;
   top: 0rem;
 }
-.portfolio .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+.portfolio-overlay .portfolio-links .portfolio-link .logo-link {
   width: 50%;
   position: absolute;
   top: 18px;
   left: 18px;
 }
-.portfolio .work-section .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link:hover {
+.portfolio-overlay .portfolio-links .portfolio-link:hover {
   background: rgb(255, 255, 255);
   transition: 0.3 all linear;
 }
-.portfolio .work-section .portfolio-images .portfolio-overlay:hover .portfolio-links {
+.portfolio-overlay:hover .portfolio-links {
   top: 0;
   transition: 0.5s all ease;
 }
@@ -1214,23 +1200,25 @@ header nav .nav-items .theme-container #theme-icon {
   justify-content: center;
   align-items: center;
 }
-.contact .contact-content {
+
+.contact-content {
   max-width: 100rem;
 }
-.contact .contact-content .contact-title {
+
+.contact-title {
   text-align: center;
   margin-bottom: 2rem;
 }
-.contact .contact-content .contact-title h2 {
+.contact-title h2 {
   position: relative;
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 700;
 }
-.contact .contact-content .contact-title h2 span {
+.contact-title h2 span {
   color: #ffffff;
 }
-.contact .contact-content .contact-title h2 .bg-text {
+.contact-title h2 .bg-text {
   position: absolute;
   top: 39%;
   left: 50%;
@@ -1241,7 +1229,12 @@ header nav .nav-items .theme-container #theme-icon {
   font-weight: 800;
   font-size: 5.9rem;
 }
-.contact .contact-content .contact-form .form-container {
+
+.contact-form {
+  width: 100%;
+}
+
+.form-container {
   padding: 2em 2.2em;
   overflow: hidden;
   position: relative;
@@ -1250,12 +1243,13 @@ header nav .nav-items .theme-container #theme-icon {
   justify-content: center;
   flex-direction: column;
 }
-.contact .contact-content .contact-form .form-container .input-container {
+
+.input-container {
   position: relative;
   margin: 0.7rem 0;
   width: 67rem;
 }
-.contact .contact-content .contact-form .form-container .input-container .input {
+.input-container .input {
   width: 100%;
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.149);
@@ -1271,7 +1265,7 @@ header nav .nav-items .theme-container #theme-icon {
   border-radius: 25px;
   transition: 0.3s;
 }
-.contact .contact-content .contact-form .form-container .input-container label {
+.input-container label {
   position: absolute;
   top: 50%;
   left: 15px;
@@ -1284,7 +1278,7 @@ header nav .nav-items .theme-container #theme-icon {
   transition: 0.5s;
   font-family: var(--ff-olney);
 }
-.contact .contact-content .contact-form .form-container .input-container.focus label {
+.input-container.focus label {
   box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.3);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
@@ -1296,15 +1290,15 @@ header nav .nav-items .theme-container #theme-icon {
   font-size: 1rem;
   font-family: var(--ff-olney);
 }
-.contact .contact-content .contact-form .form-container .input-container.focus::before {
+.input-container.focus::before {
   width: 50%;
   opacity: 1;
 }
-.contact .contact-content .contact-form .form-container .input-container.focus::after {
+.input-container.focus::after {
   width: 50%;
   opacity: 1;
 }
-.contact .contact-content .contact-form .form-container .input-container span {
+.input-container span {
   position: absolute;
   top: 0;
   left: 25px;
@@ -1315,7 +1309,7 @@ header nav .nav-items .theme-container #theme-icon {
   pointer-events: none;
   z-index: 500;
 }
-.contact .contact-content .contact-form .form-container .input-container span:before, .contact .contact-content .contact-form .form-container .input-container span:after {
+.input-container span:before, .input-container span:after {
   content: "";
   position: absolute;
   width: 10%;
@@ -1329,23 +1323,25 @@ header nav .nav-items .theme-container #theme-icon {
   top: 50%;
   transform: translateY(-50%);
 }
-.contact .contact-content .contact-form .form-container .input-container span:before {
+.input-container span:before {
   left: 50%;
 }
-.contact .contact-content .contact-form .form-container .input-container span:after {
+.input-container span:after {
   right: 50%;
 }
-.contact .contact-content .contact-form .form-container .textarea .input {
+
+.textarea .input {
   min-height: 40vh;
   border-radius: 22px;
   resize: none;
   overflow-y: auto;
 }
-.contact .contact-content .contact-form .form-container .textarea label {
+.textarea label {
   top: 1rem;
   transform: translateY(0);
 }
-.contact .contact-content .contact-form .form-container button {
+
+button {
   padding: 0.7rem 2rem;
   border-radius: 30px;
   color: #575656;
@@ -1364,7 +1360,7 @@ header nav .nav-items .theme-container #theme-icon {
   transform: scale(1);
   transition: transform 250ms;
 }
-.contact .contact-content .contact-form .form-container button:hover, .contact .contact-content .contact-form .form-container button:focus {
+button:hover, button:focus {
   background-color: white;
   color: var(--secondary-font-color);
   transition: 0.5s;
@@ -1414,78 +1410,78 @@ header nav .nav-items .theme-container #theme-icon {
     top: 88%;
   }
   body .hero {
-    margin-top: 12rem;
     min-height: 100vh;
+    margin-top: 6rem;
   }
-  body .hero .hero-content {
-    max-width: 100rem;
-    height: 88vh;
-    padding: 0 11rem;
+  body .hero-content {
+    background-color: #006c78;
+    width: 100%;
+    max-width: 90rem;
+    min-height: 70vh;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.149);
+    padding: 0 12em;
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    box-shadow: 0 20px 50px -10px rgba(118, 118, 118, 0.5);
   }
-  body .hero .hero-content .profil-img-container {
-    width: 310px;
-    height: 310px;
-    top: -12%;
-    left: 35%;
-  }
-  body .hero .hero-content .hero-mdl-content {
+  body .profil-img-container {
+    width: 17rem;
+    height: 17rem;
+    margin: -6.5rem auto 5rem auto;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  body .hero .hero-content .hero-mdl-content .intro-title {
-    font-size: 2.5rem;
+  body .intro-title {
+    font-size: 2.3rem;
     margin-bottom: 0.3em;
+    color: var(--primary-font-color);
+    text-align: center;
+    font-family: var(--ff-Electrolize);
   }
-  body .hero .hero-content .hero-mdl-content .description {
-    font-size: 1.5rem;
-    line-height: 1.9em;
-    margin-bottom: 5rem;
+  body .description {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    margin-bottom: 6rem;
   }
-  body .hero .hero-content .hero-mdl-content .typing {
+  body .typing {
     margin-bottom: 1em;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
-  body .hero .hero-content .hero-mdl-content .cv-link {
-    width: 21rem;
-    border-radius: 30px;
-    font-weight: 600;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgb(255, 255, 255);
-    -webkit-backdrop-filter: blur(30px);
-    backdrop-filter: blur(30px);
+  body .cv-link {
+    width: 20rem;
     display: flex;
     justify-content: center;
-    overflow: hidden;
     text-decoration: none;
     align-items: center;
     margin: auto;
-    font-family: var(--ff-Aldrich);
   }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-text {
+  body .cv-link .download-text {
     width: 19rem;
     position: relative;
-    left: 11px;
-    font-weight: bold;
-    font-size: 1.3rem;
+    left: 20px;
+    font-size: 1.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--secondary-font-color);
   }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon {
+  body .cv-link .download-icon {
     background-color: rgb(255, 255, 255);
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     border-radius: 50%;
-    padding: 0.4rem;
-    width: 40px;
+    padding: 0.35rem;
+    width: 37px;
   }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon img {
-    width: 28px;
+  body .cv-link .download-icon img {
+    width: 27px;
   }
-  body .hero .hero-content .hero-mdl-content .cv-link::before {
+  body .cv-link::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1494,10 +1490,10 @@ header nav .nav-items .theme-container #theme-icon {
     transition: all 0.4s ease-out;
     z-index: -1;
   }
-  body .hero .hero-content .hero-mdl-content .cv-link:hover {
+  body .cv-link:hover {
     transition: all 0.4s ease-out;
   }
-  body .hero .hero-content .hero-mdl-content .cv-link:hover::before {
+  body .cv-link:hover::before {
     width: 100%;
     height: 100%;
     background-color: rgb(255, 255, 255);
@@ -1505,42 +1501,34 @@ header nav .nav-items .theme-container #theme-icon {
     transition: all 0.4s ease-out;
   }
   body .services {
-    min-height: 94vh;
+    min-height: 81vh;
     margin-bottom: 5rem;
   }
-  body .services .card {
-    height: 77vh;
+  body .card {
+    min-height: 73vh;
     margin-top: 1rem;
     max-width: 100rem;
     padding: 0 4rem;
-  }
-  body .services .icon-develop {
-    height: 36vh;
-    max-width: 37rem;
-  }
-  body .services .icon-design {
-    height: 34vh;
-    max-width: 38rem;
   }
   body .portfolio {
     min-height: 160vh;
     margin-bottom: 5rem;
   }
-  body .portfolio .portfolio-content .potofolio-title {
+  body .potofolio-title {
     text-align: center;
     margin-bottom: 1em;
     margin-top: 5em;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 {
+  body .potofolio-title h2 {
     position: relative;
     text-transform: uppercase;
     font-size: 5rem;
     font-weight: 700;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 span {
+  body .potofolio-title h2 span {
     color: #ffffff;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+  body .potofolio-title h2 .bg-text {
     position: absolute;
     top: 30%;
     left: 50%;
@@ -1551,44 +1539,44 @@ header nav .nav-items .theme-container #theme-icon {
     font-weight: 800;
     font-size: 6.5rem;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+  body .portfolio-gallery {
     padding: 0.1rem 2rem;
     margin-bottom: 2em;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+  body .portfolio-gallery button {
     margin: 1.2rem;
     font-size: 1rem;
   }
-  body .portfolio .portfolio-content .portfolio-images {
+  body .portfolio-images {
     gap: 1rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+  body .portfolio-overlay .portfolio-img {
     width: 32rem;
     height: 100%;
     border-radius: 0.2em;
     transition: 0.95s;
     transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+  body .portfolio-overlay .img-expand {
     width: 32rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+  body .portfolio-overlay .img-shrink {
     width: 0em;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+  body .portfolio-overlay .portfolio-links {
     top: -100%;
     left: 0;
     width: 28rem;
     height: 97.5%;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link {
     width: 5rem;
     height: 5rem;
     background-color: white;
     border-radius: 100%;
     transform: translate(-11%, 7%);
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 18px;
@@ -1623,96 +1611,140 @@ header nav .nav-items .theme-container #theme-icon {
     background-color: rgba(255, 255, 0, 0.143);
     max-width: 93%;
   }
-  body header nav .logo-image {
+  body .logo-image {
     max-width: 40%;
   }
-  body header nav .nav-items {
+  body .nav-items {
     width: 57%;
     background-color: red;
   }
-  body header nav .nav-items .navbar {
+  body .navbar {
     gap: 0.8rem;
   }
-  body header nav .nav-items .navbar .nav-links {
+  body .navbar .nav-links {
     font-size: 1rem;
   }
-  body header nav .nav-items .navbar .nav-links-contact {
+  body .navbar .nav-links-contact {
     font-size: 1rem;
   }
-  body header nav .nav-items .theme-container {
+  body .theme-container {
     width: 5%;
     padding: 0.3rem;
   }
   body .hero {
-    margin-top: 10rem;
     min-height: 100vh;
+    margin-top: 6rem;
+    color: red;
   }
-  body .hero .hero-content {
+  body .hero-content {
+    background-color: #006c78;
+    width: 100%;
     max-width: 88rem;
-    height: 85vh;
-    padding: 0 12rem;
-    padding: 0 7rem;
+    min-height: 70vh;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.149);
+    padding: 0 10em;
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    box-shadow: 0 20px 50px -10px rgba(118, 118, 118, 0.5);
   }
-  body .hero .hero-content .profil-img-container {
-    width: 270px;
-    height: 270px;
-    top: -11%;
-  }
-  body .hero .hero-content .hero-mdl-content .intro-title {
-    font-size: 2.4rem;
-    margin-bottom: 0.3em;
-  }
-  body .hero .hero-content .hero-mdl-content .description {
-    font-size: 1.6rem;
-    line-height: 1.8em;
-  }
-  body .hero .hero-content .hero-mdl-content .typing {
+  body .profil-img-container {
+    width: 17rem;
+    height: 17rem;
+    margin: -5.5rem auto 5rem auto;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+  body .intro-title {
+    font-size: 2.3rem;
+    margin-bottom: 0.3em;
+    color: var(--primary-font-color);
+    text-align: center;
+    font-family: var(--ff-Electrolize);
+  }
+  body .description {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-bottom: 6rem;
+  }
+  body .typing {
     margin-bottom: 1em;
     font-size: 1.5rem;
   }
+  body .cv-link {
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    margin: auto;
+  }
+  body .cv-link .download-text {
+    width: 19rem;
+    position: relative;
+    left: 20px;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-font-color);
+  }
+  body .cv-link .download-icon {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-radius: 50%;
+    padding: 0.35rem;
+    width: 37px;
+  }
+  body .cv-link .download-icon img {
+    width: 27px;
+  }
+  body .cv-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: all 0.4s ease-out;
+    z-index: -1;
+  }
+  body .cv-link:hover {
+    transition: all 0.4s ease-out;
+  }
+  body .cv-link:hover::before {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(0);
+    transition: all 0.4s ease-out;
+  }
   body .services {
-    min-height: 85vh;
+    min-height: 76vh;
     margin-bottom: 5rem;
   }
-  body .services .services-title h2 {
-    font-size: 4rem;
-  }
-  body .services .card {
-    height: 69vh;
+  body .card {
+    min-height: 60vh;
     margin-top: 1rem;
     max-width: 88rem;
-    padding: 2rem 4rem;
-  }
-  body .services .card h2 {
-    font-size: 1.4rem;
-  }
-  body .services .card .service-text {
-    font-size: 1.1rem;
-    line-height: 1.9em;
-    font-family: var(--ff-olney);
-  }
-  body .services .icon-develop {
-    height: 39vh;
-    max-width: 37rem;
-  }
-  body .services .icon-design {
-    height: 34vh;
-    max-width: 38rem;
+    padding: 0 4rem;
   }
   body .portfolio {
     min-height: 160vh;
     margin-bottom: 5rem;
   }
-  body .portfolio .portfolio-content .potofolio-title {
+  body .potofolio-title {
     margin-bottom: 1em;
     margin-top: 5em;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 {
+  body .potofolio-title h2 {
     font-size: 5rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+  body .potofolio-title h2 .bg-text {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -1723,44 +1755,44 @@ header nav .nav-items .theme-container #theme-icon {
     font-weight: 800;
     font-size: 7rem;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+  body .portfolio-gallery {
     padding: 0.1rem 2rem;
     margin-bottom: 2em;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+  body .portfolio-gallery button {
     margin: 0.5rem;
     font-size: 1rem;
   }
-  body .portfolio .portfolio-content .portfolio-images {
+  body .portfolio-images {
     gap: 1rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+  body .portfolio-overlay .portfolio-img {
     width: 28rem;
     height: 100%;
     border-radius: 0.2em;
     transition: 0.95s;
     transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+  body .portfolio-overlay .img-expand {
     width: 28rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+  body .portfolio-overlay .img-shrink {
     width: 0em;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+  body .portfolio-overlay .portfolio-links {
     top: -100%;
     left: 0;
     width: 28rem;
     height: 97.5%;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link {
     width: 5rem;
     height: 5rem;
     background-color: white;
     border-radius: 100%;
     transform: translate(-11%, 7%);
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 18px;
@@ -1769,34 +1801,26 @@ header nav .nav-items .theme-container #theme-icon {
   body .contact {
     min-height: 100vh;
   }
-  body .contact .contact-content {
+  body .contact-content {
     max-width: 100rem;
   }
-  body .contact .contact-content .contact-title {
+  body .contact-title {
     text-align: center;
     margin-bottom: 2rem;
   }
-  body .contact .contact-content .contact-title h2 {
+  body .contact-title h2 {
     position: relative;
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 700;
   }
-  body .contact .contact-content .contact-title h2 span {
+  body .contact-title h2 span {
     color: #ffffff;
   }
-  body .contact .contact-content .contact-title h2 .bg-text {
-    position: absolute;
-    top: 39%;
-    left: 50%;
-    color: rgba(245, 245, 245, 0.1882352941);
-    transition: all 0.4s ease-in-out;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    font-weight: 800;
+  body .contact-title h2 .bg-text {
     font-size: 5.9rem;
   }
-  body .contact .contact-content .contact-form .form-container button {
+  body button {
     padding: 0.6rem 2rem;
     font-size: 0.95rem;
   }
@@ -1825,23 +1849,23 @@ header nav .nav-items .theme-container #theme-icon {
     background-color: rgba(255, 0, 0, 0.143);
     max-width: 93%;
   }
-  body header nav .logo-image {
+  body .logo-image {
     max-width: 40%;
   }
-  body header nav .nav-items {
+  body .nav-items {
     width: 61%;
     background-color: red;
   }
-  body header nav .nav-items .navbar {
+  body .navbar {
     gap: 0.8rem;
   }
-  body header nav .nav-items .navbar .nav-links {
+  body .navbar .nav-links {
     font-size: 1rem;
   }
-  body header nav .nav-items .navbar .nav-links-contact {
+  body .navbar .nav-links-contact {
     font-size: 1rem;
   }
-  body header nav .nav-items .theme-container {
+  body .theme-container {
     width: 5%;
     padding: 0.3rem;
   }
@@ -1869,118 +1893,155 @@ header nav .nav-items .theme-container #theme-icon {
     transition: all 1s;
   }
   body .hero {
-    margin-top: 10rem;
     min-height: 100vh;
+    margin-top: 4rem;
   }
-  body .hero .hero-content {
+  body .hero-content {
+    background-color: #006c78;
     max-width: 79rem;
-    height: 82vh;
-    padding: 0 6rem;
+    min-height: 70vh;
+    padding: 0 8em;
   }
-  body .hero .hero-content .profil-img-container {
-    width: 270px;
-    height: 270px;
-    top: -22%;
+  body .profil-img-container {
+    width: 16.5rem;
+    height: 16.5rem;
+    margin: -5.5rem auto 5rem auto;
   }
-  body .hero .hero-content .hero-mdl-content {
-    position: relative;
-    top: -4rem;
-  }
-  body .hero .hero-content .hero-mdl-content .intro-title {
-    font-size: 2.4rem;
+  body .intro-title {
+    font-size: 2.3rem;
     margin-bottom: 0.3em;
   }
-  body .hero .hero-content .hero-mdl-content .description {
-    font-size: 1.45rem;
-    line-height: 1.8em;
-    margin-bottom: 4em;
+  body .description {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-bottom: 6rem;
   }
-  body .hero .hero-content .hero-mdl-content .typing {
-    display: flex;
-    align-items: center;
+  body .typing {
     margin-bottom: 1em;
     font-size: 1.5rem;
   }
-  body .services {
-    min-height: 80vh;
-    margin-bottom: 5rem;
+  body .cv-link {
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    margin: auto;
   }
-  body .services .services-title h2 {
-    font-size: 3.5rem;
-  }
-  body .services .services-title .bg-text {
-    font-size: 5.3rem;
-  }
-  body .services .icon-wrap {
+  body .cv-link .download-text {
+    width: 19rem;
+    position: relative;
+    left: 20px;
+    font-size: 1.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    max-width: 79rem;
+    color: var(--secondary-font-color);
   }
-  body .services .icon-wrap .card {
-    height: 65vh;
+  body .cv-link .download-icon {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-radius: 50%;
+    padding: 0.35rem;
+    width: 37px;
+  }
+  body .cv-link .download-icon img {
+    width: 27px;
+  }
+  body .cv-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: all 0.4s ease-out;
+    z-index: -1;
+  }
+  body .cv-link:hover {
+    transition: all 0.4s ease-out;
+  }
+  body .cv-link:hover::before {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(0);
+    transition: all 0.4s ease-out;
+  }
+  body .services {
+    min-height: 70vh;
+    margin-bottom: 5rem;
+  }
+  body .card {
+    min-height: 55vh;
     margin-top: 1rem;
     max-width: 79rem;
-    padding: 2rem 2.5rem;
+    padding: 0 3rem;
   }
-  body .services .icon-wrap .card h2 {
-    font-size: 1.3rem;
+  body .card h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    color: white;
+    font-family: var(--ff-Electrolize);
   }
-  body .services .icon-wrap .card .service-text {
-    font-size: 1.1rem;
-    line-height: 1.9em;
+  body .card .service-text {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.7rem;
     font-family: var(--ff-olney);
+    text-align: justify;
   }
-  body .services .icon-develop {
-    height: 37vh;
-    max-width: 32rem;
+  body .icon-develop {
+    min-height: 30vh;
+    max-width: 24rem;
   }
-  body .services .icon-design {
-    height: 34vh;
-    max-width: 38rem;
+  body .icon-design {
+    min-height: 23vh;
+    max-width: 21rem;
   }
   body .portfolio {
     min-height: 130vh;
     margin-bottom: 7rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 {
+  body .potofolio-title h2 {
     font-size: 3.5rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+  body .potofolio-title h2 .bg-text {
     font-size: 5.3rem;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+  body .portfolio-gallery {
     padding: 0.1rem 2rem;
     margin-bottom: 2em;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+  body .portfolio-gallery button {
     margin: 0.5rem;
     font-size: 1rem;
   }
-  body .portfolio .portfolio-content .portfolio-images {
+  body .portfolio-images {
     gap: 1rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+  body .portfolio-img {
     width: 25rem;
     height: 100%;
     border-radius: 0.2em;
     transition: 0.95s;
     transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+  body .img-expand {
     width: 25rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+  body .img-shrink {
     width: 0em;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+  body .portfolio-links {
     top: -100%;
     left: 0;
     width: 28rem;
     height: 97.5%;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+  body .portfolio-links .portfolio-link {
     width: 5rem;
     height: 5rem;
     background-color: white;
@@ -1989,35 +2050,35 @@ header nav .nav-items .theme-container #theme-icon {
     left: -2rem;
     top: 0rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 18px;
     left: 18px;
   }
-  body .contact .contact-content .contact-title h2 {
+  body .contact-title h2 {
     font-size: 3.5rem;
   }
-  body .contact .contact-content .contact-title h2 .bg-text {
+  body .contact-title h2 .bg-text {
     font-size: 5.3rem;
   }
-  body .contact .contact-content .contact-form .form-container {
+  body .form-container {
     padding: 2rem 2rem;
   }
-  body .contact .contact-content .contact-form .form-container .input-container {
+  body .input-container {
     margin: 0.7rem 0;
     width: 57rem;
   }
-  body .contact .contact-content .contact-form .form-container .input-container .input {
+  body .input-container .input {
     width: 100%;
     padding: 0.9rem 2.5rem;
     font-size: 0.3rem;
   }
-  body .contact .contact-content .contact-form .form-container .input-container label {
+  body .input-container label {
     padding: 0 0.4rem;
     color: rgba(250, 250, 250, 0.5882352941);
   }
-  body .contact .contact-content .contact-form .form-container button {
+  body button {
     padding: 0.5rem 2rem;
   }
   body .footer {
@@ -2029,35 +2090,31 @@ header nav .nav-items .theme-container #theme-icon {
 /*** BELOW 1440px (large screen) ***/
 /************************************/
 @media (max-width: 90rem) {
-  body {
-    background-size: cover;
-    background-position: center;
-  }
-  body .container {
+  .container {
     max-width: 1000px;
     width: 100%;
     margin: auto;
     background-color: rgba(77, 255, 213, 0.2274509804);
   }
-  body header {
+  header {
     background-color: rgba(77, 255, 213, 0.2274509804);
     max-width: 90%;
     padding: 0.1rem 1rem;
   }
-  body header nav .logo-image {
+  .logo-image {
     max-width: 34%;
   }
-  body header nav .nav-items {
+  .nav-items {
     width: 62%;
   }
-  body header nav .nav-items .navbar {
+  .navbar {
     gap: 0.5rem;
   }
-  body header nav .nav-items .navbar .nav-links {
+  .navbar .nav-links {
     font-size: 0.7rem;
     padding: 0.45rem 1.5rem;
   }
-  body header nav .nav-items .navbar .nav-links-contact {
+  .navbar .nav-links-contact {
     font-size: 0.8rem;
     padding: 0.45rem 1.5rem;
   }
@@ -2085,180 +2142,164 @@ header nav .nav-items .theme-container #theme-icon {
       opacity: 0;
     }
   }
-  body header nav .nav-items .dropdown {
+  .dropdown {
     margin: 0 0.5rem;
     min-width: 3rem;
   }
-  body header nav .nav-items .dropdown .select {
+  .dropdown .select {
     font-size: 0.8rem;
     padding: 0.3rem 0.7rem;
   }
-  body header nav .nav-items .theme-container {
+  .theme-container {
     width: 6%;
     padding: 0.3rem;
   }
-  body .hero {
+  .hero {
     margin-top: 12rem;
-    margin-bottom: 6rem;
-    min-height: 100vh;
+    margin-bottom: 5rem;
+    min-height: 55vh;
   }
-  body .hero .hero-content {
+  .hero-content {
+    background-color: #006c78;
+    width: 100%;
     max-width: 63rem;
-    height: 100vh;
-    padding: 0 6rem;
+    min-height: 1vh;
+    padding: 0 5rem;
   }
-  body .hero .hero-content .profil-img-container {
-    width: 220px;
-    height: 220px;
-    top: -14%;
-  }
-  body .hero .hero-content .hero-mdl-content {
-    position: relative;
-    top: -3rem;
-  }
-  body .hero .hero-content .hero-mdl-content .intro-title {
-    font-size: 1.7rem;
-    margin-bottom: 0.3em;
-  }
-  body .hero .hero-content .hero-mdl-content .description {
-    font-size: 1.1rem;
-    line-height: 1.8em;
-    margin-bottom: 3rem;
-  }
-  body .hero .hero-content .hero-mdl-content .typing {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
-    font-size: 1.3rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link {
-    width: 15rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-text {
-    width: 13rem;
-    position: relative;
-    left: 12px;
-    font-weight: bold;
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--secondary-font-color);
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+  .profil-img-container {
+    width: 13.6rem;
+    height: 13.5rem;
+    margin: -5.5rem auto 2rem auto;
     border-radius: 50%;
-    padding: 0.4rem;
-    width: 40px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon img {
-    width: 26px;
+  .intro-title {
+    font-size: 1.9rem;
+    margin-bottom: 0.2rem;
   }
-  body .social-icons {
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.65rem;
+    margin-bottom: 4rem;
+  }
+  .typing {
+    margin-bottom: 1em;
+    font-size: 1.4rem;
+  }
+  .cv-link {
+    width: 18rem;
+    margin-bottom: 4rem;
+  }
+  .cv-link .download-text {
+    width: 19rem;
+    position: relative;
+    left: 20px;
+    font-size: 1.1rem;
+  }
+  .cv-link .download-icon {
+    padding: 0.35rem;
+    width: 37px;
+  }
+  .cv-link .download-icon img {
+    width: 27px;
+  }
+  .social-icons {
     top: 80%;
   }
-  body .social-icons ul {
+  .social-icons ul {
     transform: translateX(-163px);
   }
-  body .social-icons ul li {
+  .social-icons ul li {
     margin: 0.7em;
     width: 13rem;
-    text-align: right;
     font-size: 0.5rem;
     padding: 0.2em;
   }
-  body .social-icons ul li .icon {
+  .social-icons ul li .icon {
     padding: 0.4em;
-    border-radius: 50%;
-    text-align: center;
     margin-left: 0.875em;
     width: 2.8rem;
-    display: inline-block;
-    vertical-align: middle;
-    transition: all 1s;
   }
-  body .services {
-    min-height: 100vh;
-    margin-bottom: 0rem;
+  .services {
+    min-height: 56vh;
+    margin-bottom: 5rem;
   }
-  body .services .services-title h2 {
+  .services-title h2 {
     font-size: 3rem;
   }
-  body .services .services-title .bg-text {
+  .services-title .bg-text {
     font-size: 5rem;
   }
-  body .services .icon-wrap {
+  .card {
+    min-height: 47vh;
+    margin-top: 0rem;
     max-width: 63rem;
+    padding: 2rem 2rem;
   }
-  body .services .icon-wrap .card {
-    height: 83vh;
-    margin-top: 1rem;
-    max-width: 63rem;
-    padding: 0.5rem 2rem;
+  .card h2 {
+    letter-spacing: 2px;
+    font-size: 1.2em;
   }
-  body .services .icon-wrap .card h2 {
-    font-size: 1.1rem;
+  .card .service-text {
+    font-size: 0.85rem;
+    line-height: 1.2rem;
   }
-  body .services .icon-wrap .card .service-text {
-    font-size: 0.9rem;
-    line-height: 1.9em;
+  .icon-develop {
+    min-height: 30vh;
+    max-width: 20rem;
   }
-  body .services .icon-develop {
-    height: 36vh;
-    max-width: 32rem;
+  .icon-design {
+    min-height: 25vh;
+    max-width: 16.5rem;
   }
-  body .services .icon-design {
-    height: 34vh;
-    max-width: 38rem;
-  }
-  body .portfolio {
+  .portfolio {
     min-height: 100vh;
     margin-bottom: 5rem;
   }
-  body .portfolio .portfolio-content .potofolio-title {
+  .potofolio-title {
     margin-bottom: 2rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 {
+  .potofolio-title h2 {
     font-size: 3rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+  .potofolio-title h2 .bg-text {
     top: 40%;
     font-size: 5rem;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+  .portfolio-gallery {
     padding: 0.6rem 2rem;
     margin-bottom: 2em;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+  .portfolio-gallery button {
     margin: 0 0.3rem;
     font-size: 0.85rem;
   }
-  body .portfolio .portfolio-content .portfolio-images {
+  .portfolio-images {
     gap: 1rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+  .portfolio-img {
     width: 20rem;
     height: 100%;
     border-radius: 0.2em;
     transition: 0.95s;
     transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+  .img-expand {
     width: 20rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+  .img-shrink {
     width: 0em;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+  .portfolio-links {
     top: -100%;
     left: 0;
     width: 20rem;
     height: 97.2%;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+  .portfolio-links .portfolio-link {
     width: 4rem;
     height: 4rem;
     background-color: white;
@@ -2267,57 +2308,57 @@ header nav .nav-items .theme-container #theme-icon {
     left: 0rem;
     top: 0rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+  .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 15px;
     left: 17px;
   }
-  body .contact {
+  .contact {
     min-height: 100vh;
   }
-  body .contact .contact-content .contact-title {
+  .contact-title {
     margin-bottom: 1rem;
   }
-  body .contact .contact-content .contact-title h2 {
+  .contact-title h2 {
     font-size: 3rem;
   }
-  body .contact .contact-content .contact-title h2 span {
+  .contact-title h2 span {
     color: #ffffff;
   }
-  body .contact .contact-content .contact-title h2 .bg-text {
+  .contact-title h2 .bg-text {
     font-size: 5rem;
   }
-  body .contact .contact-content h2 {
+  h2 {
     font-size: 4rem;
   }
-  body .contact .contact-content h2 span {
+  h2 span {
     color: #ffffff;
   }
-  body .contact .contact-content h2 .bg-text {
+  h2 .bg-text {
     font-size: 5.5rem;
   }
-  body .contact .contact-form {
+  .contact-form {
     max-width: 63rem;
   }
-  body .contact .contact-form .form-container {
+  .form-container {
     padding: 2rem 2rem;
   }
-  body .contact .contact-form .form-container .input-container {
+  .input-container {
     margin: 0.5rem 0;
     max-width: 45rem;
   }
-  body .contact .contact-form .form-container .textarea .input {
-    height: 70vh;
+  .textarea .input {
+    min-height: 45vh;
   }
-  body .contact .contact-form .form-container button {
+  button {
     padding: 0 2rem;
   }
-  body .footer {
+  .footer {
     width: 66%;
     margin-bottom: 1rem;
   }
-  body .footer p {
+  .footer p {
     font-size: 1.2rem;
   }
 }
@@ -2325,14 +2366,8 @@ header nav .nav-items .theme-container #theme-icon {
 /*** BELOW 1123px (desktop screen) ***/
 /*************************************/
 @media (max-width: 70rem) {
-  body {
-    background-size: cover;
-    background-position: center;
-  }
   body .container {
     max-width: 870px;
-    width: 100%;
-    margin: auto;
     background-color: rgba(13, 18, 81, 0.3176470588);
   }
   body header {
@@ -2340,20 +2375,20 @@ header nav .nav-items .theme-container #theme-icon {
     max-width: 94%;
     margin-left: 2rem;
   }
-  body header nav .logo-image {
+  body .logo-image {
     max-width: 32%;
   }
-  body header nav .nav-items {
+  body .nav-items {
     width: 63%;
   }
-  body header nav .nav-items .navbar {
+  body .navbar {
     gap: 0.4rem;
   }
-  body header nav .nav-items .navbar .nav-links {
+  body .navbar .nav-links {
     font-size: 0.7rem;
     padding: 0.3rem 0.9rem;
   }
-  body header nav .nav-items .navbar .nav-links-contact {
+  body .navbar .nav-links-contact {
     font-size: 0.7rem;
     padding: 0.3rem 1.5rem;
   }
@@ -2381,15 +2416,15 @@ header nav .nav-items .theme-container #theme-icon {
       opacity: 0;
     }
   }
-  body header nav .nav-items .dropdown {
+  body .dropdown {
     margin: 0 0.5rem;
     min-width: 3rem;
   }
-  body header nav .nav-items .dropdown .select {
+  body .dropdown .select {
     font-size: 0.7rem;
     padding: 0.3rem 0.7rem;
   }
-  body header nav .nav-items .theme-container {
+  body .theme-container {
     width: 5.5%;
     padding: 0.3rem;
   }
@@ -2433,116 +2468,126 @@ header nav .nav-items .theme-container #theme-icon {
   body .hero {
     margin-top: 11rem;
     min-height: 100vh;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
+    min-height: 57vh;
   }
-  body .hero .hero-content {
+  body .hero-content {
+    padding: 0 4rem;
     max-width: 54rem;
-    height: 97vh;
-    padding: 0 5rem;
+    min-height: 27rem;
   }
-  body .hero .hero-content .profil-img-container {
-    width: 205px;
-    height: 205px;
-    top: -15%;
-  }
-  body .hero .hero-content .hero-mdl-content {
-    position: relative;
-    top: -4rem;
-  }
-  body .hero .hero-content .hero-mdl-content .intro-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.3em;
-  }
-  body .hero .hero-content .hero-mdl-content .description {
-    font-size: 1.1rem;
-    line-height: 1.7em;
+  body .profil-img-container {
     margin-bottom: 3rem;
   }
-  body .hero .hero-content .hero-mdl-content .typing {
-    display: flex;
-    align-items: center;
+  body .intro-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+  body .description {
+    font-size: 1.1rem;
+    line-height: 1.65rem;
+    margin-bottom: 4rem;
+  }
+  body .typing {
     margin-bottom: 1em;
     font-size: 1.2rem;
   }
+  body .cv-link {
+    width: 16rem;
+    margin-bottom: 4rem;
+  }
+  body .cv-link .download-text {
+    width: 19rem;
+    position: relative;
+    left: 20px;
+    font-size: 1rem;
+  }
+  body .cv-link .download-icon {
+    padding: 0.35rem;
+    width: 36px;
+  }
+  body .cv-link .download-icon img {
+    width: 25px;
+  }
   body .services {
-    min-height: 100vh;
+    min-height: 49vh;
     margin-bottom: 5rem;
   }
-  body .services .services-title h2 {
-    font-size: 2.8rem;
+  body .services-title h2 {
+    font-size: 3rem;
   }
-  body .services .services-title .bg-text {
-    font-size: 4.5rem;
+  body .services-title .bg-text {
+    font-size: 5rem;
   }
-  body .services .icon-wrap {
-    max-width: 54rem;
+  body .icon-wrap {
+    gap: 1rem;
   }
-  body .services .icon-wrap .card {
-    height: 75vh;
-    margin-top: 1rem;
-    max-width: 54rem;
-    padding: 0.5rem 2rem;
+  body .card {
+    min-height: 40vh;
+    margin-top: 0rem;
+    max-width: 63rem;
+    padding: 2rem 2rem;
   }
-  body .services .icon-wrap .card h2 {
-    font-size: 0.9rem;
+  body .card h2 {
+    letter-spacing: 2px;
+    font-size: 1.1em;
   }
-  body .services .icon-wrap .card .service-text {
-    font-size: 0.8rem;
-    line-height: 1.9em;
+  body .card .service-text {
+    font-size: 0.85rem;
+    line-height: 1.2rem;
   }
-  body .services .icon-develop {
-    height: 31vh;
-    max-width: 35rem;
+  body .icon-develop {
+    min-height: 3vh;
+    max-width: 15.8rem;
   }
-  body .services .icon-design {
-    height: 30vh;
-    max-width: 37rem;
+  body .icon-design {
+    min-height: 19vh;
+    max-width: 12.9rem;
   }
   body .portfolio {
     min-height: 100vh;
     margin-bottom: 2rem;
   }
-  body .portfolio .portfolio-content .potofolio-title {
+  body .potofolio-title {
     margin-bottom: 2rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 {
+  body .potofolio-title h2 {
     font-size: 2.8rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
-    top: 40%;
+  body .potofolio-title h2 .bg-text {
     font-size: 4.5rem;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+  body .portfolio-gallery {
     padding: 0.6rem 2rem;
     margin-bottom: 2em;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+  body .portfolio-gallery button {
     margin: 0 0.2rem;
     font-size: 0.8rem;
   }
-  body .portfolio .portfolio-content .portfolio-images {
+  body .portfolio-images {
     gap: 1rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+  body .portfolio-img {
     width: 17.3rem;
     height: 100%;
     border-radius: 0.2em;
     transition: 0.95s;
     transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+  body .img-expand {
     width: 17.3rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+  body .img-shrink {
     width: 0em;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+  body .portfolio-links {
     top: -100%;
     left: 0;
     width: 20rem;
     height: 96.5%;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+  body .portfolio-links .portfolio-link {
     width: 3.5rem;
     height: 3.5rem;
     background-color: white;
@@ -2551,61 +2596,62 @@ header nav .nav-items .theme-container #theme-icon {
     left: -1.7rem;
     top: 0rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 13px;
     left: 14px;
   }
-  body .contact {
+  .contact {
     min-height: 100vh;
   }
-  body .contact .contact-content .contact-title {
+  .contact-title {
     margin-bottom: 1rem;
   }
-  body .contact .contact-content .contact-title h2 {
+  .contact-title h2 {
     font-size: 2.8rem;
   }
-  body .contact .contact-content .contact-title h2 span {
-    color: #ffffff;
-  }
-  body .contact .contact-content .contact-title h2 .bg-text {
+  .contact-title h2 .bg-text {
     font-size: 4.5rem;
   }
-  body .contact .contact-content h2 {
+  h2 {
     font-size: 4rem;
   }
-  body .contact .contact-content h2 span {
+  h2 span {
     color: #ffffff;
   }
-  body .contact .contact-content h2 .bg-text {
+  h2 .bg-text {
     font-size: 5.5rem;
   }
-  body .contact .contact-form {
-    max-width: 54rem;
+  .contact-form {
+    max-width: 63rem;
   }
-  body .contact .contact-form .form-container {
+  .form-container {
     padding: 2rem 2rem;
   }
-  body .contact .contact-form .form-container .input-container {
-    max-width: 40rem;
-    margin: 0;
+  .input-container {
+    margin: 0.5rem 0;
+    max-width: 45rem;
   }
-  body .contact .contact-form .form-container .input-container label {
-    font-size: 10rem;
+  .textarea .input {
+    min-height: 45vh;
   }
-  body .contact .contact-form .form-container .textarea .input {
-    height: 70vh;
+  button {
+    padding: 0 2rem;
   }
-  body .contact .contact-form .form-container button {
-    padding: 0 1.5rem;
+  .footer {
+    width: 66%;
+    margin-bottom: 1rem;
   }
-  body .footer {
+  .footer p {
+    font-size: 1.2rem;
+  }
+  .footer {
     width: 41%;
     padding: 0.1rem 2rem;
     margin-bottom: 1rem;
   }
-  body .footer p {
+  .footer p {
     font-size: 1.1rem;
   }
 }
@@ -2629,20 +2675,20 @@ header nav .nav-items .theme-container #theme-icon {
     max-width: 100%;
     margin-left: 1.5rem;
   }
-  body header nav .logo-image {
+  body .logo-image {
     max-width: 34%;
   }
-  body header nav .nav-items {
-    width: 61%;
+  body .nav-items {
+    width: 69%;
   }
-  body header nav .nav-items .navbar {
+  body .navbar {
     gap: 0.5rem;
   }
-  body header nav .nav-items .navbar .nav-links {
+  body .navbar .nav-links {
     font-size: 0.7rem;
     padding: 0.3rem 0.85rem;
   }
-  body header nav .nav-items .navbar .nav-links-contact {
+  body .navbar .nav-links-contact {
     font-size: 0.7rem;
     padding: 0.3rem 0.85rem;
   }
@@ -2670,15 +2716,15 @@ header nav .nav-items .theme-container #theme-icon {
       opacity: 0;
     }
   }
-  body header nav .nav-items .dropdown {
+  body .dropdown {
     margin: 0 0.5rem;
     min-width: 3rem;
   }
-  body header nav .nav-items .dropdown .select {
+  body .dropdown .select {
     font-size: 0.7rem;
     padding: 0.3rem 0.7rem;
   }
-  body header nav .nav-items .theme-container {
+  body .theme-container {
     width: 7%;
     padding: 0.3rem;
   }
@@ -2706,118 +2752,60 @@ header nav .nav-items .theme-container #theme-icon {
     transition: all 1s;
   }
   body .hero {
-    margin-top: 9rem;
-    min-height: 100vh;
-    margin-bottom: 3rem;
+    min-height: 54vh;
+    margin-top: 11rem;
   }
-  body .hero .hero-content {
-    max-width: 50rem;
-    height: 90vh;
-    padding: 0 5rem;
-  }
-  body .hero .hero-content .profil-img-container {
-    width: 190px;
-    height: 190px;
-    top: -15%;
-  }
-  body .hero .hero-content .hero-mdl-content {
-    position: relative;
-    top: -3.5rem;
-  }
-  body .hero .hero-content .hero-mdl-content .intro-title {
-    font-size: 1.3rem;
-    margin-bottom: 0.3em;
-  }
-  body .hero .hero-content .hero-mdl-content .description {
-    font-size: 1rem;
-    line-height: 1.7em;
-    margin-bottom: 3rem;
-  }
-  body .hero .hero-content .hero-mdl-content .typing {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
-    font-size: 1.1rem;
-  }
-  body .services {
-    min-height: 93vh;
-    margin-bottom: 2rem;
-  }
-  body .services .services-title h2 {
+  body .services-title h2 {
     font-size: 2.4rem;
   }
-  body .services .services-title .bg-text {
+  body .services-title .bg-text {
     font-size: 4rem;
-  }
-  body .services .icon-wrap {
-    max-width: 50rem;
-  }
-  body .services .icon-wrap .card {
-    height: 73vh;
-    margin-top: 1rem;
-    max-width: 50rem;
-    padding: 0rem 1.5rem;
-  }
-  body .services .icon-wrap .card h2 {
-    font-size: 0.9rem;
-  }
-  body .services .icon-wrap .card .service-text {
-    font-size: 0.8rem;
-    line-height: 1.6em;
-  }
-  body .services .icon-develop {
-    height: 32vh;
-    max-width: 37rem;
-  }
-  body .services .icon-design {
-    height: 31vh;
-    max-width: 38rem;
   }
   body .portfolio {
     min-height: 90vh;
     margin-bottom: 14rem;
   }
-  body .portfolio .portfolio-content .potofolio-title {
+  body .potofolio-title {
     margin-bottom: 2rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 {
+  body .potofolio-title h2 {
     font-size: 2.4rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+  body .potofolio-title h2 .bg-text {
     top: 40%;
     font-size: 4rem;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+  body .portfolio-gallery {
     padding: 0.6rem 1rem;
     margin-bottom: 2em;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+  body .portfolio-gallery button {
     margin: 0 0.2rem;
     font-size: 0.75rem;
   }
-  body .portfolio .portfolio-content .portfolio-images {
+  body .portfolio-images {
     gap: 1rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+  body .portfolio-img {
     width: 16rem;
     height: 100%;
     border-radius: 0.2em;
     transition: 0.95s;
     transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+  body .img-expand {
     width: 16rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+  body .img-shrink {
     width: 0em;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+  body .portfolio-links {
     top: -100%;
     left: 0;
     width: 16rem;
     height: 97.5%;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+  body .portfolio-links .portfolio-link {
     width: 3.5rem;
     height: 3.5rem;
     background-color: white;
@@ -2826,54 +2814,11 @@ header nav .nav-items .theme-container #theme-icon {
     left: -0.2rem;
     top: 0rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 13px;
     left: 14px;
-  }
-  body .contact {
-    min-height: 100vh;
-  }
-  body .contact .contact-content .contact-title {
-    margin-bottom: 1rem;
-  }
-  body .contact .contact-content .contact-title h2 {
-    font-size: 2.8rem;
-  }
-  body .contact .contact-content .contact-title h2 span {
-    color: #ffffff;
-  }
-  body .contact .contact-content .contact-title h2 .bg-text {
-    font-size: 4rem;
-  }
-  body .contact .contact-content h2 {
-    font-size: 4rem;
-  }
-  body .contact .contact-content h2 span {
-    color: #ffffff;
-  }
-  body .contact .contact-content h2 .bg-text {
-    font-size: 5.5rem;
-  }
-  body .contact .contact-form {
-    max-width: 54rem;
-  }
-  body .contact .contact-form .form-container {
-    padding: 2rem 2rem;
-  }
-  body .contact .contact-form .form-container .input-container {
-    max-width: 36rem;
-    margin: 0;
-  }
-  body .contact .contact-form .form-container .input-container label {
-    font-size: 10rem;
-  }
-  body .contact .contact-form .form-container .textarea .input {
-    height: 60vh;
-  }
-  body .contact .contact-form .form-container button {
-    padding: 0 0.8rem;
   }
   body .footer {
     width: 42%;
@@ -2899,75 +2844,6 @@ header nav .nav-items .theme-container #theme-icon {
   body .cursor {
     display: none;
   }
-  body header {
-    background-color: rgba(123, 3, 45, 0.462745098);
-    max-width: 100%;
-    margin-left: 1.5rem;
-  }
-  body header nav .logo-image {
-    max-width: 35%;
-  }
-  body header nav .nav-items {
-    width: 72%;
-  }
-  body header nav .nav-items .navbar {
-    gap: 0.4rem;
-  }
-  body header nav .nav-items .navbar .nav-links {
-    font-size: 0.65rem;
-    padding: 0.3rem 0.75rem;
-  }
-  body header nav .nav-items .navbar .nav-links-contact {
-    font-size: 0.65rem;
-    padding: 0.3rem 0.75rem;
-  }
-  @-webkit-keyframes ring {
-    0% {
-      width: 30px;
-      height: 30px;
-      opacity: 1;
-    }
-    100% {
-      width: 80px;
-      height: 80px;
-      opacity: 0;
-    }
-  }
-  @keyframes ring {
-    0% {
-      width: 30px;
-      height: 30px;
-      opacity: 1;
-    }
-    100% {
-      width: 80px;
-      height: 80px;
-      opacity: 0;
-    }
-  }
-  body header nav .nav-items .dropdown {
-    min-width: 3rem;
-    margin: 0 0.2rem;
-  }
-  body header nav .nav-items .dropdown .select {
-    font-size: 0.7rem;
-  }
-  body header nav .nav-items .dropdown .menu {
-    padding: 0 0.5rem;
-    position: absolute;
-    top: 2rem;
-    left: 50%;
-    margin-top: 0.1rem;
-    font-size: 0.7rem;
-  }
-  body header nav .nav-items .dropdown .menu li {
-    padding: 0.5rem 0.5rem;
-    margin: 0.3rem 0;
-  }
-  body header nav .nav-items .theme-container {
-    width: 6%;
-    padding: 0.2rem;
-  }
   body .social-icons {
     top: 85%;
   }
@@ -2991,155 +2867,198 @@ header nav .nav-items .theme-container #theme-icon {
     vertical-align: middle;
     transition: all 1s;
   }
-  body .hero {
-    margin-top: 8rem;
-    min-height: 100vh;
-    margin-bottom: 3rem;
+  body header {
+    background-color: rgba(123, 3, 45, 0.462745098);
+    max-width: 100%;
+    margin-left: 1.5rem;
   }
-  body .hero .hero-content {
-    max-width: 44rem;
-    height: 90vh;
-    padding: 0 5rem;
+  body .logo-image {
+    max-width: 35%;
   }
-  body .hero .hero-content .profil-img-container {
-    width: 180px;
-    height: 180px;
-    top: -15%;
+  body .nav-items {
+    width: 72%;
   }
-  body .hero .hero-content .hero-mdl-content {
-    position: relative;
-    top: -3rem;
+  body .navbar {
+    gap: 0.4rem;
   }
-  body .hero .hero-content .hero-mdl-content .intro-title {
-    font-size: 1.4rem;
-    margin-bottom: 0.2em;
+  body .navbar .nav-links {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.75rem;
   }
-  body .hero .hero-content .hero-mdl-content .description {
-    font-size: 1rem;
-    line-height: 1.5em;
-    margin-bottom: 3rem;
+  body .navbar .nav-links-contact {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.75rem;
   }
-  body .hero .hero-content .hero-mdl-content .typing {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
-    font-size: 1rem;
+  @-webkit-keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 80px;
+      height: 80px;
+      opacity: 0;
+    }
   }
-  body .hero .hero-content .hero-mdl-content .cv-link {
-    width: 14rem;
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 80px;
+      height: 80px;
+      opacity: 0;
+    }
   }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-text {
-    width: 19rem;
-    font-size: 0.95rem;
+  body .dropdown {
+    min-width: 3rem;
+    margin: 0 0.2rem;
   }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon {
-    border-radius: 50%;
-    padding: 0.3rem;
-    width: 40px;
+  body .dropdown .select {
+    font-size: 0.7rem;
   }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon img {
-    width: 24px;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link::before {
-    content: "";
+  body .dropdown .menu {
+    padding: 0 0.5rem;
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(100%);
-    transition: all 0.4s ease-out;
-    z-index: -1;
+    top: 2rem;
+    left: 50%;
+    margin-top: 0.1rem;
+    font-size: 0.7rem;
   }
-  body .hero .hero-content .hero-mdl-content .cv-link:hover {
-    transition: all 0.4s ease-out;
+  body .dropdown .menu li {
+    padding: 0.5rem 0.5rem;
+    margin: 0.3rem 0;
   }
-  body .hero .hero-content .hero-mdl-content .cv-link:hover::before {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    transform: translateX(0);
-    transition: all 0.4s ease-out;
+  body .theme-container {
+    width: 6%;
+    padding: 0.2rem;
+  }
+  body .hero {
+    margin-top: 9rem;
+    margin-bottom: 4rem;
+  }
+  body .hero-content {
+    padding: 0 3rem;
+    max-width: 44rem;
+  }
+  body .profil-img-container {
+    width: 10.5rem;
+    height: 10.5rem;
+    margin: -4rem auto 1.5rem auto;
+  }
+  body .intro-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+  }
+  body .description {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin-bottom: 2.2rem;
+  }
+  body .typing {
+    font-size: 1.1rem;
+  }
+  body .cv-link {
+    width: 15rem;
+    margin-bottom: 2.8em;
+  }
+  body .cv-link .download-text {
+    width: 19rem;
+    position: relative;
+    left: 18px;
+    font-size: 0.9rem;
+  }
+  body .cv-link .download-icon {
+    padding: 0.35rem;
+    width: 32px;
+  }
+  body .cv-link .download-icon img {
+    width: 21px;
   }
   body .services {
-    min-height: 80vh;
+    min-height: 45vh;
+    margin-bottom: 5rem;
   }
-  body .services .services-title {
-    margin-bottom: 1rem;
+  body .services-title h2 {
+    font-size: 2rem;
   }
-  body .services .services-title h2 {
-    font-size: 2.3rem;
-  }
-  body .services .services-title .bg-text {
+  body .services-title .bg-text {
     font-size: 3.4rem;
   }
-  body .services .icon-wrap {
-    max-width: 50rem;
+  body .icon-wrap {
+    gap: 0.6rem;
   }
-  body .services .icon-wrap .card {
-    height: 65vh;
-    margin-top: 1rem;
-    max-width: 50rem;
-    padding: 0rem 1rem;
+  body .card {
+    min-height: 28vh;
+    margin-top: 0rem;
+    max-width: 63rem;
+    padding: 1.3rem 1.3rem;
   }
-  body .services .icon-wrap .card h2 {
-    font-size: 0.8rem;
+  body .card h2 {
+    letter-spacing: 2px;
+    font-size: 1rem;
+    text-align: center;
   }
-  body .services .icon-wrap .card .service-text {
-    font-size: 0.6rem;
-    line-height: 1.8em;
+  body .card .service-text {
+    font-size: 0.7rem;
+    line-height: 1.2rem;
   }
-  body .services .icon-develop {
-    height: 32vh;
-    max-width: 37rem;
+  body .icon-develop {
+    min-height: 19vh;
+    max-width: 14rem;
   }
-  body .services .icon-design {
-    height: 31vh;
-    max-width: 38rem;
+  body .icon-design {
+    min-height: 0vh;
+    max-width: 12rem;
   }
   body .portfolio {
     min-height: 100vh;
     margin-bottom: 5rem;
   }
-  body .portfolio .portfolio-content .potofolio-title {
+  body .potofolio-title {
     margin-bottom: 2.3rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 {
+  body .potofolio-title h2 {
     font-size: 2rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+  body .potofolio-title h2 .bg-text {
     top: 40%;
     font-size: 3.4rem;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+  body .portfolio-gallery {
     padding: 0.6rem 1rem;
     margin-bottom: 2em;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+  body .portfolio-gallery button {
     margin: 0 0.2rem;
     font-size: 0.7rem;
   }
-  body .portfolio .portfolio-content .portfolio-images {
+  body .portfolio-images {
     gap: 0.8rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+  body .portfolio-img {
     width: 14rem;
     height: 100%;
     border-radius: 0.2em;
     transition: 0.95s;
     transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+  body .img-expand {
     width: 14rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+  body .img-shrink {
     width: 0em;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+  body .portfolio-links {
     top: -100%;
     left: 0;
     width: 14rem;
     height: 97.5%;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+  body .portfolio-links .portfolio-link {
     width: 3rem;
     height: 3rem;
     background-color: white;
@@ -3148,7 +3067,7 @@ header nav .nav-items .theme-container #theme-icon {
     left: -0.2rem;
     top: 0rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 12px;
@@ -3157,42 +3076,30 @@ header nav .nav-items .theme-container #theme-icon {
   body .contact {
     min-height: 100vh;
   }
-  body .contact .contact-content .contact-title {
-    margin-bottom: 1rem;
+  body .contact-title {
+    margin-bottom: 0rem;
   }
-  body .contact .contact-content .contact-title h2 {
-    font-size: 2.3rem;
+  body .contact-title h2 {
+    font-size: 2rem;
   }
-  body .contact .contact-content .contact-title h2 span {
-    color: #ffffff;
-  }
-  body .contact .contact-content .contact-title h2 .bg-text {
+  body .contact-title .bg-text {
     font-size: 3.4rem;
   }
-  body .contact .contact-content h2 {
-    font-size: 4rem;
+  body .contact-form {
+    max-width: 44rem;
   }
-  body .contact .contact-content h2 span {
-    color: #ffffff;
-  }
-  body .contact .contact-content h2 .bg-text {
-    font-size: 5.5rem;
-  }
-  body .contact .contact-form {
-    max-width: 54rem;
-  }
-  body .contact .contact-form .form-container {
+  body .form-container {
     padding: 2rem 2rem;
   }
-  body .contact .contact-form .form-container .input-container {
-    max-width: 30rem;
-    margin: 0;
+  body .input-container {
+    margin: 0.5rem 0;
+    max-width: 41rem;
   }
-  body .contact .contact-form .form-container .textarea .input {
-    height: 60vh;
+  body .textarea .input {
+    min-height: 45vh;
   }
-  body .contact .contact-form .form-container button {
-    padding: 0 0.8rem;
+  body button {
+    padding: 0 2rem;
   }
   body .footer {
     width: 46%;
@@ -3206,7 +3113,7 @@ header nav .nav-items .theme-container #theme-icon {
 /*************************************/
 /*** BELOW 797px ( tablets screen) ***/
 /*************************************/
-@media (max-width: 50rem) {
+@media (max-width: 49rem) {
   body {
     background-size: cover;
     background-position: center;
@@ -3223,20 +3130,20 @@ header nav .nav-items .theme-container #theme-icon {
   body header {
     background-color: rgba(0, 1, 0, 0.2666666667);
   }
-  body header nav .logo-image {
+  body .logo-image {
     max-width: 54%;
   }
-  body header nav .nav-items {
+  body .nav-items {
     width: 162%;
   }
-  body header nav .nav-items .navbar {
+  body .navbar {
     gap: 0.4rem;
   }
-  body header nav .nav-items .navbar .nav-links {
+  body .navbar .nav-links {
     font-size: 0.55rem;
     padding: 0.3rem 0.75rem;
   }
-  body header nav .nav-items .navbar .nav-links-contact {
+  body .navbar .nav-links-contact {
     font-size: 0.55rem;
     padding: 0.3rem 0.75rem;
   }
@@ -3264,14 +3171,14 @@ header nav .nav-items .theme-container #theme-icon {
       opacity: 0;
     }
   }
-  body header nav .nav-items .dropdown {
+  body .dropdown {
     min-width: 1.5rem;
     margin: 0 0.1rem;
   }
-  body header nav .nav-items .dropdown .select {
+  body .dropdown .select {
     font-size: 0.6rem;
   }
-  body header nav .nav-items .dropdown .menu {
+  body .dropdown .menu {
     padding: 0 0.4rem;
     position: absolute;
     top: 2rem;
@@ -3279,11 +3186,11 @@ header nav .nav-items .theme-container #theme-icon {
     margin-top: 0.1rem;
     font-size: 0.7rem;
   }
-  body header nav .nav-items .dropdown .menu li {
+  body .dropdown .menu li {
     padding: 0.5rem 0.5rem;
     margin: 0.3rem 0;
   }
-  body header nav .nav-items .theme-container {
+  body .theme-container {
     width: 6%;
     padding: 0.2rem;
   }
@@ -3314,160 +3221,132 @@ header nav .nav-items .theme-container #theme-icon {
     transition: all 1s;
   }
   body .hero {
-    margin-top: 8rem;
-    min-height: 100vh;
+    margin-top: 9rem;
     margin-bottom: 3rem;
+    min-height: 40vh;
   }
-  body .hero .hero-content {
+  body .hero-content {
     max-width: 38rem;
-    height: 90vh;
-    padding: 0 4rem;
+    padding: 0 2.5rem;
   }
-  body .hero .hero-content .profil-img-container {
-    width: 170px;
-    height: 170px;
-    top: -15%;
-    left: 30%;
+  body .profil-img-container {
+    width: 9rem;
+    height: 9rem;
+    margin: -3.8rem auto 1.5rem auto;
   }
-  body .hero .hero-content .hero-mdl-content {
-    position: relative;
-    top: -4rem;
-  }
-  body .hero .hero-content .hero-mdl-content .intro-title {
-    font-size: 1.3rem;
-    margin-bottom: 0.2em;
-  }
-  body .hero .hero-content .hero-mdl-content .description {
-    font-size: 1rem;
-    line-height: 1.5em;
-    margin-bottom: 2rem;
-  }
-  body .hero .hero-content .hero-mdl-content .typing {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
-    font-size: 1rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link {
-    width: 14rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-text {
-    width: 19rem;
-    font-size: 0.95rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon {
-    border-radius: 50%;
-    padding: 0.3rem;
-    width: 40px;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon img {
-    width: 24px;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(100%);
-    transition: all 0.4s ease-out;
-    z-index: -1;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link:hover {
-    transition: all 0.4s ease-out;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link:hover::before {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    transform: translateX(0);
-    transition: all 0.4s ease-out;
-  }
-  body .services {
-    min-height: 100vh;
+  body .intro-title {
+    font-size: 1.2rem;
     margin-bottom: 0;
   }
-  body .services .services-title {
-    margin-bottom: 1rem;
+  body .description {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin-bottom: 2.2rem;
   }
-  body .services .services-title h2 {
+  body .typing {
+    font-size: 1rem;
+  }
+  body .cv-link {
+    width: 15rem;
+    margin-bottom: 2.5em;
+  }
+  body .cv-link .download-text {
+    width: 19rem;
+    position: relative;
+    left: 18px;
+    font-size: 0.85rem;
+  }
+  body .cv-link .download-icon {
+    padding: 0.35rem;
+    width: 30px;
+  }
+  body .cv-link .download-icon img {
+    width: 18px;
+  }
+  body .services {
+    min-height: 45vh;
+    margin-bottom: 5rem;
+  }
+  body .services-title h2 {
     font-size: 2rem;
   }
-  body .services .services-title .bg-text {
+  body .services-title .bg-text {
     font-size: 3rem;
   }
-  body .services .icon-wrap {
-    max-width: 38rem;
+  body .icon-wrap {
     flex-wrap: wrap;
-    gap: 0.5rem;
+    width: 100%;
+    gap: 1rem;
   }
-  body .services .icon-wrap .card {
-    height: 65vh;
-    margin-top: 1rem;
-    width: 90%;
-    max-width: 38rem;
-    padding: 2rem 2rem;
+  body .card {
+    min-height: 28vh;
+    margin-top: 0rem;
+    width: 84%;
+    padding: 2rem;
   }
-  body .services .icon-wrap .card h2 {
-    font-size: 0.8rem;
+  body .card h2 {
+    letter-spacing: 2px;
+    font-size: 1rem;
+    text-align: center;
   }
-  body .services .icon-wrap .card .service-text {
-    font-size: 0.8rem;
-    line-height: 1.8em;
+  body .card .service-text {
+    font-size: 0.7rem;
+    line-height: 1.2rem;
   }
-  body .services .icon-develop {
-    height: 35vh;
-    max-width: 37rem;
+  body .icon-develop {
+    min-height: 19vh;
+    max-width: 14rem;
   }
-  body .services .icon-design {
-    height: 42vh;
-    max-width: 40rem;
+  body .icon-design {
+    min-height: 0vh;
+    max-width: 12rem;
   }
   body .portfolio {
     min-height: 100vh;
     margin-bottom: 5rem;
   }
-  body .portfolio .portfolio-content .potofolio-title {
+  body .potofolio-title {
     margin-bottom: 2rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 {
+  body .potofolio-title h2 {
     font-size: 2rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+  body .potofolio-title h2 .bg-text {
     top: 40%;
     font-size: 3rem;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+  body .portfolio-gallery {
     padding: 0.6rem 1rem;
     margin-bottom: 2em;
     flex-wrap: wrap;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
-    margin: 0.7rem;
+  body .portfolio-gallery button {
+    margin: 0.5rem;
     font-size: 0.8rem;
   }
-  body .portfolio .portfolio-content .portfolio-images {
+  body .portfolio-images {
     gap: 0.8rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+  body .portfolio-overlay .portfolio-img {
     width: 18rem;
     height: 100%;
     border-radius: 0.2em;
     transition: 0.95s;
     transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+  body .portfolio-overlay .img-expand {
     width: 18rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+  body .portfolio-overlay .img-shrink {
     width: 0em;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+  body .portfolio-overlay .portfolio-links {
     top: -100%;
     left: 0;
     width: 18rem;
     height: 97.5%;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link {
     width: 3rem;
     height: 3rem;
     background-color: white;
@@ -3476,43 +3355,27 @@ header nav .nav-items .theme-container #theme-icon {
     left: -0.2rem;
     top: 0rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 12px;
     left: 11.5px;
   }
-  body .contact {
-    min-height: 100vh;
+  body .contact-title {
+    margin-bottom: 1rem;
   }
-  body .contact .contact-content .contact-title {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  body .contact .contact-content .contact-title h2 {
+  body .contact-title h2 {
     font-size: 2rem;
   }
-  body .contact .contact-content .contact-title h2 span {
-    color: #ffffff;
+  body .contact-title .bg-text {
+    font-size: 3rem;
   }
-  body .contact .contact-content .contact-title h2 .bg-text {
-    font-size: 3.5rem;
+  body .contact-form {
+    max-width: 38rem;
   }
-  body .contact .contact-content .contact-form .form-container {
-    padding: 0.5rem 2rem;
-  }
-  body .contact .contact-content .contact-form .form-container .input-container {
-    margin: 0.4rem 0;
-    width: 31rem;
-  }
-  body .contact .contact-content .contact-form .form-container .input-container label {
-    font-size: 1rem;
-  }
-  body .contact .contact-content .contact-form .form-container .textarea .input {
-    min-height: 65vh;
-  }
-  body .contact .contact-content .contact-form .form-container button {
-    padding: 0.4rem 1rem;
+  body .input-container {
+    margin: 0.5rem 0;
+    max-width: 37rem;
   }
   body .footer {
     width: 55%;
@@ -3547,7 +3410,7 @@ header nav .nav-items .theme-container #theme-icon {
     flex-direction: row-reverse;
     width: 93%;
   }
-  body header .hamburgerMenu {
+  body .hamburgerMenu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3558,7 +3421,7 @@ header nav .nav-items .theme-container #theme-icon {
     width: 50px;
     height: 50px;
   }
-  body header .hamburgerMenu div {
+  body .hamburgerMenu div {
     display: block;
     background-color: rgb(255, 255, 255);
     height: 3px;
@@ -3566,23 +3429,23 @@ header nav .nav-items .theme-container #theme-icon {
     border-radius: 10px;
     transition: 0.3s;
   }
-  body header .move .line1 {
+  body .move .line1 {
     transform: rotate(-45deg) translate(-5px, 5px);
   }
-  body header .move .line2 {
+  body .move .line2 {
     opacity: 0;
   }
-  body header .move .line3 {
+  body .move .line3 {
     transform: rotate(45deg) translate(-5px, -5px);
   }
-  body header nav {
+  body nav {
     position: relative;
-    left: 0rem;
+    left: -8.7rem;
   }
-  body header nav .logo-image {
-    width: 40%;
+  body nav .logo-image {
+    width: 33%;
   }
-  body header nav .nav-items {
+  body nav .nav-items {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -3599,51 +3462,51 @@ header nav .nav-items .theme-container #theme-icon {
     border-top-left-radius: 500px;
     border-top-right-radius: 29px;
   }
-  body header nav .nav-items .navbar {
+  body nav .navbar {
     gap: 0rem;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  body header nav .nav-items .navbar .nav-links {
+  body nav .navbar .nav-links {
     font-size: 0.8rem;
     padding: 0.3rem 1.5rem;
     display: block;
     margin: 0.9rem 0;
   }
-  body header nav .nav-items .navbar .nav-links-contact {
+  body nav .navbar .nav-links-contact {
     font-size: 0.8rem;
     padding: 0.3rem 1.1rem;
     display: block;
     margin: 0.9rem 0;
   }
-  body header nav .nav-items .dropdown {
+  body nav .dropdown {
     margin: 0 0.5rem;
     min-width: 2rem;
     display: block;
     margin: 0.9rem 0;
   }
-  body header nav .nav-items .dropdown .select {
+  body nav .dropdown .select {
     font-size: 0.7rem;
     padding: 0.3rem 0.8rem;
   }
-  body header nav .nav-items .theme-container {
+  body nav .theme-container {
     width: 2.5rem;
     height: 2.5rem;
     padding: 0.3rem;
     display: block;
   }
-  body header nav .nav-items .menu-toggle-social-icons {
+  body nav .menu-toggle-social-icons {
     display: inline-block;
     margin-top: 1rem;
   }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu {
+  body nav .menu-toggle-social-icons .social-icons-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
   }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu li {
+  body nav .menu-toggle-social-icons .social-icons-menu li {
     margin-right: 1rem;
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid rgb(255, 255, 255);
@@ -3652,10 +3515,10 @@ header nav .nav-items .theme-container #theme-icon {
     width: 3rem;
     height: 3rem;
   }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu a {
+  body nav .menu-toggle-social-icons .social-icons-menu a {
     display: inline-block;
   }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu img {
+  body nav .menu-toggle-social-icons .social-icons-menu img {
     width: 2.5rem;
     height: 2.5rem;
     display: flex;
@@ -3666,7 +3529,7 @@ header nav .nav-items .theme-container #theme-icon {
     top: -7px;
     left: -8.5px;
   }
-  body header nav .open-menu {
+  body nav .open-menu {
     right: -60%;
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
@@ -3674,154 +3537,77 @@ header nav .nav-items .theme-container #theme-icon {
     display: none;
   }
   body .hero {
-    margin-top: 8rem;
-    min-height: 100vh;
+    margin-top: 10rem;
     margin-bottom: 3rem;
+    min-height: 42vh;
   }
-  body .hero .hero-content {
-    max-width: 38rem;
-    height: 90vh;
-    padding: 0 4rem;
+  body .cv-link {
+    width: 12rem;
   }
-  body .hero .hero-content .profil-img-container {
-    width: 160px;
-    height: 160px;
-    top: -13%;
-    left: 30%;
-  }
-  body .hero .hero-content .hero-mdl-content {
-    position: relative;
-    top: -3rem;
-  }
-  body .hero .hero-content .hero-mdl-content .intro-title {
-    font-size: 1.3rem;
-    margin-bottom: 0.2em;
-  }
-  body .hero .hero-content .hero-mdl-content .description {
-    font-size: 1rem;
-    line-height: 1.5em;
-    margin-bottom: 2rem;
-  }
-  body .hero .hero-content .hero-mdl-content .typing {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
-    font-size: 1rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link {
-    width: 14rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-text {
+  body .cv-link .download-text {
     width: 19rem;
-    font-size: 0.95rem;
+    position: relative;
+    left: 14px;
+    font-size: 0.83rem;
   }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon {
-    border-radius: 50%;
-    padding: 0.3rem;
-    width: 40px;
+  body .cv-link .download-icon {
+    padding: 0.35rem;
+    width: 27px;
   }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon img {
-    width: 24px;
+  body .cv-link .download-icon img {
+    width: 16px;
   }
-  body .hero .hero-content .hero-mdl-content .cv-link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(100%);
-    transition: all 0.4s ease-out;
-    z-index: -1;
+  body .services-title h2 {
+    font-size: 2rem;
   }
-  body .hero .hero-content .hero-mdl-content .cv-link:hover {
-    transition: all 0.4s ease-out;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link:hover::before {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    transform: translateX(0);
-    transition: all 0.4s ease-out;
-  }
-  body .services {
-    min-height: 100vh;
-  }
-  body .services .services-title {
-    margin-bottom: 2rem;
-  }
-  body .services .services-title h2 {
-    font-size: 2.2rem;
-  }
-  body .services .services-title h2 .bg-text {
-    font-size: 3.5rem;
-  }
-  body .services .icon-wrap .card {
-    padding: 3rem;
-    width: 100%;
-  }
-  body .services .icon-wrap .card h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-  }
-  body .services .icon-wrap .card .service-text {
-    color: white;
-    font-size: 0.85rem;
-    line-height: 1.5em;
-  }
-  body .services .icon-wrap .icon-develop {
-    height: 31h;
-    margin-bottom: 0.4rem;
-    max-width: 20rem;
-  }
-  body .services .icon-wrap .icon-design {
-    height: 45vh;
-    max-width: 61rem;
+  body .services-title .bg-text {
+    font-size: 3.3rem;
   }
   body .portfolio {
     min-height: 100vh;
     margin-bottom: 5rem;
   }
-  body .portfolio .portfolio-content .potofolio-title {
+  body .potofolio-title {
     margin-bottom: 2rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 {
-    font-size: 2rem;
+  body .potofolio-title h2 {
+    font-size: 3.3rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+  body .potofolio-title h2 .bg-text {
     top: 40%;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+  body .portfolio-gallery {
     padding: 0.6rem 1rem;
     margin-bottom: 2em;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+  body .portfolio-gallery button {
     margin: 0.4rem;
     font-size: 0.8rem;
   }
-  body .portfolio .portfolio-content .portfolio-images {
+  body .portfolio-images {
     gap: 0.8rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+  body .portfolio-img {
     width: 18rem;
     height: 100%;
     border-radius: 0.2em;
     transition: 0.95s;
     transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+  body .img-expand {
     width: 18rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+  body .img-shrink {
     width: 0em;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+  body .portfolio-links {
     top: -100%;
     left: 0;
     width: 18rem;
     height: 96.5%;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+  body .portfolio-links .portfolio-link {
     width: 3rem;
     height: 3rem;
     background-color: white;
@@ -3830,43 +3616,27 @@ header nav .nav-items .theme-container #theme-icon {
     left: -1rem;
     top: 0rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 12px;
     left: 11.5px;
   }
-  body .contact {
-    min-height: 100vh;
-  }
-  body .contact .contact-content .contact-title {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  body .contact .contact-content .contact-title h2 {
+  body .contact-title h2 {
     font-size: 2rem;
   }
-  body .contact .contact-content .contact-title h2 span {
-    color: #ffffff;
+  body .contact-title h2 .bg-text {
+    font-size: 3.3rem;
   }
-  body .contact .contact-content .contact-title h2 .bg-text {
-    font-size: 3.5rem;
+  body .contact-form {
+    max-width: 38rem;
   }
-  body .contact .contact-content .contact-form .form-container {
-    padding: 0.5rem 2rem;
+  body .input-container {
+    margin: 0.5rem 0;
+    max-width: 36rem;
   }
-  body .contact .contact-content .contact-form .form-container .input-container {
-    margin: 0.4rem 0;
-    width: 28rem;
-  }
-  body .contact .contact-content .contact-form .form-container .input-container label {
-    font-size: 1rem;
-  }
-  body .contact .contact-content .contact-form .form-container .textarea .input {
-    min-height: 65vh;
-  }
-  body .contact .contact-content .contact-form .form-container button {
-    padding: 0.4rem 1rem;
+  body .input-container label {
+    z-index: 1;
   }
   body .footer {
     width: 62%;
@@ -3901,7 +3671,7 @@ header nav .nav-items .theme-container #theme-icon {
     padding: 0 2rem;
     top: 2%;
   }
-  body header .hamburgerMenu {
+  body .hamburgerMenu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3912,7 +3682,7 @@ header nav .nav-items .theme-container #theme-icon {
     width: 50px;
     height: 50px;
   }
-  body header .hamburgerMenu div {
+  body .hamburgerMenu div {
     display: block;
     background-color: rgb(255, 255, 255);
     height: 3px;
@@ -3920,24 +3690,24 @@ header nav .nav-items .theme-container #theme-icon {
     border-radius: 10px;
     transition: 0.3s;
   }
-  body header .move .line1 {
+  body .move .line1 {
     transform: rotate(-45deg) translate(-5px, 5px);
   }
-  body header .move .line2 {
+  body .move .line2 {
     opacity: 0;
   }
-  body header .move .line3 {
+  body .move .line3 {
     transform: rotate(45deg) translate(-5px, -5px);
   }
-  body header nav {
+  body nav {
     position: absolute;
     left: 2.3rem;
   }
-  body header nav .logo-image {
+  body nav .logo-image {
     width: 37%;
     margin-top: 0.8rem;
   }
-  body header nav .nav-items {
+  body nav .nav-items {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -3954,35 +3724,35 @@ header nav .nav-items .theme-container #theme-icon {
     border-top-left-radius: 1700px;
     border-top-right-radius: 149px;
   }
-  body header nav .nav-items .navbar {
+  body nav .navbar {
     gap: 0rem;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  body header nav .nav-items .navbar .nav-links {
+  body nav .navbar .nav-links {
     font-size: 0.75rem;
     padding: 0.3rem 1.5rem;
     display: block;
     margin: 0.6rem 0;
   }
-  body header nav .nav-items .navbar .nav-links-contact {
+  body nav .navbar .nav-links-contact {
     font-size: 0.75rem;
     padding: 0.3rem 1.1rem;
     display: block;
     margin: 0.6rem 0;
   }
-  body header nav .nav-items .menu-toggle-social-icons {
+  body nav .menu-toggle-social-icons {
     display: inline-block;
     margin-top: 1rem;
   }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu {
+  body nav .menu-toggle-social-icons .social-icons-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
   }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu li {
+  body nav .menu-toggle-social-icons .social-icons-menu li {
     margin-right: 1rem;
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid rgb(255, 255, 255);
@@ -3991,10 +3761,10 @@ header nav .nav-items .theme-container #theme-icon {
     width: 2.4rem;
     height: 2.4rem;
   }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu a {
+  body nav .menu-toggle-social-icons .social-icons-menu a {
     display: inline-block;
   }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu img {
+  body nav .menu-toggle-social-icons .social-icons-menu img {
     width: 2rem;
     height: 2rem;
     display: flex;
@@ -4005,7 +3775,7 @@ header nav .nav-items .theme-container #theme-icon {
     top: -2px;
     left: -2px;
   }
-  body header nav .open-menu {
+  body nav .open-menu {
     right: -5%;
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
@@ -4013,158 +3783,69 @@ header nav .nav-items .theme-container #theme-icon {
     display: none;
   }
   body .hero {
-    margin-top: 8rem;
-    min-height: 100vh;
+    margin-top: 10rem;
+    min-height: 47vh;
     margin-bottom: 3rem;
   }
-  body .hero .hero-content {
-    max-width: 38rem;
-    height: 100vh;
-    padding: 0 2rem;
+  body .hero-content {
+    max-width: 24rem;
   }
-  body .hero .hero-content .profil-img-container {
-    width: 150px;
-    height: 150px;
-    top: -13%;
-    left: 23%;
+  body .services-title h2 {
+    font-size: 2rem;
   }
-  body .hero .hero-content .hero-mdl-content {
-    position: relative;
-    top: -3.5rem;
+  body .services-title .services-title {
+    font-size: 2.5;
   }
-  body .hero .hero-content .hero-mdl-content .intro-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.2em;
-  }
-  body .hero .hero-content .hero-mdl-content .description {
-    font-size: 0.85rem;
-    line-height: 1.4em;
-    margin-bottom: 1rem;
-  }
-  body .hero .hero-content .hero-mdl-content .typing {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
-    font-size: 1rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link {
-    width: 14rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-text {
-    width: 19rem;
-    font-size: 0.75rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon {
-    border-radius: 50%;
-    padding: 0.3rem;
-    width: 30px;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon img {
-    width: 20px;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(100%);
-    transition: all 0.4s ease-out;
-    z-index: -1;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link:hover {
-    transition: all 0.4s ease-out;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link:hover::before {
+  body .card {
     width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    transform: translateX(0);
-    transition: all 0.4s ease-out;
-  }
-  body .services {
-    min-height: 100vh;
-    margin-bottom: 0;
-  }
-  body .services .services-title {
-    margin-bottom: 1rem;
-  }
-  body .services .services-title h2 {
-    font-size: 1.8rem;
-  }
-  body .services .services-title h2 .bg-text {
-    font-size: 3rem;
-  }
-  body .services .icon-wrap .card {
-    padding: 1.5rem;
-    width: 100%;
-    height: 26rem;
-  }
-  body .services .icon-wrap .card h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-  }
-  body .services .icon-wrap .card .service-text {
-    color: white;
-    font-size: 0.7rem;
-    line-height: 1.7em;
-  }
-  body .services .icon-wrap .icon-develop {
-    height: 31h;
-    margin-bottom: 0.4rem;
-    max-width: 20rem;
-  }
-  body .services .icon-wrap .icon-design {
-    height: 45vh;
-    max-width: 61rem;
   }
   body .portfolio {
     min-height: 100vh;
     margin-bottom: 5rem;
   }
-  body .portfolio .portfolio-content .potofolio-title {
+  body .potofolio-title {
     margin-bottom: 2rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 {
+  body .potofolio-title h2 {
     font-size: 2rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+  body .potofolio-title h2 .bg-text {
     top: 40%;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+  body .portfolio-gallery {
     padding: 0.6rem 1rem;
     margin-bottom: 1em;
     flex-wrap: wrap;
     border-radius: 8px;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+  body .portfolio-gallery button {
     margin: 0.3rem 0.4rem;
     font-size: 0.75rem;
   }
-  body .portfolio .portfolio-content .portfolio-images {
+  body .portfolio-images {
     gap: 0.8rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+  body .portfolio-overlay .portfolio-img {
     width: 22rem;
     height: 100%;
     border-radius: 0.2em;
     transition: 0.95s;
     transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+  body .portfolio-overlay .img-expand {
     width: 22rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+  body .portfolio-overlay .img-shrink {
     width: 0em;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+  body .portfolio-overlay .portfolio-links {
     top: -100%;
     left: 0;
     width: 22rem;
     height: 96.5%;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link {
     width: 3rem;
     height: 3rem;
     background-color: white;
@@ -4173,383 +3854,36 @@ header nav .nav-items .theme-container #theme-icon {
     left: -0.3rem;
     top: 0rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
     width: 70%;
     position: absolute;
     top: 6px;
     left: 7.5px;
   }
   body .contact {
-    min-height: 100vh;
-  }
-  body .contact .contact-content .contact-title {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  body .contact .contact-content .contact-title h2 {
-    font-size: 2rem;
-  }
-  body .contact .contact-content .contact-title h2 span {
-    color: #ffffff;
-  }
-  body .contact .contact-content .contact-title h2 .bg-text {
-    font-size: 3.5rem;
-  }
-  body .contact .contact-content .contact-form .form-container {
-    padding: 0.5rem 2rem;
-  }
-  body .contact .contact-content .contact-form .form-container .input-container {
-    margin: 0.4rem 0;
-    width: 23rem;
-  }
-  body .contact .contact-content .contact-form .form-container .input-container label {
-    font-size: 0.8rem;
-  }
-  body .contact .contact-content .contact-form .form-container .textarea .input {
     min-height: 65vh;
   }
-  body .contact .contact-content .contact-form .form-container button {
-    font-size: 0.75rem;
-    padding: 0.3rem 1rem;
+  body .contact-title {
+    margin-bottom: 1rem;
+  }
+  body .contact-title h2 {
+    font-size: 2rem;
+  }
+  body .contact-title .bg-text {
+    font-size: 2.5rem;
+  }
+  body .contact-form {
+    max-width: 24rem;
+  }
+  body .input-container {
+    max-width: 23rem;
+  }
+  body .input-container .input {
+    margin: -0.3rem;
   }
   body .footer {
     width: 75%;
     padding: 0.1rem 2rem;
-    margin-bottom: 1rem;
-  }
-  body .footer p {
-    font-size: 0.8rem;
-  }
-}
-/***********************************/
-/*** BELOW 320px (Phones screen) ***/
-/***********************************/
-@media (max-width: 23rem) {
-  body .container {
-    background-color: rgba(255, 119, 34, 0.137254902);
-    max-width: 330px;
-  }
-  body .cursor {
-    display: none;
-  }
-  body header {
-    background-color: rgba(21, 60, 40, 0.137254902);
-    width: 93%;
-    padding: 0 2rem;
-    top: 2%;
-    margin-left: 13px;
-  }
-  body header .hamburgerMenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 0.3rem;
-    cursor: pointer;
-    z-index: 1000;
-    width: 50px;
-    height: 50px;
-  }
-  body header .hamburgerMenu div {
-    display: block;
-    background-color: rgb(255, 255, 255);
-    height: 3px;
-    width: 24px;
-    border-radius: 10px;
-    transition: 0.3s;
-  }
-  body header .move .line1 {
-    transform: rotate(-45deg) translate(-5px, 5px);
-  }
-  body header .move .line2 {
-    opacity: 0;
-  }
-  body header .move .line3 {
-    transform: rotate(45deg) translate(-5px, -5px);
-  }
-  body header nav {
-    position: absolute;
-    left: 2.3rem;
-  }
-  body header nav .logo-image {
-    width: 40%;
-    margin-top: 0.8rem;
-  }
-  body header nav .nav-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 5rem 1rem;
-    position: absolute;
-    top: 0;
-    right: -135%;
-    width: 370px;
-    height: 104vh;
-    background-image: linear-gradient(135deg, #C19B79 20%, rgba(35, 119, 221, 0.7803921569) 100%);
-    border: 4px soild white;
-    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
-    border-top-left-radius: 1700px;
-    border-top-right-radius: 149px;
-  }
-  body header nav .nav-items .navbar {
-    gap: 0rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  body header nav .nav-items .navbar .nav-links {
-    font-size: 0.75rem;
-    padding: 0.3rem 1.5rem;
-    display: block;
-    margin: 0.6rem 0;
-  }
-  body header nav .nav-items .navbar .nav-links-contact {
-    font-size: 0.75rem;
-    padding: 0.3rem 1.1rem;
-    display: block;
-    margin: 0.6rem 0;
-  }
-  body header nav .nav-items .menu-toggle-social-icons {
-    display: inline-block;
-    margin-top: 1rem;
-  }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-  }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu li {
-    margin-right: 1rem;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgb(255, 255, 255);
-    padding: 0.3rem;
-    border-radius: 50px;
-    width: 2.4rem;
-    height: 2.4rem;
-  }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu a {
-    display: inline-block;
-  }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu img {
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    background-color: #ffffff;
-    border-radius: 50px;
-    padding: 0.3rem;
-    position: relative;
-    top: -2px;
-    left: -2px;
-  }
-  body header nav .open-menu {
-    right: -5%;
-    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
-  body .hero {
-    margin-top: 10rem;
-    min-height: 43vh;
-    margin-bottom: 2rem;
-  }
-  body .hero .hero-content {
-    max-width: 19rem;
-    height: 43vh;
-    padding: 0 1rem;
-  }
-  body .hero .hero-content .profil-img-container {
-    width: 140px;
-    height: 140px;
-    top: -9%;
-    left: 23%;
-  }
-  body .hero .hero-content .hero-mdl-content {
-    position: relative;
-    top: -1.5rem;
-  }
-  body .hero .hero-content .hero-mdl-content .intro-title {
-    font-size: 1.1rem;
-    margin-bottom: 0.2em;
-  }
-  body .hero .hero-content .hero-mdl-content .description {
-    font-size: 0.9rem;
-    line-height: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  body .hero .hero-content .hero-mdl-content .typing {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
-    font-size: 0.9rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link {
-    width: 9rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-text {
-    width: 19rem;
-    font-size: 0.65rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon {
-    border-radius: 50%;
-    padding: 0.3rem;
-    width: 30px;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon img {
-    width: 17px;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(100%);
-    transition: all 0.4s ease-out;
-    z-index: -1;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link:hover {
-    transition: all 0.4s ease-out;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link:hover::before {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    transform: translateX(0);
-    transition: all 0.4s ease-out;
-  }
-  body .services {
-    min-height: 85vh;
-    margin-bottom: 0rem;
-  }
-  body .services .services-title {
-    margin-bottom: 0rem;
-  }
-  body .services .services-title h2 {
-    font-size: 1.5rem;
-  }
-  body .services .services-title h2 .bg-text {
-    font-size: 2.5rem;
-  }
-  body .services .icon-wrap .card {
-    padding: 2rem;
-    width: 100%;
-    height: 31rem;
-    padding: 0 1rem;
-  }
-  body .services .icon-wrap .card h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-    text-align: center;
-  }
-  body .services .icon-wrap .card .service-text {
-    color: white;
-    font-size: 0.75rem;
-    line-height: 1.7em;
-  }
-  body .services .icon-wrap .icon-develop {
-    height: 17vh;
-    max-width: 15rem;
-  }
-  body .services .icon-wrap .icon-design {
-    height: 18vh;
-    max-width: 14rem;
-  }
-  body .portfolio {
-    min-height: 100vh;
-    margin-bottom: 5rem;
-  }
-  body .portfolio .portfolio-content .potofolio-title {
-    margin-bottom: 2rem;
-  }
-  body .portfolio .portfolio-content .potofolio-title h2 {
-    font-size: 1.6rem;
-  }
-  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
-    top: 40%;
-    font-size: 2.6rem;
-  }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery {
-    padding: 0.6rem 1rem;
-    margin-bottom: 1em;
-    flex-wrap: wrap;
-    border-radius: 8px;
-  }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
-    margin: 0.3rem 0.2rem;
-    font-size: 0.6rem;
-  }
-  body .portfolio .portfolio-content .portfolio-images {
-    gap: 0.8rem;
-    padding: 0;
-  }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
-    width: 19rem;
-    height: 100%;
-    border-radius: 0.2em;
-    transition: 0.95s;
-    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
-  }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
-    width: 19rem;
-  }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
-    width: 0em;
-  }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
-    top: -100%;
-    left: 0;
-    width: 22rem;
-    height: 96.5%;
-  }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: white;
-    border-radius: 100%;
-    position: relative;
-    left: -1.5rem;
-    top: 0rem;
-  }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
-    width: 70%;
-    position: absolute;
-    top: 6px;
-    left: 7.5px;
-  }
-  body .contact {
-    min-height: 100vh;
-  }
-  body .contact .contact-content .contact-title {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  body .contact .contact-content .contact-title h2 {
-    font-size: 1.6rem;
-  }
-  body .contact .contact-content .contact-title h2 .bg-text {
-    font-size: 2.6rem;
-  }
-  body .contact .contact-content .contact-form .form-container {
-    padding: 0.5rem 2rem;
-    max-width: 21rem;
-  }
-  body .contact .contact-content .contact-form .form-container .input-container {
-    margin: 0.4rem 0;
-    max-width: 21rem;
-  }
-  body .contact .contact-content .contact-form .form-container .input-container label {
-    font-size: 0.8rem;
-  }
-  body .contact .contact-content .contact-form .form-container .textarea .input {
-    min-height: 65vh;
-  }
-  body .contact .contact-content .contact-form .form-container button {
-    padding: 0.4rem 1rem;
-    font-size: 0.7rem;
-  }
-  body .footer {
-    width: 75%;
-    padding: 0.1rem 0rem;
     margin-bottom: 1rem;
   }
   body .footer p {
@@ -4573,11 +3907,12 @@ header nav .nav-items .theme-container #theme-icon {
   }
   body header {
     background-color: rgba(21, 60, 40, 0.137254902);
-    width: 92%;
+    width: 89%;
     padding: 0 0.5rem;
     top: 2%;
+    margin-left: 16px;
   }
-  body header .hamburgerMenu {
+  body .hamburgerMenu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -4588,7 +3923,7 @@ header nav .nav-items .theme-container #theme-icon {
     width: 50px;
     height: 50px;
   }
-  body header .hamburgerMenu div {
+  body .hamburgerMenu div {
     display: block;
     background-color: rgb(255, 255, 255);
     height: 2.5px;
@@ -4596,33 +3931,29 @@ header nav .nav-items .theme-container #theme-icon {
     border-radius: 10px;
     transition: 0.3s;
   }
-  body header .move .line1 {
+  body .move .line1 {
     transform: rotate(-45deg) translate(-5px, 5px);
   }
-  body header .move .line2 {
+  body .move .line2 {
     opacity: 0;
   }
-  body header .move .line3 {
+  body .move .line3 {
     transform: rotate(45deg) translate(-5px, -5px);
   }
-  body header nav {
+  body nav {
     position: absolute;
     left: 1.5rem;
   }
-  body header nav .logo-image {
+  body nav .logo-image {
     width: 43%;
     margin-top: 0.8rem;
   }
-  body header nav .nav-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  body nav .nav-items {
     padding: 5rem 1rem;
     position: absolute;
     top: 0;
     right: -133%;
-    width: 320px;
+    width: 303px;
     height: 104vh;
     background-image: linear-gradient(135deg, #C19B79 20%, rgba(35, 119, 221, 0.7803921569) 100%);
     border: 4px soild white;
@@ -4630,38 +3961,38 @@ header nav .nav-items .theme-container #theme-icon {
     border-top-left-radius: 1700px;
     border-top-right-radius: 149px;
   }
-  body header nav .nav-items .navbar {
+  body nav .navbar {
     gap: 0rem;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  body header nav .nav-items .navbar .nav-links {
+  body nav .navbar .nav-links {
     font-size: 0.75rem;
     padding: 0.3rem 1.5rem;
     display: block;
     margin: 0.6rem 0;
   }
-  body header nav .nav-items .navbar .nav-links-contact {
+  body nav .navbar .nav-links-contact {
     font-size: 0.75rem;
     padding: 0.3rem 1.1rem;
     display: block;
     margin: 0.6rem 0;
   }
-  body header nav .nav-items .theme-container {
+  body nav .theme-container {
     display: none;
   }
-  body header nav .nav-items .menu-toggle-social-icons {
+  body nav .menu-toggle-social-icons {
     display: inline-block;
     margin-top: 1rem;
   }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu {
+  body nav .menu-toggle-social-icons .social-icons-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
   }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu li {
+  body nav .menu-toggle-social-icons .social-icons-menu li {
     margin-right: 1rem;
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid rgb(255, 255, 255);
@@ -4670,10 +4001,10 @@ header nav .nav-items .theme-container #theme-icon {
     width: 2.4rem;
     height: 2.4rem;
   }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu a {
+  body nav .menu-toggle-social-icons .social-icons-menu a {
     display: inline-block;
   }
-  body header nav .nav-items .menu-toggle-social-icons .social-icons-menu img {
+  body nav .menu-toggle-social-icons .social-icons-menu img {
     width: 2rem;
     height: 2rem;
     display: flex;
@@ -4684,165 +4015,70 @@ header nav .nav-items .theme-container #theme-icon {
     top: -2px;
     left: -2px;
   }
-  body header nav .open-menu {
+  body nav .open-menu {
     right: -5%;
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
-  body .hero {
-    margin-top: 10rem;
-    min-height: 41vh;
-    margin-bottom: 2rem;
+  body .description {
+    line-height: 1.2rem;
   }
-  body .hero .hero-content {
-    max-width: 19rem;
-    height: 41vh;
-    padding: 0 1rem;
+  body .services-title h2 {
+    font-size: 0.5;
   }
-  body .hero .hero-content .profil-img-container {
-    width: 140px;
-    height: 140px;
-    top: -9%;
-    left: 23%;
+  body .services-title .services-text {
+    font-size: 2rem;
   }
-  body .hero .hero-content .hero-mdl-content {
-    position: relative;
-    top: -1.5rem;
-  }
-  body .hero .hero-content .hero-mdl-content .intro-title {
-    font-size: 4.1rem;
-    margin-bottom: 0.2em;
-  }
-  body .hero .hero-content .hero-mdl-content .description {
-    font-size: 4rem;
-    line-height: 2rem;
-    margin-bottom: 1.4rem;
-  }
-  body .hero .hero-content .hero-mdl-content .typing {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
-    font-size: 0.9rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link {
-    width: 11rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-text {
-    width: 19rem;
-    font-size: 0.65rem;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon {
-    border-radius: 50%;
-    padding: 0.3rem;
-    width: 30px;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link .download-icon img {
-    width: 17px;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(100%);
-    transition: all 0.4s ease-out;
-    z-index: -1;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link:hover {
-    transition: all 0.4s ease-out;
-  }
-  body .hero .hero-content .hero-mdl-content .cv-link:hover::before {
+  body .card {
     width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    transform: translateX(0);
-    transition: all 0.4s ease-out;
-  }
-  body .services {
-    min-height: 85vh;
-    margin-bottom: 0rem;
-  }
-  body .services .services-title {
-    margin-bottom: 0rem;
-  }
-  body .services .services-title h2 {
-    font-size: 1.5rem;
-  }
-  body .services .services-title h2 .bg-text {
-    font-size: 2.5rem;
-  }
-  body .services .icon-wrap .card {
-    padding: 2rem;
-    width: 100%;
-    height: 31rem;
-    padding: 0 1rem;
-  }
-  body .services .icon-wrap .card h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-    text-align: center;
-  }
-  body .services .icon-wrap .card .service-text {
-    color: white;
-    font-size: 0.75rem;
-    line-height: 1.7em;
-  }
-  body .services .icon-wrap .icon-develop {
-    height: 17vh;
-    max-width: 15rem;
-  }
-  body .services .icon-wrap .icon-design {
-    height: 18vh;
-    max-width: 14rem;
   }
   body .portfolio {
     min-height: 100vh;
     margin-bottom: 2rem;
   }
-  body .portfolio .portfolio-content .potofolio-title {
+  body .potofolio-title {
     margin-bottom: 2rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 {
+  body .potofolio-title h2 {
     font-size: 1.5rem;
   }
-  body .portfolio .portfolio-content .potofolio-title h2 .bg-text {
+  body .potofolio-title h2 .bg-text {
     top: 40%;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery {
+  body .work-section .portfolio-gallery {
     padding: 0.6rem 1rem;
     margin-bottom: 1em;
     flex-wrap: wrap;
     border-radius: 8px;
   }
-  body .portfolio .portfolio-content .work-section .portfolio-gallery button {
+  body .work-section .portfolio-gallery button {
     margin: 0.3rem 0.4rem;
     font-size: 0.6rem;
   }
-  body .portfolio .portfolio-content .portfolio-images {
+  body .portfolio-images {
     gap: 0.8rem;
     padding: 0;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-img {
+  body .portfolio-img {
     width: 18rem;
     height: 100%;
     border-radius: 0.2em;
     transition: 0.95s;
     transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-expand {
+  body .img-expand {
     width: 18rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .img-shrink {
+  body .img-shrink {
     width: 0em;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links {
+  body .portfolio-links {
     top: -100%;
     left: 0;
     width: 22rem;
     height: 96.5%;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link {
+  body .portfolio-links .portfolio-link {
     width: 2.4rem;
     height: 2.4rem;
     background-color: white;
@@ -4851,43 +4087,32 @@ header nav .nav-items .theme-container #theme-icon {
     left: -2rem;
     top: 0rem;
   }
-  body .portfolio .portfolio-content .portfolio-images .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-links .portfolio-link .logo-link {
     width: 70%;
     position: absolute;
     top: 6px;
     left: 7.5px;
   }
   body .contact {
-    min-height: 88vh;
+    min-height: 65vh;
   }
-  body .contact .contact-content .contact-title {
-    text-align: center;
-    margin-bottom: 2rem;
+  body .contact-title {
+    margin-bottom: 1rem;
   }
-  body .contact .contact-content .contact-title h2 {
-    font-size: 1.6rem;
+  body .contact-title h2 {
+    font-size: 2rem;
   }
-  body .contact .contact-content .contact-title h2 .bg-text {
-    font-size: 2.6rem;
+  body .contact-title .bg-text {
+    font-size: 2.5rem;
   }
-  body .contact .contact-content .contact-form .form-container {
-    padding: 0.5rem 2rem;
+  body .contact-form {
     max-width: 18rem;
   }
-  body .contact .contact-content .contact-form .form-container .input-container {
-    margin: 0.4rem 0;
+  body .input-container {
     max-width: 18rem;
   }
-  body .contact .contact-content .contact-form .form-container .input-container label {
-    font-size: 0.8rem;
-    z-index: 1;
-  }
-  body .contact .contact-content .contact-form .form-container .textarea .input {
-    min-height: 20vh;
-  }
-  body .contact .contact-content .contact-form .form-container button {
-    padding: 0.4rem 1rem;
-    font-size: 0.7rem;
+  body .input-container .input {
+    margin: -0.3rem;
   }
   body .footer {
     width: 75%;

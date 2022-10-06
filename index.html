@@ -63,7 +63,7 @@
 
         <!------------------------- DARK/LIGHT MODE ------------------------>
         <div class="theme-container shadow-dark">
-          <img id="theme-icon" src="./assets/imgs/moon.svg">
+          <img id="theme-icon" src="./assets/imgs/moon.svg" alt="mode dark icon">
         </div>
 
         <!---------------------- SOCIAL MENDIA ICONS MENU NAVBAR RESPONSIVE----------------------->
@@ -86,25 +86,21 @@
   <!--------------------------------------------------------->
   <!-------------------- HERO SECTION ----------------------->
   <!--------------------------------------------------------->
-  <section id="hero" class="hero container">
-    <div class="hero-content">
 
+  <section class="hero container" id="hero">
+    <div class="hero-content">
       <div class="profil-img-container">
+        <img src="./assets/imgs/sarah.svg" alt="profil image">
       </div>
-      <div class="hero-mdl-content">
-        <h1 class="intro-title" lng-tag="intro-text"></h1>
-      <h3 class="typing"></h3>
+
+      <h1 class="intro-title" lng-tag="intro-text"></h1>
+      <h2 class="typing"></h2>
       <p class="description" lng-tag="hero-description">
       </p>
-
-
       <a href="./assets/pdf/CV- SARAH AL-RASHID.pdf" target="_blank" class="cv-link">
         <span class="download-text" lng-tag="Cv-button"></span>
-        <span class="download-icon"><img src="./assets/imgs/icons8-télécharger.gif"></span>
+        <span class="download-icon"><img src="./assets/imgs/icons8-télécharger.gif" alt="cv download icon"></span>
       </a>
-      </div>
-      
-
 
     </div>
   </section>
@@ -584,6 +580,24 @@
           </div>
 
           <div class="portfolio-overlay">
+            <img src="./assets/imgs/sociallife.jpg" data-img="1" class="portfolio-img"
+              alt="code work">
+            <div class="portfolio-links">
+              <a href="https://github.com/SARA370/Living-the-social-life.git" class="portfolio-link"><img class="logo-link" src="./assets/imgs/icons8-nuage-actualiser.gif"
+                  alt="code link"></a>
+            </div>
+          </div>
+
+          <div class="portfolio-overlay">
+            <img src="./assets/imgs/Omnifood.jpg" data-img="1" class="portfolio-img"
+              alt="code work">
+            <div class="portfolio-links">
+              <a href="https://github.com/SARA370/Omnifood.git" class="portfolio-link"><img class="logo-link" src="./assets/imgs/icons8-nuage-actualiser.gif"
+                  alt="code link"></a>
+            </div>
+          </div>
+
+          <div class="portfolio-overlay">
             <img src="./assets/imgs/3D.jpg" data-img="2" class="portfolio-img" alt="design work">
             <div class="portfolio-links">
               <a href="#" class="portfolio-link"><img class="logo-link" src="./assets/imgs/icons8-nuage-actualiser.gif"
@@ -775,30 +789,30 @@
 
           <div class="input-container">
             <input type="text" name="name" class="input" id="Name" lng-tag="username-input" required/>
-            <label for="" lng-tag="username-input"></label>
+            <label for="Name" lng-tag="username-input"></label>
             <span lng-tag="username-input"></span>
           </div>
 
           <div class="input-container">
             <input type="email" name="email" class="input" id="Email" required />
-            <label for="">Email</label>
+            <label for="Email">Email</label>
             <span>Email</span>
           </div>
 
           <div class="input-container">
             <input type="text" name="subject" class="input" id="Subject" lng-tag="subject-input" required/>
-            <label for="" lng-tag="subject-input"></label>
+            <label for="Subject" lng-tag="subject-input"></label>
             <span lng-tag="subject-input"></span>
           </div>
 
           <div class="input-container">
             <input type="tel" name="phone" class="input" id="Phone" lng-tag="phone-input" required/>
-            <label for="" lng-tag="phone-input">Phone</label>
+            <label for="Phone" lng-tag="phone-input">Phone</label>
             <span lng-tag="phone-input"></span>
           </div>
 
           <div class="input-container textarea">
-            <label class="casse-tete" for="">Message</label>
+            <label class="casse-tete" for="Message">Message</label>
             <textarea name="message" class="input" id="Message" required></textarea>
             <span>Message</span>
           </div>
