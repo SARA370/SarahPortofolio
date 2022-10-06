@@ -1144,7 +1144,7 @@ nav .logo-image {
 }
 .portfolio-overlay .portfolio-img {
   width: 27rem;
-  border-radius: 0.2em;
+  border-radius: 1rem;
   transition: 0.95s;
   transition: margin 400ms ease-in-out, width 400ms ease-in-out;
 }
@@ -1158,14 +1158,18 @@ nav .logo-image {
   position: absolute;
   top: -100%;
   left: 0;
-  width: 35.5rem;
+  max-width: 26.95rem;
+  width: 100%;
   height: 98%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 1rem;
   background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid rgb(255, 255, 255);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 .portfolio-overlay .portfolio-links .portfolio-link {
   width: 5rem;
@@ -1173,7 +1177,7 @@ nav .logo-image {
   background-color: white;
   border-radius: 100%;
   position: relative;
-  left: -4.5rem;
+  left: 0rem;
   top: 0rem;
 }
 .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
@@ -1401,10 +1405,6 @@ button:hover, button:focus {
     max-width: 1600px;
     width: 100%;
     margin: auto;
-    background-color: rgba(57, 132, 244, 0.2392156863);
-  }
-  body header {
-    background-color: rgba(57, 132, 244, 0.2392156863);
   }
   body .social-icons {
     top: 88%;
@@ -1414,7 +1414,6 @@ button:hover, button:focus {
     margin-top: 6rem;
   }
   body .hero-content {
-    background-color: #006c78;
     width: 100%;
     max-width: 90rem;
     min-height: 70vh;
@@ -1551,14 +1550,12 @@ button:hover, button:focus {
     gap: 1rem;
   }
   body .portfolio-overlay .portfolio-img {
-    width: 32rem;
-    height: 100%;
-    border-radius: 0.2em;
+    max-width: 32rem;
     transition: 0.95s;
     transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
   body .portfolio-overlay .img-expand {
-    width: 32rem;
+    max-width: 32rem;
   }
   body .portfolio-overlay .img-shrink {
     width: 0em;
@@ -1566,7 +1563,7 @@ button:hover, button:focus {
   body .portfolio-overlay .portfolio-links {
     top: -100%;
     left: 0;
-    width: 28rem;
+    width: 32rem;
     height: 97.5%;
   }
   body .portfolio-overlay .portfolio-links .portfolio-link {
@@ -1574,13 +1571,15 @@ button:hover, button:focus {
     height: 5rem;
     background-color: white;
     border-radius: 100%;
-    transform: translate(-11%, 7%);
+    position: relative;
+    left: 0rem;
+    top: 0rem;
   }
   body .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 18px;
-    left: 18px;
+    left: 22px;
   }
   body .input-container {
     max-width: 80rem;
@@ -1597,18 +1596,12 @@ button:hover, button:focus {
 /*** BELOW 1743px (large screen) ***/
 /************************************/
 @media (max-width: 109rem) {
-  body {
-    background-size: cover;
-    background-position: center;
-  }
   body .container {
     max-width: 1400px;
     width: 100%;
     margin: auto;
-    background-color: rgba(255, 255, 0, 0.143);
   }
   body header {
-    background-color: rgba(255, 255, 0, 0.143);
     max-width: 93%;
   }
   body .logo-image {
@@ -1616,7 +1609,6 @@ button:hover, button:focus {
   }
   body .nav-items {
     width: 57%;
-    background-color: red;
   }
   body .navbar {
     gap: 0.8rem;
@@ -1634,10 +1626,8 @@ button:hover, button:focus {
   body .hero {
     min-height: 100vh;
     margin-top: 6rem;
-    color: red;
   }
   body .hero-content {
-    background-color: #006c78;
     width: 100%;
     max-width: 88rem;
     min-height: 70vh;
@@ -1767,14 +1757,10 @@ button:hover, button:focus {
     gap: 1rem;
   }
   body .portfolio-overlay .portfolio-img {
-    width: 28rem;
-    height: 100%;
-    border-radius: 0.2em;
-    transition: 0.95s;
-    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
+    max-width: 28rem;
   }
   body .portfolio-overlay .img-expand {
-    width: 28rem;
+    max-width: 28rem;
   }
   body .portfolio-overlay .img-shrink {
     width: 0em;
@@ -1790,13 +1776,15 @@ button:hover, button:focus {
     height: 5rem;
     background-color: white;
     border-radius: 100%;
-    transform: translate(-11%, 7%);
+    position: relative;
+    left: 0rem;
+    top: 0rem;
   }
   body .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 18px;
-    left: 18px;
+    left: 21px;
   }
   body .contact {
     min-height: 100vh;
@@ -1835,18 +1823,12 @@ button:hover, button:focus {
 /**************************************/
 /**************************************/
 @media (max-width: 96rem) {
-  body {
-    background-size: cover;
-    background-position: center;
-  }
   body .container {
     max-width: 1260px;
     width: 100%;
     margin: auto;
-    background-color: rgba(255, 0, 0, 0.143);
   }
   body header {
-    background-color: rgba(255, 0, 0, 0.143);
     max-width: 93%;
   }
   body .logo-image {
@@ -1854,7 +1836,6 @@ button:hover, button:focus {
   }
   body .nav-items {
     width: 61%;
-    background-color: red;
   }
   body .navbar {
     gap: 0.8rem;
@@ -1897,7 +1878,6 @@ button:hover, button:focus {
     margin-top: 4rem;
   }
   body .hero-content {
-    background-color: #006c78;
     max-width: 79rem;
     min-height: 70vh;
     padding: 0 8em;
@@ -1983,14 +1963,10 @@ button:hover, button:focus {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1.5em;
-    color: white;
-    font-family: var(--ff-Electrolize);
   }
   body .card .service-text {
-    color: white;
     font-size: 1rem;
     line-height: 1.7rem;
-    font-family: var(--ff-olney);
     text-align: justify;
   }
   body .icon-develop {
@@ -2038,16 +2014,14 @@ button:hover, button:focus {
   body .portfolio-links {
     top: -100%;
     left: 0;
-    width: 28rem;
+    width: 25rem;
     height: 97.5%;
   }
   body .portfolio-links .portfolio-link {
     width: 5rem;
     height: 5rem;
-    background-color: white;
-    border-radius: 100%;
     position: relative;
-    left: -2rem;
+    left: 0rem;
     top: 0rem;
   }
   body .portfolio-links .portfolio-link .logo-link {
@@ -2090,31 +2064,29 @@ button:hover, button:focus {
 /*** BELOW 1440px (large screen) ***/
 /************************************/
 @media (max-width: 90rem) {
-  .container {
+  body .container {
     max-width: 1000px;
     width: 100%;
     margin: auto;
-    background-color: rgba(77, 255, 213, 0.2274509804);
   }
-  header {
-    background-color: rgba(77, 255, 213, 0.2274509804);
+  body header {
     max-width: 90%;
     padding: 0.1rem 1rem;
   }
-  .logo-image {
+  body .logo-image {
     max-width: 34%;
   }
-  .nav-items {
+  body .nav-items {
     width: 62%;
   }
-  .navbar {
+  body .navbar {
     gap: 0.5rem;
   }
-  .navbar .nav-links {
+  body .navbar .nav-links {
     font-size: 0.7rem;
     padding: 0.45rem 1.5rem;
   }
-  .navbar .nav-links-contact {
+  body .navbar .nav-links-contact {
     font-size: 0.8rem;
     padding: 0.45rem 1.5rem;
   }
@@ -2142,31 +2114,30 @@ button:hover, button:focus {
       opacity: 0;
     }
   }
-  .dropdown {
+  body .dropdown {
     margin: 0 0.5rem;
     min-width: 3rem;
   }
-  .dropdown .select {
+  body .dropdown .select {
     font-size: 0.8rem;
     padding: 0.3rem 0.7rem;
   }
-  .theme-container {
+  body .theme-container {
     width: 6%;
     padding: 0.3rem;
   }
-  .hero {
+  body .hero {
     margin-top: 12rem;
     margin-bottom: 5rem;
     min-height: 55vh;
   }
-  .hero-content {
-    background-color: #006c78;
+  body .hero-content {
     width: 100%;
     max-width: 63rem;
     min-height: 1vh;
     padding: 0 5rem;
   }
-  .profil-img-container {
+  body .profil-img-container {
     width: 13.6rem;
     height: 13.5rem;
     margin: -5.5rem auto 2rem auto;
@@ -2176,130 +2147,128 @@ button:hover, button:focus {
     align-items: center;
     justify-content: center;
   }
-  .intro-title {
+  body .intro-title {
     font-size: 1.9rem;
     margin-bottom: 0.2rem;
   }
-  .description {
+  body .description {
     font-size: 1.2rem;
     line-height: 1.65rem;
     margin-bottom: 4rem;
   }
-  .typing {
+  body .typing {
     margin-bottom: 1em;
     font-size: 1.4rem;
   }
-  .cv-link {
+  body .cv-link {
     width: 18rem;
     margin-bottom: 4rem;
   }
-  .cv-link .download-text {
+  body .cv-link .download-text {
     width: 19rem;
     position: relative;
     left: 20px;
     font-size: 1.1rem;
   }
-  .cv-link .download-icon {
+  body .cv-link .download-icon {
     padding: 0.35rem;
     width: 37px;
   }
-  .cv-link .download-icon img {
+  body .cv-link .download-icon img {
     width: 27px;
   }
-  .social-icons {
+  body .social-icons {
     top: 80%;
   }
-  .social-icons ul {
+  body .social-icons ul {
     transform: translateX(-163px);
   }
-  .social-icons ul li {
+  body .social-icons ul li {
     margin: 0.7em;
     width: 13rem;
     font-size: 0.5rem;
     padding: 0.2em;
   }
-  .social-icons ul li .icon {
+  body .social-icons ul li .icon {
     padding: 0.4em;
     margin-left: 0.875em;
     width: 2.8rem;
   }
-  .services {
+  body .services {
     min-height: 56vh;
     margin-bottom: 5rem;
   }
-  .services-title h2 {
+  body .services-title h2 {
     font-size: 3rem;
   }
-  .services-title .bg-text {
+  body .services-title .bg-text {
     font-size: 5rem;
   }
-  .card {
+  body .card {
     min-height: 47vh;
     margin-top: 0rem;
     max-width: 63rem;
     padding: 2rem 2rem;
   }
-  .card h2 {
+  body .card h2 {
     letter-spacing: 2px;
     font-size: 1.2em;
   }
-  .card .service-text {
+  body .card .service-text {
     font-size: 0.85rem;
     line-height: 1.2rem;
   }
-  .icon-develop {
+  body .icon-develop {
     min-height: 30vh;
     max-width: 20rem;
   }
-  .icon-design {
+  body .icon-design {
     min-height: 25vh;
     max-width: 16.5rem;
   }
-  .portfolio {
+  body .portfolio {
     min-height: 100vh;
     margin-bottom: 5rem;
   }
-  .potofolio-title {
+  body .potofolio-title {
     margin-bottom: 2rem;
   }
-  .potofolio-title h2 {
+  body .potofolio-title h2 {
     font-size: 3rem;
   }
-  .potofolio-title h2 .bg-text {
+  body .potofolio-title h2 .bg-text {
     top: 40%;
     font-size: 5rem;
   }
-  .portfolio-gallery {
+  body .portfolio-gallery {
     padding: 0.6rem 2rem;
     margin-bottom: 2em;
   }
-  .portfolio-gallery button {
+  body .portfolio-gallery button {
     margin: 0 0.3rem;
     font-size: 0.85rem;
   }
-  .portfolio-images {
+  body .portfolio-images {
     gap: 1rem;
   }
-  .portfolio-img {
+  body .portfolio-img {
     width: 20rem;
-    height: 100%;
-    border-radius: 0.2em;
     transition: 0.95s;
     transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  .img-expand {
+  body .img-expand {
     width: 20rem;
   }
-  .img-shrink {
+  body .img-shrink {
     width: 0em;
   }
-  .portfolio-links {
+  body .portfolio-links {
     top: -100%;
     left: 0;
     width: 20rem;
     height: 97.2%;
   }
-  .portfolio-links .portfolio-link {
+  body .portfolio-links .portfolio-link {
     width: 4rem;
     height: 4rem;
     background-color: white;
@@ -2308,57 +2277,57 @@ button:hover, button:focus {
     left: 0rem;
     top: 0rem;
   }
-  .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 15px;
     left: 17px;
   }
-  .contact {
+  body .contact {
     min-height: 100vh;
   }
-  .contact-title {
+  body .contact-title {
     margin-bottom: 1rem;
   }
-  .contact-title h2 {
+  body .contact-title h2 {
     font-size: 3rem;
   }
-  .contact-title h2 span {
+  body .contact-title h2 span {
     color: #ffffff;
   }
-  .contact-title h2 .bg-text {
+  body .contact-title h2 .bg-text {
     font-size: 5rem;
   }
-  h2 {
+  body h2 {
     font-size: 4rem;
   }
-  h2 span {
+  body h2 span {
     color: #ffffff;
   }
-  h2 .bg-text {
+  body h2 .bg-text {
     font-size: 5.5rem;
   }
-  .contact-form {
+  body .contact-form {
     max-width: 63rem;
   }
-  .form-container {
+  body .form-container {
     padding: 2rem 2rem;
   }
-  .input-container {
+  body .input-container {
     margin: 0.5rem 0;
     max-width: 45rem;
   }
-  .textarea .input {
+  body .textarea .input {
     min-height: 45vh;
   }
-  button {
+  body button {
     padding: 0 2rem;
   }
-  .footer {
+  body .footer {
     width: 66%;
     margin-bottom: 1rem;
   }
-  .footer p {
+  body .footer p {
     font-size: 1.2rem;
   }
 }
@@ -2368,10 +2337,8 @@ button:hover, button:focus {
 @media (max-width: 70rem) {
   body .container {
     max-width: 870px;
-    background-color: rgba(13, 18, 81, 0.3176470588);
   }
   body header {
-    background-color: rgba(13, 18, 81, 0.3176470588);
     max-width: 94%;
     margin-left: 2rem;
   }
@@ -2570,10 +2537,6 @@ button:hover, button:focus {
   }
   body .portfolio-img {
     width: 17.3rem;
-    height: 100%;
-    border-radius: 0.2em;
-    transition: 0.95s;
-    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
   body .img-expand {
     width: 17.3rem;
@@ -2584,7 +2547,8 @@ button:hover, button:focus {
   body .portfolio-links {
     top: -100%;
     left: 0;
-    width: 20rem;
+    max-width: 10rem;
+    width: 20%;
     height: 96.5%;
   }
   body .portfolio-links .portfolio-link {
@@ -2660,18 +2624,16 @@ button:hover, button:focus {
 /*************************************/
 @media (max-width: 62rem) {
   body {
-    background-size: cover;
-    background-position: center;
+    background-size: auto;
+    background-repeat: repeat;
   }
   body .container {
-    background-color: rgba(251, 4, 197, 0.2666666667);
     max-width: 800px;
   }
   body .cursor {
     display: none;
   }
   body header {
-    background-color: rgba(251, 4, 197, 0.2666666667);
     max-width: 100%;
     margin-left: 1.5rem;
   }
@@ -2787,7 +2749,7 @@ button:hover, button:focus {
     gap: 1rem;
   }
   body .portfolio-img {
-    width: 16rem;
+    width: 12rem;
     height: 100%;
     border-radius: 0.2em;
     transition: 0.95s;
@@ -2833,12 +2795,7 @@ button:hover, button:focus {
 /*** BELOW 904px ( tablets screen) ***/
 /*************************************/
 @media (max-width: 57rem) {
-  body {
-    background-size: cover;
-    background-position: center;
-  }
   body .container {
-    background-color: rgba(123, 3, 45, 0.462745098);
     max-width: 700px;
   }
   body .cursor {
@@ -2868,7 +2825,6 @@ button:hover, button:focus {
     transition: all 1s;
   }
   body header {
-    background-color: rgba(123, 3, 45, 0.462745098);
     max-width: 100%;
     margin-left: 1.5rem;
   }
@@ -3114,21 +3070,13 @@ button:hover, button:focus {
 /*** BELOW 797px ( tablets screen) ***/
 /*************************************/
 @media (max-width: 49rem) {
-  body {
-    background-size: cover;
-    background-position: center;
-  }
   body .container {
-    background-color: rgba(0, 1, 0, 0.2666666667);
     max-width: 600px;
     width: 100%;
     margin: auto;
   }
   body .cursor {
     display: none;
-  }
-  body header {
-    background-color: rgba(0, 1, 0, 0.2666666667);
   }
   body .logo-image {
     max-width: 54%;
@@ -3221,7 +3169,7 @@ button:hover, button:focus {
     transition: all 1s;
   }
   body .hero {
-    margin-top: 9rem;
+    margin-top: 10rem;
     margin-bottom: 3rem;
     min-height: 40vh;
   }
@@ -3391,12 +3339,7 @@ button:hover, button:focus {
 /*** BELOW 688px (tablette screen) ***/
 /***********************************/
 @media (max-width: 43rem) {
-  body {
-    background-size: cover;
-    background-position: center;
-  }
   body .container {
-    background-color: rgba(156, 120, 0, 0.137254902);
     max-width: 600px;
     width: 100%;
     margin: auto;
@@ -3405,7 +3348,6 @@ button:hover, button:focus {
     display: none;
   }
   body header {
-    background-color: rgba(184, 141, 3, 0.137254902);
     display: flex;
     flex-direction: row-reverse;
     width: 93%;
@@ -3448,15 +3390,19 @@ button:hover, button:focus {
   body nav .nav-items {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 3rem 1rem;
     position: absolute;
     top: 0;
     right: -227%;
-    width: 700px;
+    width: 701px;
     height: 102vh;
-    background-image: linear-gradient(135deg, #C19B79 20%, rgba(35, 119, 221, 0.7803921569) 100%);
+    background-color: rgba(0, 0, 0, 0.737254902);
+    -webkit-backdrop-filter: blur(35px);
+            backdrop-filter: blur(35px);
+    box-shadow: 0 20px 50px -10px rgb(0, 0, 0);
+    border: 4px soild white;
     border: 4px soild white;
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
     border-top-left-radius: 500px;
@@ -3469,26 +3415,41 @@ button:hover, button:focus {
     align-items: center;
   }
   body nav .navbar .nav-links {
-    font-size: 0.8rem;
-    padding: 0.3rem 1.5rem;
-    display: block;
-    margin: 0.9rem 0;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    width: 11.7rem;
+    margin: 1.3rem 0;
+    text-align: center;
+    color: white;
   }
   body nav .navbar .nav-links-contact {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.3rem 1.1rem;
-    display: block;
+    padding: 0.5rem 1.5rem;
+    width: 11.7rem;
+    text-align: center;
     margin: 0.9rem 0;
   }
   body nav .dropdown {
-    margin: 0 0.5rem;
-    min-width: 2rem;
-    display: block;
-    margin: 0.9rem 0;
+    margin: 1rem 0 6.5rem 0;
+    padding: 0.8rem 1rem;
   }
   body nav .dropdown .select {
-    font-size: 0.7rem;
-    padding: 0.3rem 0.8rem;
+    font-size: 1rem;
+    color: white;
+    width: 11.7rem;
+  }
+  body nav .dropdown .select .caret {
+    border-top: 6px solid white;
+  }
+  body nav .dropdown .select:hover {
+    color: white;
+  }
+  body nav .dropdown .menu {
+    margin-top: 1.3rem;
+    width: 11.7rem;
+    font-size: 1rem;
+    color: #2e2e2e;
   }
   body nav .theme-container {
     width: 2.5rem;
@@ -3652,12 +3613,7 @@ button:hover, button:focus {
 /*** BELOW 425px (Phones screen) ***/
 /***********************************/
 @media (max-width: 27rem) {
-  body {
-    background-size: cover;
-    background-position: center;
-  }
   body .container {
-    background-color: rgba(21, 60, 40, 0.137254902);
     max-width: 380px;
     width: 100%;
     margin: auto;
@@ -3666,7 +3622,6 @@ button:hover, button:focus {
     display: none;
   }
   body header {
-    background-color: rgba(21, 60, 40, 0.137254902);
     width: 91%;
     padding: 0 2rem;
     top: 2%;
@@ -3710,7 +3665,7 @@ button:hover, button:focus {
   body nav .nav-items {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 5rem 1rem;
     position: absolute;
@@ -3718,29 +3673,82 @@ button:hover, button:focus {
     right: -135%;
     width: 434px;
     height: 100vh;
-    background-image: linear-gradient(135deg, #C19B79 20%, rgba(35, 119, 221, 0.7803921569) 100%);
+    background-color: rgba(0, 0, 0, 0.737254902);
+    -webkit-backdrop-filter: blur(35px);
+            backdrop-filter: blur(35px);
+    box-shadow: 0 20px 50px -10px rgb(0, 0, 0);
     border: 4px soild white;
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
     border-top-left-radius: 1700px;
     border-top-right-radius: 149px;
   }
   body nav .navbar {
-    gap: 0rem;
+    gap: 0.7rem;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   body nav .navbar .nav-links {
-    font-size: 0.75rem;
-    padding: 0.3rem 1.5rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    width: 10rem;
+    display: block;
+    text-align: center;
+    margin: 0.6rem 0;
+    color: white;
+  }
+  body nav .navbar .nav-links-contact {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    width: 10rem;
+    text-align: center;
     display: block;
     margin: 0.6rem 0;
   }
-  body nav .navbar .nav-links-contact {
-    font-size: 0.75rem;
-    padding: 0.3rem 1.1rem;
-    display: block;
-    margin: 0.6rem 0;
+  @-webkit-keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 100px;
+      height: 100px;
+      opacity: 0;
+    }
+  }
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 100px;
+      height: 100px;
+      opacity: 0;
+    }
+  }
+  body nav .dropdown {
+    margin: 1rem 0 6.5rem 0;
+    padding: 0.8rem 1rem;
+    width: 11.7rem;
+  }
+  body nav .dropdown .select {
+    font-size: 1rem;
+    color: white;
+  }
+  body nav .dropdown .select .caret {
+    border-top: 6px solid white;
+  }
+  body nav .dropdown .select:hover {
+    color: white;
+  }
+  body nav .dropdown .menu {
+    margin-top: 1.3rem;
+    width: 9.5rem;
+    font-size: 1rem;
+    color: #2e2e2e;
   }
   body nav .menu-toggle-social-icons {
     display: inline-block;
@@ -3756,24 +3764,22 @@ button:hover, button:focus {
     margin-right: 1rem;
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid rgb(255, 255, 255);
-    padding: 0.3rem;
+    padding: 0.7rem;
     border-radius: 50px;
-    width: 2.4rem;
-    height: 2.4rem;
-  }
-  body nav .menu-toggle-social-icons .social-icons-menu a {
-    display: inline-block;
+    width: 2.9rem;
+    height: 2.9rem;
+    margin: 0.3rem;
   }
   body nav .menu-toggle-social-icons .social-icons-menu img {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     display: flex;
     background-color: #ffffff;
     border-radius: 50px;
     padding: 0.3rem;
     position: relative;
-    top: -2px;
-    left: -2px;
+    top: -8px;
+    left: -9px;
   }
   body nav .open-menu {
     right: -5%;
@@ -3879,7 +3885,7 @@ button:hover, button:focus {
     max-width: 23rem;
   }
   body .input-container .input {
-    margin: -0.3rem;
+    margin: 0rem;
   }
   body .footer {
     width: 75%;
@@ -3894,19 +3900,13 @@ button:hover, button:focus {
 /*** BELOW 375px (Phones screen) ***/
 /***********************************/
 @media (max-width: 20rem) {
-  body {
-    background-size: center;
-    background-position: center;
-  }
   body .container {
-    background-color: rgba(86, 23, 175, 0.137254902);
     max-width: 295px;
   }
   body .cursor {
     display: none;
   }
   body header {
-    background-color: rgba(21, 60, 40, 0.137254902);
     width: 89%;
     padding: 0 0.5rem;
     top: 2%;
@@ -3952,10 +3952,13 @@ button:hover, button:focus {
     padding: 5rem 1rem;
     position: absolute;
     top: 0;
-    right: -133%;
-    width: 303px;
+    right: -131%;
+    max-width: 300px;
     height: 104vh;
-    background-image: linear-gradient(135deg, #C19B79 20%, rgba(35, 119, 221, 0.7803921569) 100%);
+    background-color: rgba(0, 0, 0, 0.737254902);
+    -webkit-backdrop-filter: blur(35px);
+            backdrop-filter: blur(35px);
+    box-shadow: 0 20px 50px -10px rgb(0, 0, 0);
     border: 4px soild white;
     transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
     border-top-left-radius: 1700px;
@@ -3972,6 +3975,7 @@ button:hover, button:focus {
     padding: 0.3rem 1.5rem;
     display: block;
     margin: 0.6rem 0;
+    color: white;
   }
   body nav .navbar .nav-links-contact {
     font-size: 0.75rem;
@@ -3979,8 +3983,17 @@ button:hover, button:focus {
     display: block;
     margin: 0.6rem 0;
   }
-  body nav .theme-container {
-    display: none;
+  body nav .dropdown .select {
+    color: white;
+  }
+  body nav .dropdown .select .caret {
+    border-top: 6px solid white;
+  }
+  body nav .dropdown .select:hover {
+    color: white;
+  }
+  body nav .dropdown .menu {
+    color: #2e2e2e;
   }
   body nav .menu-toggle-social-icons {
     display: inline-block;
@@ -4112,7 +4125,7 @@ button:hover, button:focus {
     max-width: 18rem;
   }
   body .input-container .input {
-    margin: -0.3rem;
+    margin: 3rem;
   }
   body .footer {
     width: 75%;
