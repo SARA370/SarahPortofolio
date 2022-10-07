@@ -1201,7 +1201,6 @@ nav {
 .portfolio-overlay {
     position: relative;
     overflow: hidden;
-    // height: 25vh;
 
 
     .portfolio-img {
@@ -1820,14 +1819,11 @@ button {
         .portfolio-overlay {
 
             .portfolio-img {
-                max-width: 32rem;
-                transition: .95s;
-                transition: margin 400ms ease-in-out,
-                    width 400ms ease-in-out;
+                width: 32rem;
             }
 
             .img-expand {
-                max-width: 32rem;
+                width: 32rem;
             }
 
             .img-shrink {
@@ -1839,7 +1835,8 @@ button {
             .portfolio-links {
                 top: -100%;
                 left: 0;
-                width: 32rem;
+                max-width: 32rem;
+                width: 100%;
                 height: 97.5%;
 
                 .portfolio-link {
@@ -2087,11 +2084,11 @@ button {
         .portfolio-overlay {
 
             .portfolio-img {
-                max-width: 28rem;
+                width: 28rem;
             }
 
             .img-expand {
-                max-width: 28rem;
+                width: 28rem;
             }
 
             .img-shrink {
@@ -2103,7 +2100,8 @@ button {
             .portfolio-links {
                 top: -100%;
                 left: 0;
-                width: 28rem;
+                max-width: 28rem;
+                width: 100%;
                 height: 97.5%;
 
                 .portfolio-link {
@@ -2405,47 +2403,47 @@ button {
             gap: 1rem;
         }
 
-        .portfolio-img {
-            width: 25rem;
-            height: 100%;
-            border-radius: 0.2em;
-            transition: .95s;
-            transition: margin 400ms ease-in-out,
-                width 400ms ease-in-out;
-        }
+        .portfolio-overlay {
 
-        .img-expand {
-            width: 25rem;
-        }
-
-        .img-shrink {
-            width: 0em;
-        }
-
-
-        .portfolio-links {
-            top: -100%;
-            left: 0;
-            width: 25rem;
-            height: 97.5%;
-
-            .portfolio-link {
-                width: 5rem;
-                height: 5rem;
-                position: relative;
-                left: 0rem;
-                top: 0rem;
-
-
-                .logo-link {
-                    width: 50%;
-                    position: absolute;
-                    top: 18px;
-                    left: 18px;
-                }
+            .portfolio-img {
+                max-width: 25rem;
+                width: 100%;
+                height: 100%;
             }
 
+            .img-expand {
+                width: 100%;
+            }
+
+            .img-shrink {
+                width: 0;
+            }
+
+
+            .portfolio-links {
+                top: -100%;
+                left: 0;
+                width: 100%;
+                height: 97.5%;
+
+                .portfolio-link {
+                    width: 5rem;
+                    height: 5rem;
+                    position: relative;
+                    left: 0rem;
+                    top: 0rem;
+
+
+                    .logo-link {
+                        width: 50%;
+                        position: absolute;
+                        top: 18px;
+                        left: 18px;
+                    }
+                }
+            }
         }
+
 
 
         .contact-title {
@@ -2730,46 +2728,49 @@ button {
             gap: 1rem;
         }
 
+        .portfolio-overlay {
 
-        .portfolio-img {
-            width: 20rem;
-            transition: .95s;
-            transition: margin 400ms ease-in-out,
-                width 400ms ease-in-out;
-        }
-
-        .img-expand {
-            width: 20rem;
-        }
-
-        .img-shrink {
-            width: 0em;
-        }
+            .portfolio-img {
+                max-width: 20rem;
+                width: 100%;
 
 
-        .portfolio-links {
-            top: -100%;
-            left: 0;
-            width: 20rem;
-            height: 97.2%;
-
-            .portfolio-link {
-                width: 4rem;
-                height: 4rem;
-                background-color: white;
-                border-radius: 100%;
-                position: relative;
-                left: 0rem;
-                top: 0rem;
-
-                .logo-link {
-                    width: 50%;
-                    position: absolute;
-                    top: 15px;
-                    left: 17px;
-                }
             }
 
+            .img-expand {
+                width: 20rem;
+            }
+
+            .img-shrink {
+                width: 0em;
+            }
+
+
+            .portfolio-links {
+                top: -100%;
+                left: 0;
+                max-width: 20rem;
+                width: 100%;
+                height: 97.2%;
+
+                .portfolio-link {
+                    width: 4rem;
+                    height: 4rem;
+                    background-color: white;
+                    border-radius: 100%;
+                    position: relative;
+                    left: 0rem;
+                    top: 0rem;
+
+                    .logo-link {
+                        width: 50%;
+                        position: absolute;
+                        top: 15px;
+                        left: 17px;
+                    }
+                }
+
+            }
         }
 
 
@@ -3093,7 +3094,7 @@ button {
             margin-bottom: 2em;
 
             button {
-                margin: 0 .2rem;
+                margin: .5rem;
                 font-size: .8rem;
             }
         }
@@ -3102,43 +3103,46 @@ button {
             gap: 1rem;
         }
 
-        .portfolio-img {
-            width: 17.3rem;
-        }
+        .portfolio-overlay {
 
-        .img-expand {
-            width: 17.3rem;
-        }
-
-        .img-shrink {
-            width: 0em;
-        }
-
-
-        .portfolio-links {
-            top: -100%;
-            left: 0;
-            max-width: 10rem;
-            width: 20%;
-            height: 96.5%;
-
-            .portfolio-link {
-                width: 3.5rem;
-                height: 3.5rem;
-                background-color: white;
-                border-radius: 100%;
-                position: relative;
-                left: -1.7rem;
-                top: 0rem;
-
-                .logo-link {
-                    width: 50%;
-                    position: absolute;
-                    top: 13px;
-                    left: 14px;
-                }
+            .portfolio-img {
+                max-width: 17.3rem;
             }
 
+            .img-expand {
+                max-width: 17.3rem;
+            }
+
+            .img-shrink {
+                width: 0em;
+            }
+
+
+            .portfolio-links {
+                top: -100%;
+                left: 0;
+                max-width: 10rem;
+                width: 20%;
+                height: 96.5%;
+
+                .portfolio-link {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    background-color: white;
+                    border-radius: 100%;
+                    position: relative;
+                    left: -1.7rem;
+                    top: 0rem;
+
+                    .logo-link {
+                        width: 50%;
+                        position: absolute;
+                        top: 13px;
+                        left: 14px;
+                    }
+                }
+
+            }
         }
 
     }
@@ -3380,48 +3384,46 @@ button {
             gap: 1rem;
         }
 
-
-        .portfolio-img {
-            width: 12rem;
-            height: 100%;
-            border-radius: 0.2em;
-            transition: .95s;
-            transition: margin 400ms ease-in-out,
-                width 400ms ease-in-out;
-        }
-
-        .img-expand {
-            width: 16rem;
-        }
-
-        .img-shrink {
-            width: 0em;
-        }
-
-
-        .portfolio-links {
-            top: -100%;
-            left: 0;
-            width: 16rem;
-            height: 97.5%;
-
-            .portfolio-link {
-                width: 3.5rem;
-                height: 3.5rem;
-                background-color: white;
-                border-radius: 100%;
-                position: relative;
-                left: -0.2rem;
-                top: 0rem;
-
-                .logo-link {
-                    width: 50%;
-                    position: absolute;
-                    top: 13px;
-                    left: 14px;
-                }
+        .portfolio-overlay {
+            .portfolio-img {
+                max-width: 16rem;
+                height: 100%;
             }
 
+            .img-expand {
+                width: 16rem;
+            }
+
+            .img-shrink {
+                width: 0em;
+            }
+
+
+            .portfolio-links {
+                top: -100%;
+                left: 0;
+                max-width: 16rem;
+                width: 100%;
+                height: 97.5%;
+
+                .portfolio-link {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    background-color: white;
+                    border-radius: 100%;
+                    position: relative;
+                    left: -0.2rem;
+                    top: 0rem;
+
+                    .logo-link {
+                        width: 50%;
+                        position: absolute;
+                        top: 13px;
+                        left: 14px;
+                    }
+                }
+
+            }
         }
 
         .footer {
@@ -3440,11 +3442,7 @@ button {
 /*** BELOW 904px ( tablets screen) ***/
 /*************************************/
 @media (max-width: 57rem) {
-
-
     body {
-
-
         .container {
             // 44rem
             max-width: 700px;
@@ -3552,8 +3550,6 @@ button {
             width: 6%;
             padding: .2rem;
         }
-
-
 
         .hero {
             margin-top: 9rem;
@@ -3692,47 +3688,46 @@ button {
             gap: .8rem;
         }
 
-        .portfolio-img {
-            width: 14rem;
-            height: 100%;
-            border-radius: 0.2em;
-            transition: .95s;
-            transition: margin 400ms ease-in-out,
-                width 400ms ease-in-out;
-        }
-
-        .img-expand {
-            width: 14rem;
-        }
-
-        .img-shrink {
-            width: 0em;
-        }
-
-
-        .portfolio-links {
-            top: -100%;
-            left: 0;
-            width: 14rem;
-            height: 97.5%;
-
-            .portfolio-link {
-                width: 3rem;
-                height: 3rem;
-                background-color: white;
-                border-radius: 100%;
-                position: relative;
-                left: -0.2rem;
-                top: 0rem;
-
-                .logo-link {
-                    width: 50%;
-                    position: absolute;
-                    top: 12px;
-                    left: 11.5px;
-                }
+        .portfolio-overlay {
+            .portfolio-img {
+                max-width: 14rem;
+                height: 100%;
             }
 
+            .img-expand {
+                width: 14rem;
+            }
+
+            .img-shrink {
+                width: 0em;
+            }
+
+
+            .portfolio-links {
+                top: -100%;
+                left: 0;
+                max-width: 14rem;
+                width: 100%;
+                height: 97.5%;
+
+                .portfolio-link {
+                    width: 3rem;
+                    height: 3rem;
+                    background-color: white;
+                    border-radius: 100%;
+                    position: relative;
+                    left: -0.2rem;
+                    top: 0rem;
+
+                    .logo-link {
+                        width: 50%;
+                        position: absolute;
+                        top: 12px;
+                        left: 11.5px;
+                    }
+                }
+
+            }
         }
 
 
@@ -3798,8 +3793,6 @@ button {
 @media (max-width: 49rem) {
 
     body {
-    
-
         .container {
             // 38rem
             max-width: 600px;
@@ -4056,12 +4049,8 @@ button {
         .portfolio-overlay {
 
             .portfolio-img {
-                width: 18rem;
+                max-width: 18rem;
                 height: 100%;
-                border-radius: 0.2em;
-                transition: .95s;
-                transition: margin 400ms ease-in-out,
-                    width 400ms ease-in-out;
             }
 
             .img-expand {
@@ -4076,7 +4065,8 @@ button {
             .portfolio-links {
                 top: -100%;
                 left: 0;
-                width: 18rem;
+                max-width: 18rem;
+                width: 100%;
                 height: 97.5%;
 
                 .portfolio-link {
@@ -4213,7 +4203,7 @@ button {
                 height: 102vh;
                 background-color: #000000bc;
                 backdrop-filter: blur(35px);
-    box-shadow: 0 20px 50px -10px rgb(0, 0, 0);
+                box-shadow: 0 20px 50px -10px rgb(0, 0, 0);
                 border: 4px soild white;
                 border: 4px soild white;
                 transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -4256,7 +4246,7 @@ button {
                     color: white;
                     width: 11.7rem;
 
-                    .caret{
+                    .caret {
                         border-top: 6px solid white;
                     }
 
@@ -4566,7 +4556,7 @@ button {
                 height: 100vh;
                 background-color: #000000bc;
                 backdrop-filter: blur(35px);
-    box-shadow: 0 20px 50px -10px rgb(0, 0, 0);
+                box-shadow: 0 20px 50px -10px rgb(0, 0, 0);
                 border: 4px soild white;
                 transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
                 border-top-left-radius: 1700px;
@@ -4624,7 +4614,7 @@ button {
                     font-size: 1rem;
                     color: white;
 
-                    .caret{
+                    .caret {
                         border-top: 6px solid white;
                     }
 
@@ -4915,7 +4905,7 @@ button {
                 height: 104vh;
                 background-color: #000000bc;
                 backdrop-filter: blur(35px);
-    box-shadow: 0 20px 50px -10px rgb(0, 0, 0);
+                box-shadow: 0 20px 50px -10px rgb(0, 0, 0);
                 border: 4px soild white;
                 transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
                 border-top-left-radius: 1700px;
@@ -4945,20 +4935,22 @@ button {
 
                 }
             }
-            .dropdown{
 
-                .select{
+            .dropdown {
+
+                .select {
                     color: white;
 
-                    .caret{
+                    .caret {
                         border-top: 6px solid white;
                     }
-                    
+
                     &:hover {
                         color: white;
                     }
                 }
-                .menu{
+
+                .menu {
                     color: #2e2e2e;
                 }
 

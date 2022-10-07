@@ -3,122 +3,49 @@
 // ///////*******************************************///////
 // INITIALIZATION OF THE LANGUAGE SWITCHER BY FINDING THE RIGHT JSON OF THE LANG
 function Translate() {
-    //initialization
-    this.init = function (attribute, lng) {
-        this.attribute = attribute;
-        this.lng = lng;
-    }
-    //translate 
-    this.process = function () {
+    this.init = function (e, t) {
+        this.attribute = e, this.lng = t
+    }, this.process = function () {
         _self = this;
-        var xrhFile = new XMLHttpRequest();
-        //load content data 
-        xrhFile.open("GET", "assets/languages/" + this.lng + ".json", false);
-        xrhFile.onreadystatechange = function () {
-            if (xrhFile.readyState === 4) {
-                if (xrhFile.status === 200 || xrhFile.status == 0) {
-                    var LngObject = JSON.parse(xrhFile.responseText);
-                    var allDom = document.getElementsByTagName("*");
-                    for (var i = 0; i < allDom.length; i++) {
-                        var elem = allDom[i];
-                        var key = elem.getAttribute(_self.attribute);
-                        if (key != null) {
-                            elem.innerHTML = LngObject[key];
-                        }
-                    }
+        var a = new XMLHttpRequest;
+        a.open("GET", "assets/languages/" + this.lng + ".json", !1), a.onreadystatechange = function () {
+            if (4 === a.readyState && (200 === a.status || 0 == a.status))
+                for (var e = JSON.parse(a.responseText), t = document.getElementsByTagName("*"), n = 0; n < t.length; n++) {
+                    var s = t[n],
+                        r = s.getAttribute(_self.attribute);
+                    null != r && (s.innerHTML = e[r])
                 }
-            }
-        }
-        xrhFile.send();
+        }, a.send()
     }
 }
+const dropdowns = document.querySelectorAll(".dropdown");
 
- // ///////*******************************************///////
-// ///////************* DROPDOWN LANGUAGE MENU ***************///////
-// ///////*******************************************///////
-
-//Get all dropdowns from the document
-const dropdowns = document.querySelectorAll('.dropdown');
-
-
-//Loop through all dropdown elements
-dropdowns.forEach(dropdown => {
-    //Get inner elements from each dropdown
-    const select = dropdown.querySelector('.select');
-    const caret = dropdown.querySelector('.caret');
-    const menu = dropdown.querySelector('.menu');
-    const options = dropdown.querySelectorAll('.menu li');
-    const selected = dropdown.querySelector('.selected');
-
-    /*
-      We are using this method in order to have 
-      multiple dropdown menus on the page work
-    */
-
-
-    //Add a click event to the select element
-    select.addEventListener('click', () => {
-        //Add the clicked select styles to the select element
-        select.classList.toggle('select-clicked');
-        //Add the rotate styles to the caret element
-        caret.classList.toggle('caret-rotate');
-        //Add the open styles to the menu element
-        menu.classList.toggle('menu-open');
-    });
-
-    //Loop through all option elements
-    options.forEach(option => {
-        //Add a click event to the option element
-        option.addEventListener('click', () => {
-            //Change selected inner text to clicked option inner text
-            selected.innerText = option.innerText;
-            //Add the clicked select styles to the select element
-            select.classList.remove('select-clicked');
-            //Add the rotate styles to the caret element
-            caret.classList.remove('caret-rotate');
-            //Add the open styles to the menu element
-            menu.classList.remove('menu-open');
-            //Remove active class from all option elements
-            options.forEach(option => {
-                option.classList.remove('active');
-                // HERE TO REMOVE THE ACTIVE DIV OF THE LANGUAGE
-            });
-            //Add active class to clicked option element
-            option.classList.add('active');
-            // ADD THE ACTIVE LANGUAGE TO SHOW UP THE LANGUAGE
-        
-        });
-    });
-});
-
-
-// TO CHANGE THE LANGUAGE TO ALL THE DOM 
-
- //This function will be called when user click changing language
- function translate(lng, tagAttr) {
-    var translate = new Translate();
-    translate.init(tagAttr, lng);
-    translate.process();
+function translate(e, t) {
+    var n = new Translate;
+    n.init(t, e), n.process()
 }
-
-
-// GET THE ID OF THE LANGUAGES BUTTONS
-const enTranslator = document.getElementById('enTranslator');
-const frTranslator = document.getElementById('frTranslator');
-
-//WHEN THE DOM IS LOADED AND THE USER CLICK ON THE LANGUAGE, IT WILL CHANGE
+dropdowns.forEach(e => {
+    const t = e.querySelector(".select"),
+        n = e.querySelector(".caret"),
+        s = e.querySelector(".menu"),
+        r = e.querySelectorAll(".menu li"),
+        a = e.querySelector(".selected");
+    t.addEventListener("click", () => {
+        t.classList.toggle("select-clicked"), n.classList.toggle("caret-rotate"), s.classList.toggle("menu-open")
+    }), r.forEach(e => {
+        e.addEventListener("click", () => {
+            a.innerText = e.innerText, t.classList.remove("select-clicked"), n.classList.remove("caret-rotate"), s.classList.remove("menu-open"), r.forEach(e => {
+                e.classList.remove("active")
+            }), e.classList.add("active")
+        })
+    })
+});
+const enTranslator = document.getElementById("enTranslator"),
+    frTranslator = document.getElementById("frTranslator");
 document.addEventListener("DOMContentLoaded", () => {
-
-    //This is id of HTML element (English) with attribute lng-tag
-    enTranslator.addEventListener('click', ()=>{
-
-        translate('en', 'lng-tag');
-        
-    });
-    //This is id of HTML element (Khmer) with attribute lng-tag
-    frTranslator.addEventListener('click', ()=>{
-
-        translate('fr', 'lng-tag');
-
-    });
+    enTranslator.addEventListener("click", () => {
+        translate("en", "lng-tag")
+    }), frTranslator.addEventListener("click", () => {
+        translate("fr", "lng-tag")
+    })
 });

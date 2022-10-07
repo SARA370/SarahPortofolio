@@ -1550,12 +1550,10 @@ button:hover, button:focus {
     gap: 1rem;
   }
   body .portfolio-overlay .portfolio-img {
-    max-width: 32rem;
-    transition: 0.95s;
-    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
+    width: 32rem;
   }
   body .portfolio-overlay .img-expand {
-    max-width: 32rem;
+    width: 32rem;
   }
   body .portfolio-overlay .img-shrink {
     width: 0em;
@@ -1563,7 +1561,8 @@ button:hover, button:focus {
   body .portfolio-overlay .portfolio-links {
     top: -100%;
     left: 0;
-    width: 32rem;
+    max-width: 32rem;
+    width: 100%;
     height: 97.5%;
   }
   body .portfolio-overlay .portfolio-links .portfolio-link {
@@ -1757,10 +1756,10 @@ button:hover, button:focus {
     gap: 1rem;
   }
   body .portfolio-overlay .portfolio-img {
-    max-width: 28rem;
+    width: 28rem;
   }
   body .portfolio-overlay .img-expand {
-    max-width: 28rem;
+    width: 28rem;
   }
   body .portfolio-overlay .img-shrink {
     width: 0em;
@@ -1768,7 +1767,8 @@ button:hover, button:focus {
   body .portfolio-overlay .portfolio-links {
     top: -100%;
     left: 0;
-    width: 28rem;
+    max-width: 28rem;
+    width: 100%;
     height: 97.5%;
   }
   body .portfolio-overlay .portfolio-links .portfolio-link {
@@ -1998,33 +1998,31 @@ button:hover, button:focus {
   body .portfolio-images {
     gap: 1rem;
   }
-  body .portfolio-img {
-    width: 25rem;
+  body .portfolio-overlay .portfolio-img {
+    max-width: 25rem;
+    width: 100%;
     height: 100%;
-    border-radius: 0.2em;
-    transition: 0.95s;
-    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  body .img-expand {
-    width: 25rem;
+  body .portfolio-overlay .img-expand {
+    width: 100%;
   }
-  body .img-shrink {
-    width: 0em;
+  body .portfolio-overlay .img-shrink {
+    width: 0;
   }
-  body .portfolio-links {
+  body .portfolio-overlay .portfolio-links {
     top: -100%;
     left: 0;
-    width: 25rem;
+    width: 100%;
     height: 97.5%;
   }
-  body .portfolio-links .portfolio-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link {
     width: 5rem;
     height: 5rem;
     position: relative;
     left: 0rem;
     top: 0rem;
   }
-  body .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 18px;
@@ -2251,24 +2249,24 @@ button:hover, button:focus {
   body .portfolio-images {
     gap: 1rem;
   }
-  body .portfolio-img {
-    width: 20rem;
-    transition: 0.95s;
-    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
+  body .portfolio-overlay .portfolio-img {
+    max-width: 20rem;
+    width: 100%;
   }
-  body .img-expand {
+  body .portfolio-overlay .img-expand {
     width: 20rem;
   }
-  body .img-shrink {
+  body .portfolio-overlay .img-shrink {
     width: 0em;
   }
-  body .portfolio-links {
+  body .portfolio-overlay .portfolio-links {
     top: -100%;
     left: 0;
-    width: 20rem;
+    max-width: 20rem;
+    width: 100%;
     height: 97.2%;
   }
-  body .portfolio-links .portfolio-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link {
     width: 4rem;
     height: 4rem;
     background-color: white;
@@ -2277,7 +2275,7 @@ button:hover, button:focus {
     left: 0rem;
     top: 0rem;
   }
-  body .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 15px;
@@ -2529,29 +2527,29 @@ button:hover, button:focus {
     margin-bottom: 2em;
   }
   body .portfolio-gallery button {
-    margin: 0 0.2rem;
+    margin: 0.5rem;
     font-size: 0.8rem;
   }
   body .portfolio-images {
     gap: 1rem;
   }
-  body .portfolio-img {
-    width: 17.3rem;
+  body .portfolio-overlay .portfolio-img {
+    max-width: 17.3rem;
   }
-  body .img-expand {
-    width: 17.3rem;
+  body .portfolio-overlay .img-expand {
+    max-width: 17.3rem;
   }
-  body .img-shrink {
+  body .portfolio-overlay .img-shrink {
     width: 0em;
   }
-  body .portfolio-links {
+  body .portfolio-overlay .portfolio-links {
     top: -100%;
     left: 0;
     max-width: 10rem;
     width: 20%;
     height: 96.5%;
   }
-  body .portfolio-links .portfolio-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link {
     width: 3.5rem;
     height: 3.5rem;
     background-color: white;
@@ -2560,7 +2558,7 @@ button:hover, button:focus {
     left: -1.7rem;
     top: 0rem;
   }
-  body .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 13px;
@@ -2748,26 +2746,24 @@ button:hover, button:focus {
   body .portfolio-images {
     gap: 1rem;
   }
-  body .portfolio-img {
-    width: 12rem;
+  body .portfolio-overlay .portfolio-img {
+    max-width: 16rem;
     height: 100%;
-    border-radius: 0.2em;
-    transition: 0.95s;
-    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  body .img-expand {
+  body .portfolio-overlay .img-expand {
     width: 16rem;
   }
-  body .img-shrink {
+  body .portfolio-overlay .img-shrink {
     width: 0em;
   }
-  body .portfolio-links {
+  body .portfolio-overlay .portfolio-links {
     top: -100%;
     left: 0;
-    width: 16rem;
+    max-width: 16rem;
+    width: 100%;
     height: 97.5%;
   }
-  body .portfolio-links .portfolio-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link {
     width: 3.5rem;
     height: 3.5rem;
     background-color: white;
@@ -2776,7 +2772,7 @@ button:hover, button:focus {
     left: -0.2rem;
     top: 0rem;
   }
-  body .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 13px;
@@ -2995,26 +2991,24 @@ button:hover, button:focus {
   body .portfolio-images {
     gap: 0.8rem;
   }
-  body .portfolio-img {
-    width: 14rem;
+  body .portfolio-overlay .portfolio-img {
+    max-width: 14rem;
     height: 100%;
-    border-radius: 0.2em;
-    transition: 0.95s;
-    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
-  body .img-expand {
+  body .portfolio-overlay .img-expand {
     width: 14rem;
   }
-  body .img-shrink {
+  body .portfolio-overlay .img-shrink {
     width: 0em;
   }
-  body .portfolio-links {
+  body .portfolio-overlay .portfolio-links {
     top: -100%;
     left: 0;
-    width: 14rem;
+    max-width: 14rem;
+    width: 100%;
     height: 97.5%;
   }
-  body .portfolio-links .portfolio-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link {
     width: 3rem;
     height: 3rem;
     background-color: white;
@@ -3023,7 +3017,7 @@ button:hover, button:focus {
     left: -0.2rem;
     top: 0rem;
   }
-  body .portfolio-links .portfolio-link .logo-link {
+  body .portfolio-overlay .portfolio-links .portfolio-link .logo-link {
     width: 50%;
     position: absolute;
     top: 12px;
@@ -3276,11 +3270,8 @@ button:hover, button:focus {
     gap: 0.8rem;
   }
   body .portfolio-overlay .portfolio-img {
-    width: 18rem;
+    max-width: 18rem;
     height: 100%;
-    border-radius: 0.2em;
-    transition: 0.95s;
-    transition: margin 400ms ease-in-out, width 400ms ease-in-out;
   }
   body .portfolio-overlay .img-expand {
     width: 18rem;
@@ -3291,7 +3282,8 @@ button:hover, button:focus {
   body .portfolio-overlay .portfolio-links {
     top: -100%;
     left: 0;
-    width: 18rem;
+    max-width: 18rem;
+    width: 100%;
     height: 97.5%;
   }
   body .portfolio-overlay .portfolio-links .portfolio-link {
