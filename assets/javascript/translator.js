@@ -1,6 +1,11 @@
 // ///////*******************************************///////
 // ///////************ CHANGE LANGUAGES *************///////
 // ///////*******************************************///////
+
+window.onload = function() {
+    translate();
+};
+
 // INITIALIZATION OF THE LANGUAGE SWITCHER BY FINDING THE RIGHT JSON OF THE LANG
 function Translate() {
     this.init = function (e, t) {
