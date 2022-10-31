@@ -3,7 +3,7 @@
 // ///////*******************************************///////
 
 window.onload = function() {
-    translate();
+    translate('en','lng-tag');
 };
 
 // INITIALIZATION OF THE LANGUAGE SWITCHER BY FINDING THE RIGHT JSON OF THE LANG
