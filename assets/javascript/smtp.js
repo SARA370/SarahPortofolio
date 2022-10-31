@@ -44,3 +44,5 @@ function sendEmail() {
     Body: " Nom: " + e + "<br/> Adress mail: " + a + "<br/> Sujet: " + t + "<br/> Numéro de téléphone: " + n + "<br/> Message du user : " + o
   }).then(e => alert(e))
 }
+
+console.log("smtp");

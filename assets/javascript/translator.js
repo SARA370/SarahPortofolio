@@ -49,3 +49,5 @@ document.addEventListener("DOMContentLoaded", () => {
         translate("fr", "lng-tag")
     })
 });
+
+console.log("Translator");
