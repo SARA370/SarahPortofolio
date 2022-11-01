@@ -28,7 +28,7 @@ menu.addEventListener("click", () => {
 // /////////*******************************************///////
 // /////////*************** TYPING EFFECT *************///////
 // /////////*******************************************///////
-const texts = ["Junior Front-End developer", "UI/UX Designer"];
+const texts = ["Junior Front-End developer", "UX/UI Designer"];
 let count = 0,
   index = 0,
   currentText = "",
