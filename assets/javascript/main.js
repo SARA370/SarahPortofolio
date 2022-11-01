@@ -148,3 +148,5 @@ function blurFunc() {
 inputs.forEach(e => {
   e.addEventListener("focus", focusFunc), e.addEventListener("blur", blurFunc)
 });
+
+console.log("main");

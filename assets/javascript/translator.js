@@ -1,6 +1,11 @@
 // ///////*******************************************///////
 // ///////************ CHANGE LANGUAGES *************///////
 // ///////*******************************************///////
+
+window.onload = function() {
+    translate('en','lng-tag');
+};
+
 // INITIALIZATION OF THE LANGUAGE SWITCHER BY FINDING THE RIGHT JSON OF THE LANG
 function Translate() {
     this.init = function (e, t) {
@@ -49,3 +54,5 @@ document.addEventListener("DOMContentLoaded", () => {
         translate("fr", "lng-tag")
     })
 });
+
+console.log("Translator");
